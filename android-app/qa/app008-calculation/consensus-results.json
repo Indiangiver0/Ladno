@@ -1,0 +1,3591 @@
+{
+  "vectors": [
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 80,
+      "verificationFailed": false,
+      "id": "C01-boundary80",
+      "expectedConfidence": "high",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 80
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 79,
+      "verificationFailed": false,
+      "id": "C02-primary79",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C03-secondary79",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 79
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": true,
+      "id": "C04-secondaryFailed",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag",
+      "expectedConfidence": "uncertain",
+      "verification": null,
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": true,
+      "id": "C06-nullSecondaryFailure",
+      "expectedConfidence": "uncertain",
+      "verification": null,
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 0
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": null,
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C07-missingPrimaryAmount",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": null,
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C08-missingSecondaryAmount",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": null,
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": null,
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": null,
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C09-missingPrimaryDate",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": null,
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": null,
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C10-missingSecondaryDate",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": null,
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": null,
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": null
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C11-missingPrimaryCurrency",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": null
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C12-missingSecondaryCurrency",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": null
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": null,
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C13-missingPrimaryKind",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": null,
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C14-missingSecondaryKind",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": null,
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 94,
+      "verificationFailed": false,
+      "id": "C15-known754vs794",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "794.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 95
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C16-kindMismatch",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "income",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C17-currencyMismatch",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "USD"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C18-dateMismatch",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-02",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C19-primaryUncertain",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C20-secondaryUncertain",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "LOW_CONFIDENCE"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C21-primaryReasonsEvenIfHigh",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C22-secondaryReasonsEvenIfHigh",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": null,
+        "note": "primary-safe-note",
+        "amount": null,
+        "reasons": [
+          "UNAVAILABLE",
+          "LOW_CONFIDENCE"
+        ],
+        "kind": null,
+        "dateOrigin": null,
+        "confidence": "unavailable",
+        "paymentReference": "primary-reference",
+        "currency": null
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C23-primaryUnavailableStaysUnavailable",
+      "expectedConfidence": "unavailable",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": null,
+        "note": "primary-safe-note",
+        "amount": null,
+        "reasons": ["UNAVAILABLE"],
+        "kind": null,
+        "dateOrigin": null,
+        "confidence": "unavailable",
+        "paymentReference": "primary-reference",
+        "currency": null
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C24-existingLowConfidenceNoDuplicate",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": null,
+        "note": "primary-safe-note",
+        "amount": null,
+        "reasons": [
+          "UNAVAILABLE",
+          "LOW_CONFIDENCE"
+        ],
+        "kind": null,
+        "dateOrigin": null,
+        "confidence": "unavailable",
+        "paymentReference": "primary-reference",
+        "currency": null
+      },
+      "primaryOcrConfidence": 0,
+      "verificationFailed": true,
+      "id": "C25-unavailableAndVerificationFailure",
+      "expectedConfidence": "unavailable",
+      "verification": null,
+      "primary": {
+        "date": null,
+        "note": "primary-safe-note",
+        "amount": null,
+        "reasons": ["UNAVAILABLE"],
+        "kind": null,
+        "dateOrigin": null,
+        "confidence": "unavailable",
+        "paymentReference": "primary-reference",
+        "currency": null
+      },
+      "verificationOcrConfidence": 0
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 100,
+      "verificationFailed": false,
+      "id": "C26-both100",
+      "expectedConfidence": "high",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 100
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 0,
+      "verificationFailed": false,
+      "id": "C27-primary0",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 100
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 100,
+      "verificationFailed": false,
+      "id": "C28-secondary0",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 0
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C29-nonfinancialDifferencePreservePrimary",
+      "expectedConfidence": "high",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "different-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "user",
+        "confidence": "high",
+        "paymentReference": "different-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C30-bothUncertainNotPromoted",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "754.32",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "9007199254740993.01",
+        "reasons": ["LOW_CONFIDENCE"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C31-hugeOneMinorMismatch",
+      "expectedConfidence": "uncertain",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "9007199254740993.02",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "9007199254740993.01",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    },
+    {
+      "actual": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "9007199254740993.01",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primaryOcrConfidence": 99,
+      "verificationFailed": false,
+      "id": "C32-hugeExactAgreement",
+      "expectedConfidence": "high",
+      "verification": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "9007199254740993.01",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "primary": {
+        "date": "2026-11-03",
+        "note": "primary-safe-note",
+        "amount": "9007199254740993.01",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": "primary-reference",
+        "currency": "KZT"
+      },
+      "verificationOcrConfidence": 99
+    }
+  ],
+  "checks": [
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "C01-boundary80/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C01-boundary80/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C01-boundary80/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C01-boundary80/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C01-boundary80/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C01-boundary80/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C01-boundary80/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C01-boundary80/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C01-boundary80/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C01-boundary80/paymentReference"
+    },
+    {
+      "actual": [],
+      "pass": true,
+      "expected": [],
+      "id": "C01-boundary80/reasonsExact"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "C01-boundary80/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C02-primary79/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C02-primary79/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C02-primary79/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C02-primary79/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C02-primary79/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C02-primary79/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C02-primary79/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C02-primary79/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C02-primary79/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C02-primary79/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C02-primary79/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C02-primary79/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C03-secondary79/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C03-secondary79/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C03-secondary79/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C03-secondary79/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C03-secondary79/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C03-secondary79/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C03-secondary79/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C03-secondary79/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C03-secondary79/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C03-secondary79/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C03-secondary79/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C03-secondary79/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C04-secondaryFailed/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C04-secondaryFailed/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C04-secondaryFailed/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C04-secondaryFailed/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C04-secondaryFailed/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C04-secondaryFailed/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C04-secondaryFailed/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C04-secondaryFailed/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C04-secondaryFailed/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C04-secondaryFailed/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C04-secondaryFailed/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C04-secondaryFailed/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/primaryUnmodified"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C05-nullSecondaryEvenWithoutFailureFlag/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C06-nullSecondaryFailure/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C06-nullSecondaryFailure/primaryUnmodified"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C06-nullSecondaryFailure/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C06-nullSecondaryFailure/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C06-nullSecondaryFailure/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C06-nullSecondaryFailure/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C06-nullSecondaryFailure/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C06-nullSecondaryFailure/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C06-nullSecondaryFailure/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C06-nullSecondaryFailure/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C06-nullSecondaryFailure/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C06-nullSecondaryFailure/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C07-missingPrimaryAmount/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":null,\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":null,\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C07-missingPrimaryAmount/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C07-missingPrimaryAmount/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C07-missingPrimaryAmount/kind"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C07-missingPrimaryAmount/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C07-missingPrimaryAmount/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C07-missingPrimaryAmount/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C07-missingPrimaryAmount/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C07-missingPrimaryAmount/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C07-missingPrimaryAmount/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C07-missingPrimaryAmount/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C07-missingPrimaryAmount/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C08-missingSecondaryAmount/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C08-missingSecondaryAmount/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":null,\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":null,\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C08-missingSecondaryAmount/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C08-missingSecondaryAmount/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C08-missingSecondaryAmount/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C08-missingSecondaryAmount/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C08-missingSecondaryAmount/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C08-missingSecondaryAmount/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C08-missingSecondaryAmount/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C08-missingSecondaryAmount/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C08-missingSecondaryAmount/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C08-missingSecondaryAmount/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C09-missingPrimaryDate/confidence"
+    },
+    {
+      "actual": "{\"date\":null,\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":null,\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":null,\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":null,\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C09-missingPrimaryDate/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C09-missingPrimaryDate/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C09-missingPrimaryDate/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C09-missingPrimaryDate/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C09-missingPrimaryDate/currency"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C09-missingPrimaryDate/date"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C09-missingPrimaryDate/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C09-missingPrimaryDate/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C09-missingPrimaryDate/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C09-missingPrimaryDate/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C09-missingPrimaryDate/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C10-missingSecondaryDate/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C10-missingSecondaryDate/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":null,\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":null,\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":null,\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":null,\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C10-missingSecondaryDate/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C10-missingSecondaryDate/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C10-missingSecondaryDate/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C10-missingSecondaryDate/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C10-missingSecondaryDate/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C10-missingSecondaryDate/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C10-missingSecondaryDate/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C10-missingSecondaryDate/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C10-missingSecondaryDate/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C10-missingSecondaryDate/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C11-missingPrimaryCurrency/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":null}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":null}",
+      "id": "C11-missingPrimaryCurrency/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C11-missingPrimaryCurrency/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C11-missingPrimaryCurrency/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C11-missingPrimaryCurrency/amount"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C11-missingPrimaryCurrency/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C11-missingPrimaryCurrency/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C11-missingPrimaryCurrency/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C11-missingPrimaryCurrency/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C11-missingPrimaryCurrency/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C11-missingPrimaryCurrency/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C11-missingPrimaryCurrency/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C12-missingSecondaryCurrency/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C12-missingSecondaryCurrency/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":null}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":null}",
+      "id": "C12-missingSecondaryCurrency/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C12-missingSecondaryCurrency/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C12-missingSecondaryCurrency/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C12-missingSecondaryCurrency/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C12-missingSecondaryCurrency/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C12-missingSecondaryCurrency/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C12-missingSecondaryCurrency/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C12-missingSecondaryCurrency/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C12-missingSecondaryCurrency/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C12-missingSecondaryCurrency/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C13-missingPrimaryKind/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":null,\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":null,\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C13-missingPrimaryKind/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C13-missingPrimaryKind/verificationUnmodified"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C13-missingPrimaryKind/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C13-missingPrimaryKind/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C13-missingPrimaryKind/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C13-missingPrimaryKind/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C13-missingPrimaryKind/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C13-missingPrimaryKind/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C13-missingPrimaryKind/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C13-missingPrimaryKind/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C13-missingPrimaryKind/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C14-missingSecondaryKind/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C14-missingSecondaryKind/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":null,\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":null,\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C14-missingSecondaryKind/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C14-missingSecondaryKind/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C14-missingSecondaryKind/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C14-missingSecondaryKind/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C14-missingSecondaryKind/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C14-missingSecondaryKind/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C14-missingSecondaryKind/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C14-missingSecondaryKind/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C14-missingSecondaryKind/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C14-missingSecondaryKind/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C15-known754vs794/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C15-known754vs794/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"794.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"794.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C15-known754vs794/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C15-known754vs794/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C15-known754vs794/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C15-known754vs794/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C15-known754vs794/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C15-known754vs794/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C15-known754vs794/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C15-known754vs794/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C15-known754vs794/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C15-known754vs794/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C16-kindMismatch/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C16-kindMismatch/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"income\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"income\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C16-kindMismatch/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C16-kindMismatch/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C16-kindMismatch/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C16-kindMismatch/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C16-kindMismatch/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C16-kindMismatch/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C16-kindMismatch/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C16-kindMismatch/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C16-kindMismatch/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C16-kindMismatch/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C17-currencyMismatch/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C17-currencyMismatch/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"USD\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"USD\"}",
+      "id": "C17-currencyMismatch/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C17-currencyMismatch/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C17-currencyMismatch/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C17-currencyMismatch/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C17-currencyMismatch/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C17-currencyMismatch/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C17-currencyMismatch/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C17-currencyMismatch/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C17-currencyMismatch/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C17-currencyMismatch/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C18-dateMismatch/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C18-dateMismatch/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-02\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-02\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C18-dateMismatch/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C18-dateMismatch/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C18-dateMismatch/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C18-dateMismatch/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C18-dateMismatch/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C18-dateMismatch/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C18-dateMismatch/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C18-dateMismatch/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C18-dateMismatch/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C18-dateMismatch/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C19-primaryUncertain/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C19-primaryUncertain/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C19-primaryUncertain/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C19-primaryUncertain/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C19-primaryUncertain/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C19-primaryUncertain/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C19-primaryUncertain/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C19-primaryUncertain/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C19-primaryUncertain/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C19-primaryUncertain/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C19-primaryUncertain/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C19-primaryUncertain/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C20-secondaryUncertain/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C20-secondaryUncertain/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C20-secondaryUncertain/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C20-secondaryUncertain/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C20-secondaryUncertain/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C20-secondaryUncertain/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C20-secondaryUncertain/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C20-secondaryUncertain/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C20-secondaryUncertain/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C20-secondaryUncertain/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C20-secondaryUncertain/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C20-secondaryUncertain/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C21-primaryReasonsEvenIfHigh/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"UNSUPPORTED_EVENT\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"UNSUPPORTED_EVENT\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C21-primaryReasonsEvenIfHigh/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C21-primaryReasonsEvenIfHigh/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C21-primaryReasonsEvenIfHigh/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C21-primaryReasonsEvenIfHigh/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C21-primaryReasonsEvenIfHigh/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C21-primaryReasonsEvenIfHigh/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C21-primaryReasonsEvenIfHigh/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C21-primaryReasonsEvenIfHigh/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C21-primaryReasonsEvenIfHigh/paymentReference"
+    },
+    {
+      "actual": [
+        "UNSUPPORTED_EVENT",
+        "LOW_CONFIDENCE"
+      ],
+      "pass": true,
+      "expected": [
+        "UNSUPPORTED_EVENT",
+        "LOW_CONFIDENCE"
+      ],
+      "id": "C21-primaryReasonsEvenIfHigh/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C21-primaryReasonsEvenIfHigh/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C22-secondaryReasonsEvenIfHigh/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C22-secondaryReasonsEvenIfHigh/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"UNSUPPORTED_EVENT\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"UNSUPPORTED_EVENT\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C22-secondaryReasonsEvenIfHigh/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C22-secondaryReasonsEvenIfHigh/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C22-secondaryReasonsEvenIfHigh/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C22-secondaryReasonsEvenIfHigh/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C22-secondaryReasonsEvenIfHigh/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C22-secondaryReasonsEvenIfHigh/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C22-secondaryReasonsEvenIfHigh/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C22-secondaryReasonsEvenIfHigh/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C22-secondaryReasonsEvenIfHigh/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C22-secondaryReasonsEvenIfHigh/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "unavailable",
+      "pass": true,
+      "expected": "unavailable",
+      "id": "C23-primaryUnavailableStaysUnavailable/confidence"
+    },
+    {
+      "actual": "{\"date\":null,\"note\":\"primary-safe-note\",\"amount\":null,\"reasons\":[\"UNAVAILABLE\"],\"kind\":null,\"dateOrigin\":null,\"confidence\":\"unavailable\",\"paymentReference\":\"primary-reference\",\"currency\":null}",
+      "pass": true,
+      "expected": "{\"date\":null,\"note\":\"primary-safe-note\",\"amount\":null,\"reasons\":[\"UNAVAILABLE\"],\"kind\":null,\"dateOrigin\":null,\"confidence\":\"unavailable\",\"paymentReference\":\"primary-reference\",\"currency\":null}",
+      "id": "C23-primaryUnavailableStaysUnavailable/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C23-primaryUnavailableStaysUnavailable/verificationUnmodified"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C23-primaryUnavailableStaysUnavailable/kind"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C23-primaryUnavailableStaysUnavailable/amount"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C23-primaryUnavailableStaysUnavailable/currency"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C23-primaryUnavailableStaysUnavailable/date"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C23-primaryUnavailableStaysUnavailable/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C23-primaryUnavailableStaysUnavailable/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C23-primaryUnavailableStaysUnavailable/paymentReference"
+    },
+    {
+      "actual": [
+        "UNAVAILABLE",
+        "LOW_CONFIDENCE"
+      ],
+      "pass": true,
+      "expected": [
+        "UNAVAILABLE",
+        "LOW_CONFIDENCE"
+      ],
+      "id": "C23-primaryUnavailableStaysUnavailable/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C23-primaryUnavailableStaysUnavailable/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C24-existingLowConfidenceNoDuplicate/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"LOW_CONFIDENCE\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"LOW_CONFIDENCE\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C24-existingLowConfidenceNoDuplicate/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C24-existingLowConfidenceNoDuplicate/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C24-existingLowConfidenceNoDuplicate/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C24-existingLowConfidenceNoDuplicate/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C24-existingLowConfidenceNoDuplicate/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C24-existingLowConfidenceNoDuplicate/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C24-existingLowConfidenceNoDuplicate/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C24-existingLowConfidenceNoDuplicate/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C24-existingLowConfidenceNoDuplicate/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C24-existingLowConfidenceNoDuplicate/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C24-existingLowConfidenceNoDuplicate/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "unavailable",
+      "pass": true,
+      "expected": "unavailable",
+      "id": "C25-unavailableAndVerificationFailure/confidence"
+    },
+    {
+      "actual": "{\"date\":null,\"note\":\"primary-safe-note\",\"amount\":null,\"reasons\":[\"UNAVAILABLE\"],\"kind\":null,\"dateOrigin\":null,\"confidence\":\"unavailable\",\"paymentReference\":\"primary-reference\",\"currency\":null}",
+      "pass": true,
+      "expected": "{\"date\":null,\"note\":\"primary-safe-note\",\"amount\":null,\"reasons\":[\"UNAVAILABLE\"],\"kind\":null,\"dateOrigin\":null,\"confidence\":\"unavailable\",\"paymentReference\":\"primary-reference\",\"currency\":null}",
+      "id": "C25-unavailableAndVerificationFailure/primaryUnmodified"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C25-unavailableAndVerificationFailure/verificationUnmodified"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C25-unavailableAndVerificationFailure/kind"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C25-unavailableAndVerificationFailure/amount"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C25-unavailableAndVerificationFailure/currency"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C25-unavailableAndVerificationFailure/date"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "C25-unavailableAndVerificationFailure/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C25-unavailableAndVerificationFailure/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C25-unavailableAndVerificationFailure/paymentReference"
+    },
+    {
+      "actual": [
+        "UNAVAILABLE",
+        "LOW_CONFIDENCE"
+      ],
+      "pass": true,
+      "expected": [
+        "UNAVAILABLE",
+        "LOW_CONFIDENCE"
+      ],
+      "id": "C25-unavailableAndVerificationFailure/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C25-unavailableAndVerificationFailure/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "C26-both100/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C26-both100/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C26-both100/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C26-both100/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C26-both100/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C26-both100/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C26-both100/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C26-both100/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C26-both100/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C26-both100/paymentReference"
+    },
+    {
+      "actual": [],
+      "pass": true,
+      "expected": [],
+      "id": "C26-both100/reasonsExact"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "C26-both100/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C27-primary0/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C27-primary0/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C27-primary0/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C27-primary0/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C27-primary0/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C27-primary0/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C27-primary0/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C27-primary0/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C27-primary0/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C27-primary0/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C27-primary0/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C27-primary0/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C28-secondary0/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C28-secondary0/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C28-secondary0/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C28-secondary0/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C28-secondary0/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C28-secondary0/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C28-secondary0/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C28-secondary0/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C28-secondary0/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C28-secondary0/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C28-secondary0/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C28-secondary0/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "C29-nonfinancialDifferencePreservePrimary/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C29-nonfinancialDifferencePreservePrimary/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"different-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"user\",\"confidence\":\"high\",\"paymentReference\":\"different-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"different-safe-note\",\"amount\":\"754.32\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"user\",\"confidence\":\"high\",\"paymentReference\":\"different-reference\",\"currency\":\"KZT\"}",
+      "id": "C29-nonfinancialDifferencePreservePrimary/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C29-nonfinancialDifferencePreservePrimary/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C29-nonfinancialDifferencePreservePrimary/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C29-nonfinancialDifferencePreservePrimary/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C29-nonfinancialDifferencePreservePrimary/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C29-nonfinancialDifferencePreservePrimary/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C29-nonfinancialDifferencePreservePrimary/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C29-nonfinancialDifferencePreservePrimary/paymentReference"
+    },
+    {
+      "actual": [],
+      "pass": true,
+      "expected": [],
+      "id": "C29-nonfinancialDifferencePreservePrimary/reasonsExact"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "C29-nonfinancialDifferencePreservePrimary/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C30-bothUncertainNotPromoted/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"LOW_CONFIDENCE\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"LOW_CONFIDENCE\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C30-bothUncertainNotPromoted/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"LOW_CONFIDENCE\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"754.32\",\"reasons\":[\"LOW_CONFIDENCE\"],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"uncertain\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C30-bothUncertainNotPromoted/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C30-bothUncertainNotPromoted/kind"
+    },
+    {
+      "actual": "754.32",
+      "pass": true,
+      "expected": "754.32",
+      "id": "C30-bothUncertainNotPromoted/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C30-bothUncertainNotPromoted/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C30-bothUncertainNotPromoted/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C30-bothUncertainNotPromoted/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C30-bothUncertainNotPromoted/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C30-bothUncertainNotPromoted/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C30-bothUncertainNotPromoted/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C30-bothUncertainNotPromoted/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "C31-hugeOneMinorMismatch/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"9007199254740993.01\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"9007199254740993.01\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C31-hugeOneMinorMismatch/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"9007199254740993.02\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"9007199254740993.02\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C31-hugeOneMinorMismatch/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C31-hugeOneMinorMismatch/kind"
+    },
+    {
+      "actual": "9007199254740993.01",
+      "pass": true,
+      "expected": "9007199254740993.01",
+      "id": "C31-hugeOneMinorMismatch/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C31-hugeOneMinorMismatch/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C31-hugeOneMinorMismatch/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C31-hugeOneMinorMismatch/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C31-hugeOneMinorMismatch/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C31-hugeOneMinorMismatch/paymentReference"
+    },
+    {
+      "actual": ["LOW_CONFIDENCE"],
+      "pass": true,
+      "expected": ["LOW_CONFIDENCE"],
+      "id": "C31-hugeOneMinorMismatch/reasonsExact"
+    },
+    {
+      "actual": 1,
+      "pass": true,
+      "expected": 1,
+      "id": "C31-hugeOneMinorMismatch/lowConfidenceNoDuplicate"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "C32-hugeExactAgreement/confidence"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"9007199254740993.01\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"9007199254740993.01\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C32-hugeExactAgreement/primaryUnmodified"
+    },
+    {
+      "actual": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"9007199254740993.01\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "pass": true,
+      "expected": "{\"date\":\"2026-11-03\",\"note\":\"primary-safe-note\",\"amount\":\"9007199254740993.01\",\"reasons\":[],\"kind\":\"expense\",\"dateOrigin\":\"source\",\"confidence\":\"high\",\"paymentReference\":\"primary-reference\",\"currency\":\"KZT\"}",
+      "id": "C32-hugeExactAgreement/verificationUnmodified"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "C32-hugeExactAgreement/kind"
+    },
+    {
+      "actual": "9007199254740993.01",
+      "pass": true,
+      "expected": "9007199254740993.01",
+      "id": "C32-hugeExactAgreement/amount"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "C32-hugeExactAgreement/currency"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "C32-hugeExactAgreement/date"
+    },
+    {
+      "actual": "source",
+      "pass": true,
+      "expected": "source",
+      "id": "C32-hugeExactAgreement/dateOrigin"
+    },
+    {
+      "actual": "primary-safe-note",
+      "pass": true,
+      "expected": "primary-safe-note",
+      "id": "C32-hugeExactAgreement/note"
+    },
+    {
+      "actual": "primary-reference",
+      "pass": true,
+      "expected": "primary-reference",
+      "id": "C32-hugeExactAgreement/paymentReference"
+    },
+    {
+      "actual": [],
+      "pass": true,
+      "expected": [],
+      "id": "C32-hugeExactAgreement/reasonsExact"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "C32-hugeExactAgreement/lowConfidenceNoDuplicate"
+    }
+  ],
+  "vectorGroups": 32,
+  "scope": "Independent pure-Java consensus guard only; not OCR JNI/photo/Android UI integration",
+  "assertions": 384,
+  "failed": 0
+}

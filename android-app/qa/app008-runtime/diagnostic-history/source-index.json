@@ -1,0 +1,37 @@
+[
+  {
+    "stageFingerprintPrefix": "288b177c711931a4",
+    "file": "android-app/qa/app008-runtime/diagnostic-history/288b177c711931a4/ReceiptLayoutRuntimeTest.java",
+    "sha256": "56f30bf638d8eeac42051b9fe282ae716c1357316d621a6135aa56ef68bdda85"
+  },
+  {
+    "stageFingerprintPrefix": "ac278d39987f0455",
+    "file": "android-app/qa/app008-runtime/diagnostic-history/ac278d39987f0455/AuthorOcrDiagnosticTest.java",
+    "sha256": "63504eb6585201830f8bdd7086f00bf209adf1a0ad88cec1c03e451ee000b70f"
+  },
+  {
+    "stageFingerprintPrefix": "ac278d39987f0455",
+    "file": "android-app/qa/app008-runtime/diagnostic-history/ac278d39987f0455/ReceiptLayoutRuntimeTest.java",
+    "sha256": "56f30bf638d8eeac42051b9fe282ae716c1357316d621a6135aa56ef68bdda85"
+  },
+  {
+    "stageFingerprintPrefix": "8d9e02a69fbb474b",
+    "file": "android-app/qa/app008-runtime/diagnostic-history/8d9e02a69fbb474b/AuthorOcrDiagnosticTest.java",
+    "sha256": "33a9dceae41bf371847913b522ec0e06bfd4f489ad96e81f3419630aa6bc9f89"
+  },
+  {
+    "stageFingerprintPrefix": "8d9e02a69fbb474b",
+    "file": "android-app/qa/app008-runtime/diagnostic-history/8d9e02a69fbb474b/ReceiptLayoutRuntimeTest.java",
+    "sha256": "56f30bf638d8eeac42051b9fe282ae716c1357316d621a6135aa56ef68bdda85"
+  },
+  {
+    "stageFingerprintPrefix": "9077f5c7c26c75f2",
+    "file": "android-app/qa/app008-runtime/diagnostic-history/9077f5c7c26c75f2/AuthorOcrDiagnosticTest.java",
+    "sha256": "7a097156c82a03305023a6388a5390859bc63b6027341a92e1e3a47efd063f34"
+  },
+  {
+    "stageFingerprintPrefix": "9077f5c7c26c75f2",
+    "file": "android-app/qa/app008-runtime/diagnostic-history/9077f5c7c26c75f2/ReceiptLayoutRuntimeTest.java",
+    "sha256": "56f30bf638d8eeac42051b9fe282ae716c1357316d621a6135aa56ef68bdda85"
+  }
+]

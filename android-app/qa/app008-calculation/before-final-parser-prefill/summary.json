@@ -1,0 +1,100 @@
+{
+  "executedAtUtc": "2026-11-03T09:14:53.979761+00:00",
+  "commands": [
+    {
+      "name": "javac",
+      "args": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\javac.exe",
+        "--release",
+        "17",
+        "-encoding",
+        "UTF-8",
+        "-cp",
+        "C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.json\\json\\20240303\\ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a\\json-20240303.jar",
+        "-d",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\classes",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\BankMessageParser.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ContractException.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ImportCandidate.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\JsonChecks.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\Money.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ParseSupport.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ReceiptParser.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\CalculationQa.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\ReceiptIndependentQa.java"
+      ]
+    },
+    {
+      "name": "regression",
+      "args": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\java.exe",
+        "-cp",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\classes;C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.json\\json\\20240303\\ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a\\json-20240303.jar",
+        "CalculationQa",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\fixtures\\money-cases.json",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\regression-results.json"
+      ]
+    },
+    {
+      "name": "receipt",
+      "args": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\java.exe",
+        "-cp",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\classes;C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.json\\json\\20240303\\ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a\\json-20240303.jar",
+        "ReceiptIndependentQa",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\receipt-results.json"
+      ]
+    },
+    {
+      "name": "chart-node",
+      "args": [
+        "node",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\chart_actual.js",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\chart-inputs.json",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\chart-actual.json"
+      ]
+    }
+  ],
+  "exits": {
+    "javac": 0,
+    "regression": 0,
+    "receipt": 0,
+    "chartNode": 0
+  },
+  "sourceHashes": {
+    "android-app/app/src/main/java/com/ladno/finance/core/BankMessageParser.java": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+    "android-app/app/src/main/java/com/ladno/finance/core/ContractException.java": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+    "android-app/app/src/main/java/com/ladno/finance/core/ImportCandidate.java": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+    "android-app/app/src/main/java/com/ladno/finance/core/JsonChecks.java": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+    "android-app/app/src/main/java/com/ladno/finance/core/Money.java": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+    "android-app/app/src/main/java/com/ladno/finance/core/ParseSupport.java": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+    "android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java": "cd1ad90d954e2ff851a67b6c348ded8c2b093b97799510bebe8f8ed71b9d2c8f",
+    "android-app/app/src/main/assets/www/view.js": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+    "docs/android/APP-008-CHART-FIXTURES.json": "fec206c779684eb2b2b5d790888915b9d4a465ff48e8be5ffd747931f7a2f11b",
+    "docs/android/APP-008-CHARTS.md": "c62cf40c21c5d023900d2ea40d39797ca5209ab63717cd5bf655add2230a2d96",
+    "android-app/fixtures/money-cases.json": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726"
+  },
+  "sourcesChangedDuringRun": [],
+  "chartGroups": 60,
+  "chartComparisons": 3840,
+  "chartFailed": 0,
+  "historicalHarnessSha256": "ce4d5afd5531ded6339f40763195f4071d64cdc060dd8fabcb829cfa8bc15d7b",
+  "orgJsonSha256": "3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed",
+  "migrationAudit": {
+    "file": "migration-review.json",
+    "sha256": "853b32ee9a2c50ac69c9acdb79d76c9d2f4a4a7cb2ecac7492e6e83582a708c5",
+    "privateAssertionPairs": 39,
+    "auditChecks": 159,
+    "failed": 0,
+    "apkSha256": "dc6e4f4fc559183e31de844e0dace842972b0e3b601afabed081165cf9ec0024"
+  },
+  "consensusAudit": {
+    "file": "consensus-summary.json",
+    "sha256": "1303bbc287adbd0c2d00d0999fe4320a913ffb7f7a82c52baee6b2a453262a28",
+    "helperSha256": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+    "groups": 32,
+    "assertions": 384,
+    "failed": 0,
+    "nativeModelsExecutedByThisAudit": false
+  }
+}

@@ -1,0 +1,2527 @@
+{
+  "task": "APP-008",
+  "author": "/root/improve_interface",
+  "executedAtUtc": "2026-11-03T09:00:51.700Z",
+  "command": "node android-app/qa/app008-interface-author/chart_smoke.js",
+  "scope": "Pure display model author smoke, not independent QA or browser/Android UI",
+  "source": {
+    "path": "android-app/app/src/main/assets/www/view.js",
+    "sha256": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98"
+  },
+  "fixtures": {
+    "path": "docs/android/APP-008-CHART-FIXTURES.json",
+    "sha256": "80e8c4d0cb2a82381adb44ab35aa635cb45a23ff434170eba71c77c3abc7e504"
+  },
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "id": "CH00",
+      "expected": {
+        "chartEmpty": true,
+        "includedExpenseIds": [],
+        "totalMinor": "0",
+        "totalAmount": "0.00",
+        "groups": [],
+        "sectors": []
+      },
+      "actual": {
+        "status": "empty",
+        "chartEmpty": true,
+        "totalMinor": "0",
+        "totalAmount": "0.00",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [],
+        "groups": [],
+        "sectors": []
+      },
+      "passed": true
+    },
+    {
+      "id": "CH01",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000001",
+          "10000000-0000-4000-8000-000000000002"
+        ],
+        "totalMinor": "30",
+        "totalAmount": "0.30",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "20",
+            "amount": "0.20",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "remainderNumerator": "20"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "10",
+            "amount": "0.10",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "10"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "20",
+            "basisPoints": 6667,
+            "startUnit": 0,
+            "endUnit": 666666666,
+            "widthUnits": 666666666,
+            "zeroWidth": false,
+            "amount": "0.20",
+            "percent": "66.67"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "10",
+            "basisPoints": 3333,
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "amount": "0.10",
+            "percent": "33.33"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "30",
+        "totalAmount": "0.30",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000001",
+          "10000000-0000-4000-8000-000000000002"
+        ],
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "minor": "20",
+            "amount": "0.20",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "remainderNumerator": "20",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "10",
+            "amount": "0.10",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "10",
+            "colorIndex": 1,
+            "inOthers": false
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "20",
+            "amount": "0.20",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "startUnit": 0,
+            "endUnit": 666666666,
+            "widthUnits": 666666666,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "10",
+            "amount": "0.10",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "colorIndex": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH02",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000003",
+          "10000000-0000-4000-8000-000000000004",
+          "10000000-0000-4000-8000-000000000005"
+        ],
+        "totalMinor": "3",
+        "totalAmount": "0.03",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3334,
+            "percent": "33.34",
+            "remainderNumerator": "1"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1"
+          },
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "1",
+            "basisPoints": 3334,
+            "startUnit": 0,
+            "endUnit": 333333333,
+            "widthUnits": 333333333,
+            "zeroWidth": false,
+            "amount": "0.01",
+            "percent": "33.34"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "1",
+            "basisPoints": 3333,
+            "startUnit": 333333333,
+            "endUnit": 666666666,
+            "widthUnits": 333333333,
+            "zeroWidth": false,
+            "amount": "0.01",
+            "percent": "33.33"
+          },
+          {
+            "key": "~uncategorized",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "1",
+            "basisPoints": 3333,
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "amount": "0.01",
+            "percent": "33.33"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "3",
+        "totalAmount": "0.03",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000003",
+          "10000000-0000-4000-8000-000000000004",
+          "10000000-0000-4000-8000-000000000005"
+        ],
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3334,
+            "percent": "33.34",
+            "remainderNumerator": "1",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1",
+            "colorIndex": 1,
+            "inOthers": false
+          },
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "name": "Без категории",
+            "label": "Без категории",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1",
+            "colorIndex": 2,
+            "inOthers": false
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3334,
+            "percent": "33.34",
+            "startUnit": 0,
+            "endUnit": 333333333,
+            "widthUnits": 333333333,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "startUnit": 333333333,
+            "endUnit": 666666666,
+            "widthUnits": 333333333,
+            "zeroWidth": false,
+            "colorIndex": 1
+          },
+          {
+            "key": "~uncategorized",
+            "name": "Без категории",
+            "label": "Без категории",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "colorIndex": 2
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH03",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000006",
+          "10000000-0000-4000-8000-000000000007"
+        ],
+        "totalMinor": "9007199254740994",
+        "totalAmount": "90071992547409.94",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "9007199254740994",
+            "amount": "90071992547409.94",
+            "basisPoints": 10000,
+            "percent": "100.00",
+            "remainderNumerator": "0"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "9007199254740994",
+            "basisPoints": 10000,
+            "startUnit": 0,
+            "endUnit": 1000000000,
+            "widthUnits": 1000000000,
+            "zeroWidth": false,
+            "amount": "90071992547409.94",
+            "percent": "100.00"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "9007199254740994",
+        "totalAmount": "90071992547409.94",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000006",
+          "10000000-0000-4000-8000-000000000007"
+        ],
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "9007199254740994",
+            "amount": "90071992547409.94",
+            "basisPoints": 10000,
+            "percent": "100.00",
+            "remainderNumerator": "0",
+            "colorIndex": 0,
+            "inOthers": false
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "9007199254740994",
+            "amount": "90071992547409.94",
+            "basisPoints": 10000,
+            "percent": "100.00",
+            "startUnit": 0,
+            "endUnit": 1000000000,
+            "widthUnits": 1000000000,
+            "zeroWidth": false,
+            "colorIndex": 0
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH04",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000008",
+          "10000000-0000-4000-8000-000000000009"
+        ],
+        "totalMinor": "199999999999999999999999998",
+        "totalAmount": "1999999999999999999999999.98",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "0"
+          },
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "0"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "99999999999999999999999999",
+            "basisPoints": 5000,
+            "startUnit": 0,
+            "endUnit": 500000000,
+            "widthUnits": 500000000,
+            "zeroWidth": false,
+            "amount": "999999999999999999999999.99",
+            "percent": "50.00"
+          },
+          {
+            "key": "~uncategorized",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "99999999999999999999999999",
+            "basisPoints": 5000,
+            "startUnit": 500000000,
+            "endUnit": 1000000000,
+            "widthUnits": 500000000,
+            "zeroWidth": false,
+            "amount": "999999999999999999999999.99",
+            "percent": "50.00"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "199999999999999999999999998",
+        "totalAmount": "1999999999999999999999999.98",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000008",
+          "10000000-0000-4000-8000-000000000009"
+        ],
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "0",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "name": "Без категории",
+            "label": "Без категории",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "0",
+            "colorIndex": 1,
+            "inOthers": false
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "startUnit": 0,
+            "endUnit": 500000000,
+            "widthUnits": 500000000,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "~uncategorized",
+            "name": "Без категории",
+            "label": "Без категории",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "startUnit": 500000000,
+            "endUnit": 1000000000,
+            "widthUnits": 500000000,
+            "zeroWidth": false,
+            "colorIndex": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH05",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000010",
+          "10000000-0000-4000-8000-000000000011"
+        ],
+        "totalMinor": "350",
+        "totalAmount": "3.50",
+        "groups": [
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "minor": "230",
+            "amount": "2.30",
+            "basisPoints": 6571,
+            "percent": "65.71",
+            "remainderNumerator": "150"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "120",
+            "amount": "1.20",
+            "basisPoints": 3429,
+            "percent": "34.29",
+            "remainderNumerator": "200"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "~uncategorized",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "230",
+            "basisPoints": 6571,
+            "startUnit": 0,
+            "endUnit": 657142857,
+            "widthUnits": 657142857,
+            "zeroWidth": false,
+            "amount": "2.30",
+            "percent": "65.71"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "120",
+            "basisPoints": 3429,
+            "startUnit": 657142857,
+            "endUnit": 1000000000,
+            "widthUnits": 342857143,
+            "zeroWidth": false,
+            "amount": "1.20",
+            "percent": "34.29"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "350",
+        "totalAmount": "3.50",
+        "currency": "KZT",
+        "month": "2026-10",
+        "scale": 2,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000010",
+          "10000000-0000-4000-8000-000000000011"
+        ],
+        "groups": [
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "name": "Без категории",
+            "label": "Без категории",
+            "minor": "230",
+            "amount": "2.30",
+            "basisPoints": 6571,
+            "percent": "65.71",
+            "remainderNumerator": "150",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "120",
+            "amount": "1.20",
+            "basisPoints": 3429,
+            "percent": "34.29",
+            "remainderNumerator": "200",
+            "colorIndex": 1,
+            "inOthers": false
+          }
+        ],
+        "sectors": [
+          {
+            "key": "~uncategorized",
+            "name": "Без категории",
+            "label": "Без категории",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "230",
+            "amount": "2.30",
+            "basisPoints": 6571,
+            "percent": "65.71",
+            "startUnit": 0,
+            "endUnit": 657142857,
+            "widthUnits": 657142857,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "120",
+            "amount": "1.20",
+            "basisPoints": 3429,
+            "percent": "34.29",
+            "startUnit": 657142857,
+            "endUnit": 1000000000,
+            "widthUnits": 342857143,
+            "zeroWidth": false,
+            "colorIndex": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH06",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000016",
+          "10000000-0000-4000-8000-000000000017"
+        ],
+        "totalMinor": "3",
+        "totalAmount": "3",
+        "groups": [
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "minor": "2",
+            "amount": "2",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "remainderNumerator": "2"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "1",
+            "amount": "1",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "~uncategorized",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "2",
+            "basisPoints": 6667,
+            "startUnit": 0,
+            "endUnit": 666666666,
+            "widthUnits": 666666666,
+            "zeroWidth": false,
+            "amount": "2",
+            "percent": "66.67"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "1",
+            "basisPoints": 3333,
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "amount": "1",
+            "percent": "33.33"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "3",
+        "totalAmount": "3",
+        "currency": "JPY",
+        "month": "2026-11",
+        "scale": 0,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000016",
+          "10000000-0000-4000-8000-000000000017"
+        ],
+        "groups": [
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "name": "Без категории",
+            "label": "Без категории",
+            "minor": "2",
+            "amount": "2",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "remainderNumerator": "2",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "1",
+            "amount": "1",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1",
+            "colorIndex": 1,
+            "inOthers": false
+          }
+        ],
+        "sectors": [
+          {
+            "key": "~uncategorized",
+            "name": "Без категории",
+            "label": "Без категории",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "2",
+            "amount": "2",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "startUnit": 0,
+            "endUnit": 666666666,
+            "widthUnits": 666666666,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "1",
+            "amount": "1",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "colorIndex": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH07",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000018",
+          "10000000-0000-4000-8000-000000000019"
+        ],
+        "totalMinor": "3",
+        "totalAmount": "0.003",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "2",
+            "amount": "0.002",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "remainderNumerator": "2"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "1",
+            "amount": "0.001",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "2",
+            "basisPoints": 6667,
+            "startUnit": 0,
+            "endUnit": 666666666,
+            "widthUnits": 666666666,
+            "zeroWidth": false,
+            "amount": "0.002",
+            "percent": "66.67"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "1",
+            "basisPoints": 3333,
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "amount": "0.001",
+            "percent": "33.33"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "3",
+        "totalAmount": "0.003",
+        "currency": "KWD",
+        "month": "2026-11",
+        "scale": 3,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000018",
+          "10000000-0000-4000-8000-000000000019"
+        ],
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "minor": "2",
+            "amount": "0.002",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "remainderNumerator": "2",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "1",
+            "amount": "0.001",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1",
+            "colorIndex": 1,
+            "inOthers": false
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "2",
+            "amount": "0.002",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "startUnit": 0,
+            "endUnit": 666666666,
+            "widthUnits": 666666666,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "1",
+            "amount": "0.001",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "colorIndex": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH08",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000020",
+          "10000000-0000-4000-8000-000000000021",
+          "10000000-0000-4000-8000-000000000022",
+          "10000000-0000-4000-8000-000000000023",
+          "10000000-0000-4000-8000-000000000024",
+          "10000000-0000-4000-8000-000000000025"
+        ],
+        "totalMinor": "21000",
+        "totalAmount": "210.00",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "6000",
+            "amount": "60.00",
+            "basisPoints": 2857,
+            "percent": "28.57",
+            "remainderNumerator": "3000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "5000",
+            "amount": "50.00",
+            "basisPoints": 2381,
+            "percent": "23.81",
+            "remainderNumerator": "20000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "minor": "4000",
+            "amount": "40.00",
+            "basisPoints": 1905,
+            "percent": "19.05",
+            "remainderNumerator": "16000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "minor": "3000",
+            "amount": "30.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "12000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "minor": "2000",
+            "amount": "20.00",
+            "basisPoints": 952,
+            "percent": "9.52",
+            "remainderNumerator": "8000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "minor": "1000",
+            "amount": "10.00",
+            "basisPoints": 476,
+            "percent": "4.76",
+            "remainderNumerator": "4000"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "6000",
+            "basisPoints": 2857,
+            "startUnit": 0,
+            "endUnit": 285714285,
+            "widthUnits": 285714285,
+            "zeroWidth": false,
+            "amount": "60.00",
+            "percent": "28.57"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "5000",
+            "basisPoints": 2381,
+            "startUnit": 285714285,
+            "endUnit": 523809523,
+            "widthUnits": 238095238,
+            "zeroWidth": false,
+            "amount": "50.00",
+            "percent": "23.81"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "4000",
+            "basisPoints": 1905,
+            "startUnit": 523809523,
+            "endUnit": 714285714,
+            "widthUnits": 190476191,
+            "zeroWidth": false,
+            "amount": "40.00",
+            "percent": "19.05"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "3000",
+            "basisPoints": 1429,
+            "startUnit": 714285714,
+            "endUnit": 857142857,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "30.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000005"
+            ],
+            "minor": "2000",
+            "basisPoints": 952,
+            "startUnit": 857142857,
+            "endUnit": 952380952,
+            "widthUnits": 95238095,
+            "zeroWidth": false,
+            "amount": "20.00",
+            "percent": "9.52"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000006"
+            ],
+            "minor": "1000",
+            "basisPoints": 476,
+            "startUnit": 952380952,
+            "endUnit": 1000000000,
+            "widthUnits": 47619048,
+            "zeroWidth": false,
+            "amount": "10.00",
+            "percent": "4.76"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "21000",
+        "totalAmount": "210.00",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000020",
+          "10000000-0000-4000-8000-000000000021",
+          "10000000-0000-4000-8000-000000000022",
+          "10000000-0000-4000-8000-000000000023",
+          "10000000-0000-4000-8000-000000000024",
+          "10000000-0000-4000-8000-000000000025"
+        ],
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "6000",
+            "amount": "60.00",
+            "basisPoints": 2857,
+            "percent": "28.57",
+            "remainderNumerator": "3000",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "minor": "5000",
+            "amount": "50.00",
+            "basisPoints": 2381,
+            "percent": "23.81",
+            "remainderNumerator": "20000",
+            "colorIndex": 1,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "name": "Категория C",
+            "label": "Категория C",
+            "minor": "4000",
+            "amount": "40.00",
+            "basisPoints": 1905,
+            "percent": "19.05",
+            "remainderNumerator": "16000",
+            "colorIndex": 2,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "name": "Категория D",
+            "label": "Категория D",
+            "minor": "3000",
+            "amount": "30.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "12000",
+            "colorIndex": 3,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "name": "Категория E",
+            "label": "Категория E",
+            "minor": "2000",
+            "amount": "20.00",
+            "basisPoints": 952,
+            "percent": "9.52",
+            "remainderNumerator": "8000",
+            "colorIndex": 4,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "name": "Категория F",
+            "label": "Категория F",
+            "minor": "1000",
+            "amount": "10.00",
+            "basisPoints": 476,
+            "percent": "4.76",
+            "remainderNumerator": "4000",
+            "colorIndex": 5,
+            "inOthers": false
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "6000",
+            "amount": "60.00",
+            "basisPoints": 2857,
+            "percent": "28.57",
+            "startUnit": 0,
+            "endUnit": 285714285,
+            "widthUnits": 285714285,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "5000",
+            "amount": "50.00",
+            "basisPoints": 2381,
+            "percent": "23.81",
+            "startUnit": 285714285,
+            "endUnit": 523809523,
+            "widthUnits": 238095238,
+            "zeroWidth": false,
+            "colorIndex": 1
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "name": "Категория C",
+            "label": "Категория C",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "4000",
+            "amount": "40.00",
+            "basisPoints": 1905,
+            "percent": "19.05",
+            "startUnit": 523809523,
+            "endUnit": 714285714,
+            "widthUnits": 190476191,
+            "zeroWidth": false,
+            "colorIndex": 2
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "name": "Категория D",
+            "label": "Категория D",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "3000",
+            "amount": "30.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "startUnit": 714285714,
+            "endUnit": 857142857,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "colorIndex": 3
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "name": "Категория E",
+            "label": "Категория E",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000005"
+            ],
+            "minor": "2000",
+            "amount": "20.00",
+            "basisPoints": 952,
+            "percent": "9.52",
+            "startUnit": 857142857,
+            "endUnit": 952380952,
+            "widthUnits": 95238095,
+            "zeroWidth": false,
+            "colorIndex": 4
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "name": "Категория F",
+            "label": "Категория F",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000006"
+            ],
+            "minor": "1000",
+            "amount": "10.00",
+            "basisPoints": 476,
+            "percent": "4.76",
+            "startUnit": 952380952,
+            "endUnit": 1000000000,
+            "widthUnits": 47619048,
+            "zeroWidth": false,
+            "colorIndex": 5
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH09",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000026",
+          "10000000-0000-4000-8000-000000000027",
+          "10000000-0000-4000-8000-000000000028",
+          "10000000-0000-4000-8000-000000000029",
+          "10000000-0000-4000-8000-000000000030",
+          "10000000-0000-4000-8000-000000000031",
+          "10000000-0000-4000-8000-000000000032"
+        ],
+        "totalMinor": "28000",
+        "totalAmount": "280.00",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "7000",
+            "amount": "70.00",
+            "basisPoints": 2500,
+            "percent": "25.00",
+            "remainderNumerator": "0"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "6000",
+            "amount": "60.00",
+            "basisPoints": 2143,
+            "percent": "21.43",
+            "remainderNumerator": "24000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "minor": "5000",
+            "amount": "50.00",
+            "basisPoints": 1786,
+            "percent": "17.86",
+            "remainderNumerator": "20000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "minor": "4000",
+            "amount": "40.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "16000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "minor": "3000",
+            "amount": "30.00",
+            "basisPoints": 1071,
+            "percent": "10.71",
+            "remainderNumerator": "12000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "minor": "2000",
+            "amount": "20.00",
+            "basisPoints": 714,
+            "percent": "7.14",
+            "remainderNumerator": "8000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000007",
+            "categoryId": "00000000-0000-4000-8000-000000000007",
+            "minor": "1000",
+            "amount": "10.00",
+            "basisPoints": 357,
+            "percent": "3.57",
+            "remainderNumerator": "4000"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "7000",
+            "basisPoints": 2500,
+            "startUnit": 0,
+            "endUnit": 250000000,
+            "widthUnits": 250000000,
+            "zeroWidth": false,
+            "amount": "70.00",
+            "percent": "25.00"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "6000",
+            "basisPoints": 2143,
+            "startUnit": 250000000,
+            "endUnit": 464285714,
+            "widthUnits": 214285714,
+            "zeroWidth": false,
+            "amount": "60.00",
+            "percent": "21.43"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "5000",
+            "basisPoints": 1786,
+            "startUnit": 464285714,
+            "endUnit": 642857142,
+            "widthUnits": 178571428,
+            "zeroWidth": false,
+            "amount": "50.00",
+            "percent": "17.86"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "4000",
+            "basisPoints": 1429,
+            "startUnit": 642857142,
+            "endUnit": 785714285,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "40.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000005"
+            ],
+            "minor": "3000",
+            "basisPoints": 1071,
+            "startUnit": 785714285,
+            "endUnit": 892857142,
+            "widthUnits": 107142857,
+            "zeroWidth": false,
+            "amount": "30.00",
+            "percent": "10.71"
+          },
+          {
+            "key": "~other",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000006",
+              "00000000-0000-4000-8000-000000000007"
+            ],
+            "minor": "3000",
+            "basisPoints": 1071,
+            "startUnit": 892857142,
+            "endUnit": 1000000000,
+            "widthUnits": 107142858,
+            "zeroWidth": false,
+            "amount": "30.00",
+            "percent": "10.71"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "28000",
+        "totalAmount": "280.00",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000026",
+          "10000000-0000-4000-8000-000000000027",
+          "10000000-0000-4000-8000-000000000028",
+          "10000000-0000-4000-8000-000000000029",
+          "10000000-0000-4000-8000-000000000030",
+          "10000000-0000-4000-8000-000000000031",
+          "10000000-0000-4000-8000-000000000032"
+        ],
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "7000",
+            "amount": "70.00",
+            "basisPoints": 2500,
+            "percent": "25.00",
+            "remainderNumerator": "0",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "minor": "6000",
+            "amount": "60.00",
+            "basisPoints": 2143,
+            "percent": "21.43",
+            "remainderNumerator": "24000",
+            "colorIndex": 1,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "name": "Категория C",
+            "label": "Категория C",
+            "minor": "5000",
+            "amount": "50.00",
+            "basisPoints": 1786,
+            "percent": "17.86",
+            "remainderNumerator": "20000",
+            "colorIndex": 2,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "name": "Категория D",
+            "label": "Категория D",
+            "minor": "4000",
+            "amount": "40.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "16000",
+            "colorIndex": 3,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "name": "Категория E",
+            "label": "Категория E",
+            "minor": "3000",
+            "amount": "30.00",
+            "basisPoints": 1071,
+            "percent": "10.71",
+            "remainderNumerator": "12000",
+            "colorIndex": 4,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "name": "Категория F",
+            "label": "Категория F",
+            "minor": "2000",
+            "amount": "20.00",
+            "basisPoints": 714,
+            "percent": "7.14",
+            "remainderNumerator": "8000",
+            "colorIndex": 5,
+            "inOthers": true
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000007",
+            "categoryId": "00000000-0000-4000-8000-000000000007",
+            "name": "Категория G",
+            "label": "Категория G",
+            "minor": "1000",
+            "amount": "10.00",
+            "basisPoints": 357,
+            "percent": "3.57",
+            "remainderNumerator": "4000",
+            "colorIndex": 5,
+            "inOthers": true
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "7000",
+            "amount": "70.00",
+            "basisPoints": 2500,
+            "percent": "25.00",
+            "startUnit": 0,
+            "endUnit": 250000000,
+            "widthUnits": 250000000,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "6000",
+            "amount": "60.00",
+            "basisPoints": 2143,
+            "percent": "21.43",
+            "startUnit": 250000000,
+            "endUnit": 464285714,
+            "widthUnits": 214285714,
+            "zeroWidth": false,
+            "colorIndex": 1
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "name": "Категория C",
+            "label": "Категория C",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "5000",
+            "amount": "50.00",
+            "basisPoints": 1786,
+            "percent": "17.86",
+            "startUnit": 464285714,
+            "endUnit": 642857142,
+            "widthUnits": 178571428,
+            "zeroWidth": false,
+            "colorIndex": 2
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "name": "Категория D",
+            "label": "Категория D",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "4000",
+            "amount": "40.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "startUnit": 642857142,
+            "endUnit": 785714285,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "colorIndex": 3
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "name": "Категория E",
+            "label": "Категория E",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000005"
+            ],
+            "minor": "3000",
+            "amount": "30.00",
+            "basisPoints": 1071,
+            "percent": "10.71",
+            "startUnit": 785714285,
+            "endUnit": 892857142,
+            "widthUnits": 107142857,
+            "zeroWidth": false,
+            "colorIndex": 4
+          },
+          {
+            "key": "~other",
+            "name": "Остальные",
+            "label": "Остальные",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000006",
+              "00000000-0000-4000-8000-000000000007"
+            ],
+            "minor": "3000",
+            "amount": "30.00",
+            "basisPoints": 1071,
+            "percent": "10.71",
+            "startUnit": 892857142,
+            "endUnit": 1000000000,
+            "widthUnits": 107142858,
+            "zeroWidth": false,
+            "colorIndex": 5
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH10",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000033",
+          "10000000-0000-4000-8000-000000000034",
+          "10000000-0000-4000-8000-000000000035",
+          "10000000-0000-4000-8000-000000000036",
+          "10000000-0000-4000-8000-000000000037",
+          "10000000-0000-4000-8000-000000000038",
+          "10000000-0000-4000-8000-000000000039"
+        ],
+        "totalMinor": "700",
+        "totalAmount": "7.00",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000007",
+            "categoryId": "00000000-0000-4000-8000-000000000007",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "remainderNumerator": "400"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "100",
+            "basisPoints": 1429,
+            "startUnit": 0,
+            "endUnit": 142857142,
+            "widthUnits": 142857142,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "100",
+            "basisPoints": 1429,
+            "startUnit": 142857142,
+            "endUnit": 285714285,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "100",
+            "basisPoints": 1429,
+            "startUnit": 285714285,
+            "endUnit": 428571428,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "100",
+            "basisPoints": 1429,
+            "startUnit": 428571428,
+            "endUnit": 571428571,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000005"
+            ],
+            "minor": "100",
+            "basisPoints": 1428,
+            "startUnit": 571428571,
+            "endUnit": 714285714,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.28"
+          },
+          {
+            "key": "~other",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000006",
+              "00000000-0000-4000-8000-000000000007"
+            ],
+            "minor": "200",
+            "basisPoints": 2856,
+            "startUnit": 714285714,
+            "endUnit": 1000000000,
+            "widthUnits": 285714286,
+            "zeroWidth": false,
+            "amount": "2.00",
+            "percent": "28.56"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "700",
+        "totalAmount": "7.00",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000033",
+          "10000000-0000-4000-8000-000000000034",
+          "10000000-0000-4000-8000-000000000035",
+          "10000000-0000-4000-8000-000000000036",
+          "10000000-0000-4000-8000-000000000037",
+          "10000000-0000-4000-8000-000000000038",
+          "10000000-0000-4000-8000-000000000039"
+        ],
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400",
+            "colorIndex": 1,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "name": "Категория C",
+            "label": "Категория C",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400",
+            "colorIndex": 2,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "name": "Категория D",
+            "label": "Категория D",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400",
+            "colorIndex": 3,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "name": "Категория E",
+            "label": "Категория E",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "remainderNumerator": "400",
+            "colorIndex": 4,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "name": "Категория F",
+            "label": "Категория F",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "remainderNumerator": "400",
+            "colorIndex": 5,
+            "inOthers": true
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000007",
+            "categoryId": "00000000-0000-4000-8000-000000000007",
+            "name": "Категория G",
+            "label": "Категория G",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "remainderNumerator": "400",
+            "colorIndex": 5,
+            "inOthers": true
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "startUnit": 0,
+            "endUnit": 142857142,
+            "widthUnits": 142857142,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "startUnit": 142857142,
+            "endUnit": 285714285,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "colorIndex": 1
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "name": "Категория C",
+            "label": "Категория C",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "startUnit": 285714285,
+            "endUnit": 428571428,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "colorIndex": 2
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "name": "Категория D",
+            "label": "Категория D",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "startUnit": 428571428,
+            "endUnit": 571428571,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "colorIndex": 3
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "name": "Категория E",
+            "label": "Категория E",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000005"
+            ],
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "startUnit": 571428571,
+            "endUnit": 714285714,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "colorIndex": 4
+          },
+          {
+            "key": "~other",
+            "name": "Остальные",
+            "label": "Остальные",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000006",
+              "00000000-0000-4000-8000-000000000007"
+            ],
+            "minor": "200",
+            "amount": "2.00",
+            "basisPoints": 2856,
+            "percent": "28.56",
+            "startUnit": 714285714,
+            "endUnit": 1000000000,
+            "widthUnits": 285714286,
+            "zeroWidth": false,
+            "colorIndex": 5
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH11",
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000040",
+          "10000000-0000-4000-8000-000000000041",
+          "10000000-0000-4000-8000-000000000042",
+          "10000000-0000-4000-8000-000000000043"
+        ],
+        "totalMinor": "200000000000000000000000000",
+        "totalAmount": "2000000000000000000000000.00",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "199999999999999999999990000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "199999999999999999999990000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 0,
+            "percent": "0.00",
+            "remainderNumerator": "10000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 0,
+            "percent": "0.00",
+            "remainderNumerator": "10000"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "99999999999999999999999999",
+            "basisPoints": 5000,
+            "startUnit": 0,
+            "endUnit": 499999999,
+            "widthUnits": 499999999,
+            "zeroWidth": false,
+            "amount": "999999999999999999999999.99",
+            "percent": "50.00"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "99999999999999999999999999",
+            "basisPoints": 5000,
+            "startUnit": 499999999,
+            "endUnit": 999999999,
+            "widthUnits": 500000000,
+            "zeroWidth": false,
+            "amount": "999999999999999999999999.99",
+            "percent": "50.00"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "1",
+            "basisPoints": 0,
+            "startUnit": 999999999,
+            "endUnit": 999999999,
+            "widthUnits": 0,
+            "zeroWidth": true,
+            "amount": "0.01",
+            "percent": "0.00"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "1",
+            "basisPoints": 0,
+            "startUnit": 999999999,
+            "endUnit": 1000000000,
+            "widthUnits": 1,
+            "zeroWidth": false,
+            "amount": "0.01",
+            "percent": "0.00"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ready",
+        "chartEmpty": false,
+        "totalMinor": "200000000000000000000000000",
+        "totalAmount": "2000000000000000000000000.00",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000040",
+          "10000000-0000-4000-8000-000000000041",
+          "10000000-0000-4000-8000-000000000042",
+          "10000000-0000-4000-8000-000000000043"
+        ],
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "199999999999999999999990000",
+            "colorIndex": 0,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "199999999999999999999990000",
+            "colorIndex": 1,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "name": "Категория C",
+            "label": "Категория C",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 0,
+            "percent": "0.00",
+            "remainderNumerator": "10000",
+            "colorIndex": 2,
+            "inOthers": false
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "name": "Категория D",
+            "label": "Категория D",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 0,
+            "percent": "0.00",
+            "remainderNumerator": "10000",
+            "colorIndex": 3,
+            "inOthers": false
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "name": "Категория A",
+            "label": "Категория A",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "startUnit": 0,
+            "endUnit": 499999999,
+            "widthUnits": 499999999,
+            "zeroWidth": false,
+            "colorIndex": 0
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "name": "Категория B",
+            "label": "Категория B",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "startUnit": 499999999,
+            "endUnit": 999999999,
+            "widthUnits": 500000000,
+            "zeroWidth": false,
+            "colorIndex": 1
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "name": "Категория C",
+            "label": "Категория C",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 0,
+            "percent": "0.00",
+            "startUnit": 999999999,
+            "endUnit": 999999999,
+            "widthUnits": 0,
+            "zeroWidth": true,
+            "colorIndex": 2
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "name": "Категория D",
+            "label": "Категория D",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 0,
+            "percent": "0.00",
+            "startUnit": 999999999,
+            "endUnit": 1000000000,
+            "widthUnits": 1,
+            "zeroWidth": false,
+            "colorIndex": 3
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CH12",
+      "expected": {
+        "chartEmpty": true,
+        "includedExpenseIds": [],
+        "totalMinor": "0",
+        "totalAmount": "0.00",
+        "groups": [],
+        "sectors": []
+      },
+      "actual": {
+        "status": "empty",
+        "chartEmpty": true,
+        "totalMinor": "0",
+        "totalAmount": "0.00",
+        "currency": "KZT",
+        "month": "2026-11",
+        "scale": 2,
+        "includedExpenseIds": [],
+        "groups": [],
+        "sectors": []
+      },
+      "passed": true
+    },
+    {
+      "id": "CH-ERR01",
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      },
+      "actual": {
+        "status": "unavailable",
+        "chartStatus": "unavailable",
+        "message": "Не удалось построить график",
+        "noPartialTotals": true
+      },
+      "passed": true
+    },
+    {
+      "id": "CH-ERR02",
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      },
+      "actual": {
+        "status": "unavailable",
+        "chartStatus": "unavailable",
+        "message": "Не удалось построить график",
+        "noPartialTotals": true
+      },
+      "passed": true
+    },
+    {
+      "id": "CH-ERR03",
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      },
+      "actual": {
+        "status": "unavailable",
+        "chartStatus": "unavailable",
+        "message": "Не удалось построить график",
+        "noPartialTotals": true
+      },
+      "passed": true
+    },
+    {
+      "id": "CH-ERR04",
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      },
+      "actual": {
+        "status": "unavailable",
+        "chartStatus": "unavailable",
+        "message": "Не удалось построить график",
+        "noPartialTotals": true
+      },
+      "passed": true
+    },
+    {
+      "id": "CH-ERR05",
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      },
+      "actual": {
+        "status": "unavailable",
+        "chartStatus": "unavailable",
+        "message": "Не удалось построить график",
+        "noPartialTotals": true
+      },
+      "passed": true
+    },
+    {
+      "id": "CH-ERR06",
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      },
+      "actual": {
+        "status": "unavailable",
+        "chartStatus": "unavailable",
+        "message": "Не удалось построить график",
+        "noPartialTotals": true
+      },
+      "passed": true
+    },
+    {
+      "id": "NO-BIGINT",
+      "expected": "unavailable",
+      "actual": "unavailable",
+      "passed": true
+    }
+  ]
+}

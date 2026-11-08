@@ -1,0 +1,5 @@
+{
+  "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeFixtures.java": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+  "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeReadTest.java": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+  "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeWriteTest.java": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903"
+}

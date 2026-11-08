@@ -1,0 +1,61 @@
+{
+  "build": {
+    "apk": "ladno-0.4.0-debug.apk",
+    "sha256": "f54733b034399ec0b147d0fa7e9b5b82a8589034ca5c8692b63c905a2aa37cd3",
+    "bytes": 68393973,
+    "stage": "C:\\Users\\04068\\.cache\\ladno-android\\work\\ladno-f999b1c52ece385b",
+    "sourceFingerprint": "f999b1c52ece385b981f9cd459b9d0d23e89e9d1bf4e56ac5371fbd7c5b423af",
+    "versionName": "0.4.0",
+    "versionCode": 4,
+    "tasks": [
+      ":app:assembleDebug",
+      ":app:testDebugUnitTest",
+      ":app:lintDebug",
+      ":app:assembleDebugAndroidTest"
+    ],
+    "builtAtUtc": "2026-11-04T08:29:19.805178+00:00"
+  },
+  "unit": {
+    "tests": 117,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "unitPassed": 116,
+  "lint": {
+    "Error": 0,
+    "Fatal": 0,
+    "Warning": 4
+  },
+  "sourceFilesChecked": 106,
+  "currentSourceMismatches": [],
+  "privateReceiptIdentifierFiles": [],
+  "privateFilesPackaged": [],
+  "ofdClassesInDex": true,
+  "liveDefaultClientPassed": true,
+  "liveInputRemoved": true,
+  "noLiveLedgerWrite": true,
+  "liveSafeResults": [
+    {
+      "sample": 4,
+      "amount": "4395.00",
+      "currency": "KZT",
+      "date": "2026-11-03",
+      "kind": "expense",
+      "confidence": "high",
+      "reasons": [],
+      "verifiedIdentityAndFinalSale": true
+    },
+    {
+      "sample": 5,
+      "amount": "3547.00",
+      "currency": "KZT",
+      "date": "2026-11-03",
+      "kind": "expense",
+      "confidence": "high",
+      "reasons": [],
+      "verifiedIdentityAndFinalSale": true
+    }
+  ],
+  "nativePassed": true
+}

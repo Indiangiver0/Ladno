@@ -1,0 +1,122 @@
+{
+  "startedAtUtc": "2026-11-03T20:51:55.384302+00:00",
+  "scope": "synthetic native API only",
+  "serial": "emulator-5580",
+  "avd": "Ladno_QA_API30",
+  "commands": [
+    {
+      "args": [
+        "emu",
+        "avd",
+        "name"
+      ],
+      "exitCode": 0,
+      "stdout": "Ladno_QA_API30\r\r\nOK\r\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "pm",
+        "path",
+        "com.ladno.finance"
+      ],
+      "exitCode": 0,
+      "stdout": "package:/data/app/~~L1XRcX0DQWXSW49Z3KoRmQ==/com.ladno.finance-sfdJrz_6gkb8miX0CxO2CA==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "sha256sum",
+        "/data/app/~~L1XRcX0DQWXSW49Z3KoRmQ==/com.ladno.finance-sfdJrz_6gkb8miX0CxO2CA==/base.apk"
+      ],
+      "exitCode": 0,
+      "stdout": "a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76  /data/app/~~L1XRcX0DQWXSW49Z3KoRmQ==/com.ladno.finance-sfdJrz_6gkb8miX0CxO2CA==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "pm",
+        "path",
+        "com.ladno.finance.test"
+      ],
+      "exitCode": 0,
+      "stdout": "package:/data/app/~~JRMhhYWAy37bzO0rG6TElA==/com.ladno.finance.test-DnuI26FPC8gEB5M7EVyBLA==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "sha256sum",
+        "/data/app/~~JRMhhYWAy37bzO0rG6TElA==/com.ladno.finance.test-DnuI26FPC8gEB5M7EVyBLA==/base.apk"
+      ],
+      "exitCode": 0,
+      "stdout": "9b0d2a6cf59f20a283429fba995db133edd171de5d8ef682f9cda460392606d0  /data/app/~~JRMhhYWAy37bzO0rG6TElA==/com.ladno.finance.test-DnuI26FPC8gEB5M7EVyBLA==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.ladno.finance.QrImportRuntimeTest",
+        "-e",
+        "ladnoSyntheticAvd",
+        "Ladno_QA_API30",
+        "com.ladno.finance.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "exitCode": 0,
+      "stdout": "INSTRUMENTATION_STATUS: class=com.ladno.finance.QrImportRuntimeTest\r\nINSTRUMENTATION_STATUS: current=1\r\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\r\nINSTRUMENTATION_STATUS: numtests=1\r\nINSTRUMENTATION_STATUS: stream=\r\ncom.ladno.finance.QrImportRuntimeTest:\r\nINSTRUMENTATION_STATUS: test=registeredSyntheticQrJobsAndNotificationFields\r\nINSTRUMENTATION_STATUS_CODE: 1\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / first/registered completion: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / first/owned input cleaned: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / first/media slot released: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / first/camera output released: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / first registered job status: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / first outcome review: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / first outcome month: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / first outcome currency: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / first no transaction ID: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / native amount exact: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / native date from QR: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / native kind unknown: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / native confidence uncertain: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / native reason unknown kind: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / no automatic ledger record: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / raw synthetic QR not persisted: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / same QR new file/registered completion: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / same QR new file/owned input cleaned: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / same QR new file/media slot released: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / same QR new file/camera output released: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / repeat status: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / repeat candidate preserved: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / ignored repeated QR/registered completion: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / ignored repeated QR/owned input cleaned: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / ignored repeated QR/media slot released: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / ignored repeated QR/camera output released: PASS\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: stream=LadnoQA app013-qr-runtime / ignored repeat stays ignored: FAIL\r\n\r\nINSTRUMENTATION_STATUS_CODE: 2\r\nINSTRUMENTATION_STATUS: class=com.ladno.finance.QrImportRuntimeTest\r\nINSTRUMENTATION_STATUS: current=1\r\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\r\nINSTRUMENTATION_STATUS: numtests=1\r\nINSTRUMENTATION_STATUS: stack=org.junit.ComparisonFailure: ignored repeat stays ignored expected:<[ignored]> but was:<[duplicate]>\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\r\n\tat com.ladno.finance.QrImportRuntimeTest.registeredSyntheticQrJobsAndNotificationFields(QrImportRuntimeTest.java:66)\r\n\r\nINSTRUMENTATION_STATUS: stream=\r\nError in registeredSyntheticQrJobsAndNotificationFields(com.ladno.finance.QrImportRuntimeTest):\r\norg.junit.ComparisonFailure: ignored repeat stays ignored expected:<[ignored]> but was:<[duplicate]>\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\r\n\tat com.ladno.finance.QrImportRuntimeTest.registeredSyntheticQrJobsAndNotificationFields(QrImportRuntimeTest.java:66)\r\n\r\nINSTRUMENTATION_STATUS: test=registeredSyntheticQrJobsAndNotificationFields\r\nINSTRUMENTATION_STATUS_CODE: -2\r\nINSTRUMENTATION_RESULT: stream=\r\n\r\nTime: 3.566\r\nThere was 1 failure:\r\n1) registeredSyntheticQrJobsAndNotificationFields(com.ladno.finance.QrImportRuntimeTest)\r\norg.junit.ComparisonFailure: ignored repeat stays ignored expected:<[ignored]> but was:<[duplicate]>\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\r\n\tat com.ladno.finance.QrImportRuntimeTest.registeredSyntheticQrJobsAndNotificationFields(QrImportRuntimeTest.java:66)\r\n\r\nFAILURES!!!\r\nTests run: 1,  Failures: 1\r\n\r\n\r\nINSTRUMENTATION_CODE: -1\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "exec-out",
+        "run-as",
+        "com.ladno.finance",
+        "cat",
+        "files/qa-android-scenario/app013-qr-runtime.json"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"app013-qr-runtime\",\n  \"startedAt\": \"2026-11-03T20:51:57.022Z\",\n  \"pid\": 2029,\n  \"apiLevel\": 30,\n  \"abis\": [\n    \"x86_64\",\n    \"x86\"\n  ],\n  \"package\": \"com.ladno.finance\",\n  \"data\": \"synthetic-only\",\n  \"checks\": [\n    {\n      \"id\": \"first\\/registered completion\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"first\\/owned input cleaned\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"first\\/media slot released\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"first\\/camera output released\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"first registered job status\",\n      \"expected\": \"completed\",\n      \"actual\": \"completed\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"first outcome review\",\n      \"expected\": \"needs_review\",\n      \"actual\": \"needs_review\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"first outcome month\",\n      \"expected\": \"2026-11\",\n      \"actual\": \"2026-11\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"first outcome currency\",\n      \"expected\": \"KZT\",\n      \"actual\": \"KZT\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"first no transaction ID\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"native amount exact\",\n      \"expected\": \"1234.50\",\n      \"actual\": \"1234.50\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"native date from QR\",\n      \"expected\": \"2026-11-04\",\n      \"actual\": \"2026-11-04\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"native kind unknown\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"native confidence uncertain\",\n      \"expected\": \"uncertain\",\n      \"actual\": \"uncertain\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"native reason unknown kind\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"no automatic ledger record\",\n      \"expected\": 2,\n      \"actual\": 2,\n      \"pass\": true\n    },\n    {\n      \"id\": \"raw synthetic QR not persisted\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"same QR new file\\/registered completion\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"same QR new file\\/owned input cleaned\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"same QR new file\\/media slot released\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"same QR new file\\/camera output released\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"repeat status\",\n      \"expected\": \"duplicate\",\n      \"actual\": \"duplicate\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"repeat candidate preserved\",\n      \"expected\": \"61e2de73-b7d6-4355-a0dd-14b36c143128\",\n      \"actual\": \"61e2de73-b7d6-4355-a0dd-14b36c143128\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"ignored repeated QR\\/registered completion\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"ignored repeated QR\\/owned input cleaned\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"ignored repeated QR\\/media slot released\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"ignored repeated QR\\/camera output released\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"ignored repeat stays ignored\",\n      \"expected\": \"ignored\",\n      \"actual\": \"duplicate\",\n      \"pass\": false\n    }\n  ],\n  \"observations\": [\n    {\n      \"id\": \"first\\/job\",\n      \"actual\": {\n        \"jobId\": \"42ced5ec-dd25-43cf-a4e9-61bea6d29be8\",\n        \"type\": \"scanCamera\",\n        \"status\": \"completed\",\n        \"error\": null,\n        \"outcome\": {\n          \"status\": \"needs_review\",\n          \"candidateId\": \"61e2de73-b7d6-4355-a0dd-14b36c143128\",\n          \"transactionId\": null,\n          \"month\": \"2026-11\",\n          \"currency\": \"KZT\"\n        }\n      }\n    },\n    {\n      \"id\": \"same QR new file\\/job\",\n      \"actual\": {\n        \"jobId\": \"311d421e-bfb9-460f-89c1-97fed951ac3a\",\n        \"type\": \"scanCamera\",\n        \"status\": \"completed\",\n        \"error\": null,\n        \"outcome\": {\n          \"status\": \"duplicate\",\n          \"candidateId\": \"61e2de73-b7d6-4355-a0dd-14b36c143128\",\n          \"transactionId\": null,\n          \"month\": \"2026-11\",\n          \"currency\": \"KZT\"\n        }\n      }\n    },\n    {\n      \"id\": \"ignored repeated QR\\/job\",\n      \"actual\": {\n        \"jobId\": \"73384318-5046-49f1-8452-d17a507d15ef\",\n        \"type\": \"scanCamera\",\n        \"status\": \"completed\",\n        \"error\": null,\n        \"outcome\": {\n          \"status\": \"duplicate\",\n          \"candidateId\": \"61e2de73-b7d6-4355-a0dd-14b36c143128\",\n          \"transactionId\": null,\n          \"month\": \"2026-11\",\n          \"currency\": \"KZT\"\n        }\n      }\n    }\n  ],\n  \"failure\": \"org.junit.ComparisonFailure: ignored repeat stays ignored expected:<[ignored]> but was:<[duplicate]>\",\n  \"finishedAt\": \"2026-11-03T20:52:00.568Z\"\n}",
+      "stderr": ""
+    }
+  ],
+  "uiExercised": false,
+  "build": {
+    "apk": "ladno-0.3.0-debug.apk",
+    "sha256": "a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76",
+    "bytes": 68393641,
+    "stage": "C:\\Users\\04068\\.cache\\ladno-android\\work\\ladno-f94a49fe3d6e7e66",
+    "sourceFingerprint": "f94a49fe3d6e7e668dd83364e031e0f090b499ba0bb05f347ae6c39d832e91a3",
+    "versionName": "0.3.0",
+    "versionCode": 3,
+    "tasks": [
+      ":app:assembleDebug",
+      ":app:testDebugUnitTest",
+      ":app:lintDebug",
+      ":app:assembleDebugAndroidTest"
+    ],
+    "builtAtUtc": "2026-11-03T20:50:56.811595+00:00"
+  },
+  "testApkSha256": "9b0d2a6cf59f20a283429fba995db133edd171de5d8ef682f9cda460392606d0",
+  "testSourceSha256": "0d167ed6c0b7a2c6034f28c356e4ca398bda4ef557acfb8395cbece695d0c686",
+  "runtimeChecks": 27,
+  "runtimeFailures": [
+    {
+      "id": "ignored repeat stays ignored",
+      "expected": "ignored",
+      "actual": "duplicate",
+      "pass": false
+    }
+  ],
+  "passed": false,
+  "error": "Native suite or recorded assertions failed",
+  "finishedAtUtc": "2026-11-03T20:52:01.776087+00:00"
+}

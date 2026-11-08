@@ -1,0 +1,28 @@
+{
+  "suite": "notification-os-revoked",
+  "startedAt": "2026-11-02T18:31:10.041Z",
+  "pid": 2880,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "actual OS access revoked",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "revoked access\/no records or pending imports during 3s",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ],
+  "observations": [],
+  "finishedAt": "2026-11-02T18:31:13.553Z"
+}

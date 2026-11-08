@@ -1,0 +1,3 @@
+package: com.ladno.finance
+permission: com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'

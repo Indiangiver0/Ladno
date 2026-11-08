@@ -1,0 +1,11 @@
+{
+  "app\\src\\main\\java\\com\\ladno\\finance\\core\\BankMessageParser.java": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+  "app\\src\\main\\java\\com\\ladno\\finance\\core\\ContractException.java": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+  "app\\src\\main\\java\\com\\ladno\\finance\\core\\ImportCandidate.java": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+  "app\\src\\main\\java\\com\\ladno\\finance\\core\\JsonChecks.java": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+  "app\\src\\main\\java\\com\\ladno\\finance\\core\\Money.java": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+  "app\\src\\main\\java\\com\\ladno\\finance\\core\\ParseSupport.java": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+  "app\\src\\main\\java\\com\\ladno\\finance\\core\\ReceiptParser.java": "c7290550715bf853d52304c4bf87700c4e14d734b46d0105d062580091527c43",
+  "fixtures/money-cases.json": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+  "org.json:json:20240303": "3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed"
+}

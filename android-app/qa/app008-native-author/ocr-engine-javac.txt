@@ -1,0 +1,7 @@
+warning: unknown enum constant Scope.LIBRARY
+  reason: class file for androidx.annotation.RestrictTo$Scope not found
+warning: unknown enum constant Scope.LIBRARY
+warning: unknown enum constant Scope.LIBRARY
+warning: unknown enum constant Scope.LIBRARY
+warning: unknown enum constant Scope.LIBRARY
+5 warnings

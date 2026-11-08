@@ -1,0 +1,160 @@
+{
+  "suite": "receipt-layout-runtime",
+  "startedAt": "2026-11-03T09:42:07.358Z",
+  "pid": 2305,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "real Tesseract initialized",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "original counterexample PNG unchanged",
+      "expected": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+      "actual": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/amount",
+      "expected": "754.32",
+      "actual": "754.32",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/completed-paid evidence",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "counterexample verifier retains alternative794.32",
+      "expected": "794.32",
+      "actual": "794.32",
+      "pass": true
+    },
+    {
+      "id": "counterexample disagreement disallows auto",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/amount",
+      "expected": "8765.43",
+      "actual": null,
+      "pass": false
+    }
+  ],
+  "observations": [
+    {
+      "id": "en-multiline-paid\/synthetic OCR",
+      "actual": {
+        "lines": [
+          "PAID",
+          "TOTAL",
+          "754.32 KZT",
+          "2026-11-03"
+        ],
+        "actualText": "PAID\nTOTAL\n754.32 KZT\n2026-11-03",
+        "meanConfidence": 94,
+        "parsed": {
+          "kind": "expense",
+          "amount": "754.32",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        },
+        "verificationText": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+        "verificationConfidence": 94,
+        "verificationFailed": false,
+        "verificationParsed": {
+          "kind": "expense",
+          "amount": "794.32",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        },
+        "primaryMillis": 465,
+        "verificationMillis": 455
+      }
+    },
+    {
+      "id": "ru-fiscal-card\/synthetic OCR",
+      "actual": {
+        "lines": [
+          "ФИСКАЛЬНЫЙ ЧЕК",
+          "ПРИХОД",
+          "ИТОГО",
+          "8765.43 KZT",
+          "Картой 8765.43 KZT",
+          "2026-11-03"
+        ],
+        "actualText": "ФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\n\nИТОГО\n\n8765.43 КАТ\n\nКартой 8765.43 KZT\n2026-11-03",
+        "meanConfidence": 88,
+        "parsed": {
+          "kind": "expense",
+          "amount": null,
+          "currency": null,
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "UNSUPPORTED_EVENT",
+            "AMOUNT_MISSING",
+            "CURRENCY_MISSING"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        },
+        "verificationText": "ФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\n\nИТОГО\n\n8765.43 KZT\n\nКартой 8765.43 КИТ\n2026-11-03",
+        "verificationConfidence": 92,
+        "verificationFailed": false,
+        "verificationParsed": {
+          "kind": "expense",
+          "amount": "8765.43",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "UNSUPPORTED_EVENT"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        },
+        "primaryMillis": 1506,
+        "verificationMillis": 296
+      }
+    }
+  ],
+  "failure": "java.lang.AssertionError: ru-fiscal-card\/amount expected:<8765.43> but was:<null>",
+  "finishedAt": "2026-11-03T09:42:11.983Z"
+}

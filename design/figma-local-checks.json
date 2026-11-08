@@ -1,0 +1,46 @@
+{
+  "task": "APP-001-DESIGN-VISUAL",
+  "version": "v1-partial",
+  "command": "node design/figma-check.js",
+  "checks": {
+    "pluginBodiesSyntax": 7,
+    "concatenatedStagesSyntax": 4,
+    "jsonManifest": "passed",
+    "uniqueComposedFrames": 5,
+    "desktopWidths": 4,
+    "mobileWidths": 1,
+    "reportedImageFillNodes": 0,
+    "blockedAnnotationsNotClaimedDone": true,
+    "fixtureD1Unchanged": true,
+    "fixtureOperations": 4,
+    "openingBalanceUnknown": true,
+    "SC01PreviewPNG": {
+      "width": 1440,
+      "height": 1120
+    }
+  },
+  "totalsFromSuccessfulFigmaWrites": {
+    "editableText": 238,
+    "instances": 36
+  },
+  "notVerified": [
+    "Figma rendering except SC-01 desktop",
+    "Figma application of pending stage 05",
+    "Prototype interactions",
+    "Application runtime",
+    "Independent QA",
+    "Court"
+  ],
+  "hashes": {
+    "figma-01-foundations.js": "4ee321487a05bcec90a6d47aeeef539df313d4e0574a2b92d3cad67b12e78fcf",
+    "figma-core.js": "3dea4fae7df711286c86cdc6de93c05441d4439c91c750861d16736166c3593f",
+    "figma-02-overview.js": "cd7f2a02abe7e07b45355e53d3f3af49923475a02b744f6d1a7648931b09be1f",
+    "figma-02a-layout-fix.js": "1033616a3bafd5998d2634fb6385e421eca6f523fa66d621fd10ed036bfd1a2d",
+    "figma-03-screens.js": "96690a16c3faec0ca0048dbee5dd462685d8cccb1f00d7d90fe7446617aa6164",
+    "figma-04-mobile.js": "553325880602568bbcebf4d689161639e086f58338a933ffa2f9ad7f625df581",
+    "figma-05-states-form.js": "4b98d1937659c4db8dc938dddc4c574231ec5d5272e7dc406313000b8c8823cf",
+    "figma-manifest.json": "724ed1b5da3d8076d0670a4020b1e1bc23104545c48a7f022eddbd3cfb9385d4",
+    "figma-evidence.json": "575ac5ea9227d4191eea7bd4c11261999995b51238b23a57d747407f823ffa96",
+    "previews/SC-01-desktop.png": "244e9159474a35e6687e92ac9669ca83564cdacde07b33ab0034dd588d9e8bd4"
+  }
+}

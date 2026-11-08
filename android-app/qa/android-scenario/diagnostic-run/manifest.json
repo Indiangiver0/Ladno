@@ -1,0 +1,17 @@
+[
+  {
+    "path": "diagnose.json",
+    "sha256": "deb70ac219e32d78372b5999e108ce1a26af6fcd48167491e350637adad2c752",
+    "bytes": 67650
+  },
+  {
+    "path": "pulled-notification-os-granted.json",
+    "sha256": "2f1cc3cdafe30a0879ef83568c6bb6ec5080f9cd9496aa2396ad58bc6e9e0110",
+    "bytes": 33921
+  },
+  {
+    "path": "test-notifications-osGrantedDelivery.json",
+    "sha256": "d87dd3568e37593727e9e2d46797f76d2641f642341fe23c9c6675ebb54858be",
+    "bytes": 3914
+  }
+]

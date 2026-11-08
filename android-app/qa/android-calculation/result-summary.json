@@ -1,0 +1,1417 @@
+{
+  "task": "APP-006",
+  "criterion": "N1",
+  "result": "PASS_in_executed_native_API_scope",
+  "executedBy": "/root via guarded dedicated-emulator orchestration",
+  "designedAndAnalyzedBy": "/root/android_qa_calculation",
+  "device": {
+    "serial": "emulator-5580",
+    "avd": "Ladno_QA_API30",
+    "pid": 25028,
+    "bootSeconds": 44,
+    "hostSettingsChanged": false,
+    "release": "11",
+    "api": "30",
+    "abi": "x86_64"
+  },
+  "writeAssertions": 166,
+  "readAssertions": 96,
+  "totalRuntimeAssertions": 262,
+  "writePID": 2343,
+  "readPID": 2388,
+  "distinctPID": true,
+  "appAPKsha256": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+  "testAPKsha256": "94c418df927a16256aba740d733de8fa6afab56da0ade12b674ea05911cda334",
+  "sourceFingerprint": "902e416a60e02ff092b8dc43f176c421de2d02660c6c0116f457508386c770d7",
+  "schemaSha256": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+  "ledgerStoreSha256": "bf58b0d8f6a9a4b6abba103a4fd050aa66e632cb5d04fff3a7041e530f70fdba",
+  "bundledSchemaSha256": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+  "testSources": {
+    "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeFixtures.java": {
+      "ready": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+      "current": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+      "buildManifest": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+      "staged": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b"
+    },
+    "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeReadTest.java": {
+      "ready": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+      "current": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+      "buildManifest": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+      "staged": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36"
+    },
+    "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeWriteTest.java": {
+      "ready": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903",
+      "current": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903",
+      "buildManifest": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903",
+      "staged": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903"
+    }
+  },
+  "evidenceSha256": {
+    "test-write.json": "d09f721960f982c9970e44aeeda3f54f99015355bb6bad1a69bd33a812cf6b35",
+    "test-read.json": "5bb2a87a2f864e6b7cf1093a96bc84a6a055ce58bdc89de6249764de523ec628",
+    "ledger-control.json": "4dbfcdf371b68ffbec58dd88e43af5f338267bc76ec1724a2c28c3868e0a572d",
+    "pulled-qa-ledger-write.json": "16976b3df90190a80e579fa0d423ea7f25b90bbb33db9635b6b8940ea565dd2d",
+    "pulled-qa-ledger-read.json": "d5d8fc597bf069151c9dbb09f0744345a34dda920a199f907654f0053fd0e85d",
+    "install.json": "62a90f58e849440926146400490ef2171b084815e2746744ba0935461ae68eab",
+    "stop.json": "6c0098d7484c844bed1cf559f650bf8c8f35a44f5f176e52a370ade9d42f126d",
+    "emulator-state.json": "745166f453bcaa99e537e4cdd56d9162cc6fe5933e797ce5b9dd2faf317cb348"
+  },
+  "analysisCheckCount": 337,
+  "analysisChecks": [
+    {
+      "id": "write/completed",
+      "pass": true
+    },
+    {
+      "id": "write/count",
+      "pass": true
+    },
+    {
+      "id": "write/APIABI",
+      "pass": true
+    },
+    {
+      "id": "write/uniqueIDs",
+      "pass": true
+    },
+    {
+      "id": "write/fresh/setup",
+      "pass": true
+    },
+    {
+      "id": "write/fresh/records",
+      "pass": true
+    },
+    {
+      "id": "write/fresh/categories",
+      "pass": true
+    },
+    {
+      "id": "write/fresh/imports",
+      "pass": true
+    },
+    {
+      "id": "write/fresh/currency",
+      "pass": true
+    },
+    {
+      "id": "write/setup/required",
+      "pass": true
+    },
+    {
+      "id": "write/setup/zero/month",
+      "pass": true
+    },
+    {
+      "id": "write/setup/zero/currency",
+      "pass": true
+    },
+    {
+      "id": "write/setup/zero/income",
+      "pass": true
+    },
+    {
+      "id": "write/setup/zero/expense",
+      "pass": true
+    },
+    {
+      "id": "write/setup/zero/net",
+      "pass": true
+    },
+    {
+      "id": "write/setup/zero/records",
+      "pass": true
+    },
+    {
+      "id": "write/setup/zero/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/manual/canonical",
+      "pass": true
+    },
+    {
+      "id": "write/manual/nullCategory",
+      "pass": true
+    },
+    {
+      "id": "write/manual/exact/month",
+      "pass": true
+    },
+    {
+      "id": "write/manual/exact/currency",
+      "pass": true
+    },
+    {
+      "id": "write/manual/exact/income",
+      "pass": true
+    },
+    {
+      "id": "write/manual/exact/expense",
+      "pass": true
+    },
+    {
+      "id": "write/manual/exact/net",
+      "pass": true
+    },
+    {
+      "id": "write/manual/exact/records",
+      "pass": true
+    },
+    {
+      "id": "write/manual/exact/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/currency/USD/month",
+      "pass": true
+    },
+    {
+      "id": "write/currency/USD/currency",
+      "pass": true
+    },
+    {
+      "id": "write/currency/USD/income",
+      "pass": true
+    },
+    {
+      "id": "write/currency/USD/expense",
+      "pass": true
+    },
+    {
+      "id": "write/currency/USD/net",
+      "pass": true
+    },
+    {
+      "id": "write/currency/USD/records",
+      "pass": true
+    },
+    {
+      "id": "write/currency/USD/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/currency/KZTSeparate/month",
+      "pass": true
+    },
+    {
+      "id": "write/currency/KZTSeparate/currency",
+      "pass": true
+    },
+    {
+      "id": "write/currency/KZTSeparate/income",
+      "pass": true
+    },
+    {
+      "id": "write/currency/KZTSeparate/expense",
+      "pass": true
+    },
+    {
+      "id": "write/currency/KZTSeparate/net",
+      "pass": true
+    },
+    {
+      "id": "write/currency/KZTSeparate/records",
+      "pass": true
+    },
+    {
+      "id": "write/currency/KZTSeparate/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/amount/0",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/amount/-1",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/amount/+1",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/amount/01.00",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/amount/1e2",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/amount/1.200",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/amount/1000000000000000000000000.00",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/date",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/categoryKind",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/noPartialWrites/month",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/noPartialWrites/currency",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/noPartialWrites/income",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/noPartialWrites/expense",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/noPartialWrites/net",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/noPartialWrites/records",
+      "pass": true
+    },
+    {
+      "id": "write/invalid/noPartialWrites/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/category/assignSameID",
+      "pass": true
+    },
+    {
+      "id": "write/category/assignRevision",
+      "pass": true
+    },
+    {
+      "id": "write/cas/staleTransaction",
+      "pass": true
+    },
+    {
+      "id": "write/cas/unchangedAmount",
+      "pass": true
+    },
+    {
+      "id": "write/category/kindInUse",
+      "pass": true
+    },
+    {
+      "id": "write/category/deleteKeepsA",
+      "pass": true
+    },
+    {
+      "id": "write/category/deleteKeepsB",
+      "pass": true
+    },
+    {
+      "id": "write/category/deleteBRevision",
+      "pass": true
+    },
+    {
+      "id": "write/category/noDoubleCount/month",
+      "pass": true
+    },
+    {
+      "id": "write/category/noDoubleCount/currency",
+      "pass": true
+    },
+    {
+      "id": "write/category/noDoubleCount/income",
+      "pass": true
+    },
+    {
+      "id": "write/category/noDoubleCount/expense",
+      "pass": true
+    },
+    {
+      "id": "write/category/noDoubleCount/net",
+      "pass": true
+    },
+    {
+      "id": "write/category/noDoubleCount/records",
+      "pass": true
+    },
+    {
+      "id": "write/category/noDoubleCount/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/October/month",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/October/currency",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/October/income",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/October/expense",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/October/net",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/October/records",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/October/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/November/month",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/November/currency",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/November/income",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/November/expense",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/November/net",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/November/records",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/November/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/invalidAtomic",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/retainedDate",
+      "pass": true
+    },
+    {
+      "id": "write/dateEdit/retainedRevision",
+      "pass": true
+    },
+    {
+      "id": "write/precision/above2pow53/month",
+      "pass": true
+    },
+    {
+      "id": "write/precision/above2pow53/currency",
+      "pass": true
+    },
+    {
+      "id": "write/precision/above2pow53/income",
+      "pass": true
+    },
+    {
+      "id": "write/precision/above2pow53/expense",
+      "pass": true
+    },
+    {
+      "id": "write/precision/above2pow53/net",
+      "pass": true
+    },
+    {
+      "id": "write/precision/above2pow53/records",
+      "pass": true
+    },
+    {
+      "id": "write/precision/above2pow53/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/precision/aggregate25Digits/month",
+      "pass": true
+    },
+    {
+      "id": "write/precision/aggregate25Digits/currency",
+      "pass": true
+    },
+    {
+      "id": "write/precision/aggregate25Digits/income",
+      "pass": true
+    },
+    {
+      "id": "write/precision/aggregate25Digits/expense",
+      "pass": true
+    },
+    {
+      "id": "write/precision/aggregate25Digits/net",
+      "pass": true
+    },
+    {
+      "id": "write/precision/aggregate25Digits/records",
+      "pass": true
+    },
+    {
+      "id": "write/precision/aggregate25Digits/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/date/terminalYear/month",
+      "pass": true
+    },
+    {
+      "id": "write/date/terminalYear/currency",
+      "pass": true
+    },
+    {
+      "id": "write/date/terminalYear/income",
+      "pass": true
+    },
+    {
+      "id": "write/date/terminalYear/expense",
+      "pass": true
+    },
+    {
+      "id": "write/date/terminalYear/net",
+      "pass": true
+    },
+    {
+      "id": "write/date/terminalYear/records",
+      "pass": true
+    },
+    {
+      "id": "write/date/terminalYear/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/scale/JPYFraction",
+      "pass": true
+    },
+    {
+      "id": "write/scale/JPY/month",
+      "pass": true
+    },
+    {
+      "id": "write/scale/JPY/currency",
+      "pass": true
+    },
+    {
+      "id": "write/scale/JPY/income",
+      "pass": true
+    },
+    {
+      "id": "write/scale/JPY/expense",
+      "pass": true
+    },
+    {
+      "id": "write/scale/JPY/net",
+      "pass": true
+    },
+    {
+      "id": "write/scale/JPY/records",
+      "pass": true
+    },
+    {
+      "id": "write/scale/JPY/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/scale/KWD/month",
+      "pass": true
+    },
+    {
+      "id": "write/scale/KWD/currency",
+      "pass": true
+    },
+    {
+      "id": "write/scale/KWD/income",
+      "pass": true
+    },
+    {
+      "id": "write/scale/KWD/expense",
+      "pass": true
+    },
+    {
+      "id": "write/scale/KWD/net",
+      "pass": true
+    },
+    {
+      "id": "write/scale/KWD/records",
+      "pass": true
+    },
+    {
+      "id": "write/scale/KWD/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/ingest/autoOutcome",
+      "pass": true
+    },
+    {
+      "id": "write/ingest/autoSource",
+      "pass": true
+    },
+    {
+      "id": "write/identity/strongOutcome",
+      "pass": true
+    },
+    {
+      "id": "write/identity/strongSameID",
+      "pass": true
+    },
+    {
+      "id": "write/identity/noDuplicate/month",
+      "pass": true
+    },
+    {
+      "id": "write/identity/noDuplicate/currency",
+      "pass": true
+    },
+    {
+      "id": "write/identity/noDuplicate/income",
+      "pass": true
+    },
+    {
+      "id": "write/identity/noDuplicate/expense",
+      "pass": true
+    },
+    {
+      "id": "write/identity/noDuplicate/net",
+      "pass": true
+    },
+    {
+      "id": "write/identity/noDuplicate/records",
+      "pass": true
+    },
+    {
+      "id": "write/identity/noDuplicate/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/replay/outcome",
+      "pass": true
+    },
+    {
+      "id": "write/replay/preservesEdit",
+      "pass": true
+    },
+    {
+      "id": "write/replay/preservesID",
+      "pass": true
+    },
+    {
+      "id": "write/revision/review",
+      "pass": true
+    },
+    {
+      "id": "write/revision/match",
+      "pass": true
+    },
+    {
+      "id": "write/weak/review",
+      "pass": true
+    },
+    {
+      "id": "write/weak/distinctNeedsConfirmation",
+      "pass": true
+    },
+    {
+      "id": "write/review/linkStatus",
+      "pass": true
+    },
+    {
+      "id": "write/review/staleResolved",
+      "pass": true
+    },
+    {
+      "id": "write/review/distinctStatus",
+      "pass": true
+    },
+    {
+      "id": "write/review/distinctNewID",
+      "pass": true
+    },
+    {
+      "id": "write/review/ignoreStatus",
+      "pass": true
+    },
+    {
+      "id": "write/review/ignoreNoRecord",
+      "pass": true
+    },
+    {
+      "id": "write/review/postStatus",
+      "pass": true
+    },
+    {
+      "id": "write/identity/uncertainReview",
+      "pass": true
+    },
+    {
+      "id": "write/identity/uncertainReason",
+      "pass": true
+    },
+    {
+      "id": "write/review/unpostedExcluded/month",
+      "pass": true
+    },
+    {
+      "id": "write/review/unpostedExcluded/currency",
+      "pass": true
+    },
+    {
+      "id": "write/review/unpostedExcluded/income",
+      "pass": true
+    },
+    {
+      "id": "write/review/unpostedExcluded/expense",
+      "pass": true
+    },
+    {
+      "id": "write/review/unpostedExcluded/net",
+      "pass": true
+    },
+    {
+      "id": "write/review/unpostedExcluded/records",
+      "pass": true
+    },
+    {
+      "id": "write/review/unpostedExcluded/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/source/notSelected",
+      "pass": true
+    },
+    {
+      "id": "write/source/noPartialImport",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/replayDuplicate",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/noResurrection",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/excluded/month",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/excluded/currency",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/excluded/income",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/excluded/expense",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/excluded/net",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/excluded/records",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/excluded/amountType",
+      "pass": true
+    },
+    {
+      "id": "write/tombstone/noVisibleID",
+      "pass": true
+    },
+    {
+      "id": "write/wrapper",
+      "pass": true
+    },
+    {
+      "id": "write/execution",
+      "pass": true
+    },
+    {
+      "id": "write/streamMatchesAssertions",
+      "pass": true
+    },
+    {
+      "id": "write/actualCommand",
+      "pass": true
+    },
+    {
+      "id": "read/completed",
+      "pass": true
+    },
+    {
+      "id": "read/count",
+      "pass": true
+    },
+    {
+      "id": "read/APIABI",
+      "pass": true
+    },
+    {
+      "id": "read/uniqueIDs",
+      "pass": true
+    },
+    {
+      "id": "read/restart/newPID",
+      "pass": true
+    },
+    {
+      "id": "read/restart/initialized",
+      "pass": true
+    },
+    {
+      "id": "read/restart/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/zone",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/KZT/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/KZT/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/KZT/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/KZT/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/KZT/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/KZT/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/KZT/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/USD/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/USD/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/USD/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/USD/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/USD/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/USD/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-10/USD/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-11/KZT/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-11/KZT/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-11/KZT/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-11/KZT/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-11/KZT/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-11/KZT/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-11/KZT/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-09/KZT/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-09/KZT/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-09/KZT/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-09/KZT/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-09/KZT/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-09/KZT/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-09/KZT/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-08/KZT/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-08/KZT/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-08/KZT/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-08/KZT/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-08/KZT/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-08/KZT/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-08/KZT/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/JPY/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/JPY/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/JPY/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/JPY/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/JPY/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/JPY/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/JPY/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/KWD/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/KWD/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/KWD/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/KWD/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/KWD/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/KWD/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-07/KWD/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/restart/9999-12/KZT/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/9999-12/KZT/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/9999-12/KZT/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/9999-12/KZT/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/9999-12/KZT/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/9999-12/KZT/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/9999-12/KZT/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-06/KZT/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-06/KZT/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-06/KZT/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-06/KZT/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-06/KZT/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-06/KZT/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/2026-06/KZT/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/restart/movedRevision",
+      "pass": true
+    },
+    {
+      "id": "read/restart/movedAmount",
+      "pass": true
+    },
+    {
+      "id": "read/restart/movedDate",
+      "pass": true
+    },
+    {
+      "id": "read/restart/movedNote",
+      "pass": true
+    },
+    {
+      "id": "read/restart/movedCategory",
+      "pass": true
+    },
+    {
+      "id": "read/restart/categoryDeletedRecordKept",
+      "pass": true
+    },
+    {
+      "id": "read/restart/categoryCount",
+      "pass": true
+    },
+    {
+      "id": "read/restart/categoryIdentity",
+      "pass": true
+    },
+    {
+      "id": "read/restart/categoryName",
+      "pass": true
+    },
+    {
+      "id": "read/restart/selectedSources",
+      "pass": true
+    },
+    {
+      "id": "read/restart/selectedBank",
+      "pass": true
+    },
+    {
+      "id": "read/restart/pendingRevision",
+      "pass": true
+    },
+    {
+      "id": "read/restart/pendingIdentity",
+      "pass": true
+    },
+    {
+      "id": "read/restart/pendingCount",
+      "pass": true
+    },
+    {
+      "id": "read/restart/distinctRecord",
+      "pass": true
+    },
+    {
+      "id": "read/restart/explicitPostRecord",
+      "pass": true
+    },
+    {
+      "id": "read/restart/tombstoneHidden",
+      "pass": true
+    },
+    {
+      "id": "read/restart/exactReplayOutcome",
+      "pass": true
+    },
+    {
+      "id": "read/restart/tombstoneNotResurrected",
+      "pass": true
+    },
+    {
+      "id": "read/restart/ignoredReplayOutcome",
+      "pass": true
+    },
+    {
+      "id": "read/restart/ignoredStatus",
+      "pass": true
+    },
+    {
+      "id": "read/restart/ignoredNoRecord",
+      "pass": true
+    },
+    {
+      "id": "read/restart/afterReplays/month",
+      "pass": true
+    },
+    {
+      "id": "read/restart/afterReplays/currency",
+      "pass": true
+    },
+    {
+      "id": "read/restart/afterReplays/income",
+      "pass": true
+    },
+    {
+      "id": "read/restart/afterReplays/expense",
+      "pass": true
+    },
+    {
+      "id": "read/restart/afterReplays/net",
+      "pass": true
+    },
+    {
+      "id": "read/restart/afterReplays/records",
+      "pass": true
+    },
+    {
+      "id": "read/restart/afterReplays/amountType",
+      "pass": true
+    },
+    {
+      "id": "read/wrapper",
+      "pass": true
+    },
+    {
+      "id": "read/execution",
+      "pass": true
+    },
+    {
+      "id": "read/streamMatchesAssertions",
+      "pass": true
+    },
+    {
+      "id": "read/actualCommand",
+      "pass": true
+    },
+    {
+      "id": "freshVsRestartPID",
+      "pass": true
+    },
+    {
+      "id": "deviceIdentity",
+      "pass": true
+    },
+    {
+      "id": "forceStopSuccess",
+      "pass": true
+    },
+    {
+      "id": "chronology",
+      "pass": true
+    },
+    {
+      "id": "installs",
+      "pass": true
+    },
+    {
+      "id": "controlSummaryCount",
+      "pass": true
+    },
+    {
+      "id": "literalExpected/('2026-10', 'KZT')",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-10', 'KZT')/income",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-10', 'KZT')/expense",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-10', 'KZT')/net",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-10', 'KZT')/records",
+      "pass": true
+    },
+    {
+      "id": "literalExpected/('2026-10', 'USD')",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-10', 'USD')/income",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-10', 'USD')/expense",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-10', 'USD')/net",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-10', 'USD')/records",
+      "pass": true
+    },
+    {
+      "id": "literalExpected/('2026-11', 'KZT')",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-11', 'KZT')/income",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-11', 'KZT')/expense",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-11', 'KZT')/net",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-11', 'KZT')/records",
+      "pass": true
+    },
+    {
+      "id": "literalExpected/('2026-09', 'KZT')",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-09', 'KZT')/income",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-09', 'KZT')/expense",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-09', 'KZT')/net",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-09', 'KZT')/records",
+      "pass": true
+    },
+    {
+      "id": "literalExpected/('2026-08', 'KZT')",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-08', 'KZT')/income",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-08', 'KZT')/expense",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-08', 'KZT')/net",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-08', 'KZT')/records",
+      "pass": true
+    },
+    {
+      "id": "literalExpected/('2026-07', 'JPY')",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-07', 'JPY')/income",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-07', 'JPY')/expense",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-07', 'JPY')/net",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-07', 'JPY')/records",
+      "pass": true
+    },
+    {
+      "id": "literalExpected/('2026-07', 'KWD')",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-07', 'KWD')/income",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-07', 'KWD')/expense",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-07', 'KWD')/net",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-07', 'KWD')/records",
+      "pass": true
+    },
+    {
+      "id": "literalExpected/('9999-12', 'KZT')",
+      "pass": true
+    },
+    {
+      "id": "readActual/('9999-12', 'KZT')/income",
+      "pass": true
+    },
+    {
+      "id": "readActual/('9999-12', 'KZT')/expense",
+      "pass": true
+    },
+    {
+      "id": "readActual/('9999-12', 'KZT')/net",
+      "pass": true
+    },
+    {
+      "id": "readActual/('9999-12', 'KZT')/records",
+      "pass": true
+    },
+    {
+      "id": "literalExpected/('2026-06', 'KZT')",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-06', 'KZT')/income",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-06', 'KZT')/expense",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-06', 'KZT')/net",
+      "pass": true
+    },
+    {
+      "id": "readActual/('2026-06', 'KZT')/records",
+      "pass": true
+    },
+    {
+      "id": "mainAPKSameAsFrozen",
+      "pass": true
+    },
+    {
+      "id": "testSource/android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeFixtures.java",
+      "pass": true
+    },
+    {
+      "id": "testSource/android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeReadTest.java",
+      "pass": true
+    },
+    {
+      "id": "testSource/android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeWriteTest.java",
+      "pass": true
+    },
+    {
+      "id": "productionSource/app/src/main/assets/db/schema.sql",
+      "pass": true
+    },
+    {
+      "id": "productionSource/app/src/main/java/com/ladno/finance/storage/LedgerStore.java",
+      "pass": true
+    },
+    {
+      "id": "apkSchema",
+      "pass": true
+    },
+    {
+      "id": "fingerprintManifest",
+      "pass": true
+    }
+  ],
+  "nativeScope": "Production Context/SQLiteOpenHelper/LedgerStore and separate-process persistence; no Activity UI, KeyStore, NLS or OCR claim",
+  "limitations": [
+    "Single AOSP Android11/API30 x86_64 emulator",
+    "Synthetic StorageApi sources/tokens, not actual bank or AndroidKeyStore validation",
+    "No camera/gallery/WebView UI automation",
+    "N2/N3 evaluated by separate scenario specialist"
+  ]
+}

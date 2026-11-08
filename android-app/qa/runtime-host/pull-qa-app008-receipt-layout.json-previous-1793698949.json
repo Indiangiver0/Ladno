@@ -1,0 +1,26 @@
+{
+  "action": "pull",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-03T09:42:29.365419+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "cat",
+        "files/qa-app008-receipt-layout.json"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "{\n  \"suite\": \"receipt-layout-runtime\",\n  \"startedAt\": \"2026-11-03T09:42:07.358Z\",\n  \"pid\": 2305,\n  \"apiLevel\": 30,\n  \"abis\": [\n    \"x86_64\",\n    \"x86\"\n  ],\n  \"package\": \"com.ladno.finance\",\n  \"data\": \"synthetic-only\",\n  \"checks\": [\n    {\n      \"id\": \"real Tesseract initialized\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"original counterexample PNG unchanged\",\n      \"expected\": \"03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d\",\n      \"actual\": \"03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"en-multiline-paid\\/amount\",\n      \"expected\": \"754.32\",\n      \"actual\": \"754.32\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"en-multiline-paid\\/currency\",\n      \"expected\": \"KZT\",\n      \"actual\": \"KZT\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"en-multiline-paid\\/date\",\n      \"expected\": \"2026-11-03\",\n      \"actual\": \"2026-11-03\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"en-multiline-paid\\/completed-paid evidence\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"counterexample verifier retains alternative794.32\",\n      \"expected\": \"794.32\",\n      \"actual\": \"794.32\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"counterexample disagreement disallows auto\",\n      \"expected\": false,\n      \"actual\": false,\n      \"pass\": true\n    },\n    {\n      \"id\": \"ru-fiscal-card\\/amount\",\n      \"expected\": \"8765.43\",\n      \"actual\": null,\n      \"pass\": false\n    }\n  ],\n  \"observations\": [\n    {\n      \"id\": \"en-multiline-paid\\/synthetic OCR\",\n      \"actual\": {\n        \"lines\": [\n          \"PAID\",\n          \"TOTAL\",\n          \"754.32 KZT\",\n          \"2026-11-03\"\n        ],\n        \"actualText\": \"PAID\\nTOTAL\\n754.32 KZT\\n2026-11-03\",\n        \"meanConfidence\": 94,\n        \"parsed\": {\n          \"kind\": \"expense\",\n          \"amount\": \"754.32\",\n          \"currency\": \"KZT\",\n          \"date\": \"2026-11-03\",\n          \"dateOrigin\": \"source\",\n          \"note\": \"\",\n          \"reasons\": [],\n          \"confidence\": \"high\",\n          \"paymentReference\": null\n        },\n        \"verificationText\": \"PAID\\nTOTAL\\n794.32 KZT\\n2026-11-03\",\n        \"verificationConfidence\": 94,\n        \"verificationFailed\": false,\n        \"verificationParsed\": {\n          \"kind\": \"expense\",\n          \"amount\": \"794.32\",\n          \"currency\": \"KZT\",\n          \"date\": \"2026-11-03\",\n          \"dateOrigin\": \"source\",\n          \"note\": \"\",\n          \"reasons\": [],\n          \"confidence\": \"high\",\n          \"paymentReference\": null\n        },\n        \"primaryMillis\": 465,\n        \"verificationMillis\": 455\n      }\n    },\n    {\n      \"id\": \"ru-fiscal-card\\/synthetic OCR\",\n      \"actual\": {\n        \"lines\": [\n          \"ФИСКАЛЬНЫЙ ЧЕК\",\n          \"ПРИХОД\",\n          \"ИТОГО\",\n          \"8765.43 KZT\",\n          \"Картой 8765.43 KZT\",\n          \"2026-11-03\"\n        ],\n        \"actualText\": \"ФИСКАЛЬНЫЙ ЧЕК\\nПРИХОД\\n\\nИТОГО\\n\\n8765.43 КАТ\\n\\nКартой 8765.43 KZT\\n2026-11-03\",\n        \"meanConfidence\": 88,\n        \"parsed\": {\n          \"kind\": \"expense\",\n          \"amount\": null,\n          \"currency\": null,\n          \"date\": \"2026-11-03\",\n          \"dateOrigin\": \"source\",\n          \"note\": \"\",\n          \"reasons\": [\n            \"UNSUPPORTED_EVENT\",\n            \"AMOUNT_MISSING\",\n            \"CURRENCY_MISSING\"\n          ],\n          \"confidence\": \"uncertain\",\n          \"paymentReference\": null\n        },\n        \"verificationText\": \"ФИСКАЛЬНЫЙ ЧЕК\\nПРИХОД\\n\\nИТОГО\\n\\n8765.43 KZT\\n\\nКартой 8765.43 КИТ\\n2026-11-03\",\n        \"verificationConfidence\": 92,\n        \"verificationFailed\": false,\n        \"verificationParsed\": {\n          \"kind\": \"expense\",\n          \"amount\": \"8765.43\",\n          \"currency\": \"KZT\",\n          \"date\": \"2026-11-03\",\n          \"dateOrigin\": \"source\",\n          \"note\": \"\",\n          \"reasons\": [\n            \"UNSUPPORTED_EVENT\"\n          ],\n          \"confidence\": \"uncertain\",\n          \"paymentReference\": null\n        },\n        \"primaryMillis\": 1506,\n        \"verificationMillis\": 296\n      }\n    }\n  ],\n  \"failure\": \"java.lang.AssertionError: ru-fiscal-card\\/amount expected:<8765.43> but was:<null>\",\n  \"finishedAt\": \"2026-11-03T09:42:11.983Z\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

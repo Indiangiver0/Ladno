@@ -1,0 +1,23 @@
+{
+  "action": "shutdown",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-02T18:49:11.013808+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "emu",
+        "kill"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "OK: killing emulator, bye bye\n\nOK\n\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

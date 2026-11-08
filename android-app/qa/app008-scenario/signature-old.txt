@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Ladno Development, O=Local, C=ZZ
+Signer #1 certificate SHA-256 digest: 08f77eff74101bd48dc2cccb52403216620cc8e1bb3a86fd685c640c9a64ec27
+Signer #1 certificate SHA-1 digest: 4b3f5577e89c156478858e020f4ee5f7e0f28e58
+Signer #1 certificate MD5 digest: 6df1f99a9dfa6cfbcaf07e722daf7bd3
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 00c3ad4a38285986a796a6d46b406befd2a8f2aae5da0c3799f39435ca02993d
+Signer #1 public key SHA-1 digest: a8759c3da1eb770b9c975289cbb6fd131c7e271e
+Signer #1 public key MD5 digest: 63b2a9ee73c3d789986c0eff2759c6aa

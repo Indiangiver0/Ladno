@@ -1,0 +1,113 @@
+{
+  "version": "app-concept-v1-partial",
+  "date": "2026-10-30",
+  "timezone": "Asia/Qyzylorda",
+  "scope": "Local concept documents, design source/evidence and final SC01 PNG; operational team reports and pre-fix PNG excluded",
+  "externalFigma": "Five saved compositions; last API evidence in design/figma-manifest.json; no post-quota full independent readback",
+  "files": [
+    {
+      "path": "design/demo-data.json",
+      "sha256": "8c6bb181ed342867e453640c1f3f61384dc2c4425a1789d813d01236a79e3c81"
+    },
+    {
+      "path": "design/figjam-readback.xml",
+      "sha256": "6109cb5264579f05792c8df92b0fdaca37486ab6b03891d395d88f78cc5072ca"
+    },
+    {
+      "path": "design/figjam-structure.json",
+      "sha256": "142a810abb7a5b3387a4e64d06fea1aacbc3dcc829ca0f6f7bda9be3e55c2082"
+    },
+    {
+      "path": "design/figma-01-foundations.js",
+      "sha256": "4ee321487a05bcec90a6d47aeeef539df313d4e0574a2b92d3cad67b12e78fcf"
+    },
+    {
+      "path": "design/figma-02-overview.js",
+      "sha256": "cd7f2a02abe7e07b45355e53d3f3af49923475a02b744f6d1a7648931b09be1f"
+    },
+    {
+      "path": "design/figma-02a-layout-fix.js",
+      "sha256": "1033616a3bafd5998d2634fb6385e421eca6f523fa66d621fd10ed036bfd1a2d"
+    },
+    {
+      "path": "design/figma-03-screens.js",
+      "sha256": "96690a16c3faec0ca0048dbee5dd462685d8cccb1f00d7d90fe7446617aa6164"
+    },
+    {
+      "path": "design/figma-04-mobile.js",
+      "sha256": "553325880602568bbcebf4d689161639e086f58338a933ffa2f9ad7f625df581"
+    },
+    {
+      "path": "design/figma-05-states-form.js",
+      "sha256": "4b98d1937659c4db8dc938dddc4c574231ec5d5272e7dc406313000b8c8823cf"
+    },
+    {
+      "path": "design/figma-check.js",
+      "sha256": "d36da930c51620805b4ffaafb093b1990a160386bde935bed77dca62b47ba760"
+    },
+    {
+      "path": "design/figma-core.js",
+      "sha256": "3dea4fae7df711286c86cdc6de93c05441d4439c91c750861d16736166c3593f"
+    },
+    {
+      "path": "design/figma-evidence.json",
+      "sha256": "575ac5ea9227d4191eea7bd4c11261999995b51238b23a57d747407f823ffa96"
+    },
+    {
+      "path": "design/figma-local-checks.json",
+      "sha256": "2daacb826f13727123d4688b2128bc95923885f883157d723672cbad538be747"
+    },
+    {
+      "path": "design/figma-manifest.json",
+      "sha256": "724ed1b5da3d8076d0670a4020b1e1bc23104545c48a7f022eddbd3cfb9385d4"
+    },
+    {
+      "path": "design/figma-report.json",
+      "sha256": "7cdc03d62fe3f64f582ea4777cbe8c5d631ea5290c1fc101179e95f42c415d6f"
+    },
+    {
+      "path": "design/figma-state.json",
+      "sha256": "8dd89daa9d81a12c3d5775b518efd0da9488c11ce58e9e32da0627294e79f9ac"
+    },
+    {
+      "path": "design/previews/SC-01-desktop.png",
+      "sha256": "244e9159474a35e6687e92ac9669ca83564cdacde07b33ab0034dd588d9e8bd4"
+    },
+    {
+      "path": "docs/architecture/SECURITY.md",
+      "sha256": "7657ff724191b1b649458cacdeceb75039d8325c581de919e6c1af3e654db60f"
+    },
+    {
+      "path": "docs/architecture/STRUCTURE.md",
+      "sha256": "9bee45e95c6a3b7307521768934293cc2b23d2a80c091d5d0d330b65b6edca60"
+    },
+    {
+      "path": "docs/design/HEAD_REVIEW.md",
+      "sha256": "69de89fe158318b88acf8f7649471c60e7ee94236042fe8cd65586d3c1bd2a3d"
+    },
+    {
+      "path": "docs/design/UX.md",
+      "sha256": "5ac6abc48b90a8565746e1b93704c805dd2e8ff60fa521e3278742db73ad030f"
+    },
+    {
+      "path": "docs/finance/HEAD_REVIEW.md",
+      "sha256": "36449a35edce7313910f24e73213097bfa1305b5fc84e8664e4a16b1583dd64d"
+    },
+    {
+      "path": "docs/finance/MODEL.md",
+      "sha256": "f020cb4dd08d8801a03ee5c7203edc76740f91cea77ce49b3f1719a42ca98674"
+    },
+    {
+      "path": "docs/product/CONCEPT.md",
+      "sha256": "fdb5a41fb0d1a8e511008f845c8489a5909700a58a7196fd0b7af94fbdffba1b"
+    },
+    {
+      "path": "docs/product/SCREENS.md",
+      "sha256": "f2217b2d387a9ff2ec5c22e50f46d6ed3720098e7b02cb21438d21e80df99503"
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "a6d3ae0637ea3d0eace40e86ad196a9c0d9e367d3ded170943f005b3f10ea5a9"
+    }
+  ]
+}

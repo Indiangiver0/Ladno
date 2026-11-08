@@ -1,0 +1,25 @@
+Ladno Finance 0.1.0 — third-party notices
+
+Tesseract4Android 4.9.0 — Copyright (C) Adaptech s.r.o., Robert Pösel
+https://github.com/adaptech-cz/Tesseract4Android/tree/4.9.0
+Apache License 2.0 (Apache-2.0.txt).
+
+Tesseract OCR and tessdata_fast language models — Apache License 2.0.
+https://github.com/tesseract-ocr/tesseract
+https://github.com/tesseract-ocr/tessdata_fast
+Model revision and hashes: ocr-models.lock.json in the source distribution.
+The original model license is also bundled as assets/tessdata/LICENSE.txt.
+
+Leptonica, bundled by Tesseract4Android — see Leptonica.txt.
+Independent JPEG Group software, bundled by Tesseract4Android — see IJG-JPEG.txt.
+This software is based in part on the work of the Independent JPEG Group.
+PNG Reference Library, bundled by Tesseract4Android — see libpng.txt.
+These files are copied without changes from the Tesseract4Android 4.9.0 source.
+Their exact source URLs and SHA-256 hashes are in sources.json.
+
+AndroidX libraries — Copyright The Android Open Source Project.
+https://android.googlesource.com/platform/frameworks/support/
+Apache License 2.0 (Apache-2.0.txt).
+Transitive dependency licenses packaged by their original distributions remain applicable.
+
+Upstream source files and trained models have not been modified by this project.

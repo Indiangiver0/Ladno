@@ -1,0 +1,26 @@
+{
+  "action": "pull-scenario",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-02T18:31:17.546837+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "cat",
+        "files/qa-android-scenario/notification-os-revoked.json"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "{\n  \"suite\": \"notification-os-revoked\",\n  \"startedAt\": \"2026-11-02T18:31:10.041Z\",\n  \"pid\": 2880,\n  \"apiLevel\": 30,\n  \"abis\": [\n    \"x86_64\",\n    \"x86\"\n  ],\n  \"package\": \"com.ladno.finance\",\n  \"data\": \"synthetic-only\",\n  \"checks\": [\n    {\n      \"id\": \"actual OS access revoked\",\n      \"expected\": false,\n      \"actual\": false,\n      \"pass\": true\n    },\n    {\n      \"id\": \"revoked access\\/no records or pending imports during 3s\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    }\n  ],\n  \"observations\": [],\n  \"finishedAt\": \"2026-11-02T18:31:13.553Z\"\n}",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

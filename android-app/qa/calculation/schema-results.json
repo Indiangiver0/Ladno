@@ -1,0 +1,281 @@
+{
+  "runtime": "host sqlite3 3.49.1",
+  "nativeAndroidRuntime": false,
+  "schemaSha256": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+  "assertions": 39,
+  "failed": 0,
+  "results": [
+    {
+      "id": "freshSetup",
+      "expected": [
+        0,
+        null,
+        null,
+        null
+      ],
+      "actual": [
+        0,
+        null,
+        null,
+        null
+      ],
+      "passed": true
+    },
+    {
+      "id": "freshTransactionCount",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "id": "freshSourceCount",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/0",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/1",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/2",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/3",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/4",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/5",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/6",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/7",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/8",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidAmount/9",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidDate/0",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidDate/1",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidDate/2",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidDate/3",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "invalidDate/4",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "validDate/0",
+      "expected": "2024-02-29",
+      "actual": "2024-02-29",
+      "passed": true
+    },
+    {
+      "id": "validDate/1",
+      "expected": "2000-02-29",
+      "actual": "2000-02-29",
+      "passed": true
+    },
+    {
+      "id": "validDate/2",
+      "expected": "0001-01-01",
+      "actual": "0001-01-01",
+      "passed": true
+    },
+    {
+      "id": "validDate/3",
+      "expected": "9999-12-31",
+      "actual": "9999-12-31",
+      "passed": true
+    },
+    {
+      "id": "categoryKindMismatch",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "categoryMissing",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "categoryInUseKindImmutable",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "categoryInUseCannotTombstone",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "categoryDeletePreservesMoney",
+      "expected": [
+        "1.20",
+        null,
+        0
+      ],
+      "actual": [
+        "1.20",
+        null,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "id": "largeExactTEXT",
+      "expected": [
+        "9007199254740993.01",
+        "text"
+      ],
+      "actual": [
+        "9007199254740993.01",
+        "text"
+      ],
+      "passed": true
+    },
+    {
+      "id": "staleCASChangesNothing",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "id": "currentCASUpdatesOne",
+      "expected": 1,
+      "actual": 1,
+      "passed": true
+    },
+    {
+      "id": "halfOpenMonthIDs",
+      "expected": [
+        "monthEnd",
+        "monthStart"
+      ],
+      "actual": [
+        "monthEnd",
+        "monthStart"
+      ],
+      "passed": true
+    },
+    {
+      "id": "independentSelectedAmountOracle",
+      "expected": "3.00",
+      "actual": "3.00",
+      "passed": true
+    },
+    {
+      "id": "exactRevisionUnique",
+      "expected": "IntegrityError",
+      "actual": "IntegrityError",
+      "passed": true
+    },
+    {
+      "id": "newRevisionRemainsObservation",
+      "expected": 2,
+      "actual": 2,
+      "passed": true
+    },
+    {
+      "id": "tombstoneKeepsSourceObservation",
+      "expected": 2,
+      "actual": 2,
+      "passed": true
+    },
+    {
+      "id": "sqlTransactionRollback",
+      "expected": 9,
+      "actual": 9,
+      "passed": true
+    },
+    {
+      "id": "fileCloseReopenExactAmount",
+      "expected": [
+        "9007199254740993.01",
+        2,
+        "changed"
+      ],
+      "actual": [
+        "9007199254740993.01",
+        2,
+        "changed"
+      ],
+      "passed": true
+    },
+    {
+      "id": "integrityCheck",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true
+    },
+    {
+      "id": "foreignKeyCheck",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    }
+  ]
+}

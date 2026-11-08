@@ -1,0 +1,413 @@
+{
+  "environment": {
+    "avd": "Ladno_QA_API30",
+    "serial": "emulator-5580",
+    "api": 30,
+    "abi": "x86_64"
+  },
+  "executionOwner": "root: guarded native instrumentation, no UI automation",
+  "reviewer": "/root/android_qa_scenario: independent readback of actual commands/private evidence",
+  "cases": [
+    {
+      "criterion": "N2a",
+      "pid": 2430,
+      "api": 30,
+      "abis": [
+        "x86_64",
+        "x86"
+      ],
+      "startedAt": "2026-11-02T17:19:09.184Z",
+      "finishedAt": "2026-11-02T17:19:09.545Z",
+      "commandPassed": true,
+      "assertions": 35,
+      "failedAssertions": [],
+      "commandEvidence": "test-notifications-keystoreParserStorage.json",
+      "commandSha256": "387a362aad4416507348d031faeb4606122958bd738793bb514cee99707661f9",
+      "privateEvidence": "pulled-notification-native.json",
+      "privateSha256": "950a7e0624614480b25a6a77a39b1c8635b4ad0b1b954039d3c68ece892f0bc1"
+    },
+    {
+      "criterion": "N2b",
+      "pid": 3075,
+      "api": 30,
+      "abis": [
+        "x86_64",
+        "x86"
+      ],
+      "startedAt": "2026-11-02T18:38:16.031Z",
+      "finishedAt": "2026-11-02T18:38:26.887Z",
+      "commandPassed": true,
+      "assertions": 18,
+      "failedAssertions": [],
+      "commandEvidence": "test-notifications-osGrantedDelivery.json",
+      "commandSha256": "7b43d30ccc2339f28e81c7e31ee2b834887c98a4b365eb65bd2a1bbd4c87a994",
+      "privateEvidence": "pulled-notification-os-granted.json",
+      "privateSha256": "4b41bbdd2a16a7ee86fa7ec9a2fd1d4755198f58fdcd87ee815a287f60612cd9"
+    },
+    {
+      "criterion": "N2c",
+      "pid": 2880,
+      "api": 30,
+      "abis": [
+        "x86_64",
+        "x86"
+      ],
+      "startedAt": "2026-11-02T18:31:10.041Z",
+      "finishedAt": "2026-11-02T18:31:13.553Z",
+      "commandPassed": true,
+      "assertions": 2,
+      "failedAssertions": [],
+      "commandEvidence": "test-notifications-osRevokedNoCapture.json",
+      "commandSha256": "057f94def58f60e8f5361c4d247ce7f2d13e0ac1fd6bea2a9cb0b8c69ddd5d15",
+      "privateEvidence": "pulled-notification-os-revoked.json",
+      "privateSha256": "6afd1172ca101419d5215ed4ab78652b4a6a014765e2d071210d36f93c4b5bac"
+    },
+    {
+      "criterion": "N3",
+      "pid": 2835,
+      "api": 30,
+      "abis": [
+        "x86_64",
+        "x86"
+      ],
+      "startedAt": "2026-11-02T18:30:38.312Z",
+      "finishedAt": "2026-11-02T18:30:42.190Z",
+      "commandPassed": true,
+      "assertions": 71,
+      "failedAssertions": [],
+      "commandEvidence": "test-ocr.json",
+      "commandSha256": "62e4022d0f988a1b73fc7514df0d1b7c02b01590f213c895a842720e3c34d59b",
+      "privateEvidence": "pulled-ocr-runtime.json",
+      "privateSha256": "2a09f52328c48fc2fa18942ff898152587a873a900cbbabdfb3aafff589d57a9"
+    }
+  ],
+  "successfulAssertions": 126,
+  "allRecordedSuccessfulRunsPassed": true,
+  "preservedPreReadinessFailedAttempts": [
+    {
+      "file": "test-notifications-osGrantedDelivery-previous-1793640000.json",
+      "createdAtUtc": "2026-11-02T17:20:00.844127+00:00",
+      "passed": false,
+      "sha256": "01051abd9d158a8f865df52da35d5282ae97f339ab6267d212fb6676e85f013c",
+      "classification": "pre-readiness setup failure"
+    },
+    {
+      "file": "test-notifications-osGrantedDelivery-previous-1793643706.json",
+      "createdAtUtc": "2026-11-02T18:21:46.907400+00:00",
+      "passed": false,
+      "sha256": "d87dd3568e37593727e9e2d46797f76d2641f642341fe23c9c6675ebb54858be",
+      "classification": "pre-readiness setup failure"
+    },
+    {
+      "file": "test-notifications-osGrantedDelivery-previous-1793644575.json",
+      "createdAtUtc": "2026-11-02T18:36:15.508801+00:00",
+      "passed": false,
+      "sha256": "50580241cd28f7e63c0e9fd6b908703298668d2e4b7e2559cc8d70f344b66ff3",
+      "classification": "redundant old diagnostic APK orchestration attempt"
+    }
+  ],
+  "installation": {
+    "action": "install",
+    "suite": null,
+    "avd": "Ladno_QA_API30",
+    "serial": "emulator-5580",
+    "createdAtUtc": "2026-11-02T18:38:09.342977+00:00",
+    "results": [
+      {
+        "command": [
+          "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+          "-s",
+          "emulator-5580",
+          "install",
+          "-r",
+          "-t",
+          "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.1.0-debug.apk"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "stdout": "Performing Streamed Install\nSuccess\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+          "-s",
+          "emulator-5580",
+          "install",
+          "-r",
+          "-t",
+          "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.1.0-androidTest.apk"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "stdout": "Performing Streamed Install\nSuccess\n",
+        "stderr": ""
+      }
+    ],
+    "passed": true,
+    "sourceFingerprint": "d001bbd85c2faeef77d3a88ceeecc63798717144adcde1d8dd3bd20edd84146d",
+    "stage": "C:\\Users\\04068\\.cache\\ladno-android\\work\\ladno-d001bbd85c2faeef",
+    "apkSha256": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+    "testApkSha256": "ac23d80872e07b52a075249f94c39b7c710edde2e1954ce87a2fe342da7e7602"
+  },
+  "apkHashes": {
+    "productionApk": {
+      "sha256": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+      "bytes": 37404606
+    },
+    "currentReadinessTestApk": {
+      "sha256": "ac23d80872e07b52a075249f94c39b7c710edde2e1954ce87a2fe342da7e7602",
+      "bytes": 415699
+    },
+    "preservedInitialTestApk": {
+      "sha256": "94c418df927a16256aba740d733de8fa6afab56da0ade12b674ea05911cda334",
+      "bytes": 412623
+    },
+    "preservedDiagnosticTestApk": {
+      "sha256": "40f5c220ef7a5a17b0b67c5b17503ad498ff325d41976f16142cbc9e0373b3ae",
+      "bytes": 413675
+    }
+  },
+  "formats": [
+    {
+      "format": {
+        "id": "en-paid",
+        "paid": true,
+        "amount": "123.45",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "paymentLine": "PAID",
+        "totalLine": "TOTAL 123.45 KZT",
+        "image": "en-paid.png"
+      },
+      "actualOcrText": "PAID\nTOTAL 123.45 KZT\n2026-11-02",
+      "meanConfidence": 94,
+      "actualParsedCandidate": {
+        "kind": "expense",
+        "amount": "123.45",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "nativeOutcome": {
+        "id": "2d517f2c-f5d5-4767-a6cb-a60e4506d2d4",
+        "status": "posted",
+        "kind": "expense",
+        "amount": "123.45",
+        "currency": "KZT",
+        "operation_date": "2026-11-02",
+        "confidence": "high",
+        "transaction_id": "8e46d6b8-9224-49ef-8ed1-ffafccdea8c0",
+        "reasons": []
+      }
+    },
+    {
+      "format": {
+        "id": "en-unpaid",
+        "paid": false,
+        "amount": "123.45",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "paymentLine": "UNPAID",
+        "totalLine": "TOTAL 123.45 KZT",
+        "image": "en-unpaid.png"
+      },
+      "actualOcrText": "UNPAID\nTOTAL 123.45 KZT\n2026-11-02",
+      "meanConfidence": 94,
+      "actualParsedCandidate": {
+        "kind": "expense",
+        "amount": "123.45",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [
+          "UNSUPPORTED_EVENT"
+        ],
+        "confidence": "uncertain",
+        "paymentReference": null
+      },
+      "nativeOutcome": {
+        "id": "5ba8b560-b714-467c-93f1-4223f93d98a2",
+        "status": "needs_review",
+        "kind": "expense",
+        "amount": "123.45",
+        "currency": "KZT",
+        "operation_date": "2026-11-02",
+        "confidence": "uncertain",
+        "transaction_id": null,
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "POSSIBLE_DUPLICATE"
+        ]
+      }
+    },
+    {
+      "format": {
+        "id": "ru-paid",
+        "paid": true,
+        "amount": "234.56",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "paymentLine": "Оплачено",
+        "totalLine": "ИТОГО 234.56 KZT",
+        "image": "ru-paid.png"
+      },
+      "actualOcrText": "Оплачено\nИТОГО 234.56 KZT\n2026-11-02",
+      "meanConfidence": 92,
+      "actualParsedCandidate": {
+        "kind": "expense",
+        "amount": "234.56",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "nativeOutcome": {
+        "id": "cda8a1a4-b071-4164-945d-64eb0ca0a760",
+        "status": "posted",
+        "kind": "expense",
+        "amount": "234.56",
+        "currency": "KZT",
+        "operation_date": "2026-11-02",
+        "confidence": "high",
+        "transaction_id": "b46cd487-2615-428f-a38b-d4e760ad2c4e",
+        "reasons": []
+      }
+    },
+    {
+      "format": {
+        "id": "ru-unpaid",
+        "paid": false,
+        "amount": "234.56",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "paymentLine": "Не оплачено",
+        "totalLine": "ИТОГО 234.56 KZT",
+        "image": "ru-unpaid.png"
+      },
+      "actualOcrText": "Не оплачено\nИТОГО 234.56 KZT\n2026-11-02",
+      "meanConfidence": 94,
+      "actualParsedCandidate": {
+        "kind": "expense",
+        "amount": "234.56",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [
+          "UNSUPPORTED_EVENT"
+        ],
+        "confidence": "uncertain",
+        "paymentReference": null
+      },
+      "nativeOutcome": {
+        "id": "ae9483b2-2f13-412f-b84b-f186dd9802c5",
+        "status": "needs_review",
+        "kind": "expense",
+        "amount": "234.56",
+        "currency": "KZT",
+        "operation_date": "2026-11-02",
+        "confidence": "uncertain",
+        "transaction_id": null,
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "POSSIBLE_DUPLICATE"
+        ]
+      }
+    },
+    {
+      "format": {
+        "id": "kz-paid",
+        "paid": true,
+        "amount": "345.67",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "paymentLine": "Төленген",
+        "totalLine": "БАРЛЫҒЫ 345.67 KZT",
+        "image": "kz-paid.png"
+      },
+      "actualOcrText": "Теленген\nБАРЛЫҒЫ 345.67 KZT\n2026-11-02",
+      "meanConfidence": 93,
+      "actualParsedCandidate": {
+        "kind": "expense",
+        "amount": "345.67",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [
+          "UNSUPPORTED_EVENT"
+        ],
+        "confidence": "uncertain",
+        "paymentReference": null
+      },
+      "nativeOutcome": {
+        "id": "a9ae048d-0987-4fa1-b20f-e0ea311319d7",
+        "status": "needs_review",
+        "kind": "expense",
+        "amount": "345.67",
+        "currency": "KZT",
+        "operation_date": "2026-11-02",
+        "confidence": "uncertain",
+        "transaction_id": null,
+        "reasons": [
+          "UNSUPPORTED_EVENT"
+        ]
+      }
+    },
+    {
+      "format": {
+        "id": "kz-unpaid",
+        "paid": false,
+        "amount": "345.67",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "paymentLine": "Төленген жоқ",
+        "totalLine": "БАРЛЫҒЫ 345.67 KZT",
+        "image": "kz-unpaid.png"
+      },
+      "actualOcrText": "Төленген жоқ\nБАРЛЫҒЫ 345.67 KZT\n2026-11-02",
+      "meanConfidence": 93,
+      "actualParsedCandidate": {
+        "kind": "expense",
+        "amount": "345.67",
+        "currency": "KZT",
+        "date": "2026-11-02",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [
+          "UNSUPPORTED_EVENT"
+        ],
+        "confidence": "uncertain",
+        "paymentReference": null
+      },
+      "nativeOutcome": {
+        "id": "31153409-0937-45b6-8818-cf4b70f86477",
+        "status": "needs_review",
+        "kind": "expense",
+        "amount": "345.67",
+        "currency": "KZT",
+        "operation_date": "2026-11-02",
+        "confidence": "uncertain",
+        "transaction_id": null,
+        "reasons": [
+          "UNSUPPORTED_EVENT"
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Synthetic own-package notifications after actual public OS readiness; no bank compatibility claim.",
+    "Generated clean PNGs, not real receipt photos; KZ paid sample remained review after OCR misspelling.",
+    "Native API/media path only; camera/gallery UI and registered job lifecycle not executed.",
+    "Only Android11/API30 x86_64 emulator execution; physical ARM/OEM/other API runtime not executed."
+  ]
+}

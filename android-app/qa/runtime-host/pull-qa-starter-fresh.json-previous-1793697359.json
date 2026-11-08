@@ -1,0 +1,26 @@
+{
+  "action": "pull",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-03T09:15:59.592367+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "cat",
+        "files/qa-starter-fresh.json"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "{\n  \"phase\": \"fresh\",\n  \"assertions\": [\n    {\n      \"id\": \"schema version\",\n      \"expected\": 2,\n      \"actual\": 2,\n      \"pass\": true\n    },\n    {\n      \"id\": \"starter total\",\n      \"expected\": 15,\n      \"actual\": 15,\n      \"pass\": true\n    },\n    {\n      \"id\": \"expense starters\",\n      \"expected\": 11,\n      \"actual\": 11,\n      \"pass\": true\n    },\n    {\n      \"id\": \"income starters\",\n      \"expected\": 4,\n      \"actual\": 4,\n      \"pass\": true\n    },\n    {\n      \"id\": \"ledger remains empty\",\n      \"expected\": 0,\n      \"actual\": 0,\n      \"pass\": true\n    },\n    {\n      \"id\": \"setup remains explicit\",\n      \"expected\": 0,\n      \"actual\": 0,\n      \"pass\": true\n    },\n    {\n      \"id\": \"stable UUID format\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"reopen total unchanged\",\n      \"expected\": 15,\n      \"actual\": 15,\n      \"pass\": true\n    },\n    {\n      \"id\": \"deleted starter stays deleted\",\n      \"expected\": 1,\n      \"actual\": 1,\n      \"pass\": true\n    },\n    {\n      \"id\": \"deleted revision preserved\",\n      \"expected\": 2,\n      \"actual\": 2,\n      \"pass\": true\n    },\n    {\n      \"id\": \"renamed starter preserved\",\n      \"expected\": \"Моя квартира\",\n      \"actual\": \"Моя квартира\",\n      \"pass\": true\n    },\n    {\n      \"id\": \"rename revision preserved\",\n      \"expected\": 3,\n      \"actual\": 3,\n      \"pass\": true\n    },\n    {\n      \"id\": \"old name not recreated\",\n      \"expected\": 0,\n      \"actual\": 0,\n      \"pass\": true\n    },\n    {\n      \"id\": \"stable IDs across installs\",\n      \"expected\": \"072989d9-54ad-381e-9674-3ed22f787b7e\",\n      \"actual\": \"072989d9-54ad-381e-9674-3ed22f787b7e\",\n      \"pass\": true\n    }\n  ],\n  \"error\": null\n}\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

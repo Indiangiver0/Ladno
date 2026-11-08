@@ -1,0 +1,4022 @@
+{
+  "schemaVersion": 1,
+  "task": "APP-008",
+  "authorRole": "financial-reference-specialist",
+  "spec": "docs/android/APP-008-CHARTS.md",
+  "reviewStatus": "awaiting finance-lead review; not app acceptance",
+  "methodology": {
+    "source": "Independent reference generator executed with Python arbitrary-precision int; no product JavaScript, parser or implementation was read to derive expected numbers.",
+    "money": "Canonical decimal strings converted by removing decimal point; input scale determines minor unit. Exact integer sums. All monetary/minor/geometric numerator fields remain strings if unbounded.",
+    "filtering": "ledgerRecords includes DB-only deleted metadata; state.records is the independently expected native month/currency/nondeleted selection. UI chart starts from state.records and includes kind=expense only.",
+    "basisPoints": "For each group: quotient,remainder=divmod(minor*10000,total). Allocate 10000-sum(quotients) points by remainder descending, key ascending. Reallocation is not repeated after Others aggregation.",
+    "sort": "Group minor descending, ASCII key ascending; null key ~uncategorized. More than6groups => first5 + ~other comprising the rest, kept last even if its sum is larger than a preceding slice.",
+    "geometry": "Q=1000000000; sorted visual cumulative endpoint=floor(Q*cumulativeMinor/total). Start is preceding endpoint. Last endpoint Q. No minimum width and no independent rounding of slice widths.",
+    "independentChecksExecuted": "All 13 cases: sum category minors=total; sum bps=10000 if total>0 else0; visual money/bps conserved; widths sum=Q if positive else0; last endpoint Q; canonical amount scale checked.",
+    "limits": "Synthetic reference data only. This does not execute or validate Android/UI. Invalid DTO fixtures expect a visible chart-unavailable state, without zero replacement or partial totals; no specific internal error code is imposed.",
+    "manualCrossChecksExecuted": {
+      "command": "Python 3 here-string; json readback and 20 hardcoded independent equalities (not UI execution).",
+      "assertions": 20,
+      "passed": 20,
+      "notableChecks": "CH01 exact cents/bps/geometry; CH02 thirds; CH03 >2^53; CH04 25-digit aggregate; CH05 filtering; CH06/07 scale0/3; CH08/09 group count; CH10 Others2856; CH11 zero-width; CH12 income-only; six invalid cases."
+    },
+    "headReviewCorrections": [
+      {
+        "id": "FX008-01",
+        "change": "CH05 and CH12 income categoryId changed to null in ledgerRecords and state.records; expense-only category A was invalid for income.",
+        "numericExpectationsUnchanged": true,
+        "sanity": "All 13 valid states have matching category kind or null; money/share/geometry conservation rechecked."
+      }
+    ]
+  },
+  "categoryKeys": {
+    "a": "00000000-0000-4000-8000-000000000001",
+    "b": "00000000-0000-4000-8000-000000000002",
+    "c": "00000000-0000-4000-8000-000000000003",
+    "d": "00000000-0000-4000-8000-000000000004",
+    "e": "00000000-0000-4000-8000-000000000005",
+    "f": "00000000-0000-4000-8000-000000000006",
+    "g": "00000000-0000-4000-8000-000000000007",
+    "h": "00000000-0000-4000-8000-000000000008"
+  },
+  "cases": [
+    {
+      "id": "CH00",
+      "purpose": "Пустая новая база: категории есть, расходов нет; без фиктивного круга и деления на ноль.",
+      "ledgerRecords": [],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "0.00",
+          "net": "0.00"
+        }
+      },
+      "expected": {
+        "chartEmpty": true,
+        "includedExpenseIds": [],
+        "totalMinor": "0",
+        "totalAmount": "0.00",
+        "groups": [],
+        "sectors": []
+      }
+    },
+    {
+      "id": "CH01",
+      "purpose": "0.10 + 0.20 KZT = ровно 0.30; доли 33.33% и 66.67%, без двоичной погрешности.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.10",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000002",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.20",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000002",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.10",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "0.30",
+          "net": "-0.30"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000001",
+          "10000000-0000-4000-8000-000000000002"
+        ],
+        "totalMinor": "30",
+        "totalAmount": "0.30",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "20",
+            "amount": "0.20",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "remainderNumerator": "20"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "10",
+            "amount": "0.10",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "10"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "20",
+            "basisPoints": 6667,
+            "startUnit": 0,
+            "endUnit": 666666666,
+            "widthUnits": 666666666,
+            "zeroWidth": false,
+            "amount": "0.20",
+            "percent": "66.67"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "10",
+            "basisPoints": 3333,
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "amount": "0.10",
+            "percent": "33.33"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH02",
+      "purpose": "Три равных группы; дополнительный basis point получает минимальный стабильный ключ A, null сортируется после UUID.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000003",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.01",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000002",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000004",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.01",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000005",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.01",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.01",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.01",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.01",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "0.03",
+          "net": "-0.03"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000003",
+          "10000000-0000-4000-8000-000000000004",
+          "10000000-0000-4000-8000-000000000005"
+        ],
+        "totalMinor": "3",
+        "totalAmount": "0.03",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3334,
+            "percent": "33.34",
+            "remainderNumerator": "1"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1"
+          },
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "1",
+            "basisPoints": 3334,
+            "startUnit": 0,
+            "endUnit": 333333333,
+            "widthUnits": 333333333,
+            "zeroWidth": false,
+            "amount": "0.01",
+            "percent": "33.34"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "1",
+            "basisPoints": 3333,
+            "startUnit": 333333333,
+            "endUnit": 666666666,
+            "widthUnits": 333333333,
+            "zeroWidth": false,
+            "amount": "0.01",
+            "percent": "33.33"
+          },
+          {
+            "key": "~uncategorized",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "1",
+            "basisPoints": 3333,
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "amount": "0.01",
+            "percent": "33.33"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH03",
+      "purpose": "Сумма minor выше 2^53: 9007199254740993 + 1 = 9007199254740994.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000006",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "90071992547409.93",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000007",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.01",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "90071992547409.93",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.01",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "90071992547409.94",
+          "net": "-90071992547409.94"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000006",
+          "10000000-0000-4000-8000-000000000007"
+        ],
+        "totalMinor": "9007199254740994",
+        "totalAmount": "90071992547409.94",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "9007199254740994",
+            "amount": "90071992547409.94",
+            "basisPoints": 10000,
+            "percent": "100.00",
+            "remainderNumerator": "0"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "9007199254740994",
+            "basisPoints": 10000,
+            "startUnit": 0,
+            "endUnit": 1000000000,
+            "widthUnits": 1000000000,
+            "zeroWidth": false,
+            "amount": "90071992547409.94",
+            "percent": "100.00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH04",
+      "purpose": "Два максимально допустимых ввода: агрегат содержит 25 целых цифр и не обрезается.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000008",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "999999999999999999999999.99",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000009",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "999999999999999999999999.99",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "999999999999999999999999.99",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000009",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "999999999999999999999999.99",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "1999999999999999999999999.98",
+          "net": "-1999999999999999999999999.98"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000008",
+          "10000000-0000-4000-8000-000000000009"
+        ],
+        "totalMinor": "199999999999999999999999998",
+        "totalAmount": "1999999999999999999999999.98",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "0"
+          },
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "0"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "99999999999999999999999999",
+            "basisPoints": 5000,
+            "startUnit": 0,
+            "endUnit": 500000000,
+            "widthUnits": 500000000,
+            "zeroWidth": false,
+            "amount": "999999999999999999999999.99",
+            "percent": "50.00"
+          },
+          {
+            "key": "~uncategorized",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "99999999999999999999999999",
+            "basisPoints": 5000,
+            "startUnit": 500000000,
+            "endUnit": 1000000000,
+            "widthUnits": 500000000,
+            "zeroWidth": false,
+            "amount": "999999999999999999999999.99",
+            "percent": "50.00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH05",
+      "purpose": "Ledger фильтруется native: включены обе границы октября; другой месяц/валюта/deleted исключены; доход не сектор; needs_review не расход.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000010",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-10-01",
+          "amount": "1.20",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000011",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-10-31",
+          "amount": "2.30",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000012",
+          "revision": 1,
+          "kind": "income",
+          "date": "2026-10-15",
+          "amount": "1000.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000013",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-01",
+          "amount": "100.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000014",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-10-10",
+          "amount": "200.00",
+          "currency": "USD",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000015",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-10-20",
+          "amount": "300.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": true
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-10",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000010",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-10-01",
+            "amount": "1.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000011",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "2.30",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000012",
+            "revision": 1,
+            "kind": "income",
+            "date": "2026-10-15",
+            "amount": "1000.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [
+          {
+            "id": "20000000-0000-4000-8000-000000000001",
+            "status": "needs_review",
+            "source": "receipt",
+            "amount": "500.00",
+            "currency": "KZT",
+            "scale": 2,
+            "date": "2026-10-20"
+          }
+        ],
+        "summary": {
+          "month": "2026-10",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "1000.00",
+          "expense": "3.50",
+          "net": "996.50"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000010",
+          "10000000-0000-4000-8000-000000000011"
+        ],
+        "totalMinor": "350",
+        "totalAmount": "3.50",
+        "groups": [
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "minor": "230",
+            "amount": "2.30",
+            "basisPoints": 6571,
+            "percent": "65.71",
+            "remainderNumerator": "150"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "120",
+            "amount": "1.20",
+            "basisPoints": 3429,
+            "percent": "34.29",
+            "remainderNumerator": "200"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "~uncategorized",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "230",
+            "basisPoints": 6571,
+            "startUnit": 0,
+            "endUnit": 657142857,
+            "widthUnits": 657142857,
+            "zeroWidth": false,
+            "amount": "2.30",
+            "percent": "65.71"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "120",
+            "basisPoints": 3429,
+            "startUnit": 657142857,
+            "endUnit": 1000000000,
+            "widthUnits": 342857143,
+            "zeroWidth": false,
+            "amount": "1.20",
+            "percent": "34.29"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH06",
+      "purpose": "JPY scale0: целые йены без искусственной дробной части.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000016",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "1",
+          "currency": "JPY",
+          "scale": 0,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000017",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "2",
+          "currency": "JPY",
+          "scale": 0,
+          "categoryId": null,
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "JPY"
+        },
+        "currencies": [
+          {
+            "code": "JPY",
+            "scale": 0
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000016",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "1",
+            "currency": "JPY",
+            "scale": 0,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000017",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "2",
+            "currency": "JPY",
+            "scale": 0,
+            "categoryId": null,
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "JPY",
+          "scale": 0,
+          "income": "0",
+          "expense": "3",
+          "net": "-3"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000016",
+          "10000000-0000-4000-8000-000000000017"
+        ],
+        "totalMinor": "3",
+        "totalAmount": "3",
+        "groups": [
+          {
+            "key": "~uncategorized",
+            "categoryId": null,
+            "minor": "2",
+            "amount": "2",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "remainderNumerator": "2"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "1",
+            "amount": "1",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "~uncategorized",
+            "memberKeys": [
+              "~uncategorized"
+            ],
+            "minor": "2",
+            "basisPoints": 6667,
+            "startUnit": 0,
+            "endUnit": 666666666,
+            "widthUnits": 666666666,
+            "zeroWidth": false,
+            "amount": "2",
+            "percent": "66.67"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "1",
+            "basisPoints": 3333,
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "amount": "1",
+            "percent": "33.33"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH07",
+      "purpose": "KWD scale3: 0.001+0.002=0.003; точные минимальные единицы.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000018",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.001",
+          "currency": "KWD",
+          "scale": 3,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000019",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.002",
+          "currency": "KWD",
+          "scale": 3,
+          "categoryId": "00000000-0000-4000-8000-000000000002",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KWD"
+        },
+        "currencies": [
+          {
+            "code": "KWD",
+            "scale": 3
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000018",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.001",
+            "currency": "KWD",
+            "scale": 3,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000019",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.002",
+            "currency": "KWD",
+            "scale": 3,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KWD",
+          "scale": 3,
+          "income": "0.000",
+          "expense": "0.003",
+          "net": "-0.003"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000018",
+          "10000000-0000-4000-8000-000000000019"
+        ],
+        "totalMinor": "3",
+        "totalAmount": "0.003",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "2",
+            "amount": "0.002",
+            "basisPoints": 6667,
+            "percent": "66.67",
+            "remainderNumerator": "2"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "1",
+            "amount": "0.001",
+            "basisPoints": 3333,
+            "percent": "33.33",
+            "remainderNumerator": "1"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "2",
+            "basisPoints": 6667,
+            "startUnit": 0,
+            "endUnit": 666666666,
+            "widthUnits": 666666666,
+            "zeroWidth": false,
+            "amount": "0.002",
+            "percent": "66.67"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "1",
+            "basisPoints": 3333,
+            "startUnit": 666666666,
+            "endUnit": 1000000000,
+            "widthUnits": 333333334,
+            "zeroWidth": false,
+            "amount": "0.001",
+            "percent": "33.33"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH08",
+      "purpose": "Ровно шесть категорий: шесть самостоятельных секторов, без Others.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000020",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "60.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000021",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "50.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000002",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000022",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "40.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000003",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000023",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "30.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000004",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000024",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "20.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000005",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000025",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "10.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000006",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000020",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "60.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000021",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "50.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000022",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "40.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000023",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "30.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000024",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "20.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000025",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "10.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "210.00",
+          "net": "-210.00"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000020",
+          "10000000-0000-4000-8000-000000000021",
+          "10000000-0000-4000-8000-000000000022",
+          "10000000-0000-4000-8000-000000000023",
+          "10000000-0000-4000-8000-000000000024",
+          "10000000-0000-4000-8000-000000000025"
+        ],
+        "totalMinor": "21000",
+        "totalAmount": "210.00",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "6000",
+            "amount": "60.00",
+            "basisPoints": 2857,
+            "percent": "28.57",
+            "remainderNumerator": "3000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "5000",
+            "amount": "50.00",
+            "basisPoints": 2381,
+            "percent": "23.81",
+            "remainderNumerator": "20000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "minor": "4000",
+            "amount": "40.00",
+            "basisPoints": 1905,
+            "percent": "19.05",
+            "remainderNumerator": "16000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "minor": "3000",
+            "amount": "30.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "12000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "minor": "2000",
+            "amount": "20.00",
+            "basisPoints": 952,
+            "percent": "9.52",
+            "remainderNumerator": "8000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "minor": "1000",
+            "amount": "10.00",
+            "basisPoints": 476,
+            "percent": "4.76",
+            "remainderNumerator": "4000"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "6000",
+            "basisPoints": 2857,
+            "startUnit": 0,
+            "endUnit": 285714285,
+            "widthUnits": 285714285,
+            "zeroWidth": false,
+            "amount": "60.00",
+            "percent": "28.57"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "5000",
+            "basisPoints": 2381,
+            "startUnit": 285714285,
+            "endUnit": 523809523,
+            "widthUnits": 238095238,
+            "zeroWidth": false,
+            "amount": "50.00",
+            "percent": "23.81"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "4000",
+            "basisPoints": 1905,
+            "startUnit": 523809523,
+            "endUnit": 714285714,
+            "widthUnits": 190476191,
+            "zeroWidth": false,
+            "amount": "40.00",
+            "percent": "19.05"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "3000",
+            "basisPoints": 1429,
+            "startUnit": 714285714,
+            "endUnit": 857142857,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "30.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000005"
+            ],
+            "minor": "2000",
+            "basisPoints": 952,
+            "startUnit": 857142857,
+            "endUnit": 952380952,
+            "widthUnits": 95238095,
+            "zeroWidth": false,
+            "amount": "20.00",
+            "percent": "9.52"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000006"
+            ],
+            "minor": "1000",
+            "basisPoints": 476,
+            "startUnit": 952380952,
+            "endUnit": 1000000000,
+            "widthUnits": 47619048,
+            "zeroWidth": false,
+            "amount": "10.00",
+            "percent": "4.76"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH09",
+      "purpose": "Семь категорий: top5+Others из F,G; полный список сохраняет все группы.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000026",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "70.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000027",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "60.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000002",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000028",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "50.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000003",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000029",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "40.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000004",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000030",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "30.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000005",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000031",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "20.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000006",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000032",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "10.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000007",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000026",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "70.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000027",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "60.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000028",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "50.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000029",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "40.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000030",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "30.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000031",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "20.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000032",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "10.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000007",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "280.00",
+          "net": "-280.00"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000026",
+          "10000000-0000-4000-8000-000000000027",
+          "10000000-0000-4000-8000-000000000028",
+          "10000000-0000-4000-8000-000000000029",
+          "10000000-0000-4000-8000-000000000030",
+          "10000000-0000-4000-8000-000000000031",
+          "10000000-0000-4000-8000-000000000032"
+        ],
+        "totalMinor": "28000",
+        "totalAmount": "280.00",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "7000",
+            "amount": "70.00",
+            "basisPoints": 2500,
+            "percent": "25.00",
+            "remainderNumerator": "0"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "6000",
+            "amount": "60.00",
+            "basisPoints": 2143,
+            "percent": "21.43",
+            "remainderNumerator": "24000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "minor": "5000",
+            "amount": "50.00",
+            "basisPoints": 1786,
+            "percent": "17.86",
+            "remainderNumerator": "20000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "minor": "4000",
+            "amount": "40.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "16000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "minor": "3000",
+            "amount": "30.00",
+            "basisPoints": 1071,
+            "percent": "10.71",
+            "remainderNumerator": "12000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "minor": "2000",
+            "amount": "20.00",
+            "basisPoints": 714,
+            "percent": "7.14",
+            "remainderNumerator": "8000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000007",
+            "categoryId": "00000000-0000-4000-8000-000000000007",
+            "minor": "1000",
+            "amount": "10.00",
+            "basisPoints": 357,
+            "percent": "3.57",
+            "remainderNumerator": "4000"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "7000",
+            "basisPoints": 2500,
+            "startUnit": 0,
+            "endUnit": 250000000,
+            "widthUnits": 250000000,
+            "zeroWidth": false,
+            "amount": "70.00",
+            "percent": "25.00"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "6000",
+            "basisPoints": 2143,
+            "startUnit": 250000000,
+            "endUnit": 464285714,
+            "widthUnits": 214285714,
+            "zeroWidth": false,
+            "amount": "60.00",
+            "percent": "21.43"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "5000",
+            "basisPoints": 1786,
+            "startUnit": 464285714,
+            "endUnit": 642857142,
+            "widthUnits": 178571428,
+            "zeroWidth": false,
+            "amount": "50.00",
+            "percent": "17.86"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "4000",
+            "basisPoints": 1429,
+            "startUnit": 642857142,
+            "endUnit": 785714285,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "40.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000005"
+            ],
+            "minor": "3000",
+            "basisPoints": 1071,
+            "startUnit": 785714285,
+            "endUnit": 892857142,
+            "widthUnits": 107142857,
+            "zeroWidth": false,
+            "amount": "30.00",
+            "percent": "10.71"
+          },
+          {
+            "key": "~other",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000006",
+              "00000000-0000-4000-8000-000000000007"
+            ],
+            "minor": "3000",
+            "basisPoints": 1071,
+            "startUnit": 892857142,
+            "endUnit": 1000000000,
+            "widthUnits": 107142858,
+            "zeroWidth": false,
+            "amount": "30.00",
+            "percent": "10.71"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH10",
+      "purpose": "Семь равных категорий: top5 определяется ID; Others basisPoints=1428+1428=2856, не перераспределять проценты заново.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000033",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "1.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000007",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000034",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "1.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000006",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000035",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "1.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000005",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000036",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "1.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000004",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000037",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "1.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000003",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000038",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "1.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000002",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000039",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "1.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000033",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000007",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000034",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000035",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000036",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000037",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000038",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000039",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "7.00",
+          "net": "-7.00"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000033",
+          "10000000-0000-4000-8000-000000000034",
+          "10000000-0000-4000-8000-000000000035",
+          "10000000-0000-4000-8000-000000000036",
+          "10000000-0000-4000-8000-000000000037",
+          "10000000-0000-4000-8000-000000000038",
+          "10000000-0000-4000-8000-000000000039"
+        ],
+        "totalMinor": "700",
+        "totalAmount": "7.00",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1429,
+            "percent": "14.29",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "categoryId": "00000000-0000-4000-8000-000000000005",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000006",
+            "categoryId": "00000000-0000-4000-8000-000000000006",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "remainderNumerator": "400"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000007",
+            "categoryId": "00000000-0000-4000-8000-000000000007",
+            "minor": "100",
+            "amount": "1.00",
+            "basisPoints": 1428,
+            "percent": "14.28",
+            "remainderNumerator": "400"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "100",
+            "basisPoints": 1429,
+            "startUnit": 0,
+            "endUnit": 142857142,
+            "widthUnits": 142857142,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "100",
+            "basisPoints": 1429,
+            "startUnit": 142857142,
+            "endUnit": 285714285,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "100",
+            "basisPoints": 1429,
+            "startUnit": 285714285,
+            "endUnit": 428571428,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "100",
+            "basisPoints": 1429,
+            "startUnit": 428571428,
+            "endUnit": 571428571,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.29"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000005",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000005"
+            ],
+            "minor": "100",
+            "basisPoints": 1428,
+            "startUnit": 571428571,
+            "endUnit": 714285714,
+            "widthUnits": 142857143,
+            "zeroWidth": false,
+            "amount": "1.00",
+            "percent": "14.28"
+          },
+          {
+            "key": "~other",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000006",
+              "00000000-0000-4000-8000-000000000007"
+            ],
+            "minor": "200",
+            "basisPoints": 2856,
+            "startUnit": 714285714,
+            "endUnit": 1000000000,
+            "widthUnits": 285714286,
+            "zeroWidth": false,
+            "amount": "2.00",
+            "percent": "28.56"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH11",
+      "purpose": "Очень маленькие расходы не увеличиваются для видимости: C имеет нулевую геометрическую ширину и 0.00%, но остаётся с точной суммой.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000040",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "999999999999999999999999.99",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000001",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000041",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "999999999999999999999999.99",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000002",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000042",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.01",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000003",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000043",
+          "revision": 1,
+          "kind": "expense",
+          "date": "2026-11-03",
+          "amount": "0.01",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": "00000000-0000-4000-8000-000000000004",
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000040",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "999999999999999999999999.99",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000041",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "999999999999999999999999.99",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000042",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.01",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000043",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.01",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "2000000000000000000000000.00",
+          "net": "-2000000000000000000000000.00"
+        }
+      },
+      "expected": {
+        "chartEmpty": false,
+        "includedExpenseIds": [
+          "10000000-0000-4000-8000-000000000040",
+          "10000000-0000-4000-8000-000000000041",
+          "10000000-0000-4000-8000-000000000042",
+          "10000000-0000-4000-8000-000000000043"
+        ],
+        "totalMinor": "200000000000000000000000000",
+        "totalAmount": "2000000000000000000000000.00",
+        "groups": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "199999999999999999999990000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "minor": "99999999999999999999999999",
+            "amount": "999999999999999999999999.99",
+            "basisPoints": 5000,
+            "percent": "50.00",
+            "remainderNumerator": "199999999999999999999990000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "categoryId": "00000000-0000-4000-8000-000000000003",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 0,
+            "percent": "0.00",
+            "remainderNumerator": "10000"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "categoryId": "00000000-0000-4000-8000-000000000004",
+            "minor": "1",
+            "amount": "0.01",
+            "basisPoints": 0,
+            "percent": "0.00",
+            "remainderNumerator": "10000"
+          }
+        ],
+        "sectors": [
+          {
+            "key": "00000000-0000-4000-8000-000000000001",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000001"
+            ],
+            "minor": "99999999999999999999999999",
+            "basisPoints": 5000,
+            "startUnit": 0,
+            "endUnit": 499999999,
+            "widthUnits": 499999999,
+            "zeroWidth": false,
+            "amount": "999999999999999999999999.99",
+            "percent": "50.00"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000002",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000002"
+            ],
+            "minor": "99999999999999999999999999",
+            "basisPoints": 5000,
+            "startUnit": 499999999,
+            "endUnit": 999999999,
+            "widthUnits": 500000000,
+            "zeroWidth": false,
+            "amount": "999999999999999999999999.99",
+            "percent": "50.00"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000003",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000003"
+            ],
+            "minor": "1",
+            "basisPoints": 0,
+            "startUnit": 999999999,
+            "endUnit": 999999999,
+            "widthUnits": 0,
+            "zeroWidth": true,
+            "amount": "0.01",
+            "percent": "0.00"
+          },
+          {
+            "key": "00000000-0000-4000-8000-000000000004",
+            "memberKeys": [
+              "00000000-0000-4000-8000-000000000004"
+            ],
+            "minor": "1",
+            "basisPoints": 0,
+            "startUnit": 999999999,
+            "endUnit": 1000000000,
+            "widthUnits": 1,
+            "zeroWidth": false,
+            "amount": "0.01",
+            "percent": "0.00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CH12",
+      "purpose": "Только доход и ожидающий разбора чек: нулевой расход, пустая диаграмма.",
+      "ledgerRecords": [
+        {
+          "id": "10000000-0000-4000-8000-000000000044",
+          "revision": 1,
+          "kind": "income",
+          "date": "2026-11-03",
+          "amount": "123.45",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "note": "",
+          "source": "manual",
+          "createdAt": "2026-11-03T00:00:00Z",
+          "updatedAt": "2026-11-03T00:00:00Z",
+          "deleted": false
+        }
+      ],
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000044",
+            "revision": 1,
+            "kind": "income",
+            "date": "2026-11-03",
+            "amount": "123.45",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [
+          {
+            "id": "20000000-0000-4000-8000-000000000002",
+            "status": "needs_review",
+            "source": "receipt",
+            "amount": "10.00",
+            "currency": "KZT",
+            "scale": 2,
+            "date": "2026-11-03"
+          }
+        ],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "123.45",
+          "expense": "0.00",
+          "net": "123.45"
+        }
+      },
+      "expected": {
+        "chartEmpty": true,
+        "includedExpenseIds": [],
+        "totalMinor": "0",
+        "totalAmount": "0.00",
+        "groups": [],
+        "sectors": []
+      }
+    }
+  ],
+  "invalidCases": [
+    {
+      "id": "CH-ERR01",
+      "purpose": "Повтор ID нельзя дважды включать или молча исключать.",
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.10",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.10",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "0.30",
+          "net": "-0.30"
+        }
+      },
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      }
+    },
+    {
+      "id": "CH-ERR02",
+      "purpose": "В record другой currency, чем selection; partial KZT chart запрещён.",
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.10",
+            "currency": "USD",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "0.30",
+          "net": "-0.30"
+        }
+      },
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      }
+    },
+    {
+      "id": "CH-ERR03",
+      "purpose": "В record другой scale; нельзя переинтерпретировать исходную сумму.",
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.10",
+            "currency": "KZT",
+            "scale": 3,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "0.30",
+          "net": "-0.30"
+        }
+      },
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      }
+    },
+    {
+      "id": "CH-ERR04",
+      "purpose": "Ненулевой categoryId отсутствует в state.categories; не подменять null.",
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.10",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000999",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "0.30",
+          "net": "-0.30"
+        }
+      },
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      }
+    },
+    {
+      "id": "CH-ERR05",
+      "purpose": "Отрицательный amount нарушает DTO; не вычитать из расходов.",
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "-1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "0.30",
+          "net": "-0.30"
+        }
+      },
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      }
+    },
+    {
+      "id": "CH-ERR06",
+      "purpose": "Сумма групп не равна summary.expense; не показывать несогласованный круг.",
+      "state": {
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "currencies": [
+          {
+            "code": "KZT",
+            "scale": 2
+          }
+        ],
+        "records": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.10",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000001",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "kind": "expense",
+            "date": "2026-11-03",
+            "amount": "0.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "00000000-0000-4000-8000-000000000002",
+            "note": "",
+            "source": "manual",
+            "createdAt": "2026-11-03T00:00:00Z",
+            "updatedAt": "2026-11-03T00:00:00Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "revision": 1,
+            "name": "Категория A",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000002",
+            "revision": 1,
+            "name": "Категория B",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000003",
+            "revision": 1,
+            "name": "Категория C",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000004",
+            "revision": 1,
+            "name": "Категория D",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000005",
+            "revision": 1,
+            "name": "Категория E",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000006",
+            "revision": 1,
+            "name": "Категория F",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "revision": 1,
+            "name": "Категория G",
+            "kind": "expense"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000008",
+            "revision": 1,
+            "name": "Категория H",
+            "kind": "expense"
+          }
+        ],
+        "imports": [],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "0.31",
+          "net": "-0.30"
+        }
+      },
+      "expected": {
+        "chartStatus": "unavailable",
+        "noPartialTotals": true,
+        "message": "Не удалось построить график"
+      }
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "executedAtUtc": "2026-11-03T09:56:29.228923+00:00",
+  "command": "python android-app/qa/app008-calculation/final_continuity.py",
+  "scope": "Current JVM/chart tested sources and root-executed migration evidence bound to same final APK; pure helper evidence reused where tested bytes unchanged. This script does not execute native OCR or Android migration.",
+  "apkSha256": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+  "sourceFingerprint": "d20ab8f54d5aede6bf35af8b1b1b01caacd5bc890bece57d303023514b444fe8",
+  "actualTests": {
+    "regression": 211,
+    "receiptBank": 269,
+    "chartGroups": 60,
+    "chartComparisons": 3840
+  },
+  "checks": [
+    {
+      "id": "build/source fingerprint",
+      "expected": "d20ab8f54d5aede6bf35af8b1b1b01caacd5bc890bece57d303023514b444fe8",
+      "actual": "d20ab8f54d5aede6bf35af8b1b1b01caacd5bc890bece57d303023514b444fe8",
+      "pass": true
+    },
+    {
+      "id": "actual main APK",
+      "expected": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+      "actual": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/app/src/main/java/com/ladno/finance/core/BankMessageParser.java",
+      "expected": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+      "actual": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/app/src/main/java/com/ladno/finance/core/BankMessageParser.java",
+      "expected": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+      "actual": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/app/src/main/java/com/ladno/finance/core/BankMessageParser.java",
+      "expected": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+      "actual": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/app/src/main/java/com/ladno/finance/core/ContractException.java",
+      "expected": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "actual": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/app/src/main/java/com/ladno/finance/core/ContractException.java",
+      "expected": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "actual": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/app/src/main/java/com/ladno/finance/core/ContractException.java",
+      "expected": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "actual": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/app/src/main/java/com/ladno/finance/core/ImportCandidate.java",
+      "expected": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "actual": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/app/src/main/java/com/ladno/finance/core/ImportCandidate.java",
+      "expected": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "actual": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/app/src/main/java/com/ladno/finance/core/ImportCandidate.java",
+      "expected": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "actual": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/app/src/main/java/com/ladno/finance/core/JsonChecks.java",
+      "expected": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "actual": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/app/src/main/java/com/ladno/finance/core/JsonChecks.java",
+      "expected": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "actual": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/app/src/main/java/com/ladno/finance/core/JsonChecks.java",
+      "expected": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "actual": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/app/src/main/java/com/ladno/finance/core/Money.java",
+      "expected": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "actual": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/app/src/main/java/com/ladno/finance/core/Money.java",
+      "expected": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "actual": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/app/src/main/java/com/ladno/finance/core/Money.java",
+      "expected": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "actual": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/app/src/main/java/com/ladno/finance/core/ParseSupport.java",
+      "expected": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "actual": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/app/src/main/java/com/ladno/finance/core/ParseSupport.java",
+      "expected": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "actual": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/app/src/main/java/com/ladno/finance/core/ParseSupport.java",
+      "expected": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "actual": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/app/src/main/java/com/ladno/finance/core/ReceiptOcrConsensus.java",
+      "expected": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "actual": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/app/src/main/java/com/ladno/finance/core/ReceiptOcrConsensus.java",
+      "expected": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "actual": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/app/src/main/java/com/ladno/finance/core/ReceiptOcrConsensus.java",
+      "expected": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "actual": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "expected": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "actual": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "expected": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "actual": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "expected": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "actual": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/app/src/main/assets/www/view.js",
+      "expected": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "actual": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/app/src/main/assets/www/view.js",
+      "expected": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "actual": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/app/src/main/assets/www/view.js",
+      "expected": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "actual": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/docs/android/APP-008-CHART-FIXTURES.json",
+      "expected": "fec206c779684eb2b2b5d790888915b9d4a465ff48e8be5ffd747931f7a2f11b",
+      "actual": "fec206c779684eb2b2b5d790888915b9d4a465ff48e8be5ffd747931f7a2f11b",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/docs/android/APP-008-CHARTS.md",
+      "expected": "c62cf40c21c5d023900d2ea40d39797ca5209ab63717cd5bf655add2230a2d96",
+      "actual": "c62cf40c21c5d023900d2ea40d39797ca5209ab63717cd5bf655add2230a2d96",
+      "pass": true
+    },
+    {
+      "id": "tested source unchanged/android-app/fixtures/money-cases.json",
+      "expected": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "actual": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "pass": true
+    },
+    {
+      "id": "tested source in built manifest/fixtures/money-cases.json",
+      "expected": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "actual": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "pass": true
+    },
+    {
+      "id": "tested source staged/fixtures/money-cases.json",
+      "expected": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "actual": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "pass": true
+    },
+    {
+      "id": "actual APK chart model",
+      "expected": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "actual": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "pass": true
+    },
+    {
+      "id": "reused 384-assertion helper same bytes",
+      "expected": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "actual": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "pass": true
+    },
+    {
+      "id": "reused helper actual build",
+      "expected": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "actual": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "pass": true
+    },
+    {
+      "id": "reused guard assertions",
+      "expected": 384,
+      "actual": 384,
+      "pass": true
+    },
+    {
+      "id": "reused guard failures",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "root migration executed on final APK",
+      "expected": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+      "actual": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+      "pass": true
+    },
+    {
+      "id": "reused Android migration source unchanged/app/src/main/java/com/ladno/finance/storage/LedgerStore.java",
+      "expected": "92d55537dc60ab672b7e6950b70bbf21c587386edf4f77eddacd3156c273d986",
+      "actual": "92d55537dc60ab672b7e6950b70bbf21c587386edf4f77eddacd3156c273d986",
+      "pass": true
+    },
+    {
+      "id": "reused Android migration source built/app/src/main/java/com/ladno/finance/storage/LedgerStore.java",
+      "expected": "92d55537dc60ab672b7e6950b70bbf21c587386edf4f77eddacd3156c273d986",
+      "actual": "92d55537dc60ab672b7e6950b70bbf21c587386edf4f77eddacd3156c273d986",
+      "pass": true
+    },
+    {
+      "id": "reused Android migration source unchanged/app/src/main/java/com/ladno/finance/storage/StarterCategories.java",
+      "expected": "d6d30f2a1990d9a1ae40b473b3a1ba981762fddfedc593d8e3c7a1595df6d013",
+      "actual": "d6d30f2a1990d9a1ae40b473b3a1ba981762fddfedc593d8e3c7a1595df6d013",
+      "pass": true
+    },
+    {
+      "id": "reused Android migration source built/app/src/main/java/com/ladno/finance/storage/StarterCategories.java",
+      "expected": "d6d30f2a1990d9a1ae40b473b3a1ba981762fddfedc593d8e3c7a1595df6d013",
+      "actual": "d6d30f2a1990d9a1ae40b473b3a1ba981762fddfedc593d8e3c7a1595df6d013",
+      "pass": true
+    },
+    {
+      "id": "reused Android migration source unchanged/app/src/main/assets/db/schema.sql",
+      "expected": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "actual": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "pass": true
+    },
+    {
+      "id": "reused Android migration source built/app/src/main/assets/db/schema.sql",
+      "expected": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "actual": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "pass": true
+    },
+    {
+      "id": "reused Android migration source unchanged/app/src/androidTest/java/com/ladno/finance/storage/StarterCategoryMigrationTest.java",
+      "expected": "c6bee4ef559c8e4ce1c81809422cd07967efe086ba0d058a1c8ba53a990f84f6",
+      "actual": "c6bee4ef559c8e4ce1c81809422cd07967efe086ba0d058a1c8ba53a990f84f6",
+      "pass": true
+    },
+    {
+      "id": "reused Android migration source built/app/src/androidTest/java/com/ladno/finance/storage/StarterCategoryMigrationTest.java",
+      "expected": "c6bee4ef559c8e4ce1c81809422cd07967efe086ba0d058a1c8ba53a990f84f6",
+      "actual": "c6bee4ef559c8e4ce1c81809422cd07967efe086ba0d058a1c8ba53a990f84f6",
+      "pass": true
+    },
+    {
+      "id": "reused migration actual assertion pairs",
+      "expected": 39,
+      "actual": 39,
+      "pass": true
+    },
+    {
+      "id": "reused migration audit failures",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    }
+  ],
+  "auditChecks": 50,
+  "failed": 0,
+  "evidenceHashes": {
+    "summary.json": "27946ea09976654658cdc4ca79c840ab5d539cf4a8d71d4bd16adb9c1febe978",
+    "receipt-results.json": "361c8f61a68667c7520a012af460233b77e1177f06876555acd9469db9fc7b0c",
+    "regression-results.json": "f28cf132b902fbefc92e3902e9fd9f273524991ffc481b4b8c4540f2ef469126",
+    "chart-results.json": "d2f10c13fc537973edd913b1bc1d3734cdb357d41253f91c8968feb7651358aa",
+    "consensus-summary.json": "1303bbc287adbd0c2d00d0999fe4320a913ffb7f7a82c52baee6b2a453262a28",
+    "migration-review.json": "d7c13a679abc39e148492231f70532323926083bfcaad9f65615a865d072f587"
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "ledger.db",
+    "bytes": 110592,
+    "sha256": "aa7584ebd249e6f4eef96d5239eb164c5edf4fcb1cd5c69c85e80676f0cb134c"
+  },
+  {
+    "name": "ledger.db-wal",
+    "bytes": 436752,
+    "sha256": "1c7e57b0373d48db0708b100fcb85bb923f86b6a34cf781e65b02deb2ed9e7a0"
+  },
+  {
+    "name": "ledger.db-shm",
+    "bytes": 32768,
+    "sha256": "02c404f15cce3e6f0e5c17f84d1b4e3f3c24603303bd0a126a1851e552ff0a4e"
+  }
+]

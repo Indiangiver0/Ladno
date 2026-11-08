@@ -1,0 +1,127 @@
+{
+  "startedAtUtc": "2026-11-04T07:50:51.459399+00:00",
+  "scope": "APP-017-SAMPLES-4-5",
+  "serial": "emulator-5580",
+  "avd": "Ladno_QA_API30",
+  "commands": [
+    {
+      "args": [
+        "emu",
+        "avd",
+        "name"
+      ],
+      "exitCode": 0,
+      "stdout": "Ladno_QA_API30\r\r\nOK\r\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "pm",
+        "path",
+        "com.ladno.finance"
+      ],
+      "exitCode": 0,
+      "stdout": "package:/data/app/~~bE4KaBzX_8CnI3_HMuGM6Q==/com.ladno.finance-cEScbtM2sSt61vri3l0fNw==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "sha256sum",
+        "/data/app/~~bE4KaBzX_8CnI3_HMuGM6Q==/com.ladno.finance-cEScbtM2sSt61vri3l0fNw==/base.apk"
+      ],
+      "exitCode": 0,
+      "stdout": "3067506ade998a7b1e659fa28cca9db8c7ba034282a816bf7801d44356fc8ef9  /data/app/~~bE4KaBzX_8CnI3_HMuGM6Q==/com.ladno.finance-cEScbtM2sSt61vri3l0fNw==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "pm",
+        "path",
+        "com.ladno.finance.test"
+      ],
+      "exitCode": 0,
+      "stdout": "package:/data/app/~~RC-Bfz1gMC8Jk2ntYhmF7Q==/com.ladno.finance.test-RGniUkRMfijcgUyxugchLQ==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "sha256sum",
+        "/data/app/~~RC-Bfz1gMC8Jk2ntYhmF7Q==/com.ladno.finance.test-RGniUkRMfijcgUyxugchLQ==/base.apk"
+      ],
+      "exitCode": 0,
+      "stdout": "e0610a1f278c18d40d5b27753d571ae735e3133e29ac8ad428ae043f8dbe5e66  /data/app/~~RC-Bfz1gMC8Jk2ntYhmF7Q==/com.ladno.finance.test-RGniUkRMfijcgUyxugchLQ==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "exec-in",
+        "run-as",
+        "com.ladno.finance",
+        "sh",
+        "-c",
+        "'cat > files/qa-ofd-authorized.json'"
+      ],
+      "exitCode": 0,
+      "stdout": "[private upload output suppressed]",
+      "stderr": "[private upload output suppressed]"
+    },
+    {
+      "args": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.ladno.finance.OfdAuthorizedLiveRuntimeTest",
+        "-e",
+        "ladnoSyntheticAvd",
+        "Ladno_QA_API30",
+        "-e",
+        "ladnoLiveOfdScope",
+        "APP-017-SAMPLES-4-5",
+        "com.ladno.finance.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "exitCode": 0,
+      "stdout": "INSTRUMENTATION_STATUS: class=com.ladno.finance.OfdAuthorizedLiveRuntimeTest\r\nINSTRUMENTATION_STATUS: current=1\r\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\r\nINSTRUMENTATION_STATUS: numtests=1\r\nINSTRUMENTATION_STATUS: stream=\r\ncom.ladno.finance.OfdAuthorizedLiveRuntimeTest:\r\nINSTRUMENTATION_STATUS: test=authorizedOwnReceiptsLookupWithoutIngest\r\nINSTRUMENTATION_STATUS_CODE: 1\r\nINSTRUMENTATION_STATUS: class=com.ladno.finance.OfdAuthorizedLiveRuntimeTest\r\nINSTRUMENTATION_STATUS: current=1\r\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\r\nINSTRUMENTATION_STATUS: numtests=1\r\nINSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Authorized read-only OFD check failed; inspect safe evidence\r\n\tat com.ladno.finance.OfdAuthorizedLiveRuntimeTest.authorizedOwnReceiptsLookupWithoutIngest(OfdAuthorizedLiveRuntimeTest.java:93)\r\n\r\nINSTRUMENTATION_STATUS: stream=\r\nError in authorizedOwnReceiptsLookupWithoutIngest(com.ladno.finance.OfdAuthorizedLiveRuntimeTest):\r\njava.lang.AssertionError: Authorized read-only OFD check failed; inspect safe evidence\r\n\tat com.ladno.finance.OfdAuthorizedLiveRuntimeTest.authorizedOwnReceiptsLookupWithoutIngest(OfdAuthorizedLiveRuntimeTest.java:93)\r\n\r\nINSTRUMENTATION_STATUS: test=authorizedOwnReceiptsLookupWithoutIngest\r\nINSTRUMENTATION_STATUS_CODE: -2\r\nINSTRUMENTATION_RESULT: stream=\r\n\r\nTime: 0.02\r\nThere was 1 failure:\r\n1) authorizedOwnReceiptsLookupWithoutIngest(com.ladno.finance.OfdAuthorizedLiveRuntimeTest)\r\njava.lang.AssertionError: Authorized read-only OFD check failed; inspect safe evidence\r\n\tat com.ladno.finance.OfdAuthorizedLiveRuntimeTest.authorizedOwnReceiptsLookupWithoutIngest(OfdAuthorizedLiveRuntimeTest.java:93)\r\n\r\nFAILURES!!!\r\nTests run: 1,  Failures: 1\r\n\r\n\r\nINSTRUMENTATION_CODE: -1\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "exec-out",
+        "run-as",
+        "com.ladno.finance",
+        "cat",
+        "files/qa-app017-authorized-live.json"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"startedAt\": \"2026-11-04T07:50:52.037Z\",\n  \"scope\": \"APP-017-SAMPLES-4-5\",\n  \"nativeDefaultClient\": true,\n  \"ledgerIngestCalled\": false,\n  \"uiExercised\": false,\n  \"results\": [],\n  \"safeFailureType\": \"FileNotFoundException\",\n  \"passed\": false,\n  \"finishedAt\": \"2026-11-04T07:50:52.045Z\",\n  \"privateInputRemoved\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "rm",
+        "-f",
+        "files/qa-ofd-authorized.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "ledgerIngestCalled": false,
+  "mainApkSha256": "3067506ade998a7b1e659fa28cca9db8c7ba034282a816bf7801d44356fc8ef9",
+  "testApkSha256": "e0610a1f278c18d40d5b27753d571ae735e3133e29ac8ad428ae043f8dbe5e66",
+  "passed": false,
+  "safeFailureType": "RuntimeError",
+  "cleanupAttempted": true,
+  "finishedAtUtc": "2026-11-04T07:50:53.059107+00:00"
+}

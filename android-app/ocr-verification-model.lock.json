@@ -1,0 +1,23 @@
+{
+  "source": "https://github.com/tesseract-ocr/tessdata_best",
+  "commit": "e12c65a915945e4c28e237a9b52bc4a8f39a0cec",
+  "models": {
+    "eng": {
+      "gitBlobSha1": "176dc3220de7db34d3b3aecbfa42043a6038348b",
+      "sha256": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "bytes": 15400601
+    },
+    "rus": {
+      "gitBlobSha1": "702e3c43c863cf3325002c9d2cc38045e01314a9",
+      "sha256": "b617eb6830ffabaaa795dd87ea7fd251adfe9cf0efe05eb9a2e8128b7728d6b6",
+      "bytes": 15301764
+    },
+    "kaz": {
+      "gitBlobSha1": "ef5f6c521b066935bf8a8d5c4d4c7e3436ee3315",
+      "sha256": "34cbd9204b1ff3cc813d50b29e3c0ae3752bcc201f261a4a393ceca3895aea9d",
+      "bytes": 7528853
+    }
+  },
+  "licenseSha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+  "scope": "Pinned offline primary OCR models; actual accuracy and cross-model guard require test evidence"
+}

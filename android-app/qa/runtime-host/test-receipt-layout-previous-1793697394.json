@@ -1,0 +1,30 @@
+{
+  "action": "test",
+  "suite": "receipt-layout",
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-03T09:16:34.194664+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.ladno.finance.ReceiptLayoutRuntimeTest",
+        "com.ladno.finance.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "exitCode": 0,
+      "passed": false,
+      "stdout": "INSTRUMENTATION_STATUS: class=com.ladno.finance.ReceiptLayoutRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=\ncom.ladno.finance.ReceiptLayoutRuntimeTest:\nINSTRUMENTATION_STATUS: test=syntheticMultilineAndFiscalImages\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / real Tesseract initialized: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / en-multiline-paid/amount: FAIL\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: class=com.ladno.finance.ReceiptLayoutRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stack=org.junit.ComparisonFailure: en-multiline-paid/amount expected:<7[5]4.32> but was:<7[9]4.32>\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\n\tat com.ladno.finance.ReceiptLayoutRuntimeTest.syntheticMultilineAndFiscalImages(ReceiptLayoutRuntimeTest.java:48)\n\nINSTRUMENTATION_STATUS: stream=\nError in syntheticMultilineAndFiscalImages(com.ladno.finance.ReceiptLayoutRuntimeTest):\norg.junit.ComparisonFailure: en-multiline-paid/amount expected:<7[5]4.32> but was:<7[9]4.32>\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\n\tat com.ladno.finance.ReceiptLayoutRuntimeTest.syntheticMultilineAndFiscalImages(ReceiptLayoutRuntimeTest.java:48)\n\nINSTRUMENTATION_STATUS: test=syntheticMultilineAndFiscalImages\nINSTRUMENTATION_STATUS_CODE: -2\nINSTRUMENTATION_RESULT: stream=\n\nTime: 1.284\nThere was 1 failure:\n1) syntheticMultilineAndFiscalImages(com.ladno.finance.ReceiptLayoutRuntimeTest)\norg.junit.ComparisonFailure: en-multiline-paid/amount expected:<7[5]4.32> but was:<7[9]4.32>\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\n\tat com.ladno.finance.ReceiptLayoutRuntimeTest.syntheticMultilineAndFiscalImages(ReceiptLayoutRuntimeTest.java:48)\n\nFAILURES!!!\nTests run: 1,  Failures: 1\n\n\nINSTRUMENTATION_CODE: -1\n",
+      "stderr": ""
+    }
+  ],
+  "passed": false
+}

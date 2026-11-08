@@ -1,0 +1,38 @@
+{
+  "apk": "cdeeafe797c024fa125cf0c2cb832ba293b7dba8a9f50ff7071e96296caeffbc",
+  "reason": "counterexample primary corrected; fiscal source currency became unsupported OCR chars, safe review required, new bounded prefill planned",
+  "files": [
+    {
+      "path": "android-app/qa/runtime-host/test-receipt-layout.json",
+      "sha256": "7e9c442e7438448501d91b63def482690552ea784f79215346961b2fedfa51fd"
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-qa-app008-receipt-layout.json",
+      "sha256": "528bea3b93e79ffa3e4ed9a25313a34778c7adce2f2d126389e7da03afb3ae4f"
+    },
+    {
+      "path": "android-app/dist/build-result.json",
+      "sha256": "15505b916e617d4676aa8d71ee7445d9aa4007780bc5fb29047ffd7b09d622d7"
+    },
+    {
+      "path": "android-app/dist/build-source-manifest.json",
+      "sha256": "7c4276a674b100b9f63ecabf1727d2796ab127e50bc4d1fe547e751231ab301f"
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/OcrEngine.java",
+      "sha256": "7a6feaecbac6257794fdb812cbadfe7a45501dcf2a51ed89e0ecc562adfa4fab"
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "sha256": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2"
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NativeRuntime.java",
+      "sha256": "64201514a727437650a2ada237762c48cfe454b369e064acab9fb7da60ca7419"
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/ReceiptLayoutRuntimeTest.java",
+      "sha256": "ba83fc186dac98ec24dcfad98f74fbb86e53077e7bb4946bca43c8f261a5ead0"
+    }
+  ]
+}

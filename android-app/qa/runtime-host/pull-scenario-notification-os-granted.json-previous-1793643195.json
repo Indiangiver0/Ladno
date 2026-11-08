@@ -1,0 +1,26 @@
+{
+  "action": "pull-scenario",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-02T18:13:15.995275+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "cat",
+        "files/qa-android-scenario/notification-os-granted.json"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "{\n  \"suite\": \"notification-os-granted\",\n  \"startedAt\": \"2026-11-02T17:19:26.219Z\",\n  \"pid\": 2502,\n  \"apiLevel\": 30,\n  \"abis\": [\n    \"x86_64\",\n    \"x86\"\n  ],\n  \"package\": \"com.ladno.finance\",\n  \"data\": \"synthetic-only\",\n  \"checks\": [\n    {\n      \"id\": \"actual OS NLS grant\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"unselected source\\/no records or pending imports during 3s\",\n      \"expected\": true,\n      \"actual\": true,\n      \"pass\": true\n    },\n    {\n      \"id\": \"actual OS expense delivery\\/deadline\",\n      \"expected\": true,\n      \"actual\": false,\n      \"pass\": false\n    }\n  ],\n  \"observations\": [],\n  \"failure\": \"java.lang.AssertionError: actual OS expense delivery\\/deadline expected:<true> but was:<false>\",\n  \"finishedAt\": \"2026-11-02T17:19:59.785Z\"\n}",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

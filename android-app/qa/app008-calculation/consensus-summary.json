@@ -1,0 +1,65 @@
+{
+  "scope": "Independent actual pure-Java ReceiptOcrConsensus; no native OCR/JNI/UI execution",
+  "executedAtUtc": "2026-11-03T09:41:44.647022+00:00",
+  "sourceHashes": {
+    "android-app/app/src/main/java/com/ladno/finance/core/BankMessageParser.java": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+    "android-app/app/src/main/java/com/ladno/finance/core/ContractException.java": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+    "android-app/app/src/main/java/com/ladno/finance/core/ImportCandidate.java": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+    "android-app/app/src/main/java/com/ladno/finance/core/JsonChecks.java": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+    "android-app/app/src/main/java/com/ladno/finance/core/Money.java": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+    "android-app/app/src/main/java/com/ladno/finance/core/ParseSupport.java": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+    "android-app/app/src/main/java/com/ladno/finance/core/ReceiptOcrConsensus.java": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+    "android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java": "cd1ad90d954e2ff851a67b6c348ded8c2b093b97799510bebe8f8ed71b9d2c8f"
+  },
+  "previousJvmCoreUnchanged": {
+    "android-app/app/src/main/java/com/ladno/finance/core/BankMessageParser.java": true,
+    "android-app/app/src/main/java/com/ladno/finance/core/ContractException.java": true,
+    "android-app/app/src/main/java/com/ladno/finance/core/ImportCandidate.java": true,
+    "android-app/app/src/main/java/com/ladno/finance/core/JsonChecks.java": true,
+    "android-app/app/src/main/java/com/ladno/finance/core/Money.java": true,
+    "android-app/app/src/main/java/com/ladno/finance/core/ParseSupport.java": true,
+    "android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java": true
+  },
+  "sourceChangedDuringRun": [],
+  "commands": [
+    {
+      "name": "consensus-javac",
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\javac.exe",
+        "--release",
+        "17",
+        "-encoding",
+        "UTF-8",
+        "-cp",
+        "C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.json\\json\\20240303\\ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a\\json-20240303.jar",
+        "-d",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\consensus-classes",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\BankMessageParser.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ContractException.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ImportCandidate.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\JsonChecks.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\Money.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ParseSupport.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ReceiptOcrConsensus.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ReceiptParser.java",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\ReceiptConsensusIndependentQa.java"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "consensus-java",
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\java.exe",
+        "-cp",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\consensus-classes;C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.json\\json\\20240303\\ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a\\json-20240303.jar",
+        "ReceiptConsensusIndependentQa",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\qa\\app008-calculation\\consensus-results.json"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "vectorGroups": 32,
+  "assertions": 384,
+  "failed": 0,
+  "resultSha256": "d567d0ab88297a7998beeb99fc5064d14b57ff9c354792fec1725085029b6253"
+}

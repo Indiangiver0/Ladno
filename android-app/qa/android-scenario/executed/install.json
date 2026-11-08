@@ -1,0 +1,44 @@
+{
+  "action": "install",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-02T18:38:09.342977+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "install",
+        "-r",
+        "-t",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.1.0-debug.apk"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "install",
+        "-r",
+        "-t",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.1.0-androidTest.apk"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true,
+  "sourceFingerprint": "d001bbd85c2faeef77d3a88ceeecc63798717144adcde1d8dd3bd20edd84146d",
+  "stage": "C:\\Users\\04068\\.cache\\ladno-android\\work\\ladno-d001bbd85c2faeef",
+  "apkSha256": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+  "testApkSha256": "ac23d80872e07b52a075249f94c39b7c710edde2e1954ce87a2fe342da7e7602"
+}

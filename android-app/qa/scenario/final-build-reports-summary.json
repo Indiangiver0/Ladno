@@ -1,0 +1,60 @@
+{
+  "source": "Read existing final Gradle report XML; tests not rerun by scenario QA",
+  "suites": [
+    {
+      "name": "com.ladno.finance.core.MoneyTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.ladno.finance.core.ParserTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.ladno.finance.LocalAssetsTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.ladno.finance.NativeJsonGuardTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.ladno.finance.NotificationStatusTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.ladno.finance.storage.IngestSourceTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "totals": {
+    "tests": 24,
+    "failures": 0,
+    "errors": 0
+  },
+  "lintIssues": [
+    {
+      "id": "ApplySharedPref",
+      "severity": "Warning"
+    },
+    {
+      "id": "SetJavaScriptEnabled",
+      "severity": "Warning"
+    },
+    {
+      "id": "StaticFieldLeak",
+      "severity": "Warning"
+    }
+  ]
+}

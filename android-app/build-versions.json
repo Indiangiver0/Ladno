@@ -1,0 +1,25 @@
+{
+  "agp": "8.13.2",
+  "gradle": "8.13",
+  "javaRuntimeMajor": 21,
+  "javaSource": 17,
+  "compileSdk": 36,
+  "targetSdk": 36,
+  "minSdk": 26,
+  "buildTools": "35.0.0",
+  "commandLineTools": {
+    "url": "https://dl.google.com/android/repository/commandlinetools-win-15859902_latest.zip",
+    "sha256": "90ae805d20434428bffcb699c290860f19bb5f66a67e6b330067e3de801fb04a",
+    "source": "https://developer.android.com/studio"
+  },
+  "sdkTerms": "https://developer.android.com/studio/terms",
+  "tesseract4Android": "4.9.0",
+  "tesseractSource": "https://github.com/adaptech-cz/Tesseract4Android",
+  "trainedDataSource": "https://github.com/tesseract-ocr/tessdata_fast",
+  "ocrLanguages": ["eng", "rus", "kaz"],
+  "versionSources": [
+    "https://developer.android.com/build/releases/agp-8-13-0-release-notes",
+    "https://docs.gradle.org/current/userguide/compatibility.html",
+    "https://developer.android.com/jetpack/androidx/releases/core"
+  ]
+}

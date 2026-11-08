@@ -1,0 +1,66 @@
+{
+  "task": "APP-001-DESIGN-VISUAL",
+  "version": "v1-partial",
+  "date": "2026-10-30",
+  "authorRole": "visual-content-designer",
+  "reviewerRole": "creative-lead",
+  "status": "head_review / incomplete due external quota",
+  "completed": [
+    "Светлый визуальный язык: нейтральный фон, графит, зелёный акцент, Manrope; Inter в библиотечных контролах.",
+    "Figma сохранены четыре desktop-экрана 1440×1120 и mobile-обзор 390×2020.",
+    "SC-01 desktop после адресного исправления layout визуально проверен автором и creative-lead по PNG.",
+    "Выбраны и применены компоненты Button и Input Field Simple Design System; локальные NavItem/KPI повторяются через instances; семантические переменные и стили.",
+    "Сохранены исходные Plugin API scripts, manifest с реальными IDs и исходные tool-return evidence."
+  ],
+  "evidence": [
+    {
+      "step": "use_figma foundations + overview + targeted layout fix + screens + mobile",
+      "expected": "Сохранённые editable compositions на D1 без UI raster",
+      "actual": "5 кадров; 238 TEXT, 36 INSTANCE, 0 image-fill nodes по audit() в successful tool returns",
+      "path": "design/figma-evidence.json"
+    },
+    {
+      "step": "get_screenshot SC-01 desktop; визуальный осмотр и один повтор после адресной правки",
+      "expected": "Все числа/подписи видны, пересечений нет",
+      "actual": "SC-01 1440×1120; main overflow пуст; автор и creative-lead осмотрели post-fix PNG",
+      "path": "design/previews/SC-01-desktop.png"
+    },
+    {
+      "step": "node design/figma-check.js",
+      "expected": "Синтаксис Plugin API function bodies, корректный manifest, неизменный D1, валидный PNG",
+      "actual": "exit 0; 7 standalone bodies + 4 concatenated stages; 5 unique frames, 4 desktop+1mobile, D1 SHA256 unchanged, operations4, opening=null, PNG1440×1120",
+      "path": "design/figma-local-checks.json"
+    }
+  ],
+  "issues": [
+    {
+      "id": "VIS-R01",
+      "priority": "P2",
+      "status": "fixed",
+      "description": "Первый screenshot выявил fixed 1px cross-height горизонтальных wrappers; исправлены primary/counter sizing и порядок text HEIGHT после resize.",
+      "evidence": "design/previews/SC-01-desktop.png"
+    },
+    {
+      "id": "VIS-B01",
+      "priority": "P2",
+      "status": "open-blocks-required-deliverables",
+      "description": "Starter MCP tool-call limit. use_figma stage05 и get_screenshot SC02 отклонены. whoami: starter/View.",
+      "impact": "AN01/02 остаются placeholder skeletons; SC02/03/04/mobile не прошли визуальный осмотр; mobile nav ещё не componentized.",
+      "evidence": "design/figma-evidence.json"
+    }
+  ],
+  "assumptions": [
+    "Платформа web, название «Ладно», KZT/2 и октябрь 2026 — предложения концепции, не дополнительные решения пользователя.",
+    "Данные только D1; 200000 не использовано как баланс; долги и цели отдельно; исходные долги и прошлые платежи не выдуманы."
+  ],
+  "questions": [
+    "Нужно восстановить доступность Figma MCP для завершения AN01/02 и штатных снимков остальных кадров.",
+    "Продуктовые Q-01–04 сохраняются: платформа/валюта/часовой пояс/связи целей и долгов со счетами."
+  ],
+  "nextAction": "После восстановления MCP выполнить figma-core.js + figma-05-states-form.js, затем один структурный audit и по одному full-frame screenshot SC02–04/mobile/AN01/AN02. Исправить лишь подтверждённые дефекты; передать creative-lead, независимому QA и суду. Не объявлять макет работающим приложением.",
+  "notPerformed": [
+    "Интерактивные переходы/кнопки не настроены и не проверены.",
+    "Runtime приложения, пользовательское тестирование и независимая QA не выполнялись.",
+    "Судебного вердикта по визуальной версии нет; специалист собственную работу не принимает."
+  ]
+}

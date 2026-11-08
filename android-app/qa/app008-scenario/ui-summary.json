@@ -1,0 +1,15 @@
+{
+  "logicalGroups": 20,
+  "rawObservations": 23,
+  "successfulObservations": 22,
+  "initialHarnessFailures": [
+    {
+      "id": "SC008-08",
+      "reason": "AX diff omitted unchanged empty-state node; full AX recheck passed"
+    }
+  ],
+  "productDefects": [],
+  "tools": "mcp__cua_repl only for every browser UI action",
+  "mobileScreenshot": "charts-mobile.png",
+  "fixture": "synthetic explicit fixture.html+fixture-adapter.js, current production UI assets; no native OCR simulated in production"
+}

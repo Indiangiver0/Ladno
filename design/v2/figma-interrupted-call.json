@@ -1,0 +1,43 @@
+{
+  "task": "APP-002-VISUAL",
+  "version": "v2",
+  "date": "2026-11-02",
+  "status": "external-call-outcome-unknown-after-interruption",
+  "lastExternalCall": {
+    "tool": "mcp__codex_apps__figma_use_figma",
+    "wrapper": "functions.exec",
+    "description": "Завершить состояния и форму, проверить семь кадров и отрисовать шесть недостающих превью",
+    "fileKey": "e68RYW0YZNQxo8CAgUTgT4",
+    "sessionId": "5e751897-b3ae-4dfb-82cd-a487cbe002bb",
+    "sourceOrder": [
+      "design/v2/figma-core.js",
+      "design/v2/figma-05-states-form.js",
+      "design/v2/figma-readback.js"
+    ],
+    "sent": true,
+    "resultReceived": false,
+    "runningCellIdReturned": false,
+    "externalRunIdReturned": false,
+    "wrapperOutcome": "aborted by user after 715.2s",
+    "externalCompletionStatus": "unknown; cancellation may have ended only local waiting",
+    "figmaCallsSentByVisualInAPP002": 1,
+    "successfulResponsesByVisualInAPP002": 0
+  },
+  "localRecoveryCheck": {
+    "method": "functions.load('v2buildResult')",
+    "resultPresent": false,
+    "buildCodeStillPresent": true,
+    "newExternalCallsPerformed": false
+  },
+  "confirmed": {
+    "sourceFilesSaved": true,
+    "localSyntaxCheckPassed": true,
+    "stage05Applied": "unknown",
+    "readbackReceived": false,
+    "screenshotImageBlocksReceived": 0,
+    "previewsSaved": 0,
+    "rollbackConfirmed": false
+  },
+  "nextAction": "Root performs one bounded, read-only check of known frames. Visual does not retry writes or create a session until the result is coordinated with creative-lead.",
+  "caveat": "No conclusion about save, failure or rollback is supported by the interrupted tool call."
+}

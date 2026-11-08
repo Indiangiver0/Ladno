@@ -1,0 +1,198 @@
+{
+  "importedNodeIds": [
+    "4:56",
+    "4:142"
+  ],
+  "removedNodeIds": [
+    "4:179",
+    "4:183"
+  ],
+  "components": [
+    {
+      "setId": "4:56",
+      "name": "Button",
+      "defaultVariantId": "4:57",
+      "defaultVariantName": "Variant=Primary, State=Default, Size=Medium",
+      "variantCount": 18,
+      "variantSample": [
+        {
+          "id": "4:57",
+          "name": "Variant=Primary, State=Default, Size=Medium"
+        },
+        {
+          "id": "4:58",
+          "name": "Variant=Primary, State=Hover, Size=Medium"
+        },
+        {
+          "id": "4:59",
+          "name": "Variant=Primary, State=Disabled, Size=Medium"
+        },
+        {
+          "id": "4:60",
+          "name": "Variant=Neutral, State=Default, Size=Medium"
+        },
+        {
+          "id": "4:61",
+          "name": "Variant=Neutral, State=Hover, Size=Medium"
+        },
+        {
+          "id": "4:62",
+          "name": "Variant=Neutral, State=Disabled, Size=Medium"
+        },
+        {
+          "id": "4:63",
+          "name": "Variant=Subtle, State=Default, Size=Medium"
+        },
+        {
+          "id": "4:64",
+          "name": "Variant=Subtle, State=Hover, Size=Medium"
+        }
+      ],
+      "properties": [
+        {
+          "key": "Icon Start#4:192",
+          "type": "INSTANCE_SWAP",
+          "value": "4:9"
+        },
+        {
+          "key": "Has Icon Start#4:128",
+          "type": "BOOLEAN",
+          "value": false
+        },
+        {
+          "key": "Has Icon End#4:64",
+          "type": "BOOLEAN",
+          "value": false
+        },
+        {
+          "key": "Icon End#4:0",
+          "type": "INSTANCE_SWAP",
+          "value": "4:7"
+        },
+        {
+          "key": "Label#2:0",
+          "type": "TEXT",
+          "value": "Button"
+        },
+        {
+          "key": "Variant",
+          "type": "VARIANT",
+          "value": "Primary"
+        },
+        {
+          "key": "State",
+          "type": "VARIANT",
+          "value": "Default"
+        },
+        {
+          "key": "Size",
+          "type": "VARIANT",
+          "value": "Medium"
+        }
+      ],
+      "fontFamilies": [
+        "Inter"
+      ]
+    },
+    {
+      "setId": "4:142",
+      "name": "Input Field",
+      "defaultVariantId": "4:144",
+      "defaultVariantName": "State=Default, Value Type=Default",
+      "variantCount": 6,
+      "variantSample": [
+        {
+          "id": "4:143",
+          "name": "State=Default, Value Type=Placeholder"
+        },
+        {
+          "id": "4:144",
+          "name": "State=Default, Value Type=Default"
+        },
+        {
+          "id": "4:145",
+          "name": "State=Error, Value Type=Placeholder"
+        },
+        {
+          "id": "4:146",
+          "name": "State=Error, Value Type=Default"
+        },
+        {
+          "id": "4:147",
+          "name": "State=Disabled, Value Type=Placeholder"
+        },
+        {
+          "id": "4:148",
+          "name": "State=Disabled, Value Type=Default"
+        }
+      ],
+      "properties": [
+        {
+          "key": "Description#611:27",
+          "type": "TEXT",
+          "value": "Description"
+        },
+        {
+          "key": "Has Description#611:20",
+          "type": "BOOLEAN",
+          "value": false
+        },
+        {
+          "key": "Value#630:14",
+          "type": "TEXT",
+          "value": "Value"
+        },
+        {
+          "key": "Error#280:44",
+          "type": "TEXT",
+          "value": "Error"
+        },
+        {
+          "key": "Label#280:41",
+          "type": "TEXT",
+          "value": "Label"
+        },
+        {
+          "key": "Has Error#72:6",
+          "type": "BOOLEAN",
+          "value": false
+        },
+        {
+          "key": "Has Label#57:0",
+          "type": "BOOLEAN",
+          "value": true
+        },
+        {
+          "key": "State",
+          "type": "VARIANT",
+          "value": "Default"
+        },
+        {
+          "key": "Value Type",
+          "type": "VARIANT",
+          "value": "Default"
+        }
+      ],
+      "fontFamilies": [
+        "Inter"
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "id": "VariableID:a4865545b526a5b3399a512667f40c9efe0c2fc4/5613:370",
+      "name": "Background/Default/Default",
+      "key": "a4865545b526a5b3399a512667f40c9efe0c2fc4"
+    },
+    {
+      "id": "VariableID:395870afebb3397e858358930ffdd69a5ec0f73d/5613:437",
+      "name": "Border/Default/Default",
+      "key": "395870afebb3397e858358930ffdd69a5ec0f73d"
+    },
+    {
+      "id": "VariableID:16bc6f84b6e7e20e4234ef79030ee580ec0f4505/564:258",
+      "name": "Space/400",
+      "key": "16bc6f84b6e7e20e4234ef79030ee580ec0f4505"
+    }
+  ]
+}

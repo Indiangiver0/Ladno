@@ -1,0 +1,155 @@
+{
+  "startedAtUtc": "2026-11-04T08:32:53.730982+00:00",
+  "scope": "APP-017-SAMPLES-4-5",
+  "serial": "emulator-5580",
+  "avd": "Ladno_QA_API30",
+  "commands": [
+    {
+      "args": [
+        "emu",
+        "avd",
+        "name"
+      ],
+      "exitCode": 0,
+      "stdout": "Ladno_QA_API30\r\r\nOK\r\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "pm",
+        "path",
+        "com.ladno.finance"
+      ],
+      "exitCode": 0,
+      "stdout": "package:/data/app/~~vDwy_KzMAeEl8hVKDXY35Q==/com.ladno.finance-sr8SALOgiFe9m6OygELTCA==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "sha256sum",
+        "/data/app/~~vDwy_KzMAeEl8hVKDXY35Q==/com.ladno.finance-sr8SALOgiFe9m6OygELTCA==/base.apk"
+      ],
+      "exitCode": 0,
+      "stdout": "f54733b034399ec0b147d0fa7e9b5b82a8589034ca5c8692b63c905a2aa37cd3  /data/app/~~vDwy_KzMAeEl8hVKDXY35Q==/com.ladno.finance-sr8SALOgiFe9m6OygELTCA==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "pm",
+        "path",
+        "com.ladno.finance.test"
+      ],
+      "exitCode": 0,
+      "stdout": "package:/data/app/~~S9PP683rUEFA3MrgBd4HRQ==/com.ladno.finance.test-jAuzLHCHOMZtfyRGVZt76A==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "sha256sum",
+        "/data/app/~~S9PP683rUEFA3MrgBd4HRQ==/com.ladno.finance.test-jAuzLHCHOMZtfyRGVZt76A==/base.apk"
+      ],
+      "exitCode": 0,
+      "stdout": "2c3f1516d57f625ef76f5fb6e924fd7977b2fc328be2924563534550686b97fd  /data/app/~~S9PP683rUEFA3MrgBd4HRQ==/com.ladno.finance.test-jAuzLHCHOMZtfyRGVZt76A==/base.apk\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "exec-in",
+        "run-as",
+        "com.ladno.finance",
+        "tee",
+        "files/qa-ofd-authorized.json"
+      ],
+      "exitCode": 0,
+      "stdout": "[private upload output suppressed]",
+      "stderr": "[private upload output suppressed]"
+    },
+    {
+      "args": [
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "stat",
+        "-c",
+        "%s",
+        "files/qa-ofd-authorized.json"
+      ],
+      "exitCode": 0,
+      "stdout": "253\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "sha256sum",
+        "files/qa-ofd-authorized.json"
+      ],
+      "exitCode": 0,
+      "stdout": "a2cf5663750ecbbd5bc8c625a50992bb581f7f1a7ef2300c54d422a8983d9e05  files/qa-ofd-authorized.json\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.ladno.finance.OfdAuthorizedLiveRuntimeTest",
+        "-e",
+        "ladnoSyntheticAvd",
+        "Ladno_QA_API30",
+        "-e",
+        "ladnoLiveOfdScope",
+        "APP-017-SAMPLES-4-5",
+        "com.ladno.finance.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "exitCode": 0,
+      "stdout": "INSTRUMENTATION_STATUS: class=com.ladno.finance.OfdAuthorizedLiveRuntimeTest\r\nINSTRUMENTATION_STATUS: current=1\r\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\r\nINSTRUMENTATION_STATUS: numtests=1\r\nINSTRUMENTATION_STATUS: stream=\r\ncom.ladno.finance.OfdAuthorizedLiveRuntimeTest:\r\nINSTRUMENTATION_STATUS: test=authorizedOwnReceiptsLookupWithoutIngest\r\nINSTRUMENTATION_STATUS_CODE: 1\r\nINSTRUMENTATION_STATUS: class=com.ladno.finance.OfdAuthorizedLiveRuntimeTest\r\nINSTRUMENTATION_STATUS: current=1\r\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\r\nINSTRUMENTATION_STATUS: numtests=1\r\nINSTRUMENTATION_STATUS: stream=.\r\nINSTRUMENTATION_STATUS: test=authorizedOwnReceiptsLookupWithoutIngest\r\nINSTRUMENTATION_STATUS_CODE: 0\r\nINSTRUMENTATION_RESULT: stream=\r\n\r\nTime: 0.323\r\n\r\nOK (1 test)\r\n\r\n\r\nINSTRUMENTATION_CODE: -1\r\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "exec-out",
+        "run-as",
+        "com.ladno.finance",
+        "cat",
+        "files/qa-app017-authorized-live.json"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"startedAt\": \"2026-11-04T08:32:54.536Z\",\n  \"scope\": \"APP-017-SAMPLES-4-5\",\n  \"nativeDefaultClient\": true,\n  \"realDelegatingTransport\": false,\n  \"ledgerIngestCalled\": false,\n  \"uiExercised\": false,\n  \"results\": [\n    {\n      \"sample\": 4,\n      \"amount\": \"4395.00\",\n      \"currency\": \"KZT\",\n      \"date\": \"2026-11-03\",\n      \"kind\": \"expense\",\n      \"confidence\": \"high\",\n      \"reasons\": [],\n      \"verifiedIdentityAndFinalSale\": true\n    },\n    {\n      \"sample\": 5,\n      \"amount\": \"3547.00\",\n      \"currency\": \"KZT\",\n      \"date\": \"2026-11-03\",\n      \"kind\": \"expense\",\n      \"confidence\": \"high\",\n      \"reasons\": [],\n      \"verifiedIdentityAndFinalSale\": true\n    }\n  ],\n  \"noLedgerWrite\": true,\n  \"passed\": true,\n  \"finishedAt\": \"2026-11-04T08:32:54.843Z\",\n  \"transportDiagnostics\": [],\n  \"privateInputRemoved\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "rm",
+        "-f",
+        "files/qa-ofd-authorized.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "ledgerIngestCalled": false,
+  "transportDiagnostic": false,
+  "mainApkSha256": "f54733b034399ec0b147d0fa7e9b5b82a8589034ca5c8692b63c905a2aa37cd3",
+  "testApkSha256": "2c3f1516d57f625ef76f5fb6e924fd7977b2fc328be2924563534550686b97fd",
+  "privateInputVerified": true,
+  "privateInputBytes": 253,
+  "privateInputSha256": "a2cf5663750ecbbd5bc8c625a50992bb581f7f1a7ef2300c54d422a8983d9e05",
+  "passed": true,
+  "cleanupAttempted": true,
+  "finishedAtUtc": "2026-11-04T08:32:55.819109+00:00"
+}

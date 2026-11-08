@@ -1,0 +1,21 @@
+<canvas id="0:1" name="Page 1" x="0" y="0" width="0" height="0">
+  <shape-with-text id="1:3" x="304" y="412" width="224" height="128" name="SQUARE">UI SC-01–04</shape-with-text>
+  <shape-with-text id="1:6" x="656" y="412" width="224" height="128" name="SQUARE">Сценарии приложения</shape-with-text>
+  <shape-with-text id="1:9" x="1040" y="-36" width="224" height="128" name="SQUARE">Счета и операции</shape-with-text>
+  <shape-with-text id="1:12" x="1040" y="188" width="224" height="128" name="SQUARE">Месячный бюджет</shape-with-text>
+  <shape-with-text id="1:15" x="1040" y="412" width="224" height="128" name="SQUARE">Цели</shape-with-text>
+  <shape-with-text id="1:18" x="1040" y="636" width="224" height="128" name="SQUARE">Долги и возвраты</shape-with-text>
+  <shape-with-text id="1:21" x="1392" y="-36" width="224" height="128" name="SQUARE">Точные деньги и даты</shape-with-text>
+  <shape-with-text id="1:24" x="1040" y="860" width="224" height="128" name="SQUARE">Порты и UnitOfWork</shape-with-text>
+  <shape-with-text id="1:27" x="656" y="764" width="224" height="128" name="SQUARE">Адаптер IndexedDB</shape-with-text>
+  <shape-with-text id="1:30" x="656" y="988" width="224" height="128" name="SQUARE">Адаптер JSON backup</shape-with-text>
+  <connector id="1:33" x="536" y="476" connectorStart="1:3" connectorStartCap="NONE" connectorEnd="1:6" connectorEndCap="ARROW_LINES"></connector>
+  <connector id="1:37" x="888" y="28" connectorStart="1:6" connectorStartCap="NONE" connectorEnd="1:9" connectorEndCap="ARROW_LINES"></connector>
+  <connector id="1:41" x="888" y="252" connectorStart="1:6" connectorStartCap="NONE" connectorEnd="1:12" connectorEndCap="ARROW_LINES"></connector>
+  <connector id="1:45" x="888" y="476" connectorStart="1:6" connectorStartCap="NONE" connectorEnd="1:15" connectorEndCap="ARROW_LINES"></connector>
+  <connector id="1:49" x="888" y="476" connectorStart="1:6" connectorStartCap="NONE" connectorEnd="1:18" connectorEndCap="ARROW_LINES"></connector>
+  <connector id="1:53" x="1272" y="28" connectorStart="1:9" connectorStartCap="NONE" connectorEnd="1:21" connectorEndCap="ARROW_LINES"></connector>
+  <connector id="1:57" x="888" y="476" connectorStart="1:6" connectorStartCap="NONE" connectorEnd="1:24" connectorEndCap="ARROW_LINES"></connector>
+  <connector id="1:61" x="888" y="828" connectorStart="1:27" connectorStartCap="NONE" connectorEnd="1:24" connectorEndCap="ARROW_LINES"></connector>
+  <connector id="1:65" x="888" y="924" connectorStart="1:30" connectorStartCap="NONE" connectorEnd="1:24" connectorEndCap="ARROW_LINES"></connector>
+</canvas>

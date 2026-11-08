@@ -1,0 +1,31 @@
+{
+  "startedAt": "2026-11-04T07:54:15.879Z",
+  "scope": "APP-017-SAMPLES-4-5",
+  "nativeDefaultClient": true,
+  "ledgerIngestCalled": false,
+  "uiExercised": false,
+  "results": [
+    {
+      "sample": 4,
+      "amount": "4395.00",
+      "currency": "KZT",
+      "date": "2026-11-03",
+      "kind": null,
+      "confidence": "uncertain",
+      "verifiedIdentityAndFinalSale": false
+    },
+    {
+      "sample": 5,
+      "amount": "3547.00",
+      "currency": "KZT",
+      "date": "2026-11-03",
+      "kind": null,
+      "confidence": "uncertain",
+      "verifiedIdentityAndFinalSale": false
+    }
+  ],
+  "safeFailureType": "AssertionError",
+  "passed": false,
+  "finishedAt": "2026-11-04T07:54:16.720Z",
+  "privateInputRemoved": true
+}

@@ -1,0 +1,67 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.ladno.finance'
+    compileSdk 36
+    buildToolsVersion '35.0.0'
+
+    defaultConfig {
+        applicationId 'com.ladno.finance'
+        minSdk 26
+        targetSdk 36
+        versionCode 5
+        versionName '0.4.1'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    signingConfigs {
+        debug {
+            storeFile file(System.getenv('LADNO_DEBUG_KEYSTORE') ?: '../.local/debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+    buildTypes {
+        debug { signingConfig signingConfigs.debug }
+        release { minifyEnabled false }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    testOptions { unitTests.returnDefaultValues = false }
+    lint { abortOnError true }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.16.0'
+    implementation 'androidx.exifinterface:exifinterface:1.4.2'
+    implementation 'cz.adaptech.tesseract4android:tesseract4android:4.9.0'
+    implementation 'com.google.zxing:core:3.5.3'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20240303'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+}
+
+tasks.register('verifyBundledOcrModels') {
+    doLast {
+        ['index.html', 'styles.css', 'view.js', 'bridge.js', 'app.js', 'preview-adapter.js'].each { name ->
+            if (!file("src/main/assets/www/${name}").isFile()) {
+                throw new GradleException("Missing Android UI asset ${name}")
+            }
+        }
+        ['eng', 'rus', 'kaz'].each { language ->
+            def model = file("src/main/assets/tessdata/${language}.traineddata")
+            if (!model.isFile() || model.length() < 100000) {
+                throw new GradleException("Missing OCR model ${language}; run scripts/build_android.py provisioning first")
+            }
+            def best = file("src/main/assets/tessdata-best/${language}.traineddata")
+            if (!best.isFile() || best.length() < 100000) {
+                throw new GradleException("Missing pinned BEST model ${language}; run scripts/build_android.py first")
+            }
+        }
+    }
+}
+tasks.named('preBuild').configure { dependsOn 'verifyBundledOcrModels' }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }

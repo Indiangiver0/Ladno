@@ -1,0 +1,659 @@
+{
+  "android_metadata": [
+    {
+      "locale": "en_US"
+    }
+  ],
+  "settings": [
+    {
+      "singleton": 1,
+      "initialized": 1,
+      "primary_currency": "KZT",
+      "zone_id": "Asia/Qyzylorda",
+      "date_policy": "POST_TIME_IN_ZONE"
+    }
+  ],
+  "categories": [
+    {
+      "id": "96d0d2f9-8806-4206-b1c7-d8c07ad052ac",
+      "revision": 1,
+      "name": "Зарплата QA",
+      "kind": "income",
+      "deleted": 0
+    },
+    {
+      "id": "3d33a2ba-7378-40ae-bb7c-01ebdbbf292d",
+      "revision": 3,
+      "name": "Еда QA",
+      "kind": "expense",
+      "deleted": 1
+    }
+  ],
+  "transactions": [
+    {
+      "id": "042a3697-ad2f-42a4-adad-4a01868434a0",
+      "revision": 3,
+      "kind": "expense",
+      "operation_date": "2026-11-02",
+      "amount": "31949295.11",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "QA manual edit",
+      "source": "notification",
+      "created_at": "2026-11-02T17:19:09.330Z",
+      "updated_at": "2026-11-02T17:19:09.393Z",
+      "deleted": 1
+    },
+    {
+      "id": "d4d16713-9232-4c96-9941-81bd64d5f670",
+      "revision": 1,
+      "kind": "expense",
+      "operation_date": "2026-06-10",
+      "amount": "7.89",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "",
+      "source": "receipt",
+      "created_at": "2026-11-02T17:16:55.458Z",
+      "updated_at": "2026-11-02T17:16:55.458Z",
+      "deleted": 0
+    },
+    {
+      "id": "475be5cd-3fa8-485e-a6c5-2baccc0fa996",
+      "revision": 1,
+      "kind": "expense",
+      "operation_date": "2026-06-02",
+      "amount": "13.34",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "",
+      "source": "receipt",
+      "created_at": "2026-11-02T17:16:55.447Z",
+      "updated_at": "2026-11-02T17:16:55.447Z",
+      "deleted": 0
+    },
+    {
+      "id": "fc55475a-b7a2-4388-87be-bac6bc54ef84",
+      "revision": 3,
+      "kind": "expense",
+      "operation_date": "2026-06-02",
+      "amount": "13.34",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "manual correction QA",
+      "source": "notification",
+      "created_at": "2026-11-02T17:16:55.400Z",
+      "updated_at": "2026-11-02T17:16:55.491Z",
+      "deleted": 1
+    },
+    {
+      "id": "58eb05c6-f83e-4dcf-ae1d-34f8a202de22",
+      "revision": 1,
+      "kind": "income",
+      "operation_date": "2026-07-31",
+      "amount": "1.200",
+      "currency": "KWD",
+      "scale": 3,
+      "category_id": null,
+      "note": "",
+      "source": "manual",
+      "created_at": "2026-11-02T17:16:55.379Z",
+      "updated_at": "2026-11-02T17:16:55.379Z",
+      "deleted": 0
+    },
+    {
+      "id": "82086eb2-d1d0-4e18-950b-6dfd3c784c37",
+      "revision": 1,
+      "kind": "expense",
+      "operation_date": "2026-07-31",
+      "amount": "7",
+      "currency": "JPY",
+      "scale": 0,
+      "category_id": null,
+      "note": "",
+      "source": "manual",
+      "created_at": "2026-11-02T17:16:55.378Z",
+      "updated_at": "2026-11-02T17:16:55.378Z",
+      "deleted": 0
+    },
+    {
+      "id": "8a4550f3-78cb-4ca6-86ab-a559862fc5e5",
+      "revision": 1,
+      "kind": "expense",
+      "operation_date": "9999-12-31",
+      "amount": "0.01",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "",
+      "source": "manual",
+      "created_at": "2026-11-02T17:16:55.371Z",
+      "updated_at": "2026-11-02T17:16:55.371Z",
+      "deleted": 0
+    },
+    {
+      "id": "aacf0d81-e63a-4fe4-8bfd-27f199b32bb7",
+      "revision": 1,
+      "kind": "income",
+      "operation_date": "2026-08-31",
+      "amount": "999999999999999999999999.99",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "",
+      "source": "manual",
+      "created_at": "2026-11-02T17:16:55.361Z",
+      "updated_at": "2026-11-02T17:16:55.361Z",
+      "deleted": 0
+    },
+    {
+      "id": "b569c4c8-c4d4-4f23-83d8-899184e21e5d",
+      "revision": 1,
+      "kind": "income",
+      "operation_date": "2026-08-31",
+      "amount": "999999999999999999999999.99",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "",
+      "source": "manual",
+      "created_at": "2026-11-02T17:16:55.359Z",
+      "updated_at": "2026-11-02T17:16:55.359Z",
+      "deleted": 0
+    },
+    {
+      "id": "86ad9e56-5e4d-47d7-b0c4-d4d473d27bf9",
+      "revision": 1,
+      "kind": "expense",
+      "operation_date": "2026-09-30",
+      "amount": "9007199254740992.99",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "",
+      "source": "manual",
+      "created_at": "2026-11-02T17:16:55.352Z",
+      "updated_at": "2026-11-02T17:16:55.352Z",
+      "deleted": 0
+    },
+    {
+      "id": "8ea85169-9bd3-467b-868a-11b6e0f7e355",
+      "revision": 1,
+      "kind": "income",
+      "operation_date": "2026-09-30",
+      "amount": "0.02",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "",
+      "source": "manual",
+      "created_at": "2026-11-02T17:16:55.351Z",
+      "updated_at": "2026-11-02T17:16:55.351Z",
+      "deleted": 0
+    },
+    {
+      "id": "9f94ccd3-f611-474e-9282-065bc47f874e",
+      "revision": 1,
+      "kind": "income",
+      "operation_date": "2026-09-30",
+      "amount": "9007199254740993.01",
+      "currency": "KZT",
+      "scale": 2,
+      "category_id": null,
+      "note": "",
+      "source": "manual",
+      "created_at": "2026-11-02T17:16:55.350Z",
+      "updated_at": "2026-11-02T17:16:55.350Z",
+      "deleted": 0
+    }
+  ],
+  "import_candidates": [
+    {
+      "id": "0aa04ff0-d2d0-427b-b08c-4ddea96828c8",
+      "revision": 1,
+      "status": "needs_review",
+      "source": "notification",
+      "source_label": "Уведомление",
+      "received_at": "2026-11-02T17:19:09.464Z",
+      "kind": "expense",
+      "amount": "31949295.11",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-11-02",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "uncertain",
+      "transaction_id": null
+    },
+    {
+      "id": "ef21409c-27bb-480b-a844-cdc153835654",
+      "revision": 1,
+      "status": "needs_review",
+      "source": "notification",
+      "source_label": "Уведомление",
+      "received_at": "2026-11-02T17:19:09.449Z",
+      "kind": "expense",
+      "amount": null,
+      "currency": null,
+      "scale": null,
+      "operation_date": "2026-11-02",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "uncertain",
+      "transaction_id": null
+    },
+    {
+      "id": "2e5e2474-55ac-47af-94a8-8e651e9ab76c",
+      "revision": 1,
+      "status": "needs_review",
+      "source": "notification",
+      "source_label": "Уведомление",
+      "received_at": "2026-11-02T17:19:09.431Z",
+      "kind": "expense",
+      "amount": "31949295.11",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-11-02",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "uncertain",
+      "transaction_id": null
+    },
+    {
+      "id": "dfb2715a-216f-49b5-88f2-b1e631d5e0f3",
+      "revision": 1,
+      "status": "needs_review",
+      "source": "notification",
+      "source_label": "Уведомление",
+      "received_at": "2026-11-02T17:19:09.411Z",
+      "kind": "expense",
+      "amount": "31949295.11",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-11-02",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "uncertain",
+      "transaction_id": null
+    },
+    {
+      "id": "5ef2a875-7fde-41ec-b940-6444ca4106d8",
+      "revision": 2,
+      "status": "posted",
+      "source": "notification",
+      "source_label": "Уведомление",
+      "received_at": "2026-11-02T17:19:09.327Z",
+      "kind": "expense",
+      "amount": "31949295.11",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-11-02",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "high",
+      "transaction_id": "042a3697-ad2f-42a4-adad-4a01868434a0"
+    },
+    {
+      "id": "ae3c1c6a-1b6a-465d-ab62-4de411c33801",
+      "revision": 1,
+      "status": "needs_review",
+      "source": "receipt",
+      "source_label": "Чек",
+      "received_at": "2026-11-02T00:00:00Z",
+      "kind": "expense",
+      "amount": "6.66",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-06-20",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "high",
+      "transaction_id": null
+    },
+    {
+      "id": "18487aba-54e6-46e9-abb6-bca64766058d",
+      "revision": 2,
+      "status": "posted",
+      "source": "receipt",
+      "source_label": "Чек",
+      "received_at": "2026-11-02T00:00:00Z",
+      "kind": "expense",
+      "amount": "7.89",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-06-10",
+      "date_origin": "user",
+      "note": "",
+      "confidence": "uncertain",
+      "transaction_id": "d4d16713-9232-4c96-9941-81bd64d5f670"
+    },
+    {
+      "id": "b6819363-2a9d-4b4c-ad34-9dd2ba998a96",
+      "revision": 2,
+      "status": "ignored",
+      "source": "receipt",
+      "source_label": "Чек",
+      "received_at": "2026-11-02T00:00:00Z",
+      "kind": "expense",
+      "amount": "9.99",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-06-15",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "uncertain",
+      "transaction_id": null
+    },
+    {
+      "id": "36e85845-d1b5-4e2c-8f62-46ae93f9d3b3",
+      "revision": 2,
+      "status": "posted",
+      "source": "receipt",
+      "source_label": "Чек",
+      "received_at": "2026-11-02T00:00:00Z",
+      "kind": "expense",
+      "amount": "13.34",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-06-02",
+      "date_origin": "user",
+      "note": "",
+      "confidence": "high",
+      "transaction_id": "475be5cd-3fa8-485e-a6c5-2baccc0fa996"
+    },
+    {
+      "id": "3a53a2db-452d-45e8-9fe7-47dd2f6802b3",
+      "revision": 2,
+      "status": "linked",
+      "source": "receipt",
+      "source_label": "Чек",
+      "received_at": "2026-11-02T00:00:00Z",
+      "kind": "expense",
+      "amount": "13.34",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-06-02",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "high",
+      "transaction_id": "fc55475a-b7a2-4388-87be-bac6bc54ef84"
+    },
+    {
+      "id": "f7f8ad6c-8894-4d0d-aafb-c7f65936243d",
+      "revision": 1,
+      "status": "needs_review",
+      "source": "notification",
+      "source_label": "Уведомление",
+      "received_at": "2026-11-02T00:00:00Z",
+      "kind": "expense",
+      "amount": "13.34",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-06-02",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "high",
+      "transaction_id": null
+    },
+    {
+      "id": "563494d9-365f-4264-883a-776b730fda0d",
+      "revision": 2,
+      "status": "linked",
+      "source": "receipt",
+      "source_label": "Чек",
+      "received_at": "2026-11-02T00:00:00Z",
+      "kind": "expense",
+      "amount": "12.34",
+      "currency": "KZT",
+      "scale": 2,
+      "operation_date": "2026-06-02",
+      "date_origin": "source",
+      "note": "",
+      "confidence": "high",
+      "transaction_id": "fc55475a-b7a2-4388-87be-bac6bc54ef84"
+    }
+  ],
+  "source_observations": [
+    {
+      "id": "016f5f4e-fdd8-4d1e-a3d9-5eee609ebe64",
+      "candidate_id": "0aa04ff0-d2d0-427b-b08c-4ddea96828c8",
+      "source_kind": "notification",
+      "event_id": "9c3fb98c-1315-443e-88ae-a5972f70354f",
+      "provider_package": "com.ladno.finance",
+      "source_key_token": "82a377dbe5e06547643aab6af822de5baef784a5f9506dc312185cfa5f95074d",
+      "revision_token": "7ae020f5ed8b3b4579ae49976a76fb5e36fad98e03986bc73d8d778bc9aceec1",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T17:19:09.464Z",
+      "post_time": 1793639949395
+    },
+    {
+      "id": "202aed7b-0c32-4015-94aa-f8d60ebc3737",
+      "candidate_id": "ef21409c-27bb-480b-a844-cdc153835654",
+      "source_kind": "notification",
+      "event_id": "fd7d9330-2b3d-40a5-85c5-e531e6f85826",
+      "provider_package": "com.ladno.finance",
+      "source_key_token": "52e5403f341b30b873ff6092da666a3e6aa8c954b884ac21bd214a80d0ed9969",
+      "revision_token": "a305b522255f18b1c4180826ef0526844caf4b597da50c10f16045e1da686ebf",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T17:19:09.449Z",
+      "post_time": 1793639949298
+    },
+    {
+      "id": "f703a14c-c3d4-486c-a185-7eae7eb0f7f0",
+      "candidate_id": "2e5e2474-55ac-47af-94a8-8e651e9ab76c",
+      "source_kind": "notification",
+      "event_id": "74bbf2e9-9a70-4649-93b2-cca40fe1d1fc",
+      "provider_package": "com.ladno.finance",
+      "source_key_token": "4e9d4e1bc911461d46a534ed781610604e847d7f246345c58d2c114e76720681",
+      "revision_token": "860165b3e677f938ebc9330696f241cab5485d08112cab231c6e2ce1b4c2a84c",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T17:19:09.431Z",
+      "post_time": 1793639949297
+    },
+    {
+      "id": "9e34b7a3-8c06-48de-b891-70324d98ca3f",
+      "candidate_id": "dfb2715a-216f-49b5-88f2-b1e631d5e0f3",
+      "source_kind": "notification",
+      "event_id": "22214a42-c230-4abc-89df-ac0dcda47bd7",
+      "provider_package": "com.ladno.finance",
+      "source_key_token": "8d23e046ff590df2993cd0185d92abe5379937b5ffd477bed819ae3f4e9f9ee8",
+      "revision_token": "bdaf01518dc17a318f41ed3851619c0cc801e2075143d79a54e251bef939a049",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T17:19:09.411Z",
+      "post_time": 1793639949296
+    },
+    {
+      "id": "c1e2b2b1-d891-4705-bc12-e7e90e1f2137",
+      "candidate_id": "5ef2a875-7fde-41ec-b940-6444ca4106d8",
+      "source_kind": "notification",
+      "event_id": "5dff3036-2960-40d1-9d5a-cf2c7872d2ae",
+      "provider_package": "com.ladno.finance",
+      "source_key_token": "82a377dbe5e06547643aab6af822de5baef784a5f9506dc312185cfa5f95074d",
+      "revision_token": "f3c59b783e9611fa3c21cd03bb6c7f4c31cd7ef06cb930cfc19636f7b4acd22c",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T17:19:09.327Z",
+      "post_time": 1793639949295
+    },
+    {
+      "id": "81ed7557-4e9c-44dd-b18f-042e153d193e",
+      "candidate_id": "ae3c1c6a-1b6a-465d-ab62-4de411c33801",
+      "source_kind": "receipt",
+      "event_id": "ba4b18ff-a123-4278-9000-584b663b3d9f",
+      "provider_package": "com.ladno.qa.bank",
+      "source_key_token": null,
+      "revision_token": "381a413a4fc3c33623c7771c065de3a87608cec23ae51516aedefcbba2353ad7",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T00:00:00Z",
+      "post_time": 1793577600000
+    },
+    {
+      "id": "7f3f1bc7-eda8-43da-ae63-8683fc430967",
+      "candidate_id": "18487aba-54e6-46e9-abb6-bca64766058d",
+      "source_kind": "receipt",
+      "event_id": "830cb517-bdcb-4b79-b3c1-611f828c515d",
+      "provider_package": "com.ladno.qa.bank",
+      "source_key_token": "d8cb0e2734ad09735d4635273053f04a083cc9a09912b23192429ed797684898",
+      "revision_token": "d631781c924db870e9d0e20759ed081295c20f138c571725bb51e83985adb021",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T00:00:00Z",
+      "post_time": 1793577600000
+    },
+    {
+      "id": "05281427-5c30-4e82-942a-b23db3b0d313",
+      "candidate_id": "b6819363-2a9d-4b4c-ad34-9dd2ba998a96",
+      "source_kind": "receipt",
+      "event_id": "795aa81b-ef4d-4b71-80e2-0423a9d3b9f5",
+      "provider_package": "com.ladno.qa.bank",
+      "source_key_token": "62a47e5b1346df294824b9835292e1b2b14f72fe9eb4db394a0669000a007b4d",
+      "revision_token": "ceb2bc3ebee6eae77c2daa459ed4418429b9a36eb8b31624801aa1823400577a",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T00:00:00Z",
+      "post_time": 1793577600000
+    },
+    {
+      "id": "a94bbeee-0824-4a6e-ac81-4fa6c7310fc5",
+      "candidate_id": "36e85845-d1b5-4e2c-8f62-46ae93f9d3b3",
+      "source_kind": "receipt",
+      "event_id": "727b454e-7b06-4f8a-b42a-d35ef08d92ff",
+      "provider_package": "com.ladno.qa.bank",
+      "source_key_token": "820f05726b7c833934b7ee43b549356a7e7693eb6efe7ba25aa834e6f163e16a",
+      "revision_token": "b089c5563b2a02cfb6788ec0928ffbf91299545945072221962ac5c0895fb720",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T00:00:00Z",
+      "post_time": 1793577600000
+    },
+    {
+      "id": "ad6361b1-f145-4a43-aad2-bb685cd47b06",
+      "candidate_id": "3a53a2db-452d-45e8-9fe7-47dd2f6802b3",
+      "source_kind": "receipt",
+      "event_id": "982571e2-d40b-4147-8b5a-631eabd631bb",
+      "provider_package": "com.ladno.qa.bank",
+      "source_key_token": "a0d6264d9b43b07a36fa496c9d7e51e2880430af05772ffccb1a055c8de98f28",
+      "revision_token": "aa1dde721286d474035094e9922029fc8867a496151ef04c0330bee14a7d7c2f",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T00:00:00Z",
+      "post_time": 1793577600000
+    },
+    {
+      "id": "3c1d44df-8c5a-4743-880f-98756836f2b7",
+      "candidate_id": "f7f8ad6c-8894-4d0d-aafb-c7f65936243d",
+      "source_kind": "notification",
+      "event_id": "8d17a979-d390-4b50-99fd-14cc0e0b3985",
+      "provider_package": "com.ladno.qa.bank",
+      "source_key_token": "9b64220849d7873d4772b32cdc351abf7ff9401fc33cfbb7b915f1717bbd7ed3",
+      "revision_token": "89d33b5c10bb026312073d5bddf23c4a6d53d23fecfb988e69ffe6f4ab77afc8",
+      "account_surrogate": null,
+      "payment_ref_token": null,
+      "captured_at": "2026-11-02T00:00:00Z",
+      "post_time": 1793577600000
+    },
+    {
+      "id": "5a1e5534-73cc-4c47-981b-0de74774d93d",
+      "candidate_id": "563494d9-365f-4264-883a-776b730fda0d",
+      "source_kind": "receipt",
+      "event_id": "2e672d72-f792-4b02-bb6e-0ab952c2dd05",
+      "provider_package": "com.ladno.qa.bank",
+      "source_key_token": "8c2fd55daa471bfb4305b3d24697b3b65941ca2673aeb52b15bfad09bc58f759",
+      "revision_token": "1697077f259a849a773a117d272ba1f7aef73c5ac967b5de76bf533d4f43fa45",
+      "account_surrogate": "585b671b2bd026149a58e0327452aa128937a5a230b34e22a29bf42e177966a6",
+      "payment_ref_token": "dfc72c56e0216f8e16069f78b7a917d7634b4178169ddfb003a93c033aed9a96",
+      "captured_at": "2026-11-02T00:00:00Z",
+      "post_time": 1793577600000
+    }
+  ],
+  "candidate_reasons": [
+    {
+      "candidate_id": "0aa04ff0-d2d0-427b-b08c-4ddea96828c8",
+      "position": 0,
+      "reason": "IDENTITY_UNCERTAIN"
+    },
+    {
+      "candidate_id": "ef21409c-27bb-480b-a844-cdc153835654",
+      "position": 2,
+      "reason": "LOW_CONFIDENCE"
+    },
+    {
+      "candidate_id": "ef21409c-27bb-480b-a844-cdc153835654",
+      "position": 1,
+      "reason": "CURRENCY_MISSING"
+    },
+    {
+      "candidate_id": "ef21409c-27bb-480b-a844-cdc153835654",
+      "position": 0,
+      "reason": "AMOUNT_MISSING"
+    },
+    {
+      "candidate_id": "2e5e2474-55ac-47af-94a8-8e651e9ab76c",
+      "position": 0,
+      "reason": "UNSUPPORTED_EVENT"
+    },
+    {
+      "candidate_id": "dfb2715a-216f-49b5-88f2-b1e631d5e0f3",
+      "position": 0,
+      "reason": "UNSUPPORTED_EVENT"
+    },
+    {
+      "candidate_id": "ae3c1c6a-1b6a-465d-ab62-4de411c33801",
+      "position": 0,
+      "reason": "IDENTITY_UNCERTAIN"
+    },
+    {
+      "candidate_id": "18487aba-54e6-46e9-abb6-bca64766058d",
+      "position": 0,
+      "reason": "LOW_CONFIDENCE"
+    },
+    {
+      "candidate_id": "b6819363-2a9d-4b4c-ad34-9dd2ba998a96",
+      "position": 0,
+      "reason": "LOW_CONFIDENCE"
+    },
+    {
+      "candidate_id": "36e85845-d1b5-4e2c-8f62-46ae93f9d3b3",
+      "position": 0,
+      "reason": "POSSIBLE_DUPLICATE"
+    },
+    {
+      "candidate_id": "3a53a2db-452d-45e8-9fe7-47dd2f6802b3",
+      "position": 0,
+      "reason": "POSSIBLE_DUPLICATE"
+    },
+    {
+      "candidate_id": "f7f8ad6c-8894-4d0d-aafb-c7f65936243d",
+      "position": 1,
+      "reason": "POSSIBLE_DUPLICATE"
+    }
+  ],
+  "candidate_matches": [
+    {
+      "candidate_id": "36e85845-d1b5-4e2c-8f62-46ae93f9d3b3",
+      "transaction_id": "fc55475a-b7a2-4388-87be-bac6bc54ef84"
+    },
+    {
+      "candidate_id": "3a53a2db-452d-45e8-9fe7-47dd2f6802b3",
+      "transaction_id": "fc55475a-b7a2-4388-87be-bac6bc54ef84"
+    },
+    {
+      "candidate_id": "f7f8ad6c-8894-4d0d-aafb-c7f65936243d",
+      "transaction_id": "fc55475a-b7a2-4388-87be-bac6bc54ef84"
+    }
+  ],
+  "selected_sources": [
+    {
+      "package_name": "com.ladno.qa.bank"
+    }
+  ]
+}

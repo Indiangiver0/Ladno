@@ -1,0 +1,30 @@
+{
+  "phase": "empty-upgrade",
+  "assertions": [
+    {
+      "id": "empty upgrade version",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "empty upgrade starters",
+      "expected": 15,
+      "actual": 15,
+      "pass": true
+    },
+    {
+      "id": "no financial records invented",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "currency not guessed",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    }
+  ],
+  "error": null
+}

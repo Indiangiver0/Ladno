@@ -1,0 +1,5 @@
+{
+  "note": "Initial raw DB/WAL/SHM were read into a writable host SQLite preview; host checkpoint changed the copied DB and removed copied WAL/SHM. files.json records pre-preview capture hashes, not current bytes. This directory is a derived data snapshot; raw bytes are no longer retained. Later snapshots preserve raw copies separately.",
+  "currentLedgerBytes": 118784,
+  "currentLedgerSha256": "9793c8e1dd684443761a9b8c1f16bce3e561ef5d62db8767722306eb44cd8e36"
+}

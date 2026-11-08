@@ -1,0 +1,32 @@
+[
+  {
+    "path": "database-preview-summary.json",
+    "sha256": "551b602b0c05cd131f9ab1c7ed415672c0e5ca6ec921708951e0edcb2af9b543",
+    "bytes": 247
+  },
+  {
+    "path": "diagnose.json",
+    "sha256": "e9a650010f9cceb23524de49f8aedba34d06a51d8960281824ab89b8251954ba",
+    "bytes": 63958
+  },
+  {
+    "path": "pulled-notification-native.json",
+    "sha256": "950a7e0624614480b25a6a77a39b1c8635b4ad0b1b954039d3c68ece892f0bc1",
+    "bytes": 35040
+  },
+  {
+    "path": "pulled-notification-os-granted.json",
+    "sha256": "ba1b3ba6f34971253846eb880bf259af6fc3c6166ba04f8c91bef80431557a03",
+    "bytes": 845
+  },
+  {
+    "path": "test-notifications-keystoreParserStorage.json",
+    "sha256": "387a362aad4416507348d031faeb4606122958bd738793bb514cee99707661f9",
+    "bytes": 6021
+  },
+  {
+    "path": "test-notifications-osGrantedDelivery.json",
+    "sha256": "01051abd9d158a8f865df52da35d5282ae97f339ab6267d212fb6676e85f013c",
+    "bytes": 3914
+  }
+]

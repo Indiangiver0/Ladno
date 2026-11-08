@@ -1,0 +1,795 @@
+{
+  "suite": "ocr-runtime",
+  "startedAt": "2026-11-02T18:30:38.312Z",
+  "pid": 2835,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "OCR class real NLS grant revoked",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "actual Tesseract JNI ready",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "bundled language state",
+      "expected": "[\"eng\",\"rus\",\"kaz\"]",
+      "actual": "[\"eng\",\"rus\",\"kaz\"]",
+      "pass": true
+    },
+    {
+      "id": "en-paid\/nonempty actual OCR",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-paid\/confidence bounds",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-paid\/high amount matches independent input",
+      "expected": "123.45",
+      "actual": "123.45",
+      "pass": true
+    },
+    {
+      "id": "en-paid\/high currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "en-paid\/high date",
+      "expected": "2026-11-02",
+      "actual": "2026-11-02",
+      "pass": true
+    },
+    {
+      "id": "en-unpaid\/nonempty actual OCR",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-unpaid\/confidence bounds",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-unpaid\/unpaid must not be high",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/nonempty actual OCR",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/confidence bounds",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/high amount matches independent input",
+      "expected": "234.56",
+      "actual": "234.56",
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/high currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/high date",
+      "expected": "2026-11-02",
+      "actual": "2026-11-02",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/nonempty actual OCR",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/confidence bounds",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/unpaid must not be high",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-paid\/nonempty actual OCR",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-paid\/confidence bounds",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-unpaid\/nonempty actual OCR",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-unpaid\/confidence bounds",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-unpaid\/unpaid must not be high",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "non-image safe code",
+      "expected": "IMAGE_INVALID",
+      "actual": "IMAGE_INVALID",
+      "pass": true
+    },
+    {
+      "id": "singleton actual OCR ready",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-paid\/native private image cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-paid\/native observation committed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-paid\/posted amount",
+      "expected": "123.45",
+      "actual": "123.45",
+      "pass": true
+    },
+    {
+      "id": "en-paid\/posted currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "en-paid\/posted date",
+      "expected": "2026-11-02",
+      "actual": "2026-11-02",
+      "pass": true
+    },
+    {
+      "id": "en-paid\/posted kind",
+      "expected": "expense",
+      "actual": "expense",
+      "pass": true
+    },
+    {
+      "id": "en-paid\/ledger delta",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "en-unpaid\/native private image cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-unpaid\/native observation committed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-unpaid\/unpaid native review",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "en-unpaid\/safe non-posted status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "en-unpaid\/review explains uncertainty",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-unpaid\/review excludes ledger totals",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/native private image cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/native observation committed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/posted amount",
+      "expected": "234.56",
+      "actual": "234.56",
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/posted currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/posted date",
+      "expected": "2026-11-02",
+      "actual": "2026-11-02",
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/posted kind",
+      "expected": "expense",
+      "actual": "expense",
+      "pass": true
+    },
+    {
+      "id": "ru-paid\/ledger delta",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/native private image cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/native observation committed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/unpaid native review",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/safe non-posted status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/review explains uncertainty",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/review excludes ledger totals",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "kz-paid\/native private image cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-paid\/native observation committed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-paid\/safe non-posted status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "kz-paid\/review explains uncertainty",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-paid\/review excludes ledger totals",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "kz-unpaid\/native private image cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-unpaid\/native observation committed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-unpaid\/unpaid native review",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "kz-unpaid\/safe non-posted status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "kz-unpaid\/review explains uncertainty",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "kz-unpaid\/review excludes ledger totals",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "identical image processed and cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "identical image same candidate",
+      "expected": "2d517f2c-f5d5-4767-a6cb-a60e4506d2d4",
+      "actual": "2d517f2c-f5d5-4767-a6cb-a60e4506d2d4",
+      "pass": true
+    },
+    {
+      "id": "identical image no second ledger record",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "identical image no second pending review",
+      "expected": 10,
+      "actual": 10,
+      "pass": true
+    },
+    {
+      "id": "invalid image cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "invalid image no candidate",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "id": "invalid image no ledger change",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "invalid image no pending review",
+      "expected": 10,
+      "actual": 10,
+      "pass": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "en-paid\/direct actual OCR",
+      "actual": {
+        "syntheticInput": {
+          "id": "en-paid",
+          "paid": true,
+          "amount": "123.45",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "PAID",
+          "totalLine": "TOTAL 123.45 KZT",
+          "image": "en-paid.png"
+        },
+        "text": "PAID\nTOTAL 123.45 KZT\n2026-11-02",
+        "meanConfidence": 94,
+        "candidate": {
+          "kind": "expense",
+          "amount": "123.45",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        }
+      }
+    },
+    {
+      "id": "en-unpaid\/direct actual OCR",
+      "actual": {
+        "syntheticInput": {
+          "id": "en-unpaid",
+          "paid": false,
+          "amount": "123.45",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "UNPAID",
+          "totalLine": "TOTAL 123.45 KZT",
+          "image": "en-unpaid.png"
+        },
+        "text": "UNPAID\nTOTAL 123.45 KZT\n2026-11-02",
+        "meanConfidence": 94,
+        "candidate": {
+          "kind": "expense",
+          "amount": "123.45",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "UNSUPPORTED_EVENT"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        }
+      }
+    },
+    {
+      "id": "ru-paid\/direct actual OCR",
+      "actual": {
+        "syntheticInput": {
+          "id": "ru-paid",
+          "paid": true,
+          "amount": "234.56",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "Оплачено",
+          "totalLine": "ИТОГО 234.56 KZT",
+          "image": "ru-paid.png"
+        },
+        "text": "Оплачено\nИТОГО 234.56 KZT\n2026-11-02",
+        "meanConfidence": 92,
+        "candidate": {
+          "kind": "expense",
+          "amount": "234.56",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        }
+      }
+    },
+    {
+      "id": "ru-unpaid\/direct actual OCR",
+      "actual": {
+        "syntheticInput": {
+          "id": "ru-unpaid",
+          "paid": false,
+          "amount": "234.56",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "Не оплачено",
+          "totalLine": "ИТОГО 234.56 KZT",
+          "image": "ru-unpaid.png"
+        },
+        "text": "Не оплачено\nИТОГО 234.56 KZT\n2026-11-02",
+        "meanConfidence": 94,
+        "candidate": {
+          "kind": "expense",
+          "amount": "234.56",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "UNSUPPORTED_EVENT"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        }
+      }
+    },
+    {
+      "id": "kz-paid\/direct actual OCR",
+      "actual": {
+        "syntheticInput": {
+          "id": "kz-paid",
+          "paid": true,
+          "amount": "345.67",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "Төленген",
+          "totalLine": "БАРЛЫҒЫ 345.67 KZT",
+          "image": "kz-paid.png"
+        },
+        "text": "Теленген\nБАРЛЫҒЫ 345.67 KZT\n2026-11-02",
+        "meanConfidence": 93,
+        "candidate": {
+          "kind": "expense",
+          "amount": "345.67",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "UNSUPPORTED_EVENT"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        }
+      }
+    },
+    {
+      "id": "kz-unpaid\/direct actual OCR",
+      "actual": {
+        "syntheticInput": {
+          "id": "kz-unpaid",
+          "paid": false,
+          "amount": "345.67",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "Төленген жоқ",
+          "totalLine": "БАРЛЫҒЫ 345.67 KZT",
+          "image": "kz-unpaid.png"
+        },
+        "text": "Төленген жоқ\nБАРЛЫҒЫ 345.67 KZT\n2026-11-02",
+        "meanConfidence": 93,
+        "candidate": {
+          "kind": "expense",
+          "amount": "345.67",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "UNSUPPORTED_EVENT"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        }
+      }
+    },
+    {
+      "id": "en-paid\/actual native outcome",
+      "actual": {
+        "expectedImage": {
+          "id": "en-paid",
+          "paid": true,
+          "amount": "123.45",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "PAID",
+          "totalLine": "TOTAL 123.45 KZT",
+          "image": "en-paid.png"
+        },
+        "previousObservation": null,
+        "actualObservation": {
+          "id": "2d517f2c-f5d5-4767-a6cb-a60e4506d2d4",
+          "status": "posted",
+          "kind": "expense",
+          "amount": "123.45",
+          "currency": "KZT",
+          "operation_date": "2026-11-02",
+          "confidence": "high",
+          "transaction_id": "8e46d6b8-9224-49ef-8ed1-ffafccdea8c0",
+          "reasons": []
+        }
+      }
+    },
+    {
+      "id": "en-unpaid\/actual native outcome",
+      "actual": {
+        "expectedImage": {
+          "id": "en-unpaid",
+          "paid": false,
+          "amount": "123.45",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "UNPAID",
+          "totalLine": "TOTAL 123.45 KZT",
+          "image": "en-unpaid.png"
+        },
+        "previousObservation": null,
+        "actualObservation": {
+          "id": "5ba8b560-b714-467c-93f1-4223f93d98a2",
+          "status": "needs_review",
+          "kind": "expense",
+          "amount": "123.45",
+          "currency": "KZT",
+          "operation_date": "2026-11-02",
+          "confidence": "uncertain",
+          "transaction_id": null,
+          "reasons": [
+            "UNSUPPORTED_EVENT",
+            "POSSIBLE_DUPLICATE"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ru-paid\/actual native outcome",
+      "actual": {
+        "expectedImage": {
+          "id": "ru-paid",
+          "paid": true,
+          "amount": "234.56",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "Оплачено",
+          "totalLine": "ИТОГО 234.56 KZT",
+          "image": "ru-paid.png"
+        },
+        "previousObservation": null,
+        "actualObservation": {
+          "id": "cda8a1a4-b071-4164-945d-64eb0ca0a760",
+          "status": "posted",
+          "kind": "expense",
+          "amount": "234.56",
+          "currency": "KZT",
+          "operation_date": "2026-11-02",
+          "confidence": "high",
+          "transaction_id": "b46cd487-2615-428f-a38b-d4e760ad2c4e",
+          "reasons": []
+        }
+      }
+    },
+    {
+      "id": "ru-unpaid\/actual native outcome",
+      "actual": {
+        "expectedImage": {
+          "id": "ru-unpaid",
+          "paid": false,
+          "amount": "234.56",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "Не оплачено",
+          "totalLine": "ИТОГО 234.56 KZT",
+          "image": "ru-unpaid.png"
+        },
+        "previousObservation": null,
+        "actualObservation": {
+          "id": "ae9483b2-2f13-412f-b84b-f186dd9802c5",
+          "status": "needs_review",
+          "kind": "expense",
+          "amount": "234.56",
+          "currency": "KZT",
+          "operation_date": "2026-11-02",
+          "confidence": "uncertain",
+          "transaction_id": null,
+          "reasons": [
+            "UNSUPPORTED_EVENT",
+            "POSSIBLE_DUPLICATE"
+          ]
+        }
+      }
+    },
+    {
+      "id": "kz-paid\/actual native outcome",
+      "actual": {
+        "expectedImage": {
+          "id": "kz-paid",
+          "paid": true,
+          "amount": "345.67",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "Төленген",
+          "totalLine": "БАРЛЫҒЫ 345.67 KZT",
+          "image": "kz-paid.png"
+        },
+        "previousObservation": null,
+        "actualObservation": {
+          "id": "a9ae048d-0987-4fa1-b20f-e0ea311319d7",
+          "status": "needs_review",
+          "kind": "expense",
+          "amount": "345.67",
+          "currency": "KZT",
+          "operation_date": "2026-11-02",
+          "confidence": "uncertain",
+          "transaction_id": null,
+          "reasons": [
+            "UNSUPPORTED_EVENT"
+          ]
+        }
+      }
+    },
+    {
+      "id": "kz-unpaid\/actual native outcome",
+      "actual": {
+        "expectedImage": {
+          "id": "kz-unpaid",
+          "paid": false,
+          "amount": "345.67",
+          "currency": "KZT",
+          "date": "2026-11-02",
+          "paymentLine": "Төленген жоқ",
+          "totalLine": "БАРЛЫҒЫ 345.67 KZT",
+          "image": "kz-unpaid.png"
+        },
+        "previousObservation": null,
+        "actualObservation": {
+          "id": "31153409-0937-45b6-8818-cf4b70f86477",
+          "status": "needs_review",
+          "kind": "expense",
+          "amount": "345.67",
+          "currency": "KZT",
+          "operation_date": "2026-11-02",
+          "confidence": "uncertain",
+          "transaction_id": null,
+          "reasons": [
+            "UNSUPPORTED_EVENT"
+          ]
+        }
+      }
+    },
+    {
+      "id": "explicit execution limits",
+      "actual": "Native API\/image path only; arbitrary test job IDs do not register Activity jobs. Camera\/gallery chooser\/grants, UI job lifecycle and OCR accuracy on real photographs were not exercised."
+    }
+  ],
+  "finishedAt": "2026-11-02T18:30:42.190Z"
+}

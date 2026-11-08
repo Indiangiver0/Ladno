@@ -1,0 +1,6 @@
+ZXing core 3.5.3
+Copyright ZXing authors
+https://github.com/zxing/zxing/tree/zxing-3.5.3
+Artifact: com.google.zxing:core:3.5.3
+License: Apache License 2.0, supplied in ZXing-3.5.3-LICENSE.txt.
+The library is used unmodified for local QR decoding. No ZXing Barcode Scanner app is used.

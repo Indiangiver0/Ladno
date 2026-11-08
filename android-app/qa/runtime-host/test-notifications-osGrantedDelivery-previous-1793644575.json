@@ -1,0 +1,30 @@
+{
+  "action": "test",
+  "suite": "notifications",
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-02T18:36:15.508801+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.ladno.finance.NotificationRuntimeTest#osGrantedDelivery",
+        "com.ladno.finance.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "exitCode": 0,
+      "passed": false,
+      "stdout": "INSTRUMENTATION_STATUS: class=com.ladno.finance.NotificationRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=\ncom.ladno.finance.NotificationRuntimeTest:\nINSTRUMENTATION_STATUS: test=osGrantedDelivery\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / actual OS NLS grant: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / unselected source/no records or pending imports during 3s: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / actual OS expense delivery/deadline: FAIL\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: class=com.ladno.finance.NotificationRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stack=java.lang.AssertionError: actual OS expense delivery/deadline expected:<true> but was:<false>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:120)\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\n\tat com.ladno.finance.NativeRuntimeFixtures.truth(NativeRuntimeFixtures.java:59)\n\tat com.ladno.finance.NativeRuntimeFixtures.await(NativeRuntimeFixtures.java:70)\n\tat com.ladno.finance.NotificationRuntimeTest.osGrantedDelivery(NotificationRuntimeTest.java:128)\n\nINSTRUMENTATION_STATUS: stream=\nError in osGrantedDelivery(com.ladno.finance.NotificationRuntimeTest):\njava.lang.AssertionError: actual OS expense delivery/deadline expected:<true> but was:<false>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:120)\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\n\tat com.ladno.finance.NativeRuntimeFixtures.truth(NativeRuntimeFixtures.java:59)\n\tat com.ladno.finance.NativeRuntimeFixtures.await(NativeRuntimeFixtures.java:70)\n\tat com.ladno.finance.NotificationRuntimeTest.osGrantedDelivery(NotificationRuntimeTest.java:128)\n\nINSTRUMENTATION_STATUS: test=osGrantedDelivery\nINSTRUMENTATION_STATUS_CODE: -2\nINSTRUMENTATION_RESULT: stream=\n\nTime: 33.982\nThere was 1 failure:\n1) osGrantedDelivery(com.ladno.finance.NotificationRuntimeTest)\njava.lang.AssertionError: actual OS expense delivery/deadline expected:<true> but was:<false>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:120)\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\n\tat com.ladno.finance.NativeRuntimeFixtures.truth(NativeRuntimeFixtures.java:59)\n\tat com.ladno.finance.NativeRuntimeFixtures.await(NativeRuntimeFixtures.java:70)\n\tat com.ladno.finance.NotificationRuntimeTest.osGrantedDelivery(NotificationRuntimeTest.java:128)\n\nFAILURES!!!\nTests run: 1,  Failures: 1\n\n\nINSTRUMENTATION_CODE: -1\n",
+      "stderr": ""
+    }
+  ],
+  "passed": false
+}

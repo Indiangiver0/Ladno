@@ -1,0 +1,73 @@
+{
+  "task": "APP-002-VISUAL",
+  "version": "v2-source-handoff",
+  "date": "2026-11-02",
+  "authorRole": "visual-content-designer",
+  "reviewerRole": "creative-lead",
+  "status": "offline-source-handoff; Figma outcome unknown",
+  "completedOffline": [
+    "Новые источники повторно используют сохранённые стили, токены и компоненты без discovery/import.",
+    "Stage05 дополнен образцом SC-02 без результатов: видимый фильтр «Переводы · Октябрь 2026», сообщение «По этим фильтрам ничего нет», «Сбросить фильтры».",
+    "В source сохранены состояния SC-01–04, несохранённая форма 1200,999 с датой/счётом/категорией и текстом ошибки; изменения целей/долгов отделены от счёта/бюджета.",
+    "Выделен standalone figma-build-only.js без screenshot, полного readback и getMainComponentAsync обхода; по умолчанию он возвращает executed:false до подтверждённого свежего чтения.",
+    "Синтаксис четырёх function-body файлов и комбинирования первоначальных трёх исходников проверен локально; исходные 26 frozen-файлов неизменны."
+  ],
+  "sourceHandoff": {
+    "originalCombinedCall": {
+      "order": [
+        "figma-core.js",
+        "figma-05-states-form.js",
+        "figma-readback.js"
+      ],
+      "separator": "newline",
+      "result": "unknown after local interruption"
+    },
+    "futureBuildOnly": "design/v2/figma-build-only.js",
+    "guard": "APP002_CANVAS_FRESH_READ_CONFIRMED = false",
+    "requiredBeforeAnyFutureWrite": "Короткое read-only чтение существующих 6:226/6:227/6:228 и shelf 7:10, проверка сохранённых DS-идентификаторов; глава определяет фактически выполненные части и адресный остаток. Не повторять полный build вслепую.",
+    "returnContract": "created/mutated/removed IDs и counts трёх затронутых композиций; <23500 UTF-8 bytes; screenshotsProduced=0.",
+    "limitations": "Build-only локально компилируется, в Figma не выполнялся и не проверен. Исходник readback может включать долгое последовательное разрешение main components и шесть renders; это возможная причина задержки, не установленный факт."
+  },
+  "externalEvidence": {
+    "ownFigmaCallsSent": 1,
+    "ownSuccessfulFigmaResponses": 0,
+    "lastTool": "mcp__codex_apps__figma_use_figma via functions.exec",
+    "wrapperResult": "aborted by user after 715.2s",
+    "runIdOrCellIdReceived": false,
+    "resultStored": false,
+    "stage05Applied": "unknown",
+    "currentCanvas": "unknown",
+    "receivedPNG": 0,
+    "savedNewPNG": 0,
+    "rollback": "not-confirmed",
+    "rootFollowup": "Root сообщил, что короткое read-only чтение также блокировано Starter quota; визуальный автор его не выполнял.",
+    "noMoreFigmaCalls": true
+  },
+  "checks": {
+    "command": "node -e [AsyncFunction syntax compilation + SHA-256 check against frozen snapshot]",
+    "exitCode": 0,
+    "evidence": "design/v2/figma-source-checks.json",
+    "frozenFiles": 26,
+    "frozenChanged": [],
+    "runtimeApplication": "not-created/not-tested"
+  },
+  "issues": [
+    {
+      "id": "VIS2-01",
+      "priority": "P2",
+      "status": "open",
+      "description": "Исход неизвестного Figma write после interrupted ожидания не подтверждён; нельзя заявить применённые состояния или чистый rollback."
+    },
+    {
+      "id": "VIS2-02",
+      "priority": "P2",
+      "status": "open",
+      "description": "Недостающие шесть native PNG и новый readback не получены. QA-APP-01/02 этим этапом не закрыты."
+    }
+  ],
+  "questions": [
+    "Доступность Figma MCP остаётся внешним условием для последующей проверки; пользователь выбрал отдельный локальный интерактивный прототип, его реализацией занимается интерфейсный отдел."
+  ],
+  "nextAction": "Передать UX/source ограничения frontend и отдельному creative-lead review. Figma API больше не вызывать; при будущем восстановлении сначала fresh read и сверка частично сохранённого состояния. Независимые QA/суд выполняются отдельно по фактическому результату.",
+  "selfAcceptance": "not-performed; specialist does not accept own work"
+}

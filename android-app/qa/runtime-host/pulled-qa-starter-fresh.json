@@ -1,0 +1,90 @@
+{
+  "phase": "fresh",
+  "assertions": [
+    {
+      "id": "schema version",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "starter total",
+      "expected": 15,
+      "actual": 15,
+      "pass": true
+    },
+    {
+      "id": "expense starters",
+      "expected": 11,
+      "actual": 11,
+      "pass": true
+    },
+    {
+      "id": "income starters",
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "id": "ledger remains empty",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "setup remains explicit",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "stable UUID format",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "reopen total unchanged",
+      "expected": 15,
+      "actual": 15,
+      "pass": true
+    },
+    {
+      "id": "deleted starter stays deleted",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "deleted revision preserved",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "renamed starter preserved",
+      "expected": "Моя квартира",
+      "actual": "Моя квартира",
+      "pass": true
+    },
+    {
+      "id": "rename revision preserved",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "old name not recreated",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "stable IDs across installs",
+      "expected": "072989d9-54ad-381e-9674-3ed22f787b7e",
+      "actual": "072989d9-54ad-381e-9674-3ed22f787b7e",
+      "pass": true
+    }
+  ],
+  "error": null
+}

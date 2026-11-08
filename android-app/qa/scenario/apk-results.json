@@ -1,0 +1,530 @@
+{
+  "build": {
+    "apk": "ladno-0.1.0-debug.apk",
+    "sha256": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+    "bytes": 37404606,
+    "stage": "C:\\Users\\04068\\.cache\\ladno-android\\work\\ladno-b5b8d938295f9489",
+    "sourceFingerprint": "b5b8d938295f9489124bec82ad0c07c0aa86fcde8f0d1c5bd8cafc343db57b03",
+    "tasks": [
+      ":app:assembleDebug",
+      ":app:testDebugUnitTest",
+      ":app:lintDebug"
+    ],
+    "builtAtUtc": "2026-11-02T11:08:18.301566+00:00"
+  },
+  "apkBytes": 37404606,
+  "checks": [
+    {
+      "id": "apk/hashMatchesBuildRecord",
+      "actual": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+      "expected": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+      "pass": true
+    },
+    {
+      "id": "apk/expectedFinalSha",
+      "actual": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+      "expected": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+      "pass": true
+    },
+    {
+      "id": "apk/expectedFinalBytes",
+      "actual": 37404606,
+      "expected": 37404606,
+      "pass": true
+    },
+    {
+      "id": "apk/expectedSourceFingerprint",
+      "actual": "b5b8d938295f9489124bec82ad0c07c0aa86fcde8f0d1c5bd8cafc343db57b03",
+      "expected": "b5b8d938295f9489124bec82ad0c07c0aa86fcde8f0d1c5bd8cafc343db57b03",
+      "pass": true
+    },
+    {
+      "id": "signature/toolSuccess",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "badging/toolSuccess",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "badging/package: name='com.ladno.finance'",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "badging/versionCode='1'",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "badging/versionName='0.1.0'",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "badging/minSdkVersion:'26'",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "badging/targetSdkVersion:'36'",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "badging/launchable-activity: name='com.ladno.finance.MainActivity'",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "permissions/toolSuccess",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "permissions/no-INTERNET",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "permissions/no-READ_SMS",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "permissions/no-RECEIVE_SMS",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "permissions/no-CAMERA",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "permissions/no-BIND_ACCESSIBILITY_SERVICE",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "manifest/toolSuccess",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "manifest/android.permission.BIND_NOTIFICATION_LISTENER_SERVICE",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "manifest/com.ladno.finance.BankNotificationService",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "manifest/androidx.core.content.FileProvider",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "manifest/com.ladno.finance.NoBackupAgent",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "manifest/components-and-export-boundaries",
+      "actual": {
+        "com.ladno.finance.MainActivity": {
+          "type": "activity",
+          "exported": "true",
+          "permission": null
+        },
+        "com.ladno.finance.BankNotificationService": {
+          "type": "service",
+          "exported": "true",
+          "permission": "android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        },
+        "androidx.core.content.FileProvider": {
+          "type": "provider",
+          "exported": "false",
+          "permission": null
+        },
+        "androidx.startup.InitializationProvider": {
+          "type": "provider",
+          "exported": "false",
+          "permission": null
+        },
+        "androidx.profileinstaller.ProfileInstallReceiver": {
+          "type": "receiver",
+          "exported": "true",
+          "permission": "android.permission.DUMP"
+        }
+      },
+      "expected": {
+        "com.ladno.finance.MainActivity": {
+          "type": "activity",
+          "exported": "true",
+          "permission": null
+        },
+        "com.ladno.finance.BankNotificationService": {
+          "type": "service",
+          "exported": "true",
+          "permission": "android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        },
+        "androidx.core.content.FileProvider": {
+          "type": "provider",
+          "exported": "false",
+          "permission": null
+        },
+        "androidx.startup.InitializationProvider": {
+          "type": "provider",
+          "exported": "false",
+          "permission": null
+        },
+        "androidx.profileinstaller.ProfileInstallReceiver": {
+          "type": "receiver",
+          "exported": "true",
+          "permission": "android.permission.DUMP"
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "manifest/allowBackup",
+      "actual": "false",
+      "expected": "false",
+      "pass": true
+    },
+    {
+      "id": "manifest/usesCleartextTraffic",
+      "actual": "false",
+      "expected": "false",
+      "pass": true
+    },
+    {
+      "id": "manifest/debuggable",
+      "actual": "true",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "id": "manifest/extractNativeLibs",
+      "actual": "false",
+      "expected": "false",
+      "pass": true
+    },
+    {
+      "id": "alignment/zipalign16kb",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "sourceManifest/fingerprint",
+      "actual": "b5b8d938295f9489124bec82ad0c07c0aa86fcde8f0d1c5bd8cafc343db57b03",
+      "expected": "b5b8d938295f9489124bec82ad0c07c0aa86fcde8f0d1c5bd8cafc343db57b03",
+      "pass": true
+    },
+    {
+      "id": "sourceManifest/all-current-source-hashes",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "asset/current-index.html",
+      "actual": "7e9dd72daee9df50ab69b5b260f3f5c0bf087663c674a7fc75b2c1652a511e01",
+      "expected": "7e9dd72daee9df50ab69b5b260f3f5c0bf087663c674a7fc75b2c1652a511e01",
+      "pass": true
+    },
+    {
+      "id": "asset/current-styles.css",
+      "actual": "6dfb7742f7d090c61b9a242303ba40d5857110c33275733c307e166d92143a0d",
+      "expected": "6dfb7742f7d090c61b9a242303ba40d5857110c33275733c307e166d92143a0d",
+      "pass": true
+    },
+    {
+      "id": "asset/current-view.js",
+      "actual": "8ce8edb22cd7cb5fa2eddade470db2ae26a29a9619e3fb32d4bfc75a69bdfac3",
+      "expected": "8ce8edb22cd7cb5fa2eddade470db2ae26a29a9619e3fb32d4bfc75a69bdfac3",
+      "pass": true
+    },
+    {
+      "id": "asset/current-bridge.js",
+      "actual": "4241148a4a12c50eeccfb5965a1247711fdb07d5d369e1a1f825d39fdc98c6e2",
+      "expected": "4241148a4a12c50eeccfb5965a1247711fdb07d5d369e1a1f825d39fdc98c6e2",
+      "pass": true
+    },
+    {
+      "id": "asset/current-app.js",
+      "actual": "fa684ae1ca4f4b237861138fb2eeaa4a7f97cace31c7a1d94d418b47fcf16952",
+      "expected": "fa684ae1ca4f4b237861138fb2eeaa4a7f97cace31c7a1d94d418b47fcf16952",
+      "pass": true
+    },
+    {
+      "id": "asset/current-preview-adapter.js",
+      "actual": "3033679bd41cc6a288f9a3fb1ec03362410b6aa4977519db67049e555c65a80e",
+      "expected": "3033679bd41cc6a288f9a3fb1ec03362410b6aa4977519db67049e555c65a80e",
+      "pass": true
+    },
+    {
+      "id": "model/eng",
+      "actual": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "expected": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "pass": true
+    },
+    {
+      "id": "model/rus",
+      "actual": "e16e5e036cce1d9ec2b00063cf8b54472625b9e14d893a169e2b0dedeb4df225",
+      "expected": "e16e5e036cce1d9ec2b00063cf8b54472625b9e14d893a169e2b0dedeb4df225",
+      "pass": true
+    },
+    {
+      "id": "model/kaz",
+      "actual": "fcc01eed3815a42b9c6321c4c9d3606f39b166cbf95ade98b7d8d12063eae53d",
+      "expected": "fcc01eed3815a42b9c6321c4c9d3606f39b166cbf95ade98b7d8d12063eae53d",
+      "pass": true
+    },
+    {
+      "id": "schema/current",
+      "actual": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "expected": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "pass": true
+    },
+    {
+      "id": "license/assets/licenses/Apache-2.0.txt",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "license/assets/licenses/Leptonica.txt",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "license/assets/licenses/IJG-JPEG.txt",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "license/assets/licenses/libpng.txt",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "license/assets/licenses/THIRD_PARTY_NOTICES.txt",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "alignment/elf64-lib/arm64-v8a/libjpeg.so",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "alignment/elf64-lib/arm64-v8a/libleptonica.so",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "alignment/elf64-lib/arm64-v8a/libpngx.so",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "alignment/elf64-lib/arm64-v8a/libtesseract.so",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "alignment/elf64-lib/x86_64/libjpeg.so",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "alignment/elf64-lib/x86_64/libleptonica.so",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "alignment/elf64-lib/x86_64/libpngx.so",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "alignment/elf64-lib/x86_64/libtesseract.so",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "dex/present",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\java.exe",
+        "-jar",
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\build-tools\\35.0.0\\lib\\apksigner.jar",
+        "verify",
+        "--verbose",
+        "--print-certs",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.1.0-debug.apk"
+      ],
+      "exitCode": 0,
+      "output": "Verifies\r\nVerified using v1 scheme (JAR signing): false\r\nVerified using v2 scheme (APK Signature Scheme v2): true\r\nVerified using v3 scheme (APK Signature Scheme v3): false\r\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\r\nVerified using v4 scheme (APK Signature Scheme v4): false\r\nVerified for SourceStamp: false\r\nNumber of signers: 1\r\nSigner #1 certificate DN: CN=Ladno Development, O=Local, C=ZZ\r\nSigner #1 certificate SHA-256 digest: 08f77eff74101bd48dc2cccb52403216620cc8e1bb3a86fd685c640c9a64ec27\r\nSigner #1 certificate SHA-1 digest: 4b3f5577e89c156478858e020f4ee5f7e0f28e58\r\nSigner #1 certificate MD5 digest: 6df1f99a9dfa6cfbcaf07e722daf7bd3\r\nSigner #1 key algorithm: RSA\r\nSigner #1 key size (bits): 2048\r\nSigner #1 public key SHA-256 digest: 00c3ad4a38285986a796a6d46b406befd2a8f2aae5da0c3799f39435ca02993d\r\nSigner #1 public key SHA-1 digest: a8759c3da1eb770b9c975289cbb6fd131c7e271e\r\nSigner #1 public key MD5 digest: 63b2a9ee73c3d789986c0eff2759c6aa\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\build-tools\\35.0.0\\aapt2.exe",
+        "dump",
+        "badging",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.1.0-debug.apk"
+      ],
+      "exitCode": 0,
+      "output": "package: name='com.ladno.finance' versionCode='1' versionName='0.1.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'\r\nminSdkVersion:'26'\r\ntargetSdkVersion:'36'\r\nuses-permission: name='com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\r\napplication-label:'Ладно'\r\napplication-label-af:'Ладно'\r\napplication-label-am:'Ладно'\r\napplication-label-ar:'Ладно'\r\napplication-label-as:'Ладно'\r\napplication-label-az:'Ладно'\r\napplication-label-be:'Ладно'\r\napplication-label-bg:'Ладно'\r\napplication-label-bn:'Ладно'\r\napplication-label-bs:'Ладно'\r\napplication-label-ca:'Ладно'\r\napplication-label-cs:'Ладно'\r\napplication-label-da:'Ладно'\r\napplication-label-de:'Ладно'\r\napplication-label-el:'Ладно'\r\napplication-label-en-AU:'Ладно'\r\napplication-label-en-CA:'Ладно'\r\napplication-label-en-GB:'Ладно'\r\napplication-label-en-IN:'Ладно'\r\napplication-label-en-XC:'Ладно'\r\napplication-label-es:'Ладно'\r\napplication-label-es-US:'Ладно'\r\napplication-label-et:'Ладно'\r\napplication-label-eu:'Ладно'\r\napplication-label-fa:'Ладно'\r\napplication-label-fi:'Ладно'\r\napplication-label-fr:'Ладно'\r\napplication-label-fr-CA:'Ладно'\r\napplication-label-gl:'Ладно'\r\napplication-label-gu:'Ладно'\r\napplication-label-hi:'Ладно'\r\napplication-label-hr:'Ладно'\r\napplication-label-hu:'Ладно'\r\napplication-label-hy:'Ладно'\r\napplication-label-in:'Ладно'\r\napplication-label-is:'Ладно'\r\napplication-label-it:'Ладно'\r\napplication-label-iw:'Ладно'\r\napplication-label-ja:'Ладно'\r\napplication-label-ka:'Ладно'\r\napplication-label-kk:'Ладно'\r\napplication-label-km:'Ладно'\r\napplication-label-kn:'Ладно'\r\napplication-label-ko:'Ладно'\r\napplication-label-ky:'Ладно'\r\napplication-label-lo:'Ладно'\r\napplication-label-lt:'Ладно'\r\napplication-label-lv:'Ладно'\r\napplication-label-mk:'Ладно'\r\napplication-label-ml:'Ладно'\r\napplication-label-mn:'Ладно'\r\napplication-label-mr:'Ладно'\r\napplication-label-ms:'Ладно'\r\napplication-label-my:'Ладно'\r\napplication-label-nb:'Ладно'\r\napplication-label-ne:'Ладно'\r\napplication-label-nl:'Ладно'\r\napplication-label-or:'Ладно'\r\napplication-label-pa:'Ладно'\r\napplication-label-pl:'Ладно'\r\napplication-label-pt:'Ладно'\r\napplication-label-pt-BR:'Ладно'\r\napplication-label-pt-PT:'Ладно'\r\napplication-label-ro:'Ладно'\r\napplication-label-ru:'Ладно'\r\napplication-label-si:'Ладно'\r\napplication-label-sk:'Ладно'\r\napplication-label-sl:'Ладно'\r\napplication-label-sq:'Ладно'\r\napplication-label-sr:'Ладно'\r\napplication-label-sr-Latn:'Ладно'\r\napplication-label-sv:'Ладно'\r\napplication-label-sw:'Ладно'\r\napplication-label-ta:'Ладно'\r\napplication-label-te:'Ладно'\r\napplication-label-th:'Ладно'\r\napplication-label-tl:'Ладно'\r\napplication-label-tr:'Ладно'\r\napplication-label-uk:'Ладно'\r\napplication-label-ur:'Ладно'\r\napplication-label-uz:'Ладно'\r\napplication-label-vi:'Ладно'\r\napplication-label-zh-CN:'Ладно'\r\napplication-label-zh-HK:'Ладно'\r\napplication-label-zh-TW:'Ладно'\r\napplication-label-zu:'Ладно'\r\napplication-icon-160:'res/drawable/ic_launcher.xml'\r\napplication-icon-240:'res/drawable/ic_launcher.xml'\r\napplication-icon-320:'res/drawable/ic_launcher.xml'\r\napplication: label='Ладно' icon='res/drawable/ic_launcher.xml'\r\napplication-debuggable\r\nlaunchable-activity: name='com.ladno.finance.MainActivity'  label='' icon=''\r\nfeature-group: label=''\r\n  uses-feature: name='android.hardware.faketouch'\r\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\r\nprovides-component:'notification-listener'\r\nmain\r\nother-receivers\r\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\r\nsupports-any-density: 'true'\r\nlocales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'\r\ndensities: '160' '240' '320'\r\nnative-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\build-tools\\35.0.0\\aapt2.exe",
+        "dump",
+        "permissions",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.1.0-debug.apk"
+      ],
+      "exitCode": 0,
+      "output": "package: com.ladno.finance\r\npermission: com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\r\nuses-permission: name='com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\build-tools\\35.0.0\\aapt2.exe",
+        "dump",
+        "xmltree",
+        "--file",
+        "AndroidManifest.xml",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.1.0-debug.apk"
+      ],
+      "exitCode": 0,
+      "output": "N: android=http://schemas.android.com/apk/res/android (line=2)\r\n  E: manifest (line=2)\r\n    A: http://schemas.android.com/apk/res/android:versionCode(0x0101021b)=1\r\n    A: http://schemas.android.com/apk/res/android:versionName(0x0101021c)=\"0.1.0\" (Raw: \"0.1.0\")\r\n    A: http://schemas.android.com/apk/res/android:compileSdkVersion(0x01010572)=36\r\n    A: http://schemas.android.com/apk/res/android:compileSdkVersionCodename(0x01010573)=\"16\" (Raw: \"16\")\r\n    A: package=\"com.ladno.finance\" (Raw: \"com.ladno.finance\")\r\n    A: platformBuildVersionCode=36\r\n    A: platformBuildVersionName=16\r\n      E: uses-sdk (line=7)\r\n        A: http://schemas.android.com/apk/res/android:minSdkVersion(0x0101020c)=26\r\n        A: http://schemas.android.com/apk/res/android:targetSdkVersion(0x01010270)=36\r\n      E: queries (line=11)\r\n          E: intent (line=12)\r\n              E: action (line=13)\r\n                A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"android.intent.action.MAIN\" (Raw: \"android.intent.action.MAIN\")\r\n              E: category (line=15)\r\n                A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"android.intent.category.LAUNCHER\" (Raw: \"android.intent.category.LAUNCHER\")\r\n          E: intent (line=17)\r\n              E: action (line=18)\r\n                A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"android.media.action.IMAGE_CAPTURE\" (Raw: \"android.media.action.IMAGE_CAPTURE\")\r\n      E: permission (line=22)\r\n        A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\" (Raw: \"com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\")\r\n        A: http://schemas.android.com/apk/res/android:protectionLevel(0x01010009)=0x00000002\r\n      E: uses-permission (line=26)\r\n        A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\" (Raw: \"com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\")\r\n      E: application (line=28)\r\n        A: http://schemas.android.com/apk/res/android:theme(0x01010000)=@0x7f090000\r\n        A: http://schemas.android.com/apk/res/android:label(0x01010001)=@0x7f080001\r\n        A: http://schemas.android.com/apk/res/android:icon(0x01010002)=@0x7f040006\r\n        A: http://schemas.android.com/apk/res/android:debuggable(0x0101000f)=true\r\n        A: http://schemas.android.com/apk/res/android:backupAgent(0x0101027f)=\"com.ladno.finance.NoBackupAgent\" (Raw: \"com.ladno.finance.NoBackupAgent\")\r\n        A: http://schemas.android.com/apk/res/android:allowBackup(0x01010280)=false\r\n        A: http://schemas.android.com/apk/res/android:supportsRtl(0x010103af)=true\r\n        A: http://schemas.android.com/apk/res/android:extractNativeLibs(0x010104ea)=false\r\n        A: http://schemas.android.com/apk/res/android:fullBackupContent(0x010104eb)=@0x7f0b0000\r\n        A: http://schemas.android.com/apk/res/android:usesCleartextTraffic(0x010104ec)=false\r\n        A: http://schemas.android.com/apk/res/android:appComponentFactory(0x0101057a)=\"androidx.core.app.CoreComponentFactory\" (Raw: \"androidx.core.app.CoreComponentFactory\")\r\n        A: http://schemas.android.com/apk/res/android:dataExtractionRules(0x0101063e)=@0x7f0b0002\r\n          E: activity (line=41)\r\n            A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"com.ladno.finance.MainActivity\" (Raw: \"com.ladno.finance.MainActivity\")\r\n            A: http://schemas.android.com/apk/res/android:exported(0x01010010)=true\r\n            A: http://schemas.android.com/apk/res/android:windowSoftInputMode(0x0101022b)=0x00000010\r\n              E: intent-filter (line=45)\r\n                  E: action (line=46)\r\n                    A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"android.intent.action.MAIN\" (Raw: \"android.intent.action.MAIN\")\r\n                  E: category (line=48)\r\n                    A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"android.intent.category.LAUNCHER\" (Raw: \"android.intent.category.LAUNCHER\")\r\n          E: service (line=52)\r\n            A: http://schemas.android.com/apk/res/android:label(0x01010001)=@0x7f080009\r\n            A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"com.ladno.finance.BankNotificationService\" (Raw: \"com.ladno.finance.BankNotificationService\")\r\n            A: http://schemas.android.com/apk/res/android:permission(0x01010006)=\"android.permission.BIND_NOTIFICATION_LISTENER_SERVICE\" (Raw: \"android.permission.BIND_NOTIFICATION_LISTENER_SERVICE\")\r\n            A: http://schemas.android.com/apk/res/android:exported(0x01010010)=true\r\n              E: intent-filter (line=57)\r\n                  E: action (line=58)\r\n                    A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"android.service.notification.NotificationListenerService\" (Raw: \"android.service.notification.NotificationListenerService\")\r\n          E: provider (line=62)\r\n            A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"androidx.core.content.FileProvider\" (Raw: \"androidx.core.content.FileProvider\")\r\n            A: http://schemas.android.com/apk/res/android:exported(0x01010010)=false\r\n            A: http://schemas.android.com/apk/res/android:authorities(0x01010018)=\"com.ladno.finance.capture\" (Raw: \"com.ladno.finance.capture\")\r\n            A: http://schemas.android.com/apk/res/android:grantUriPermissions(0x0101001b)=true\r\n              E: meta-data (line=67)\r\n                A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"android.support.FILE_PROVIDER_PATHS\" (Raw: \"android.support.FILE_PROVIDER_PATHS\")\r\n                A: http://schemas.android.com/apk/res/android:resource(0x01010025)=@0x7f0b0001\r\n          E: provider (line=71)\r\n            A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"androidx.startup.InitializationProvider\" (Raw: \"androidx.startup.InitializationProvider\")\r\n            A: http://schemas.android.com/apk/res/android:exported(0x01010010)=false\r\n            A: http://schemas.android.com/apk/res/android:authorities(0x01010018)=\"com.ladno.finance.androidx-startup\" (Raw: \"com.ladno.finance.androidx-startup\")\r\n              E: meta-data (line=75)\r\n                A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"androidx.profileinstaller.ProfileInstallerInitializer\" (Raw: \"androidx.profileinstaller.ProfileInstallerInitializer\")\r\n                A: http://schemas.android.com/apk/res/android:value(0x01010024)=\"androidx.startup\" (Raw: \"androidx.startup\")\r\n          E: receiver (line=80)\r\n            A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"androidx.profileinstaller.ProfileInstallReceiver\" (Raw: \"androidx.profileinstaller.ProfileInstallReceiver\")\r\n            A: http://schemas.android.com/apk/res/android:permission(0x01010006)=\"android.permission.DUMP\" (Raw: \"android.permission.DUMP\")\r\n            A: http://schemas.android.com/apk/res/android:enabled(0x0101000e)=true\r\n            A: http://schemas.android.com/apk/res/android:exported(0x01010010)=true\r\n            A: http://schemas.android.com/apk/res/android:directBootAware(0x01010505)=false\r\n              E: intent-filter (line=86)\r\n                  E: action (line=87)\r\n                    A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"androidx.profileinstaller.action.INSTALL_PROFILE\" (Raw: \"androidx.profileinstaller.action.INSTALL_PROFILE\")\r\n              E: intent-filter (line=89)\r\n                  E: action (line=90)\r\n                    A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"androidx.profileinstaller.action.SKIP_FILE\" (Raw: \"androidx.profileinstaller.action.SKIP_FILE\")\r\n              E: intent-filter (line=92)\r\n                  E: action (line=93)\r\n                    A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"androidx.profileinstaller.action.SAVE_PROFILE\" (Raw: \"androidx.profileinstaller.action.SAVE_PROFILE\")\r\n              E: intent-filter (line=95)\r\n                  E: action (line=96)\r\n                    A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"androidx.profileinstaller.action.BENCHMARK_OPERATION\" (Raw: \"androidx.profileinstaller.action.BENCHMARK_OPERATION\")\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\build-tools\\35.0.0\\zipalign.exe",
+        "-c",
+        "-P",
+        "16",
+        "-v",
+        "4",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.1.0-debug.apk"
+      ],
+      "exitCode": 0,
+      "output": "Verifying alignment of C:\\Users\\04068\\OneDrive\\���������\\ChatGPT\\������� �����\\android-app\\dist\\ladno-0.1.0-debug.apk (4)...\r\n      87 META-INF/com/android/build/gradle/app-metadata.properties (OK - compressed)\r\n     181 classes.dex (OK - compressed)\r\n 2226994 classes2.dex (OK - compressed)\r\n 2232910 classes3.dex (OK - compressed)\r\n 2260943 classes4.dex (OK - compressed)\r\n 2310144 lib/arm64-v8a/libjpeg.so (OK)\r\n 2572288 lib/arm64-v8a/libleptonica.so (OK)\r\n 5455872 lib/arm64-v8a/libpngx.so (OK)\r\n 5685248 lib/arm64-v8a/libtesseract.so (OK)\r\n 9863168 lib/armeabi-v7a/libjpeg.so (OK)\r\n10059776 lib/armeabi-v7a/libleptonica.so (OK)\r\n12222464 lib/armeabi-v7a/libpngx.so (OK)\r\n12386304 lib/armeabi-v7a/libtesseract.so (OK)\r\n15400960 lib/x86/libjpeg.so (OK)\r\n15679488 lib/x86/libleptonica.so (OK)\r\n18661376 lib/x86/libpngx.so (OK)\r\n18907136 lib/x86/libtesseract.so (OK)\r\n23248896 lib/x86_64/libjpeg.so (OK)\r\n23543808 lib/x86_64/libleptonica.so (OK)\r\n26656768 lib/x86_64/libpngx.so (OK)\r\n26902528 lib/x86_64/libtesseract.so (OK)\r\n31234714 assets/db/schema.sql (OK - compressed)\r\n31236839 assets/licenses/Apache-2.0.txt (OK - compressed)\r\n31241326 assets/licenses/IJG-JPEG.txt (OK - compressed)\r\n31249851 assets/licenses/Leptonica.txt (OK - compressed)\r\n31250663 assets/licenses/THIRD_PARTY_NOTICES.txt (OK - compressed)\r\n31251366 assets/licenses/libpng.txt (OK - compressed)\r\n31253488 assets/licenses/sources.json (OK - compressed)\r\n31253945 assets/tessdata/LICENSE.txt (OK - compressed)\r\n31258436 assets/tessdata/eng.traineddata (OK - compressed)\r\n33317983 assets/tessdata/kaz.traineddata (OK - compressed)\r\n35561475 assets/tessdata/rus.traineddata (OK - compressed)\r\n37269818 assets/www/app.js (OK - compressed)\r\n37278463 assets/www/bridge.js (OK - compressed)\r\n37280448 assets/www/index.html (OK - compressed)\r\n37281160 assets/www/preview-adapter.js (OK - compressed)\r\n37285767 assets/www/styles.css (OK - compressed)\r\n37291060 assets/www/view.js (OK - compressed)\r\n37306758 AndroidManifest.xml (OK - compressed)\r\n37308804 res/drawable-hdpi-v4/notification_bg_low_normal.9.png (OK)\r\n37309100 res/drawable-hdpi-v4/notification_bg_low_pressed.9.png (OK)\r\n37309404 res/drawable-hdpi-v4/notification_bg_normal.9.png (OK)\r\n37309704 res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png (OK)\r\n37310020 res/drawable-hdpi-v4/notification_oversize_large_icon_bg.png (OK)\r\n37311020 res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png (OK)\r\n37311212 res/drawable-mdpi-v4/notification_bg_low_normal.9.png (OK)\r\n37311512 res/drawable-mdpi-v4/notification_bg_low_pressed.9.png (OK)\r\n37311816 res/drawable-mdpi-v4/notification_bg_normal.9.png (OK)\r\n37312120 res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png (OK)\r\n37312432 res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png (OK)\r\n37312611 res/drawable-v21/notification_action_background.xml (OK - compressed)\r\n37313164 res/drawable-xhdpi-v4/notification_bg_low_normal.9.png (OK)\r\n37313472 res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png (OK)\r\n37313804 res/drawable-xhdpi-v4/notification_bg_normal.9.png (OK)\r\n37314116 res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png (OK)\r\n37314452 res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png (OK)\r\n37314651 res/drawable/ic_call_answer.xml (OK - compressed)\r\n37315379 res/drawable/ic_call_answer_low.xml (OK - compressed)\r\n37316090 res/drawable/ic_call_answer_video.xml (OK - compressed)\r\n37316582 res/drawable/ic_call_answer_video_low.xml (OK - compressed)\r\n37317045 res/drawable/ic_call_decline.xml (OK - compressed)\r\n37317845 res/drawable/ic_call_decline_low.xml (OK - compressed)\r\n37318615 res/drawable/ic_launcher.xml (OK - compressed)\r\n37319053 res/drawable/notification_bg.xml (OK - compressed)\r\n37319371 res/drawable/notification_bg_low.xml (OK - compressed)\r\n37319698 res/drawable/notification_icon_background.xml (OK - compressed)\r\n37319949 res/drawable/notification_tile_bg.xml (OK - compressed)\r\n37320189 res/layout-v21/notification_action.xml (OK - compressed)\r\n37320752 res/layout-v21/notification_action_tombstone.xml (OK - compressed)\r\n37321369 res/layout-v21/notification_template_custom_big.xml (OK - compressed)\r\n37322236 res/layout-v21/notification_template_icon_group.xml (OK - compressed)\r\n37322712 res/layout/custom_dialog.xml (OK - compressed)\r\n37323094 res/layout/ime_base_split_test_activity.xml (OK - compressed)\r\n37323373 res/layout/ime_secondary_split_test_activity.xml (OK - compressed)\r\n37323871 res/layout/notification_template_part_chronometer.xml (OK - compressed)\r\n37324207 res/layout/notification_template_part_time.xml (OK - compressed)\r\n37324523 res/xml/backup_rules.xml (OK - compressed)\r\n37324908 res/xml/capture_paths.xml (OK - compressed)\r\n37325182 res/xml/data_extraction_rules.xml (OK - compressed)\r\n37325724 resources.arsc (OK)\r\n37378943 DebugProbesKt.bin (OK - compressed)\r\n37379816 META-INF/androidx.annotation_annotation-experimental.version (OK)\r\n37379900 META-INF/androidx.arch.core_core-runtime.version (OK - compressed)\r\n37380036 META-INF/androidx.core_core-viewtree.version (OK)\r\n37380108 META-INF/androidx.core_core.version (OK)\r\n37380200 META-INF/androidx.exifinterface_exifinterface.version (OK)\r\n37380288 META-INF/androidx.interpolator_interpolator.version (OK)\r\n37380377 META-INF/androidx.lifecycle_lifecycle-runtime.version (OK - compressed)\r\n37380528 META-INF/androidx.profileinstaller_profileinstaller.version (OK)\r\n37380616 META-INF/androidx.startup_startup-runtime.version (OK)\r\n37380696 META-INF/androidx.tracing_tracing.version (OK)\r\n37380800 META-INF/androidx.versionedparcelable_versionedparcelable.version (OK)\r\n37380880 META-INF/kotlinx_coroutines_android.version (OK)\r\n37380956 META-INF/kotlinx_coroutines_core.version (OK)\r\n37381053 META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler (OK - compressed)\r\n37381200 META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory (OK - compressed)\r\n37381323 kotlin/annotation/annotation.kotlin_builtins (OK - compressed)\r\n37381958 kotlin/collections/collections.kotlin_builtins (OK - compressed)\r\n37383553 kotlin/coroutines/coroutines.kotlin_builtins (OK - compressed)\r\n37383780 kotlin/internal/internal.kotlin_builtins (OK - compressed)\r\n37384233 kotlin/kotlin.kotlin_builtins (OK - compressed)\r\n37389303 kotlin/ranges/ranges.kotlin_builtins (OK - compressed)\r\n37390635 kotlin/reflect/reflect.kotlin_builtins (OK - compressed)\r\nVerification succesful\r\n"
+    }
+  ],
+  "archive": {
+    "abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "nativeLibraries": [
+      "lib/arm64-v8a/libjpeg.so",
+      "lib/arm64-v8a/libleptonica.so",
+      "lib/arm64-v8a/libpngx.so",
+      "lib/arm64-v8a/libtesseract.so",
+      "lib/armeabi-v7a/libjpeg.so",
+      "lib/armeabi-v7a/libleptonica.so",
+      "lib/armeabi-v7a/libpngx.so",
+      "lib/armeabi-v7a/libtesseract.so",
+      "lib/x86/libjpeg.so",
+      "lib/x86/libleptonica.so",
+      "lib/x86/libpngx.so",
+      "lib/x86/libtesseract.so",
+      "lib/x86_64/libjpeg.so",
+      "lib/x86_64/libleptonica.so",
+      "lib/x86_64/libpngx.so",
+      "lib/x86_64/libtesseract.so"
+    ],
+    "elf64LoadAlignments": {
+      "lib/arm64-v8a/libjpeg.so": [
+        16384,
+        16384
+      ],
+      "lib/arm64-v8a/libleptonica.so": [
+        16384,
+        16384,
+        16384
+      ],
+      "lib/arm64-v8a/libpngx.so": [
+        16384,
+        16384
+      ],
+      "lib/arm64-v8a/libtesseract.so": [
+        16384,
+        16384,
+        16384
+      ],
+      "lib/x86_64/libjpeg.so": [
+        16384,
+        16384
+      ],
+      "lib/x86_64/libleptonica.so": [
+        16384,
+        16384,
+        16384
+      ],
+      "lib/x86_64/libpngx.so": [
+        16384,
+        16384
+      ],
+      "lib/x86_64/libtesseract.so": [
+        16384,
+        16384,
+        16384
+      ]
+    }
+  },
+  "harnessCorrections": [
+    "Initial oracle incorrectly sought sdkVersion:'26'; aapt2 prints minSdkVersion:'26'. Initial JSON retained as apk-results-initial-harness.json."
+  ],
+  "limitations": [
+    "No installation, Android lifecycle, SQLite runtime, OCR JNI, NLS delivery, Keystore or OEM backup execution performed."
+  ]
+}

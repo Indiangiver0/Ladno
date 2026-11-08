@@ -1,0 +1,37 @@
+{
+  "build": {
+    "apk": "ladno-0.3.0-debug.apk",
+    "sha256": "a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76",
+    "bytes": 68393641,
+    "stage": "C:\\Users\\04068\\.cache\\ladno-android\\work\\ladno-85db77f1cbb54120",
+    "sourceFingerprint": "85db77f1cbb5412032dfdc869c4c14faadc07def9992ab620d9a6e05ead03284",
+    "versionName": "0.3.0",
+    "versionCode": 3,
+    "tasks": [
+      ":app:assembleDebug",
+      ":app:testDebugUnitTest",
+      ":app:lintDebug",
+      ":app:assembleDebugAndroidTest"
+    ],
+    "builtAtUtc": "2026-11-03T20:54:49.142946+00:00"
+  },
+  "unit": {
+    "tests": 80,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "unitPassed": 79,
+  "lint": {
+    "Error": 0,
+    "Fatal": 0,
+    "Warning": 3
+  },
+  "currentSourceMismatches": [],
+  "sourceFilesChecked": 94,
+  "nativePassed": true,
+  "nativeChecks": 82,
+  "nativeTestApkSha256": "95da5b07020819f2e0fa83e34ac53374dda6e1973174609f9a4fde9efd9ca769",
+  "originalApkUnchanged": true,
+  "scope": "root actual synthetic execution, no physical device/UI/real QR/bank corpus/network API"
+}

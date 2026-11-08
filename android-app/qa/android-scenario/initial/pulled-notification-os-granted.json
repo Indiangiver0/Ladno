@@ -1,0 +1,35 @@
+{
+  "suite": "notification-os-granted",
+  "startedAt": "2026-11-02T17:19:26.219Z",
+  "pid": 2502,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "actual OS NLS grant",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "unselected source\/no records or pending imports during 3s",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "actual OS expense delivery\/deadline",
+      "expected": true,
+      "actual": false,
+      "pass": false
+    }
+  ],
+  "observations": [],
+  "failure": "java.lang.AssertionError: actual OS expense delivery\/deadline expected:<true> but was:<false>",
+  "finishedAt": "2026-11-02T17:19:59.785Z"
+}

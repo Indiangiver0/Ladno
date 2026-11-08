@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; media-src 'none'; worker-src 'none'">
+  <title>Ладно — личные финансы</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="preview-adapter.js"></script>
+  <script defer src="bridge.js"></script>
+  <script defer src="view.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div id="app" aria-busy="true">
+    <main class="loading-screen">
+      <div class="brand-mark" aria-hidden="true">л</div>
+      <h1>Ладно</h1>
+      <p>Открываем ваш учёт…</p>
+    </main>
+  </div>
+  <div id="toasts" class="toast-region" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript>Для работы локального интерфейса нужен JavaScript.</noscript>
+</body>
+</html>

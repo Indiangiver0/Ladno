@@ -1,0 +1,743 @@
+{
+  "suite": "receipt-layout-runtime",
+  "startedAt": "2026-11-03T09:50:20.564Z",
+  "pid": 2366,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "real Tesseract initialized",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "original counterexample PNG unchanged",
+      "expected": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+      "actual": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/amount",
+      "expected": "754.32",
+      "actual": "754.32",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/OCR completed-paid evidence",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "counterexample verifier retains alternative794.32",
+      "expected": "794.32",
+      "actual": "794.32",
+      "pass": true
+    },
+    {
+      "id": "counterexample disagreement disallows auto",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/amount",
+      "expected": "8765.43",
+      "actual": "8765.43",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/OCR completed-paid evidence",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "unsupported currency spelling requires review",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/amount",
+      "expected": "99.85",
+      "actual": "99.85",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/OCR completed-paid evidence",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/amount",
+      "expected": "123.45",
+      "actual": "123.45",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/OCR completed-paid evidence",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/known agreement proves automatic path",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/amount",
+      "expected": "6543.21",
+      "actual": "6543.21",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/OCR completed-paid evidence",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/known agreement proves automatic path",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "runtime OCR initialized",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/native amount",
+      "expected": "754.32",
+      "actual": "754.32",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/native status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/ledger delta",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/disagreement explains review",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/native amount",
+      "expected": "8765.43",
+      "actual": "8765.43",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/native status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/ledger delta",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card\/disagreement explains review",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "native fiscal unsupported currency remains review",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/native amount",
+      "expected": "99.85",
+      "actual": "99.85",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/native status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/ledger delta",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid\/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/native amount",
+      "expected": "123.45",
+      "actual": "123.45",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/native status",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/ledger delta",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid\/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/native amount",
+      "expected": "6543.21",
+      "actual": "6543.21",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/native status",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/ledger delta",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge\/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "en-multiline-paid\/synthetic OCR",
+      "actual": {
+        "lines": [
+          "PAID",
+          "TOTAL",
+          "754.32 KZT",
+          "2026-11-03"
+        ],
+        "actualText": "PAID\nTOTAL\n754.32 KZT\n2026-11-03",
+        "meanConfidence": 94,
+        "parsed": {
+          "kind": "expense",
+          "amount": "754.32",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        },
+        "verificationText": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+        "verificationConfidence": 94,
+        "verificationFailed": false,
+        "verificationParsed": {
+          "kind": "expense",
+          "amount": "794.32",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        },
+        "primaryMillis": 515,
+        "verificationMillis": 330
+      }
+    },
+    {
+      "id": "ru-fiscal-card\/synthetic OCR",
+      "actual": {
+        "lines": [
+          "ФИСКАЛЬНЫЙ ЧЕК",
+          "ПРИХОД",
+          "ИТОГО",
+          "8765.43 KZT",
+          "Картой 8765.43 KZT",
+          "2026-11-03"
+        ],
+        "actualText": "ФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\n\nИТОГО\n\n8765.43 КАТ\n\nКартой 8765.43 KZT\n2026-11-03",
+        "meanConfidence": 88,
+        "parsed": {
+          "kind": "expense",
+          "amount": "8765.43",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "CURRENCY_UNKNOWN"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        },
+        "verificationText": "ФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\n\nИТОГО\n\n8765.43 KZT\n\nКартой 8765.43 КИТ\n2026-11-03",
+        "verificationConfidence": 92,
+        "verificationFailed": false,
+        "verificationParsed": {
+          "kind": "expense",
+          "amount": "8765.43",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "CURRENCY_UNKNOWN"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        },
+        "primaryMillis": 1328,
+        "verificationMillis": 275
+      }
+    },
+    {
+      "id": "ru-unpaid\/synthetic OCR",
+      "actual": {
+        "lines": [
+          "Не оплачено",
+          "ИТОГО",
+          "99.85 KZT",
+          "2026-11-03"
+        ],
+        "actualText": "Не оплачено\nИТОГО\n\n99.85 KZT\n2026-11-03",
+        "meanConfidence": 92,
+        "parsed": {
+          "kind": "expense",
+          "amount": "99.85",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "UNSUPPORTED_EVENT"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        },
+        "verificationText": "Не оплачено\nИТОГО\n\n99.85 КИТ\n2026-11-03",
+        "verificationConfidence": 86,
+        "verificationFailed": false,
+        "verificationParsed": {
+          "kind": "expense",
+          "amount": null,
+          "currency": null,
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [
+            "CURRENCY_UNKNOWN",
+            "UNSUPPORTED_EVENT",
+            "AMOUNT_MISSING",
+            "CURRENCY_MISSING"
+          ],
+          "confidence": "uncertain",
+          "paymentReference": null
+        },
+        "primaryMillis": 750,
+        "verificationMillis": 290
+      }
+    },
+    {
+      "id": "en-agreement-paid\/synthetic OCR",
+      "actual": {
+        "lines": [
+          "PAID",
+          "TOTAL 123.45 KZT",
+          "2026-11-03"
+        ],
+        "actualText": "PAID\nTOTAL 123.45 KZT\n2026-11-03",
+        "meanConfidence": 93,
+        "parsed": {
+          "kind": "expense",
+          "amount": "123.45",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        },
+        "verificationText": "PAID\nTOTAL 123.45 KZT\n2026-11-03",
+        "verificationConfidence": 94,
+        "verificationFailed": false,
+        "verificationParsed": {
+          "kind": "expense",
+          "amount": "123.45",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        },
+        "primaryMillis": 510,
+        "verificationMillis": 442
+      }
+    },
+    {
+      "id": "ru-fiscal-tenge\/synthetic OCR",
+      "actual": {
+        "lines": [
+          "ФИСКАЛЬНЫЙ ЧЕК",
+          "ПРИХОД",
+          "ИТОГО",
+          "6543.21 тг",
+          "Картой 6543.21 тг",
+          "2026-11-03"
+        ],
+        "actualText": "ФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\n\nИТОГО\n\n6543.21 тг\n\nКартой 6543.21 тг\n2026-11-03",
+        "meanConfidence": 94,
+        "parsed": {
+          "kind": "expense",
+          "amount": "6543.21",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        },
+        "verificationText": "ФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\n\nИТОГО\n\n6543.21 тг\n\nКартой 6543.21 тг\n2026-11-03",
+        "verificationConfidence": 94,
+        "verificationFailed": false,
+        "verificationParsed": {
+          "kind": "expense",
+          "amount": "6543.21",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        },
+        "primaryMillis": 940,
+        "verificationMillis": 269
+      }
+    },
+    {
+      "id": "en-multiline-paid\/native committed",
+      "actual": {
+        "id": "30a72171-5539-4bc3-954c-3a30319b604b",
+        "status": "needs_review",
+        "kind": "expense",
+        "amount": "754.32",
+        "currency": "KZT",
+        "operation_date": "2026-11-03",
+        "confidence": "uncertain",
+        "transaction_id": null,
+        "reasons": [
+          "LOW_CONFIDENCE"
+        ]
+      }
+    },
+    {
+      "id": "ru-fiscal-card\/native committed",
+      "actual": {
+        "id": "40afe354-8b1e-4df6-9c81-7f3f09fecd97",
+        "status": "needs_review",
+        "kind": "expense",
+        "amount": "8765.43",
+        "currency": "KZT",
+        "operation_date": "2026-11-03",
+        "confidence": "uncertain",
+        "transaction_id": null,
+        "reasons": [
+          "CURRENCY_UNKNOWN",
+          "LOW_CONFIDENCE"
+        ]
+      }
+    },
+    {
+      "id": "ru-unpaid\/native committed",
+      "actual": {
+        "id": "9ac29a35-231f-4d6c-926c-ae41a5d395db",
+        "status": "needs_review",
+        "kind": "expense",
+        "amount": "99.85",
+        "currency": "KZT",
+        "operation_date": "2026-11-03",
+        "confidence": "uncertain",
+        "transaction_id": null,
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "LOW_CONFIDENCE"
+        ]
+      }
+    },
+    {
+      "id": "en-agreement-paid\/native committed",
+      "actual": {
+        "id": "a72fceec-70f7-4de2-a922-6059cfcf8d69",
+        "status": "posted",
+        "kind": "expense",
+        "amount": "123.45",
+        "currency": "KZT",
+        "operation_date": "2026-11-03",
+        "confidence": "high",
+        "transaction_id": "040e0f48-ddd7-4114-b62f-8d8a292856cc",
+        "reasons": []
+      }
+    },
+    {
+      "id": "ru-fiscal-tenge\/native committed",
+      "actual": {
+        "id": "165707fe-d703-4079-afbc-e33acfabf46d",
+        "status": "posted",
+        "kind": "expense",
+        "amount": "6543.21",
+        "currency": "KZT",
+        "operation_date": "2026-11-03",
+        "confidence": "high",
+        "transaction_id": "51636927-34d1-4e29-9458-9292a4c6e6b5",
+        "reasons": []
+      }
+    },
+    {
+      "id": "scope",
+      "actual": "Synthetic clear PNGs only; actual photographed paper, MainActivity, camera chooser\/grants, registered job lifecycle and device UI were not exercised."
+    },
+    {
+      "id": "all fixture assertion failures",
+      "actual": []
+    }
+  ],
+  "finishedAt": "2026-11-03T09:50:38.918Z"
+}

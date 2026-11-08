@@ -1,0 +1,15 @@
+# APP-017 — независимая позиция адвоката реализации
+
+2026-11-04. `/root/app017_implementation`, court-implementation-advocate. В создании рассматриваемой версии не участвовал; другие первоначальные позиции не читал. Прочитаны AGENTS.md, PROTOCOL, полный профиль, общий packet, заключения backend/TLS/QA. Собственных сетевых запросов, сборки, instrumentation или установки не выполнял.
+
+Версия: **android-alpha-v5**, manifest `f34dcc26c3923050c47ade6543bf854428b35fe0ba01d584852a04fe80ac39e8`; APK **0.4.0/code4**, SHA `f54733b034399ec0b147d0fa7e9b5b82a8589034ca5c8692b63c905a2aa37cd3`. Самостоятельная Python SHA-проверка всех **170** файлов frozen manifest дала mismatches=[]; продукт не изменялся.
+
+**IMPL-01 / доказанная защита API-инкремента.** Прочитаны production OfdReceiptClient и целевые parser/runtime guards. URL фиксирован, redirects отключены, body ограничен262144B, работа/deadline ограничены, URL-bearing ошибки не попадают в журнал/JS. Парсер сопоставляет QR с окончательным totalSum, временем и фискальной identity, разрешает только окончательную SALE; CARD/CASH/MOBILE payments должны сходиться. Деньги KZT имеют scale2 без округления и без double-потери исходных lexemes. Цена до скидки, НДС и сдача не подменяют итог. Сохранённые [live evidence](../../android-app/qa/app017/authorized-live-evidence.json) подтверждают обычный Android-клиент для4395.00/3547.00KZT,03.11.2026,expense/high. Это реальный API, но ledgerIngestCalled=false: фактическое проведение этих личных покупок не заявляю.
+
+**IMPL-02 / доказанная защита повторов и TLS.** NativeRuntime сохраняет обе прежние HMAC-формулы source/revision. QA сообщает187 synthetic assertions, включая replay/ignore/manual edits/delete/weak match; поздний API success не переигрывает pending. Это разумный консервативный компромисс, а не полная автоматизация старых кандидатов. TLS source делегирует проверку исходному DEFAULT extended validator; известный промежуточный сертификат добавляется только как недоверенный элемент, не anchor. Default hostname verifier сохранён. Actual default-client PASS закрывает LIVE01 в проверенном API30 subset; сохранённые FAIL и lint warning не скрыты.
+
+**APP017-DEC-01 / P1, признан открытым:** фото545/490 не декодируются; отрицательное исследование не исправило основной сценарий для этих входов. Нужны более читаемые QR либо новая decoder-стратегия от backend с повтором именно исходных входов. POS490 не отдельная покупка.
+
+**QA17-01/02/03 / P2, признаны:** damaged-neighbor diagnostic skipped; физическая камера/видимый UI и OEM update не испытаны; crypto-negative/Engine/revocation coverage ограничен. Новых доказанных неверных сумм или ослабления trust anchors в прочитанном материале не установил.
+
+Рекомендация: **revise по общей APP-017**. Отдельную передачу exact APK как ограниченного development-обновления считаю обоснованной при сохранении этих границ, обычной установке без удаления данных и честном запросе крупного QR545/490. Это не принятие всех чеков, банков или полного camera end-to-end; решение принадлежит судье после обмена возражениями.

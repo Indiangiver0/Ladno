@@ -1,0 +1,716 @@
+{
+  "version": "android-alpha-v4",
+  "createdAtUtc": "2026-11-03T21:02:50.827738+00:00",
+  "scope": "APP-013 local known-format KZ fiscal QR prefill and APP-014 notification field extraction; network OFD API and all-bank automatic capture remain unimplemented/unverified",
+  "apkSha256": "a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76",
+  "sourceFingerprint": "85db77f1cbb5412032dfdc869c4c14faadc07def9992ab620d9a6e05ead03284",
+  "parent": "android-alpha-v3",
+  "parentManifestSha256": "e513023c2a8a237716addaed0c3d936d15ce4be682719f22f4b6ea0670fb5fa2",
+  "parentArchive": "team/snapshots/android-alpha-v3-files",
+  "parentArchiveFilesVerified": 402,
+  "previousProtectedFilesUnchanged": 46,
+  "canonicalization": "SHA-256 two-spaces POSIX-path LF, sorted paths, exact bytes",
+  "manifestSha256": "9e992a831fa5be3a758c71c51529638fb5be37728631258ee6a0f17faa51f7ce",
+  "files": [
+    {
+      "path": "android-app/.gitignore",
+      "sha256": "3b5c4a1f7ff509109b819243abd332e85b9cecf28bb73f8ac3baed5666f74f7b",
+      "bytes": 102
+    },
+    {
+      "path": "android-app/README.md",
+      "sha256": "a96385f0dac9ea34e1b0251c2e0f88336b9461cfaa5e586eb6925f3a205a9fc2",
+      "bytes": 7875
+    },
+    {
+      "path": "android-app/app/build.gradle",
+      "sha256": "add7af9c76218529890082c1510ae1ddd82273f32644f57f6adfc73c80a6aaba",
+      "bytes": 2533
+    },
+    {
+      "path": "android-app/app/src/androidTest/assets/tessdata-best/LICENSE.txt",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "bytes": 10173
+    },
+    {
+      "path": "android-app/app/src/androidTest/assets/tessdata-best/eng.traineddata",
+      "sha256": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "bytes": 15400601
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/AuthorOcrDiagnosticTest.java",
+      "sha256": "7a097156c82a03305023a6388a5390859bc63b6027341a92e1e3a47efd063f34",
+      "bytes": 11385
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/NativeRuntimeFixtures.java",
+      "sha256": "bc886ed956e451d0c1bbc22f5cf4db9c84fe303ac6db235c435d0d205d6d84f4",
+      "bytes": 9109
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/NotificationRuntimeTest.java",
+      "sha256": "7bb1312445c6deda3e65a1879e22c6a2d9abf74a9340c3c8b33b1d82f36f9ba5",
+      "bytes": 21822
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/OcrRuntimeTest.java",
+      "sha256": "ac492a5307e344131abb0997309054b37c041270cc0998baaacc190992cae1e3",
+      "bytes": 11596
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/QrImportRuntimeTest.java",
+      "sha256": "5f044e5ef55f7aa4b9d95daaf1fccdb557d5b00e5a6a894b04f63b82c3632639",
+      "bytes": 12902
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/ReceiptLayoutRuntimeTest.java",
+      "sha256": "6495b49e9120ee8ad1807fb9a691ed0f6200ea4894676c8f1c89c1e8df25fccc",
+      "bytes": 12304
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeFixtures.java",
+      "sha256": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+      "bytes": 7574
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeReadTest.java",
+      "sha256": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+      "bytes": 4497
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeWriteTest.java",
+      "sha256": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903",
+      "bytes": 14786
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/storage/StarterCategoryMigrationTest.java",
+      "sha256": "c6bee4ef559c8e4ce1c81809422cd07967efe086ba0d058a1c8ba53a990f84f6",
+      "bytes": 14910
+    },
+    {
+      "path": "android-app/app/src/main/AndroidManifest.xml",
+      "sha256": "757d8ea2e8ab5e4df74d1fbfc7f3b2d6577d2b9fd3519749e43cb135cc63f246",
+      "bytes": 2091
+    },
+    {
+      "path": "android-app/app/src/main/assets/db/schema.sql",
+      "sha256": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "bytes": 8170
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/Apache-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/IJG-JPEG.txt",
+      "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+      "bytes": 18719
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/Leptonica.txt",
+      "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+      "bytes": 1521
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/THIRD_PARTY_NOTICES.txt",
+      "sha256": "2a0491fbdcef603061562ea17b674ee1983b355fbe86891858cbd001f99c1593",
+      "bytes": 1306
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/ZXing-3.5.3-LICENSE.txt",
+      "sha256": "3f62881f0566227a24b12e5a754cc79f39aaa94883038e95c94812e1f50af42f",
+      "bytes": 13320
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/ZXing-NOTICE.txt",
+      "sha256": "fbb2ec6344d1ebf854133d8649213605d2be85ae6b26cd9940143c4176851c59",
+      "bytes": 285
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/libpng.txt",
+      "sha256": "16d9daaafbf63a31a5bdc91d4600972548fef5aaa1244202393288dbd079c49a",
+      "bytes": 5345
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/sources.json",
+      "sha256": "6d5b8a9588d9d85717800353c5205f033990099700391b8206b560fc7bed5ac5",
+      "bytes": 969
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata-best/LICENSE.txt",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "bytes": 10173
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata-best/eng.traineddata",
+      "sha256": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "bytes": 15400601
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata-best/kaz.traineddata",
+      "sha256": "34cbd9204b1ff3cc813d50b29e3c0ae3752bcc201f261a4a393ceca3895aea9d",
+      "bytes": 7528853
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata-best/rus.traineddata",
+      "sha256": "b617eb6830ffabaaa795dd87ea7fd251adfe9cf0efe05eb9a2e8128b7728d6b6",
+      "bytes": 15301764
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata/eng.traineddata",
+      "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "bytes": 4113088
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata/kaz.traineddata",
+      "sha256": "fcc01eed3815a42b9c6321c4c9d3606f39b166cbf95ade98b7d8d12063eae53d",
+      "bytes": 4734644
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata/rus.traineddata",
+      "sha256": "e16e5e036cce1d9ec2b00063cf8b54472625b9e14d893a169e2b0dedeb4df225",
+      "bytes": 3861738
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/app.js",
+      "sha256": "2ffcfeca79dd221b2c6043f1ac40b8b180bdcd2108609de43b5ac25920ed11fe",
+      "bytes": 35047
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/bridge.js",
+      "sha256": "4241148a4a12c50eeccfb5965a1247711fdb07d5d369e1a1f825d39fdc98c6e2",
+      "bytes": 5452
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/index.html",
+      "sha256": "7e9dd72daee9df50ab69b5b260f3f5c0bf087663c674a7fc75b2c1652a511e01",
+      "bytes": 1216
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/preview-adapter.js",
+      "sha256": "1f096640f1cbc16d014cf535b20f51174a585e979d6ea68bfd9a6a0424000611",
+      "bytes": 13472
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/styles.css",
+      "sha256": "eec74046d44208c6a878776a8a5bfa66eef5f6f1cb691894de30ff04c2aabb64",
+      "bytes": 20813
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/view.js",
+      "sha256": "9658349d6890b62a2cd64a8a3301ebcb4dfc389fa049136efbb928ce6f4661d2",
+      "bytes": 62471
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/AppBridge.java",
+      "sha256": "47c5780139e069231d2c193fcb90d7aa437a1f80ed178cad0b1ed4b21358ae0b",
+      "bytes": 7625
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/BankNotificationService.java",
+      "sha256": "f642b386022efcf465cf347ba74ecae3c1abee3ba94cc0783b3de2b3988b393d",
+      "bytes": 7489
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/LocalAssets.java",
+      "sha256": "877dfa97b7259d289575c72939c516ef975115088a2acac6c554db5ddccd4f40",
+      "bytes": 813
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/MainActivity.java",
+      "sha256": "fe161aea8c84cbf03a9f1da136159702d3fc1a0f77d62a27b499411600b6dc4f",
+      "bytes": 12886
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NativeJson.java",
+      "sha256": "4d6cbc0baa55fa6349f3eb1e9ab48463f1e61541b5cb904d36728b602408dfd1",
+      "bytes": 8195
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NativeRuntime.java",
+      "sha256": "1dcf1979b90e81496f59e19ea4093d6ab1a2cea1004f96d69cf24b8b60c89d62",
+      "bytes": 19752
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NoBackupAgent.java",
+      "sha256": "345e7b5588edafc68f07afbfefb80eac870da9b6f6f861f27147cb35eb611925",
+      "bytes": 1455
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NotificationStatus.java",
+      "sha256": "bc3cee982de669d3fbbcda31f17a6fb0cf7f7a4d00b085c0e628bc31a00bfaca",
+      "bytes": 464
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NotificationText.java",
+      "sha256": "85ef2f257e5881b78f98cbe55669ebf8ab367e433698a5de99ddcffaaf23bb26",
+      "bytes": 2567
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/OcrEngine.java",
+      "sha256": "7a6feaecbac6257794fdb812cbadfe7a45501dcf2a51ed89e0ecc562adfa4fab",
+      "bytes": 12546
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/ReceiptQrDecoder.java",
+      "sha256": "ce6542817bf4df4e0a5cbf851b3a7650907f7889b11e2131c130e6a711fd046d",
+      "bytes": 3577
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/ReceiptQrScanner.java",
+      "sha256": "f031962ef9baf0c9420d93a1309d15fd59931a541c586fc69c4a9a8da6fd152f",
+      "bytes": 4418
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/ScanOutcome.java",
+      "sha256": "fc105480468a9b261f0dabef675edc6314f3ab4c77e70cfd589756f655f68118",
+      "bytes": 1923
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/SourceTokens.java",
+      "sha256": "576ec0ff9a16febe1bae6c411f3ae3701fe30decb8ba1fc70ed2c978d1b8a9fa",
+      "bytes": 6047
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/BankMessageParser.java",
+      "sha256": "2cc03a6c3c5f18f45126712f8d82220b45884d5279f950cd50170906b6fce440",
+      "bytes": 4510
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ContractException.java",
+      "sha256": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "bytes": 400
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/FiscalQrParser.java",
+      "sha256": "81268416ab6a7530d6e3a045a5f58e74aee48150c2ee472ccf11accd7e3f775e",
+      "bytes": 7191
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ImportCandidate.java",
+      "sha256": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "bytes": 3526
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/JsonChecks.java",
+      "sha256": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "bytes": 5157
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/Money.java",
+      "sha256": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "bytes": 5830
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ParseSupport.java",
+      "sha256": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "bytes": 6720
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ReceiptOcrConsensus.java",
+      "sha256": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "bytes": 1787
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "sha256": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "bytes": 10268
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/storage/IngestSource.java",
+      "sha256": "8698a9e321e905b0969431cc2c58cb50dd2d8a25c4f8d78f0bcee3b5ae86c3b0",
+      "bytes": 2757
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/storage/LedgerStore.java",
+      "sha256": "92d55537dc60ab672b7e6950b70bbf21c587386edf4f77eddacd3156c273d986",
+      "bytes": 36783
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/storage/StarterCategories.java",
+      "sha256": "d6d30f2a1990d9a1ae40b473b3a1ba981762fddfedc593d8e3c7a1595df6d013",
+      "bytes": 2526
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/storage/StorageApi.java",
+      "sha256": "d9d7c475f22cfa356f7200221ed85f767445d4ed95f86881b3e9b3c06f34353e",
+      "bytes": 334
+    },
+    {
+      "path": "android-app/app/src/main/res/drawable/ic_launcher.xml",
+      "sha256": "4bb92a9b5309c2a0232d074e0d1bd91d6c93d369a3f5cf94165f5b187f584c76",
+      "bytes": 439
+    },
+    {
+      "path": "android-app/app/src/main/res/values/strings.xml",
+      "sha256": "4862818a50d70a0675b9dec848f3562cfd5bf1e1e5af303796e6112fdab76f59",
+      "bytes": 232
+    },
+    {
+      "path": "android-app/app/src/main/res/values/styles.xml",
+      "sha256": "7f0ef49a3e707fe9c8133db6f9f0f544937f92a62992827290e1d274c682e05f",
+      "bytes": 457
+    },
+    {
+      "path": "android-app/app/src/main/res/xml/backup_rules.xml",
+      "sha256": "865cae97840e81b9950d70457a05c5c1125a68364b0a83f44cd3daa030bc7e96",
+      "bytes": 487
+    },
+    {
+      "path": "android-app/app/src/main/res/xml/capture_paths.xml",
+      "sha256": "d289feecffdc65f6bd51c9715cfbc8d0cbb77bfcf3b50186353c2cd0117f8ae0",
+      "bytes": 173
+    },
+    {
+      "path": "android-app/app/src/main/res/xml/data_extraction_rules.xml",
+      "sha256": "23be8f0e337039bad566d125d29c0dceac8c66d21aba280147212c9385e20ce0",
+      "bytes": 1189
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/NotificationTextTest.java",
+      "sha256": "9a4748905be4c2361e0f2a550387fe2ccd097e46f6da8020232e9f67db9382bb",
+      "bytes": 3916
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/QrIndependentTest.java",
+      "sha256": "6c509d99b4fecbd137dcd8824b0a7c1b98e7134b793943f78ccaf61f049b4008",
+      "bytes": 5818
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/ReceiptQrDecoderTest.java",
+      "sha256": "9d9d2413ae106b31ac1f87d7a796158bdd0738b2dbc362f2f4b15c8711bcc371",
+      "bytes": 4438
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/ScanOutcomeTest.java",
+      "sha256": "0f877f7423445809aea4b99a5afc63b71527c756dfbcebd54ab02350bceb82a0",
+      "bytes": 3397
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/core/BankMessageExpansionTest.java",
+      "sha256": "3bfb195e0bb65868b0cdb248aedf153188fda34f68be4049c2827b8fc60c4b59",
+      "bytes": 4807
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/core/FiscalQrParserTest.java",
+      "sha256": "a1089671bf146aea01e7ef5ca2f1417121e084c81ca51a167a077baa0236f680",
+      "bytes": 6318
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/core/MoneyTest.java",
+      "sha256": "01e79291afa12637b2288f86f19760c40097d88e81cd29ac3b8c1e4a6228a5a1",
+      "bytes": 8501
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/core/ParserTest.java",
+      "sha256": "90d79651b3aac9cde2250dbd07ff1aaf216adddb3119030a01679c130cd908f4",
+      "bytes": 17887
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/core/ReceiptOcrConsensusTest.java",
+      "sha256": "9fd05517fef7a80b65b1d33487287d8d46ee2a20247ebfd6d162f63f690af532",
+      "bytes": 2962
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/nativebridge/LocalAssetsTest.java",
+      "sha256": "421097fd52441b6dc616c3c20ff211a3a77cae513b342bd0c927f34506e05107",
+      "bytes": 1638
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/nativebridge/NativeJsonGuardTest.java",
+      "sha256": "ca57d7a976ed643b71d0bb63e012bc58dc3da2aba6c67fbdb6bb618b9f81b2cc",
+      "bytes": 2996
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/nativebridge/NotificationStatusTest.java",
+      "sha256": "07d51a8b20ee8c4da0c2acebac81a51477fa911bc9e4fe2b50456918089e11d3",
+      "bytes": 2788
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/storage/IngestSourceTest.java",
+      "sha256": "0b3ed97eeb5d2416c0769eda3336bcd710c5bbe51de05de5b120aadbe1e25f3e",
+      "bytes": 2261
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/storage/schema_contract_test.py",
+      "sha256": "3337219fd96b4fdc797fd6601182c32e3dff0e96de85ac3d8b314f20e42948d7",
+      "bytes": 8115
+    },
+    {
+      "path": "android-app/build-versions.json",
+      "sha256": "92f8989fe38b30044135927dd47af71caf46b2dc59805e7ddda19d68031eef95",
+      "bytes": 947
+    },
+    {
+      "path": "android-app/build.gradle",
+      "sha256": "6844d442e0ae87ec0b784c8afe5598878784c4fa41aced1e9389a9b3bfb25666",
+      "bytes": 74
+    },
+    {
+      "path": "android-app/dist/build-result.json",
+      "sha256": "fdf72f820ae2b5e84c069340f8cb0c4095d223ece46bff61d6f51b1bea218d00",
+      "bytes": 559
+    },
+    {
+      "path": "android-app/dist/build-source-manifest.json",
+      "sha256": "b354dcd8d497a0c2d32bf5ba0312ae3d759d4f4bd030e5f35fd1277ceb1d5000",
+      "bytes": 15907
+    },
+    {
+      "path": "android-app/dist/ladno-0.3.0-androidTest.apk",
+      "sha256": "95da5b07020819f2e0fa83e34ac53374dda6e1973174609f9a4fde9efd9ca769",
+      "bytes": 13391035
+    },
+    {
+      "path": "android-app/dist/ladno-0.3.0-debug.apk",
+      "sha256": "a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76",
+      "bytes": 68393641
+    },
+    {
+      "path": "android-app/dist/reports/lint-results-debug.xml",
+      "sha256": "49df16043f1c5ae0d055e3fc9f343bb0425271af98fe06ae7e4af110a01d33b4",
+      "bytes": 3164
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.LocalAssetsTest.xml",
+      "sha256": "b9872de19c3ae98d4977f2017d71716d28657a95b18b70e2b5b70609df4fa938",
+      "bytes": 441
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.NativeJsonGuardTest.xml",
+      "sha256": "3a6f1968f3ec79bd7941004220bd49d78c35511091bbd79c173d550d93aec822",
+      "bytes": 724
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.NotificationStatusTest.xml",
+      "sha256": "1c764ae9de642dc4145a6bf0103bad86c1d9577bcd4fa1a2772b894a39f63ee9",
+      "bytes": 596
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.NotificationTextTest.xml",
+      "sha256": "679873e278cdaf6e61d98d617f09bf4cc550840bc0818f4f969d9721ed81ab7b",
+      "bytes": 1363
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.QrIndependentTest.xml",
+      "sha256": "7a4120b648222ac5b56683e8464611ff5b1141f0c8368b963c5e60d3700a8c12",
+      "bytes": 1214
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.ReceiptQrDecoderTest.xml",
+      "sha256": "dd9947861eed03f0fd3eff936d45c863b24f23e2f77252ceeb5f146cb68de138",
+      "bytes": 1094
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.ScanOutcomeTest.xml",
+      "sha256": "13df641a8c5aeb0fbce7d70ffec101d04a7551508c7c09f65e3fbbc497d0cf44",
+      "bytes": 828
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.core.BankMessageExpansionTest.xml",
+      "sha256": "00355b816497ab785ae76542b098d0986c79fc7517dca0f946a7f7fa23b0e5b4",
+      "bytes": 1377
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.core.FiscalQrParserTest.xml",
+      "sha256": "6e21d8bd6c999d3b44ee3cec74485a25975157a6d4ddf12d3c98e92c7746f2d0",
+      "bytes": 1613
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.core.MoneyTest.xml",
+      "sha256": "90fe646edbc9d32f526f9f47b262820ab0d0fc638fecc6034ebc00a1a113d37b",
+      "bytes": 906
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.core.ParserTest.xml",
+      "sha256": "a20885019fc79361c63ad886406bd73b4bebbdc4a5dd23b82a47a4b584f6c6aa",
+      "bytes": 2761
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.core.ReceiptOcrConsensusTest.xml",
+      "sha256": "ee08020ce8c8cbe68fb7d0c51c448aab3b964ae1206cb2c0d4e87e2055a88b30",
+      "bytes": 1058
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.storage.IngestSourceTest.xml",
+      "sha256": "989a8777a8200f0a37b8be5e1dd5039c2e197891dbacacec700b1f035f4ea716",
+      "bytes": 763
+    },
+    {
+      "path": "android-app/fixtures/money-cases.json",
+      "sha256": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "bytes": 55230
+    },
+    {
+      "path": "android-app/gradle.properties",
+      "sha256": "4584b119086c0d659b3659855382aa69e65604fe9964662a1f65d0db291af310",
+      "bytes": 206
+    },
+    {
+      "path": "android-app/ocr-models.lock.json",
+      "sha256": "76e6608d2821b4a4395f9f699a29c4c3235ec73a804d227e28c21b7443ac7368",
+      "bytes": 740
+    },
+    {
+      "path": "android-app/ocr-verification-model.lock.json",
+      "sha256": "ac3f74ae94e40270795aa3438326e31be040c9d675f0869d7bc849f56089ff5e",
+      "bytes": 936
+    },
+    {
+      "path": "android-app/qa/app013/artifact-identity-first-failure.json",
+      "sha256": "1426a556ba259e11cfe72a8364347460effe63d5c0539e98462c7fee3ea50862",
+      "bytes": 35720
+    },
+    {
+      "path": "android-app/qa/app013/artifact-identity.json",
+      "sha256": "3b9eff7b6c922ca6634ec31f8b6263c14f04b5ffa49d4904d46c27bf60832044",
+      "bytes": 35932
+    },
+    {
+      "path": "android-app/qa/app013/native-run-first-failure.json",
+      "sha256": "bd107eee04163457f4e38370bf3da2ac7150e227f70106fd418e1f9ac70d633b",
+      "bytes": 15343
+    },
+    {
+      "path": "android-app/qa/app013/native-run.json",
+      "sha256": "e237bd31cbe92c4e1e6755bb4bc6b5831261dff1cb77778684d9ab78134b5b2e",
+      "bytes": 31820
+    },
+    {
+      "path": "android-app/qa/app013/native-runtime-evidence-first-failure.json",
+      "sha256": "8e92ba6472ca8a905fbc56d305e5f16b6b893de8a7eb7330ef0ccc523f13364e",
+      "bytes": 5206
+    },
+    {
+      "path": "android-app/qa/app013/native-runtime-evidence.json",
+      "sha256": "c568a0221027d7cd08ebaf4cb0412ea6f351ca50cf8f4555bd517fe02f36724c",
+      "bytes": 14492
+    },
+    {
+      "path": "android-app/qa/app013/run_native.py",
+      "sha256": "540bbcc0a2bd5ea01f887300a93df21c91a83eebba63d78f6fc4d6c2800c9722",
+      "bytes": 5080
+    },
+    {
+      "path": "android-app/qa/app013/scenario-report.md",
+      "sha256": "a693460442ad790c0bf54118b6dbb87ae75190883552a3821a391e90ff39c7d0",
+      "bytes": 14906
+    },
+    {
+      "path": "android-app/qa/app013/verify_artifacts.py",
+      "sha256": "8abe8465fca6e41a60b67589de3b09bd7552abccdb527a6fd0cd7fd349288e53",
+      "bytes": 5185
+    },
+    {
+      "path": "android-app/scripts/build_android.py",
+      "sha256": "6fb316971f4eedbe2db8d974abf577c8117e1cd9ae922821feff551fc77678cf",
+      "bytes": 16470
+    },
+    {
+      "path": "android-app/settings.gradle",
+      "sha256": "cc3a94c9d7a6e2928b27e8bf51e85c61730711811207b2d50e9447991574d5d2",
+      "bytes": 353
+    },
+    {
+      "path": "docs/android/APP-013-IMPLEMENTATION-SECURITY.md",
+      "sha256": "9f0529a7e8b6d0d3c1b5e41a2499932dad237ad07e63b1048ec3e93e129548ad",
+      "bytes": 7313
+    },
+    {
+      "path": "docs/android/APP-013-QR-CONTRACT.md",
+      "sha256": "20982166ace1d7a6bebf89719837225e0b301b0650dd58e617934687813b5e28",
+      "bytes": 17808
+    },
+    {
+      "path": "docs/android/APP-013-QR-SECURITY.md",
+      "sha256": "0c19542d373930babebdb72c31320516946b5f2e982be41a141ef092f65efa4d",
+      "bytes": 11365
+    },
+    {
+      "path": "scripts/archive_reviewed_snapshot.py",
+      "sha256": "7c4d9473f78a8cde09ca80c0ba13a0e741f57e3b46a851d82d9c313c733c3080",
+      "bytes": 2190
+    },
+    {
+      "path": "scripts/snapshot_app013.py",
+      "sha256": "57db2c9281999f88f78aac9a0115296e10d0003646822dfe510b0096e06ce2be",
+      "bytes": 4371
+    },
+    {
+      "path": "team/reports/APP-013-architecture-implementation-review.md",
+      "sha256": "d0604ab0b6893289e1a9b6f6bdf01acb5469f3426e389298f1241b3e84f2a626",
+      "bytes": 4974
+    },
+    {
+      "path": "team/reports/APP-013-architecture-review.md",
+      "sha256": "a4ac8e0dfb3a0c6837313a1297b145819ad93147b17d9e24ff5c09ce4cbd6f8b",
+      "bytes": 9609
+    },
+    {
+      "path": "team/reports/APP-013-backend-review.md",
+      "sha256": "9725aa781cc4bdd3cc7da86da78bd9a6ce65506a580a60e83a8e31b3bbf539d1",
+      "bytes": 20343
+    },
+    {
+      "path": "team/reports/APP-013-build-final.json",
+      "sha256": "afadb651a8a56371a2a5cba66af5bad78bbdb16ad8936aa093fad047b44ce1e7",
+      "bytes": 1131
+    },
+    {
+      "path": "team/reports/APP-013-build-final.log",
+      "sha256": "8e58044cc4c4728f4bce72a6fd043a7539219b0baddbdd066d329055e72f708f",
+      "bytes": 5442
+    },
+    {
+      "path": "team/reports/APP-013-build-first.log",
+      "sha256": "c3f40ddf23b0e973ee0c18a583e4f043e2a331692a0bc150c159aa078de6a779",
+      "bytes": 3874
+    },
+    {
+      "path": "team/reports/APP-013-build-second.log",
+      "sha256": "2b3161655368e1b64a6bb5c6f996890ec16b66640da267cf9108258fa5b40b32",
+      "bytes": 5032
+    },
+    {
+      "path": "team/reports/APP-013-build-third.log",
+      "sha256": "9be3d58ad08adce88f0f3cc6b76796ed2b1779268c81197170e63cf038779c48",
+      "bytes": 5439
+    },
+    {
+      "path": "team/reports/APP-013-decoder-first-failure.xml",
+      "sha256": "ce0451c7fcb22720385eeb7dbc60067d47c2f5d8697abd95748da814cefe9db6",
+      "bytes": 5038
+    },
+    {
+      "path": "team/reports/APP-013-frontend-review.md",
+      "sha256": "3300704627768dc73d9dc8c09db15a67b361ddf81c3e3abf7ee438f0d43195cd",
+      "bytes": 3591
+    },
+    {
+      "path": "team/reports/APP-013-qa-review.md",
+      "sha256": "461ecedd43f2299bf8491aaf2511f5d0ffe35945001dcafa36c9ccb78cc49b1e",
+      "bytes": 10639
+    },
+    {
+      "path": "team/reports/APP-013-qr-implementation.md",
+      "sha256": "9fb785daa56f32a21720bbadc78fbf554d751d178b53a30e94587e062f729a3b",
+      "bytes": 9083
+    },
+    {
+      "path": "team/reports/APP-014-backend-plan.md",
+      "sha256": "e1a8d02e9c836c52ee8edcf8ff13f24fb7fd6bf347a80a834bc19c029172dd95",
+      "bytes": 15103
+    },
+    {
+      "path": "team/reports/APP-014-bank-implementation.md",
+      "sha256": "519a03624eab2476244c416b3ffb5a365ecd536ddddf6efbf0843a585e079a0c",
+      "bytes": 7394
+    }
+  ]
+}

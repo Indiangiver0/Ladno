@@ -1,0 +1,38 @@
+# APP-006 — независимый Android scenario QA N2/N3/N4
+
+Исполнитель: `/root/android_qa_scenario`, scenario-test-engineer; глава: `/root/android_qa_lead`. Дата: 2026-11-02, Asia/Qyzylorda. Root выполнил provision/build/guarded ADB orchestration; специалист создал назначенные тесты и независимо прочитал фактические команды/private expected/actual. Самостоятельной приёмки приложения нет.
+
+## Зафиксированная версия и реальная среда
+
+- Установленный production APK остался прежним: SHA256 `38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a`, 37404606bytes. Production и старые frozen108/QA/court этим специалистом не менялись.
+- Финальный readiness test APK: SHA256 `ac23d80872e07b52a075249f94c39b7c710edde2e1954ce87a2fe342da7e7602`. Install evidence содержит завершённый source fingerprint `d001bbd85c2faeef77d3a88ceeecc63798717144adcde1d8dd3bd20edd84146d`, stage `ladno-d001bbd85c2faeef`, SHA обоих APK и успешные install results.
+- Исторические initial/diagnostic test APK сохранены root: SHA94c418df… / 40f5c220…; полный readback в results-summary.json. OcrRuntimeTest и NativeRuntimeFixtures не менялись при поздних readiness правках NotificationRuntimeTest; N3 и revoke без новой причины повторно не запускались.
+- Только выделенный `emulator-5580`, AVD `Ladno_QA_API30`, AOSP Android11/API30, x86_64. Root проверял AVD identity перед операциями. Личные устройства, Windows security/BIOS/драйверы не менялись. Всё содержимое синтетическое. OS NLS grant/revoke реальные; после завершения root снова отозвал доступ.
+
+## Реально исполнено: 4 успешных instrumentation команды, 126 assertions
+
+Все4 успешных command results и все126 private checks прошли; команда сбора уже выполненных результатов `python -u android-app/qa/android-scenario/collect_results.py` дала successfulRuns4/successfulAssertions126/passedtrue. Сборщик не использует ADB и не запускает приложение. Команды `am instrument -w -r -e class …` с runner `com.ladno.finance.test/androidx.test.runner.AndroidJUnitRunner`, stdout и private JSON побайтово сохранены в executed/. Сводка входов, ожиданий, фактов, SHA и форматов: results-summary.json.
+
+- **N2a, keystoreParserStorage, PID2430: 35 PASS.** Настоящий AndroidKeyStore и production SourceTokens: существующий неэкспортируемый HMAC key, hex64, стабильность между объектами, purpose/namespace/field framing. Production bank parser→safeCandidate→Android LedgerStore автоматически создал точный расход без категории. Exact source revision replay не создал второй расход, не перезаписал ручную правку, не воскресил tombstone. Неуспешные/запланированные/скрытые суммы получили review; capture gap дал IDENTITY_UNCERTAIN. Synthetic raw-marker отсутствовал в DB cells и lifecycle preferences. Это настоящее Android API/SQLite исполнение, не host-копия формул.
+- **N2b, osGrantedDelivery, PID3075: 18 PASS, 10.899s.** Настоящий OS grant и реальный NotificationManager→system callback→NLS→parser/HMAC→SQLite. Сначала public нефинансовый readiness ping действительно создал needs_review; только новый probe ID игнорирован, финансовая запись не создана. После готовности unselected source не менял records/imports в3s. Selected synthetic completed expense и income создали по записи с точными полями; expense category null. Повтор NotificationManager.notify дал новый system postTime/revision→review с возможным совпадением, второго расхода не создал. Отрицательная оплата получила review и не увеличила расходы. Source com.ladno.finance задан через production storage API как явно разрешённый root test fixture; native UI собственный package не предлагает. Gates/OS access/callback не подменялись.
+- **N2c, osRevokedNoCapture, PID2880: 2 PASS.** Фактический OS access=false после реального root revoke; публикация выбранного synthetic source не меняла records/imports в ограниченном3s окне. Это не обещание поведения после будущей повторной выдачи доступа.
+- **N3, realTesseractAndNativeMediaPipeline, PID2835: 71 PASS, примерно5s.** Настоящий Tesseract JNI с bundled eng+rus+kaz распознал6 generated private PNG, затем после release прямого engine исполнился production NativeRuntime image→OCR→sanitize/HMAC→Android SQLite. EN paid mean94 создал расход123.45KZT, RU paid mean92 —234.56KZT, дата2026-11-02; unpaid EN/RU/KZ остались review. KZ paid mean93 распознал «Теленген» вместо «Төленген» и безопасно остался review/UNSUPPORTED_EVENT. Повтор одинаковых байтов не дал второй записи или pending import; malformed image дал реальный IMAGE_INVALID, cleanup и отсутствие financial/import entry.
+
+## N4: фактическое покрытие форматов
+
+- Уведомления: один synthetic собственный package, явные generic EN Paid и RU Зачислено, RU отрицание; даты ISO, валюта KZT, точные положительные decimal amounts. Неполные/планируемые/скрытые формы дополнительно исполнены Android parser/storage через N2a. Это не список совместимых реальных банков; bank brands/templates/версии не предоставлялись и не проверялись.
+- Чеки: ровно6 чистых Android Canvas PNG: EN PAID/UNPAID + TOTAL, RU Оплачено/Не оплачено + ИТОГО, KZ Төленген/Төленген жоқ + БАРЛЫҒЫ; явные ISO дата и KZT. Фактический текст/confidence/candidate/outcome каждого входа полностью записан в formats массива results-summary.json. Успех защитных тестов не означает6 автоматических расходов: реально posted только2 paid EN/RU.
+- Kazakh модель фактически загрузилась и выполнилась, но оплаченное слово в данном образце исказилось; полное автоматическое распознавание KZ не заявляется. Реальные фото/смаз/складки/поворот/другие кассы/другие валюты или языки этим корпусом не покрыты.
+- Исполнен API30 x86_64 emulator. Физический ARM телефон, другие API/OEM, battery/background policies и транспорт backup не проверены.
+
+## Сохранённые неуспешные прогоны и исправление test setup
+
+Все3 финансовых deadline FAIL сохранены в pre-readiness-attempts/ с SHA; initial private PID2502 и diagnostic private PID2737 отдельно с манифестами. Первые2 прогона приравнивали OS grant к готовности listener. Live diagnostic подтвердил active own SBN, grant/setup/allowlist, корректный high parser и отсутствие нового capture; ServiceRecord появился после ранней публикации, что поддержало timing/setup hypothesis. Grant сам по себе не доказывает подключение callback.
+
+Третий FAIL18:36:15 — признанная root orchestration ошибка: пока новая Gradle-сборка ещё выполнялась, установлен прежний diagnostic APK40f5c220…; это повтор старой версии, не новый дефект продукта. Root добавил fingerprint guard против stale install. Chief согласовал только test-setup readiness через настоящий OS ping→DB commit; финансовые ожидания/deadlines не ослаблялись, production не менялся. После завершённой сборки финальный N2b прошёл. Детали и точные timing: DIAGNOSIS.md. Первое несогласование host raw/normalized SQLite snapshot тоже честно зафиксировано root normalization notes; оно не выдаётся за сохранённые raw bytes.
+
+## Невыполненные проверки и передача
+
+Не исполнялись camera/gallery Activity, chooser/FileProvider grant UI, Native WebView/клавиатура, зарегистрированный Activity job lifecycle: processMedia использовал test-only unregistered jobId и проверял data path/cleanup/commit. Не было UI input, UiAutomator/Espresso/ActivityScenario, manual NLS callbacks, reflection/private framework gate override или mock SQLite/OCR/KeyStore. Отсутствие raw-marker проверено в синтетическом native path; не заявляется полный аудит любых секретов/всех OEM transport.
+
+Выполненная N2/N3 native область готова к отдельной проверке главы QA вместе с независимым N1 коллеги и к повторному суду по новому evidence snapshot. Предыдущий insufficient_evidence остаётся историей; специалист не заменяет вердикт суда и не объявляет всё приложение полностью проверенным.

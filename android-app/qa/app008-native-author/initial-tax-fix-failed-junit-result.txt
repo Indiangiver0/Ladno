@@ -1,0 +1,16 @@
+JUnit version 4.13.2
+.......E...............
+Time: 0,157
+There was 1 failure:
+1) taxAndFeeAmountsAreNotPurchaseTotals(com.ladno.finance.core.ParserTest)
+java.lang.AssertionError: Values should be different. Actual: high
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failEquals(Assert.java:187)
+	at org.junit.Assert.assertNotEquals(Assert.java:163)
+	at org.junit.Assert.assertNotEquals(Assert.java:177)
+	at com.ladno.finance.core.ParserTest.review(ParserTest.java:9)
+	at com.ladno.finance.core.ParserTest.taxAndFeeAmountsAreNotPurchaseTotals(ParserTest.java:208)
+
+FAILURES!!!
+Tests run: 22,  Failures: 1
+

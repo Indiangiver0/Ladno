@@ -1,0 +1,112 @@
+{
+  "fileKey": "e68RYW0YZNQxo8CAgUTgT4",
+  "sessionId": "5e751897-b3ae-4dfb-82cd-a487cbe002bb",
+  "fileUrl": "https://www.figma.com/design/e68RYW0YZNQxo8CAgUTgT4",
+  "pageId": "0:1",
+  "libraryKey": "lk-e0ffcff14368019c4f30f45401cd233d6cbc5f869988484192d04cbbef801fb0064ef68feaa8a2775ee4f1f05d9a4af1a6d07b2658eac4aefb7afb18728c4066",
+  "libraryName": "Simple Design System",
+  "codeConnect": "rg found no existing app code or .figma mappings",
+  "fonts": {
+    "Manrope": [
+      "Regular",
+      "Medium",
+      "SemiBold",
+      "Bold"
+    ],
+    "Inter": [
+      "Regular",
+      "Medium",
+      "Semi Bold",
+      "Bold"
+    ]
+  },
+  "discovery": [
+    {
+      "entity": "component",
+      "query": "Button",
+      "assets": [
+        {
+          "name": "Button",
+          "assetType": "component_set",
+          "componentSetKey": "cc8b558dc7d9684011b6b99ce8e6509399bc836b",
+          "libraryName": "Simple Design System"
+        }
+      ]
+    },
+    {
+      "entity": "component",
+      "query": "Input Field",
+      "assets": [
+        {
+          "name": "Input Field",
+          "assetType": "component_set",
+          "componentSetKey": "c28150b04d333d34ed9d2b77abd9f2f54e1a878a",
+          "libraryName": "Simple Design System"
+        }
+      ]
+    },
+    {
+      "entity": "variable",
+      "query": "Background/Default/Default",
+      "assets": [
+        {
+          "name": "Background/Default/Default",
+          "key": "a4865545b526a5b3399a512667f40c9efe0c2fc4",
+          "libraryName": "Simple Design System",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "EFFECT_COLOR"
+          ]
+        },
+        {
+          "name": "Border/Default/Default",
+          "key": "395870afebb3397e858358930ffdd69a5ec0f73d",
+          "libraryName": "Simple Design System",
+          "scopes": [
+            "STROKE"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "variable",
+      "query": "Text/Default/Default",
+      "assets": []
+    },
+    {
+      "entity": "variable",
+      "query": "Border/Default/Default",
+      "assets": [
+        {
+          "name": "Border/Default/Default",
+          "key": "395870afebb3397e858358930ffdd69a5ec0f73d",
+          "libraryName": "Simple Design System",
+          "scopes": [
+            "STROKE"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "variable",
+      "query": "Space/400",
+      "assets": [
+        {
+          "name": "Space/400",
+          "key": "16bc6f84b6e7e20e4234ef79030ee580ec0f4505",
+          "libraryName": "Simple Design System",
+          "scopes": [
+            "GAP"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Created new empty file; no pre-existing screens.",
+    "Initial batched search across subscribed libraries included whole-view personal finance dashboard, Button, Input Field, Navigation, background and space. No whole-view foundation was selected.",
+    "Narrowed relevant unresolved assets to Simple Design System; inspect chosen component variants/properties before applying.",
+    "No UI mutation yet. Use the exact sessionId on every eligible call."
+  ]
+}

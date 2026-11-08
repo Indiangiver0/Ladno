@@ -1,0 +1,16 @@
+{
+  "apk": "ladno-0.2.0-debug.apk",
+  "sha256": "c2d760c3b48ec15a7933365d8bca4602cc898fa496dddd4248f10a53ceff925f",
+  "bytes": 37414478,
+  "stage": "C:\\Users\\04068\\.cache\\ladno-android\\work\\ladno-8269f52fc4c62f8b",
+  "sourceFingerprint": "8269f52fc4c62f8b072f6ac1ac69cbedd637dc67253d3ab8522df424b1fffe02",
+  "versionName": "0.2.0",
+  "versionCode": 2,
+  "tasks": [
+    ":app:assembleDebug",
+    ":app:assembleDebugAndroidTest",
+    ":app:testDebugUnitTest",
+    ":app:lintDebug"
+  ],
+  "builtAtUtc": "2026-11-03T09:07:48.500680+00:00"
+}

@@ -1,0 +1,236 @@
+{
+  "version": "team-setup-v1",
+  "date": "2026-10-30",
+  "timezone": "Asia/Qyzylorda",
+  "scope": "Configuration and protocol; operational tasks, case reports and snapshots are excluded",
+  "files": [
+    {
+      "path": ".codex/agents/acceptance-analyst.toml",
+      "sha256": "b55c49bbe55ad37d5692e578d743adf4d82910cb2576614bbb275c502deb6a57"
+    },
+    {
+      "path": ".codex/agents/architecture-lead.toml",
+      "sha256": "fd1bf8f5a6ca54fa712211fda4f89b546411256ec025bf693c9da2402d05f6ea"
+    },
+    {
+      "path": ".codex/agents/backend-data-lead.toml",
+      "sha256": "4a49bf2ac6688f1e90435acdb90e02ba968dcad8781f56e8fd24fa4db07f8a40"
+    },
+    {
+      "path": ".codex/agents/backend-engineer.toml",
+      "sha256": "28c2b8509290e62ca2485919342c6a5d6b525e629bd57aafb950ea2b629c4522"
+    },
+    {
+      "path": ".codex/agents/calculation-analyst.toml",
+      "sha256": "ed72233e504d75ba7d5f0bc7505ed1c70596ed5c0171a9adfbadb557e535863c"
+    },
+    {
+      "path": ".codex/agents/calculation-test-engineer.toml",
+      "sha256": "0f6658d7100f22e10860bc3b4e64fc8ed3d54770c20408bae071c25d75561b5e"
+    },
+    {
+      "path": ".codex/agents/court-critic.toml",
+      "sha256": "70a42322565966ce461039e0f9c06a0b44111d403e5ff632c7fb7be391bc0766"
+    },
+    {
+      "path": ".codex/agents/court-implementation-advocate.toml",
+      "sha256": "0058793d5d74821b1b6d7cc529f69267869a4459f4842c33fe13d7bd2b9019f8"
+    },
+    {
+      "path": ".codex/agents/court-judge.toml",
+      "sha256": "ea72000c8b02711014fd88dbf7ac46ed0c91d0b1c88c006d121d6328c6b66420"
+    },
+    {
+      "path": ".codex/agents/court-user-advocate.toml",
+      "sha256": "3a0928c66742685fea09a50f211b69fa14987807986325129d2ad09d335fc00d"
+    },
+    {
+      "path": ".codex/agents/creative-lead.toml",
+      "sha256": "656a77b096041490f68bd9b87757d20f4e0d8d3c9284913a82524cadb75d1144"
+    },
+    {
+      "path": ".codex/agents/data-engineer.toml",
+      "sha256": "f61736fc8acdcbd120a76f21ac462cda52a60300c68cec7d03c557dbc96dd5ed"
+    },
+    {
+      "path": ".codex/agents/finance-lead.toml",
+      "sha256": "ae5f72463156485aed29eef149702084aa43f95a5cfcc9a7d55e6d7f461e80e0"
+    },
+    {
+      "path": ".codex/agents/financial-reference-specialist.toml",
+      "sha256": "dec37c0cb43d7e6b2fa38655e53e9fb0e87f81a4a4d7432ac7932d26ead36ab7"
+    },
+    {
+      "path": ".codex/agents/frontend-lead.toml",
+      "sha256": "f1b15f6f115a5282fbf75b6552b64731cdabf4fddd799a5493f29857ec5933dd"
+    },
+    {
+      "path": ".codex/agents/interaction-engineer.toml",
+      "sha256": "b9c528e9f2a6e54461bea37e2c49847a3bc7d4970ef31b46a03e0d10f4ca3eeb"
+    },
+    {
+      "path": ".codex/agents/interface-engineer.toml",
+      "sha256": "debcc509a58d71954fbc94b5a947f00981c6e60f6f564fbddd0c98fec52db129"
+    },
+    {
+      "path": ".codex/agents/product-lead.toml",
+      "sha256": "de9ba2d0ef9101ac0670b9a27effe7547fabd2cd6d7456b12492f1a922dc5dad"
+    },
+    {
+      "path": ".codex/agents/qa-lead.toml",
+      "sha256": "7d7747a12721548c268708766b4deba75e41b1090fcc16492d44285c54f1b688"
+    },
+    {
+      "path": ".codex/agents/requirements-analyst.toml",
+      "sha256": "bafb9f669e24185da28850aee280a48bd1810cf59d0d2c2b23f8c7883c257cdb"
+    },
+    {
+      "path": ".codex/agents/scenario-test-engineer.toml",
+      "sha256": "f04e7ab2a33dbbf08b4fae519acae488048f71481649c2c4187a12b9552d2e76"
+    },
+    {
+      "path": ".codex/agents/security-engineer.toml",
+      "sha256": "2205e7cffc1797d3625f2696051538b550433ecb59e9b43b9035506c2f76a05c"
+    },
+    {
+      "path": ".codex/agents/system-architect.toml",
+      "sha256": "a3ce9d9af747da6ec3399d3a40908efb2e80e9938799310b3e573e9478ed17b7"
+    },
+    {
+      "path": ".codex/agents/ux-specialist.toml",
+      "sha256": "013acb144d7685d42d5141796c5c754796d6feb4509e089daacc7654767ec3a9"
+    },
+    {
+      "path": ".codex/agents/visual-content-designer.toml",
+      "sha256": "bab48ea16e60031f34b0af000c98f2920e73160bc1bdc1acc4135edbe50fdd3b"
+    },
+    {
+      "path": ".cursor/agents/acceptance-analyst.md",
+      "sha256": "753012c4faf18a1bfb0e7ba5b55cbbd12d2146591c53f9e58c56dc7da18aaefd"
+    },
+    {
+      "path": ".cursor/agents/architecture-lead.md",
+      "sha256": "927aae33ce1bba1c9325b6ac7322d65defa67b4f9293265ced32e1d3e714bcd6"
+    },
+    {
+      "path": ".cursor/agents/backend-data-lead.md",
+      "sha256": "813488c8f65e861e7f64e81b34f9e68d9b1efb0ae9e62ac7c509fdc12aaa764f"
+    },
+    {
+      "path": ".cursor/agents/backend-engineer.md",
+      "sha256": "eeb319ef3e13723237689643b30966deff819bdb138d5108754421332e5b68a5"
+    },
+    {
+      "path": ".cursor/agents/calculation-analyst.md",
+      "sha256": "4d1f95ad898fa016c00e9bff6ae0623b26354e2b946e7afcaf2519366d3e2192"
+    },
+    {
+      "path": ".cursor/agents/calculation-test-engineer.md",
+      "sha256": "5faadf9e50c8bdd4e774f6aa74860bc55396927fe0eb120a7c73b3aa4649da98"
+    },
+    {
+      "path": ".cursor/agents/court-critic.md",
+      "sha256": "70821167c151fd9e35bd73bd8d45e39eb4a75a2e1744684375b7e8ab5eef097d"
+    },
+    {
+      "path": ".cursor/agents/court-implementation-advocate.md",
+      "sha256": "5607da750ceea338ccaa429200fc05671ddf535aeffdadf5e918239dba4e5fd6"
+    },
+    {
+      "path": ".cursor/agents/court-judge.md",
+      "sha256": "80dcf8188f572970875f97640f155c384b0f4ea281522a7acce68dff05a52729"
+    },
+    {
+      "path": ".cursor/agents/court-user-advocate.md",
+      "sha256": "68090b418b2d644852ff04eb7c86ca7fdcf866f9b919f795fc0af692d10d7973"
+    },
+    {
+      "path": ".cursor/agents/creative-lead.md",
+      "sha256": "271b1f0cf54120aba3a9653a93815bb06d0908892a7e4ca537678728aa39b233"
+    },
+    {
+      "path": ".cursor/agents/data-engineer.md",
+      "sha256": "97d338adc50a06a5c9cc95d3f42550ea8e82a0fa77f0c103208eddddfe4f9bf2"
+    },
+    {
+      "path": ".cursor/agents/finance-lead.md",
+      "sha256": "5796ed2a4fb157cc9ed62fa1bd397e8f2107135e2f1ff4182d7cc0c260c8ee2a"
+    },
+    {
+      "path": ".cursor/agents/financial-reference-specialist.md",
+      "sha256": "7b561da9f876d601116ac50753a5d9062eafc244cc20ae99cbaef64feb24e8fb"
+    },
+    {
+      "path": ".cursor/agents/frontend-lead.md",
+      "sha256": "c42ad996c0057c85ecefe294152a266cac13a2c7caae31378aadc6f6231bb7b5"
+    },
+    {
+      "path": ".cursor/agents/interaction-engineer.md",
+      "sha256": "7f62cc835ce9b1b21a266af25ebdcf2162e31eecd66b0fe7a5e5a7bffd528610"
+    },
+    {
+      "path": ".cursor/agents/interface-engineer.md",
+      "sha256": "97d977a38e0e94153d63a9b77f2731f13cc6df3e26f205d60578f23cb7a1c4f0"
+    },
+    {
+      "path": ".cursor/agents/product-lead.md",
+      "sha256": "cc23129ccb35db0d239da7e248418e9881dafddf5bc11ab8cd4a41accf9a39b5"
+    },
+    {
+      "path": ".cursor/agents/qa-lead.md",
+      "sha256": "927429c0b3bf5b6a204c20c1564194408489409c43737e321f9d306596b96f8f"
+    },
+    {
+      "path": ".cursor/agents/requirements-analyst.md",
+      "sha256": "5804b24d14699b5bb4d1e37ea6d4b8e52ddfaad39a297ad5d3380949d21cbb71"
+    },
+    {
+      "path": ".cursor/agents/scenario-test-engineer.md",
+      "sha256": "522f3ab0a4576260d8e6ca3493f4795f8eab7d5f94c8858b346ba29f9e3755f8"
+    },
+    {
+      "path": ".cursor/agents/security-engineer.md",
+      "sha256": "037c3b5e0e098a7e4a4273aaabfaa8d0cd8b4a6fb64db40cec7cdf602f01296d"
+    },
+    {
+      "path": ".cursor/agents/system-architect.md",
+      "sha256": "012b22849888f6f901bfbd555eb48fef80376ba40d69d9afcdd5a7f6d277da00"
+    },
+    {
+      "path": ".cursor/agents/ux-specialist.md",
+      "sha256": "7b329a61f1bd1f84a94416d724706fce326faca5c26dd5406a16e76ad030127c"
+    },
+    {
+      "path": ".cursor/agents/visual-content-designer.md",
+      "sha256": "b01597dbf4415b7b5bee41a4ee3a725a527e74aa19a5a727202f804381eb99e4"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "5470a6d1d6d11bb69474fdf2a86b640b1099040fd9473af6d5d7e140df425b07"
+    },
+    {
+      "path": "scripts/build_team.py",
+      "sha256": "3ac526022ca15ef17d62652930050ff0ab91b11526a9ec931f8c95c4fb5ee0bb"
+    },
+    {
+      "path": "team/PROTOCOL.md",
+      "sha256": "c13fd14d0ad273f680c20471cafa0ce172202a9f9ede42a026554e17aa543478"
+    },
+    {
+      "path": "team/README.md",
+      "sha256": "15825ce17e308d23e57d9d0a9b77ade59da289e592cc840bfbc45b5b22c9501b"
+    },
+    {
+      "path": "team/roster.json",
+      "sha256": "30a43320d1ae87ec9593f0b105440d4edb2173d8e4261d7987a0963b4abcc47e"
+    },
+    {
+      "path": "team/templates/case.md",
+      "sha256": "39c7f3b845cab28016a70a1ed802a3f115225e48cd5124558f62fe3f7e731cac"
+    },
+    {
+      "path": "team/templates/task.md",
+      "sha256": "b44cb28abdeb6f4f80fbd2bf0364e19755016d1aab6f3c90764256aa94103980"
+    }
+  ]
+}

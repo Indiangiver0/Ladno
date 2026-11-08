@@ -1,0 +1,198 @@
+{
+  "version": "local-prototype-v1",
+  "date": "2026-11-02",
+  "timezone": "Asia/Qyzylorda",
+  "parent": "app-concept-v1-partial",
+  "parentDigest": "7548a12d9d0b60064bbd113e38248e785c5f88ffac004fde31f2f2251384f892",
+  "scope": "Local interactive prototype, immutable historical references, source handoff, frontend head review and two final browser proofs. Operational QA/court/task files excluded.",
+  "runtime": "http://127.0.0.1:8766/; static demo in tab memory, no production financial application",
+  "externalFigma": "Not part of acceptance of this locally selected deliverable; APP-002 mutation remains unknown and unaccepted.",
+  "canonicalization": "UTF-8 LF, Python ordinal sorted POSIX paths, sha256 + two spaces + path + LF",
+  "manifestSha256": "be7ef8f3e912744b04804a7a225fdee44ad6917254de68529f97a2af728e354e",
+  "files": [
+    {
+      "path": "design/demo-data.json",
+      "sha256": "8c6bb181ed342867e453640c1f3f61384dc2c4425a1789d813d01236a79e3c81"
+    },
+    {
+      "path": "design/figjam-readback.xml",
+      "sha256": "6109cb5264579f05792c8df92b0fdaca37486ab6b03891d395d88f78cc5072ca"
+    },
+    {
+      "path": "design/figjam-structure.json",
+      "sha256": "142a810abb7a5b3387a4e64d06fea1aacbc3dcc829ca0f6f7bda9be3e55c2082"
+    },
+    {
+      "path": "design/figma-01-foundations.js",
+      "sha256": "4ee321487a05bcec90a6d47aeeef539df313d4e0574a2b92d3cad67b12e78fcf"
+    },
+    {
+      "path": "design/figma-02-overview.js",
+      "sha256": "cd7f2a02abe7e07b45355e53d3f3af49923475a02b744f6d1a7648931b09be1f"
+    },
+    {
+      "path": "design/figma-02a-layout-fix.js",
+      "sha256": "1033616a3bafd5998d2634fb6385e421eca6f523fa66d621fd10ed036bfd1a2d"
+    },
+    {
+      "path": "design/figma-03-screens.js",
+      "sha256": "96690a16c3faec0ca0048dbee5dd462685d8cccb1f00d7d90fe7446617aa6164"
+    },
+    {
+      "path": "design/figma-04-mobile.js",
+      "sha256": "553325880602568bbcebf4d689161639e086f58338a933ffa2f9ad7f625df581"
+    },
+    {
+      "path": "design/figma-05-states-form.js",
+      "sha256": "4b98d1937659c4db8dc938dddc4c574231ec5d5272e7dc406313000b8c8823cf"
+    },
+    {
+      "path": "design/figma-check.js",
+      "sha256": "d36da930c51620805b4ffaafb093b1990a160386bde935bed77dca62b47ba760"
+    },
+    {
+      "path": "design/figma-core.js",
+      "sha256": "3dea4fae7df711286c86cdc6de93c05441d4439c91c750861d16736166c3593f"
+    },
+    {
+      "path": "design/figma-evidence.json",
+      "sha256": "575ac5ea9227d4191eea7bd4c11261999995b51238b23a57d747407f823ffa96"
+    },
+    {
+      "path": "design/figma-local-checks.json",
+      "sha256": "2daacb826f13727123d4688b2128bc95923885f883157d723672cbad538be747"
+    },
+    {
+      "path": "design/figma-manifest.json",
+      "sha256": "724ed1b5da3d8076d0670a4020b1e1bc23104545c48a7f022eddbd3cfb9385d4"
+    },
+    {
+      "path": "design/figma-report.json",
+      "sha256": "7cdc03d62fe3f64f582ea4777cbe8c5d631ea5290c1fc101179e95f42c415d6f"
+    },
+    {
+      "path": "design/figma-state.json",
+      "sha256": "8dd89daa9d81a12c3d5775b518efd0da9488c11ce58e9e32da0627294e79f9ac"
+    },
+    {
+      "path": "design/previews/SC-01-desktop.png",
+      "sha256": "244e9159474a35e6687e92ac9669ca83564cdacde07b33ab0034dd588d9e8bd4"
+    },
+    {
+      "path": "design/v2/figma-05-states-form.js",
+      "sha256": "3da67e267fe49a389ce026c47db451cd0e9422c2874893b4f1220c9b5f7d4912"
+    },
+    {
+      "path": "design/v2/figma-build-only.js",
+      "sha256": "8b6e6b77f548e2c9a1171175f5d0642b2d807e61899cd2b7d9dd53c4a0eb5935"
+    },
+    {
+      "path": "design/v2/figma-core.js",
+      "sha256": "214e82bdfedcf4d3530ba0a0f47f7e0a5b6522c12ac4c882556445065c82f1e2"
+    },
+    {
+      "path": "design/v2/figma-interrupted-call.json",
+      "sha256": "94f8a34227771f41cc32a75b41fea1ec7492a8d7cb2e633bd8cdbad25e45c541"
+    },
+    {
+      "path": "design/v2/figma-readback.js",
+      "sha256": "d7c8163f29867988bf13155122c593465b2ef13e66df25b17131fee736d2cc8e"
+    },
+    {
+      "path": "design/v2/figma-source-checks.json",
+      "sha256": "294f679b75dbd5cee54090ead9b6c49a968c73b124b111d6dcc1aa01ff9ec10a"
+    },
+    {
+      "path": "design/v2/figma-source-handoff.json",
+      "sha256": "9cddbf06baacf721be212f6b879526f3e7b11282330a54ad4aef4722e91dec4f"
+    },
+    {
+      "path": "docs/CONCEPT-V2.md",
+      "sha256": "39ddb4ae197cc2e6b1b3458ef5e5235f603104277609b1863c1c5de2730f0307"
+    },
+    {
+      "path": "docs/LOCAL-PROTOTYPE.md",
+      "sha256": "1c00b5e8a6e96059b45669f87f92724a5edcb9d8aede767bdb9f8b8d242acfab"
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "a6d3ae0637ea3d0eace40e86ad196a9c0d9e367d3ded170943f005b3f10ea5a9"
+    },
+    {
+      "path": "docs/architecture/SECURITY.md",
+      "sha256": "7657ff724191b1b649458cacdeceb75039d8325c581de919e6c1af3e654db60f"
+    },
+    {
+      "path": "docs/architecture/STRUCTURE.md",
+      "sha256": "9bee45e95c6a3b7307521768934293cc2b23d2a80c091d5d0d330b65b6edca60"
+    },
+    {
+      "path": "docs/design/HEAD_REVIEW-V2.md",
+      "sha256": "e476f13e9e6485613cae8947f5f8b1ae26cc9709f50c8f136bace068449a843c"
+    },
+    {
+      "path": "docs/design/HEAD_REVIEW.md",
+      "sha256": "69de89fe158318b88acf8f7649471c60e7ee94236042fe8cd65586d3c1bd2a3d"
+    },
+    {
+      "path": "docs/design/UX-REVIEW-V2.md",
+      "sha256": "500512cc7599d042f444cff6e849698b060328c870e717141bffa2c7d33cfe7d"
+    },
+    {
+      "path": "docs/design/UX.md",
+      "sha256": "5ac6abc48b90a8565746e1b93704c805dd2e8ff60fa521e3278742db73ad030f"
+    },
+    {
+      "path": "docs/finance/HEAD_REVIEW.md",
+      "sha256": "36449a35edce7313910f24e73213097bfa1305b5fc84e8664e4a16b1583dd64d"
+    },
+    {
+      "path": "docs/finance/MODEL.md",
+      "sha256": "f020cb4dd08d8801a03ee5c7203edc76740f91cea77ce49b3f1719a42ca98674"
+    },
+    {
+      "path": "docs/frontend/HEAD_REVIEW.md",
+      "sha256": "dd39ede0659f39ec824d89679637c78c9f3eb9e593c484ac2d5d17bd260cda15"
+    },
+    {
+      "path": "docs/frontend/proofs/head-overview-390.jpg",
+      "sha256": "e62ff3b9b9612127419b597a107254e756bc1708d20084b56f0f37958e5aa25e"
+    },
+    {
+      "path": "docs/frontend/proofs/head-overview-desktop.jpg",
+      "sha256": "04be7ded757191294f2618b3b49252c0230d4d747db3e209ff7a27cb1f50fc68"
+    },
+    {
+      "path": "docs/product/CONCEPT.md",
+      "sha256": "fdb5a41fb0d1a8e511008f845c8489a5909700a58a7196fd0b7af94fbdffba1b"
+    },
+    {
+      "path": "docs/product/SCREENS.md",
+      "sha256": "f2217b2d387a9ff2ec5c22e50f46d6ed3720098e7b02cb21438d21e80df99503"
+    },
+    {
+      "path": "prototype/app.js",
+      "sha256": "138b2f6eeb2da77413b93a527925e865ab0f7192c48e5e12906fa83530185aa0"
+    },
+    {
+      "path": "prototype/demo-data.js",
+      "sha256": "2c7583d026a63d9a610ef12df68226dd3d6d355b5ede84e664e149c064f10fdc"
+    },
+    {
+      "path": "prototype/index.html",
+      "sha256": "34071c52b743b3b10142c29d0d38abc9e4b4465a83b3f8a9a362a7ea231e8acc"
+    },
+    {
+      "path": "prototype/model.js",
+      "sha256": "becaef60252265af4f89e2d7b75b89f6246eb578eea9dd1619e58038aab766fa"
+    },
+    {
+      "path": "prototype/styles.css",
+      "sha256": "febc570afe7bf3aa23e15fa1ca0c81b09bdec681624a5a180e6c17307f277ecc"
+    },
+    {
+      "path": "prototype/view.js",
+      "sha256": "7e08e9b6a506aa66fa80f3e3408ac16fe839ea6b7df8b32bacb1b96b34087dcc"
+    }
+  ]
+}

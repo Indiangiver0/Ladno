@@ -1,0 +1,361 @@
+{
+  "task": "APP-001-DESIGN-VISUAL",
+  "version": "v1-partial",
+  "status": "needs_information",
+  "date": "2026-10-30",
+  "fileKey": "e68RYW0YZNQxo8CAgUTgT4",
+  "sessionId": "5e751897-b3ae-4dfb-82cd-a487cbe002bb",
+  "url": "https://www.figma.com/design/e68RYW0YZNQxo8CAgUTgT4",
+  "page": {
+    "id": "0:1",
+    "name": "01 · Личные финансы / концепция"
+  },
+  "fixture": {
+    "id": "D1",
+    "version": "1.0.0",
+    "path": "design/demo-data.json",
+    "currency": "KZT",
+    "scale": 2,
+    "month": "2026-10",
+    "snapshotDate": "2026-10-30"
+  },
+  "inputs": {
+    "concept": "v0.1.1",
+    "screens": "v1",
+    "ux": "v1",
+    "finance": "v1"
+  },
+  "scope": {
+    "desktopScreens": 4,
+    "mobileScreens": 1,
+    "annotationBoards": 2,
+    "prototypeInteractionsConfigured": false
+  },
+  "frames": [
+    {
+      "id": "6:222",
+      "name": "SC-01 · Обзор / desktop",
+      "w": 1440,
+      "h": 1120,
+      "descendants": 108,
+      "types": {
+        "FRAME": 39,
+        "TEXT": 56,
+        "INSTANCE": 8,
+        "RECTANGLE": 5
+      },
+      "imageFillNodes": [],
+      "fonts": [
+        "{\"family\":\"Manrope\",\"style\":\"SemiBold\",\"variationSettings\":{\"wght\":600}}",
+        "{\"family\":\"Manrope\",\"style\":\"Medium\",\"variationSettings\":{\"wght\":500}}",
+        "{\"family\":\"Manrope\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400}}",
+        "{\"family\":\"Inter\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400,\"slnt\":0}}"
+      ],
+      "url": "https://www.figma.com/design/e68RYW0YZNQxo8CAgUTgT4?node-id=6-222",
+      "purpose": "Обзор месячного бюджета, расходов и отдельных целей/долгов",
+      "figmaStatus": "composition-saved",
+      "metricsEvidence": "use_figma composition return",
+      "metricsWereReadBack": true,
+      "visualInspection": "passed after targeted layout fix",
+      "previewPath": "design/previews/SC-01-desktop.png"
+    },
+    {
+      "id": "6:223",
+      "name": "SC-02 · Операции / desktop",
+      "w": 1440,
+      "h": 1120,
+      "descendants": 99,
+      "types": {
+        "FRAME": 27,
+        "TEXT": 57,
+        "INSTANCE": 11,
+        "RECTANGLE": 4
+      },
+      "imageFillNodes": [],
+      "fonts": [
+        "{\"family\":\"Manrope\",\"style\":\"SemiBold\",\"variationSettings\":{\"wght\":600}}",
+        "{\"family\":\"Manrope\",\"style\":\"Medium\",\"variationSettings\":{\"wght\":500}}",
+        "{\"family\":\"Manrope\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400}}",
+        "{\"family\":\"Inter\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400,\"slnt\":0}}"
+      ],
+      "url": "https://www.figma.com/design/e68RYW0YZNQxo8CAgUTgT4?node-id=6-223",
+      "purpose": "История ровно четырёх операций D1",
+      "figmaStatus": "composition-saved",
+      "metricsEvidence": "use_figma composition return",
+      "metricsWereReadBack": true,
+      "visualInspection": "not-performed: Starter MCP limit",
+      "previewPath": null
+    },
+    {
+      "id": "6:224",
+      "name": "SC-03 · Цели / desktop",
+      "w": 1440,
+      "h": 1120,
+      "descendants": 64,
+      "types": {
+        "FRAME": 21,
+        "TEXT": 34,
+        "INSTANCE": 7,
+        "RECTANGLE": 2
+      },
+      "imageFillNodes": [],
+      "fonts": [
+        "{\"family\":\"Manrope\",\"style\":\"SemiBold\",\"variationSettings\":{\"wght\":600}}",
+        "{\"family\":\"Manrope\",\"style\":\"Medium\",\"variationSettings\":{\"wght\":500}}",
+        "{\"family\":\"Manrope\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400}}",
+        "{\"family\":\"Inter\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400,\"slnt\":0}}"
+      ],
+      "url": "https://www.figma.com/design/e68RYW0YZNQxo8CAgUTgT4?node-id=6-224",
+      "purpose": "Цель Подушка безопасности и отдельный ручной учёт",
+      "figmaStatus": "composition-saved",
+      "metricsEvidence": "use_figma composition return",
+      "metricsWereReadBack": true,
+      "visualInspection": "not-performed: Starter MCP limit",
+      "previewPath": null
+    },
+    {
+      "id": "6:225",
+      "name": "SC-04 · Долги / desktop",
+      "w": 1440,
+      "h": 1120,
+      "descendants": 68,
+      "types": {
+        "FRAME": 21,
+        "TEXT": 40,
+        "INSTANCE": 6,
+        "RECTANGLE": 1
+      },
+      "imageFillNodes": [],
+      "fonts": [
+        "{\"family\":\"Manrope\",\"style\":\"SemiBold\",\"variationSettings\":{\"wght\":600}}",
+        "{\"family\":\"Manrope\",\"style\":\"Medium\",\"variationSettings\":{\"wght\":500}}",
+        "{\"family\":\"Manrope\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400}}",
+        "{\"family\":\"Inter\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400,\"slnt\":0}}"
+      ],
+      "url": "https://www.figma.com/design/e68RYW0YZNQxo8CAgUTgT4?node-id=6-225",
+      "purpose": "Раздельные направления долгов без взаимозачёта",
+      "figmaStatus": "composition-saved",
+      "metricsEvidence": "use_figma composition return",
+      "metricsWereReadBack": true,
+      "visualInspection": "not-performed: Starter MCP limit",
+      "previewPath": null
+    },
+    {
+      "id": "6:226",
+      "name": "SC-01 · Обзор / mobile",
+      "w": 390,
+      "h": 2020,
+      "descendants": 87,
+      "types": {
+        "FRAME": 27,
+        "TEXT": 51,
+        "INSTANCE": 4,
+        "RECTANGLE": 5
+      },
+      "imageFillNodes": [],
+      "fonts": [
+        "{\"family\":\"Manrope\",\"style\":\"SemiBold\",\"variationSettings\":{\"wght\":600}}",
+        "{\"family\":\"Manrope\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400}}",
+        "{\"family\":\"Inter\",\"style\":\"Regular\",\"variationSettings\":{\"wght\":400,\"slnt\":0}}",
+        "{\"family\":\"Manrope\",\"style\":\"Medium\",\"variationSettings\":{\"wght\":500}}"
+      ],
+      "url": "https://www.figma.com/design/e68RYW0YZNQxo8CAgUTgT4?node-id=6-226",
+      "purpose": "Адаптивный обзор шириной 390 px",
+      "figmaStatus": "composition-saved",
+      "metricsEvidence": "use_figma composition return",
+      "metricsWereReadBack": true,
+      "visualInspection": "not-performed: Starter MCP limit",
+      "previewPath": null
+    }
+  ],
+  "annotations": [
+    {
+      "id": "6:227",
+      "name": "AN-01 · Состояния SC-01–04",
+      "w": 1440,
+      "h": 1120,
+      "status": "skeleton-only",
+      "placeholder": true,
+      "compositionApplied": false,
+      "source": "design/figma-05-states-form.js",
+      "previewPath": null
+    },
+    {
+      "id": "6:228",
+      "name": "AN-02 · Форма операции / ошибка",
+      "w": 480,
+      "h": 950,
+      "status": "skeleton-with-seed-input-only",
+      "placeholder": true,
+      "compositionApplied": false,
+      "source": "design/figma-05-states-form.js",
+      "previewPath": null
+    }
+  ],
+  "components": {
+    "shelf": "7:10",
+    "nav": "7:11",
+    "kpi": "7:14",
+    "button": "6:56",
+    "input": "6:142",
+    "mobileNavigation": "not-componentized-yet; stage 05 blocked"
+  },
+  "foundations": {
+    "collectionId": "VariableCollectionId:6:182",
+    "variables": {
+      "canvas": "VariableID:6:184",
+      "ink": "VariableID:6:186",
+      "muted": "VariableID:6:188",
+      "green": "VariableID:6:190",
+      "tint": "VariableID:6:192",
+      "line": "VariableID:6:194",
+      "red": "VariableID:6:196",
+      "redTint": "VariableID:6:198",
+      "amber": "VariableID:6:200",
+      "amberTint": "VariableID:6:202",
+      "white": "VariableID:6:204",
+      "dark": "VariableID:6:206",
+      "track": "VariableID:6:208",
+      "gap8": "VariableID:6:209",
+      "gap12": "VariableID:6:210",
+      "gap24": "VariableID:6:211",
+      "gap32": "VariableID:6:212",
+      "radius12": "VariableID:6:213",
+      "radius20": "VariableID:6:214"
+    },
+    "importedVariables": {
+      "surface": {
+        "id": "VariableID:a4865545b526a5b3399a512667f40c9efe0c2fc4/5613:370",
+        "name": "Background/Default/Default"
+      },
+      "border": {
+        "id": "VariableID:395870afebb3397e858358930ffdd69a5ec0f73d/5613:437",
+        "name": "Border/Default/Default"
+      },
+      "space16": {
+        "id": "VariableID:16bc6f84b6e7e20e4234ef79030ee580ec0f4505/564:258",
+        "name": "Space/400"
+      }
+    },
+    "styles": {
+      "Display": "S:8738dbde5557b0e3350f8e9c93956dbaa6b1c1c6,",
+      "Title": "S:ab654cc4874cb169b8271b353035c08845d07520,",
+      "Heading": "S:b9f1326778f08b136fc429c21806213dd97283d6,",
+      "Body": "S:a6c181bd230506479758e1239149092fcb365443,",
+      "Label": "S:4239fb3e6ab27c7ba299bcb2daff59c79a9e3082,",
+      "Caption": "S:1628d000d6281742c78e4d0ceaadf0fe970d7f19,",
+      "Money": "S:01b22b6dfd41f9253994ad2c5143185545e16ec0,"
+    },
+    "bodyStyle": {
+      "id": "S:dd16ffab542d022b9a2d78275ed222c2cb4646b4,3017:75",
+      "name": "Body Small",
+      "font": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "size": 14
+    },
+    "fonts": [
+      {
+        "family": "Manrope",
+        "style": "Regular"
+      },
+      {
+        "family": "Manrope",
+        "style": "Medium"
+      },
+      {
+        "family": "Manrope",
+        "style": "SemiBold"
+      },
+      {
+        "family": "Manrope",
+        "style": "Bold"
+      },
+      {
+        "family": "Inter",
+        "style": "Regular"
+      },
+      {
+        "family": "Inter",
+        "style": "Medium"
+      },
+      {
+        "family": "Inter",
+        "style": "Semi Bold"
+      },
+      {
+        "family": "Inter",
+        "style": "Bold"
+      }
+    ]
+  },
+  "recovery": {
+    "obsoleteDiscoveryIds": [
+      "4:56",
+      "4:142",
+      "4:57",
+      "4:144"
+    ],
+    "readResult": "null; keys used to re-import assets",
+    "actualImportedSets": [
+      {
+        "id": "6:56",
+        "name": "Button"
+      },
+      {
+        "id": "6:142",
+        "name": "Input Field"
+      }
+    ],
+    "sc01LayoutFix": {
+      "issue": "Horizontal wrappers initially hugged width while retaining fixed 1px height; screenshot showed overlap",
+      "resolved": "primaryAxisSizingMode FIXED; counterAxisSizingMode AUTO; text HEIGHT after resize",
+      "evidence": "post-fix screenshot; root bounds and no main overflow",
+      "beforePreview": "design/previews/SC-01-before-layout-fix.png"
+    }
+  },
+  "blocker": {
+    "id": "VIS-B01",
+    "priority": "P2",
+    "kind": "external-provider-quota",
+    "tool": "use_figma",
+    "message": "You've reached the Figma MCP tool call limit on the Starter plan.",
+    "screenshotToolAlsoBlocked": true,
+    "whoami": {
+      "tier": "starter",
+      "seat": "View"
+    },
+    "notApplied": "design/figma-05-states-form.js",
+    "actionNeeded": "Restore Figma MCP availability; do not start another session or account to bypass limit."
+  },
+  "scripts": {
+    "standaloneFoundation": "design/figma-01-foundations.js",
+    "sharedPrefix": "design/figma-core.js",
+    "compositionOrder": [
+      "design/figma-02-overview.js",
+      "design/figma-03-screens.js",
+      "design/figma-04-mobile.js",
+      "design/figma-05-states-form.js"
+    ],
+    "concatRule": "Prepend figma-core.js to each composition stage. Page 0:1 and human-readable exact names select existing roots. Every eligible call must use the recorded fileKey/sessionId and figma-use,figma-generate-design,figma-generate-library.",
+    "lastAppliedStage": "design/figma-04-mobile.js",
+    "pendingStage": "design/figma-05-states-form.js",
+    "historicalRepair": "design/figma-02a-layout-fix.js (IDs specific to first run; corrected core makes this unnecessary on a clean replay)",
+    "replayValidated": false
+  },
+  "verification": {
+    "appRuntime": "not-created/not-tested",
+    "screenshots": {
+      "SC01Desktop": "saved and visually inspected",
+      "others": "not-performed: external-provider-quota"
+    },
+    "independentQA": "pending",
+    "court": "pending",
+    "headReview": "SC01 screenshot reviewed by creative-lead; remaining pending"
+  }
+}

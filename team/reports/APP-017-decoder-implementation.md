@@ -1,0 +1,43 @@
+# APP-017 — offline QR decoder, исследование v1
+
+Задача выдана backend-data-lead исполнителю data-engineer. Проверяемая рабочая версия: Android 0.3.0/code3, исходный декодер после подтверждённого архивирования v4. **Исправление декодирования фото 1/2 не найдено. Производственные файлы не менялись; задачу на приёмку как выполненную не передаю.**
+
+## Выполненное
+
+Полностью прочитаны AGENTS.md, team/PROTOCOL.md, .cursor/agents/data-engineer.md, team/tasks/APP-017.md. Соблюдены ownership и запрет receipt/OFD network этой подзадачи. Оригиналы открывались для чтения; raw QR остаются только в исключённой из repo/build папке android-app/.local/app017. В этом отчёте нет локаторов чеков, номеров, URL запросов, карты и RRN.
+
+По локальному ZXing Java 3.5.3 JAR проверены реальные API/байткод `MultiDetector`, `Detector`, `QRCodeReader`, `RGBLuminanceSource`, `Detector.createTransform` (`javap -c`, для последнего `-p`). Многокодовый и одиночный детекторы используют разные finder selection; одиночный путь сам по себе не гарантирует работу с этими фото.
+
+В новых приватных диагностических helpers проверены whole-original multi + single detection, общие перекрывающиеся сетки областей 2/3, nearest и bicubic масштабирование, Hybrid/GlobalHistogram binarization. Дополнительно исследованы resampling по finder points, штатная и affine геометрия, соседние допустимые QR dimensions и ограниченные смещения выведенной четвёртой вершины. Координаты областей вычисляются из размеров снимка; координаты QR — из детектора. Ручных координат конкретных чеков в алгоритме нет. Ничего из этих экспериментов не добавлено в приложение: успешного декодирования фото 1/2 не получено.
+
+По отдельному разрешению начальника скачан только публичный Python wheel **zxing-cpp 3.1.1** с PyPI, с установкой `--target android-app/.local/app017/decode-deps --only-binary=:all: --no-deps --no-cache-dir`. Никакие фото/QR в сеть не отправлялись. Обычный sandbox pip download завершился DNS ошибкой; повтор с разрешённой эскалацией public dependency download завершился exit0. Это не разрешение OFD запросов.
+
+Официальные первичные источники: [Python wrapper](https://github.com/zxing-cpp/zxing-cpp/blob/master/wrappers/python/README.md), [PyPI package](https://pypi.org/project/zxing-cpp/3.1.1/), [Android wrapper](https://github.com/zxing-cpp/zxing-cpp/blob/master/wrappers/android/README.md). Это Apache-2.0 библиотека с отдельным Android artifact `io.github.zxing-cpp:android:3.1.1`. Простая замена Java на этот native decoder не доказана полезной для фото 1/2; dependency/manifest/build не менялись. ABI, 16KB ELF/packaging, minSDK и runtime Android этой зависимости не проверялись и не заявляются совместимыми.
+
+## Доказательства
+
+1. Pure Java baseline regression: JDK21.0.13+9, `javac --release 17 -encoding UTF-8`; настоящие ZXing3.5.3, JSON20240303, JUnit4.13.2, Hamcrest1.3; Android stubs не использованы. Скомпилированы все main/core/*.java, ReceiptQrDecoder.java, NotificationText.java; test/core/*.java, ReceiptQrDecoderTest.java, QrIndependentTest.java и private decode_regression/decode_verify helpers. Запуск `java -cp <decode-classes;four-libraries> decode_regression com.ladno.finance.core.BankMessageExpansionTest com.ladno.finance.core.FiscalQrParserTest com.ladno.finance.core.MoneyTest com.ladno.finance.core.ParserTest com.ladno.finance.core.ReceiptOcrConsensusTest com.ladno.finance.ReceiptQrDecoderTest com.ladno.finance.QrIndependentTest`. Ожидание: текущие денежные/QR гарантии, distinct/mixed multi и прежний ignored diagnostic сохраняются. **Факт: javac exit0; JUnit run=58, ignored=1, failures=0, 470ms, exit0.** Это проверка неизменённого baseline, не доказательство исправления реальных фото. Старый damaged-neighbor `@Ignore` сохранён.
+
+2. `python android-app/.local/app017/decode_cpp.py android-app/.local/app017/decode-cpp-receipts.json <original1> <original2> <original3> <original4> <original5>`: `read_barcodes` только QRCode, whole original, rotate/downscale/invert true, Plain text, return_errors=false. Ожидание расследования: понять, помогает ли более новый native decoder без изменений фото. **Факт: exit0; distinct decoded counts 0/0/0/1/1.** Это отрицательный результат для цели 1/2.
+
+3. `python android-app/.local/app017/decode_cpp_variants.py android-app/.local/app017/decode-cpp-variants.json <original1> <original2>`: whole + одинаковая для любого снимка overlapping grid 2/3, scale1/1.5/2/3, LANCZOS, LocalAverage/GlobalHistogram, каждый вариант не более8,000,000px. Все distinct results собираются; раннего выхода после первого нет. **Факт: exit0; 278 попыток/фото; counts0/0; 1936ms/1580ms.** Приватный диагностический harness не является Android integration.
+
+4. `java -Xmx768m -cp <decode-classes;ZXing3.5.3> decode_probe --sweep <original1> <original2>` — воспроизводимый Java bicubic/threshold/region/geometric diagnostic; лог только диагностических counters в `.local/app017/decode-java-probe.log`. **Факт: exit0, counts0/0.** Для1: decode Checksum374/Format27/NotFound6; multi NotFound324, single NotFound322. Для2: decode Checksum669/Format112; multi NotFound312, single NotFound312. Более ранние nearest и ограниченный отдельный mesh probe тоже дали0/0. Эти exploratory Java варианты не объявлены производственным bounded pipeline; production limits остались прежними.
+
+5. `java -cp <decode-classes;four-libraries> decode_verify android-app/.local/app017/decode-cpp-receipts.json <original1> ... <original5>` повторно декодирует все пять whole originals рабочим ReceiptQrDecoder и прогоняет **каждый** положительный результат Java/C++ через неизменённый strict FiscalQrParser. Ожидание baseline: 0/0/0/1/1; фото3 — POS, не дополнительный расход; 4/5 — точные бумажные итоги. **Факт: exit0, все ожидания совпали, исходные SHA до/после чтения совпали.** Фото4: consumer.oofd.kz,4395.00KZT,2026-11-03. Фото5: consumer.oofd.kz,3547.00KZT,2026-11-03. Scale2; округление не выполнялось. Никакой записи ledger не выполнялось. Эталоны545.00/490.00 для1/2 остаются только наблюдениями бумаги, декодированием не подтверждены.
+
+Все оригиналы739×1600. SHA256: фото1 `4d71b4efd4c3901dd6d15285aa42ddc6ace59ba236d2ab65597a03f334a1c5a0`; фото2 `d90a7f22e2c93ab15fe666a4d06614faba6764f9d2309d151accccf50349e53e`; фото3 `52939b19402e02c58abaeb52447ed2a692f7b5d8fc8f63d2dae7e9bbd61f613a`; фото4 `dd4f127194d56057cf00db440d3c17baa17c8efad254018581a4d8917d0a8413`; фото5 `57483339dab481c03a2ee65b5741205d7b6b36cd6a455efd7af8b1261fb7601a`.
+
+Проверяемые source SHA256: ReceiptQrDecoder.java `ce6542817bf4df4e0a5cbf851b3a7650907f7889b11e2131c130e6a711fd046d`; ReceiptQrScanner.java `f031962ef9baf0c9420d93a1309d15fd59931a541c586fc69c4a9a8da6fd152f`; ReceiptQrDecoderTest.java `9d9d2413ae106b31ac1f87d7a796158bdd0738b2dbc362f2f4b15c8711bcc371`; QrIndependentTest.java `6c509d99b4fecbd137dcd8824b0a7c1b98e7134b793943f78ccaf61f049b4008`. ZXing Java JAR SHA256 `8d8064c1636fdaef7189dd9055c7d59950a8940a12f2293956446ec3c109fd82`; private ZXing-C++ extension SHA256 `61538e8df1aefa2b04ce9307b9b4d27d3c7c68b7f2eb3ac55b46f94435c0ce30`.
+
+## Замечания и ограничения
+
+- APP017-DEC-01, P1: подтверждённый отказ заданного primary photo1/2 decode сохраняется. Цель этой подзадачи не достигнута. Это не утверждение, что никакой алгоритм вообще не может их прочитать.
+- APP017-DEC-02, P2: на фото2 визуально присутствует ещё QR на заднем плане. Ни основной, ни дополнительный QR из этого снимка не удалось декодировать проверенными способами. Нельзя заявлять успешный single outcome или выбирать крупнейший/первый QR. Неослабленный guard сохраняется в рабочем коде.
+- APP017-DEC-03, P2: прежний ignored damaged-neighbor diagnostic остаётся открытым ограничением детектируемости. Нахождение всех визуально недетектируемых/повреждённых QR не гарантируется.
+
+Android scanner/native UI end-to-end, Android build, device installation, сетевые/OFD проверки этой подзадачей **не выполнялись**. Новых product unit tests нет, поскольку product implementation не менялась. Схемы/миграции, exact-money и identity/parser/storage не менялись.
+
+## Оставшиеся вопросы и следующее действие
+
+Главе отдельно проверить этот отрицательный результат и решить, оставлять ли поиск декодера открытым отдельным этапом. Доказанного native fallback для этих originals пока нет; добавлять Android dependency на основании данного исследования не рекомендуется. Работу provider contract можно продолжать независимо на уже декодируемых4/5 в рамках разрешений начальника. При появлении нового алгоритма требуется whole-original proof со сбором всех distinct QR, strict parser, затем реальная Android integration/independent QA/court. Исполнитель свою работу не принимает.

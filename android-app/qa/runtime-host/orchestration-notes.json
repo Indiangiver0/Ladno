@@ -1,0 +1,16 @@
+{
+  "staleTestAttempt": {
+    "finishedAtUtc": "2026-11-02T18:36:15Z",
+    "description": "Root continued install after a Gradle poll still returned session_id. The old build-result selected the diagnostic APK from stage ladno-26cc9f833afe8202. This was not execution of the readiness patch.",
+    "oldTestApkSha256": "40f5c220",
+    "hashNote": "Prefix only here; full verified hash is retained by independent scenario QA attempt manifests.",
+    "outcome": "Old diagnostic deadline failed again; preserved as orchestration/setup attempt, not a new product defect.",
+    "correction": "install refuses when build-result/source-manifest fingerprints differ; successful final install records stage and both APK hashes. The real readiness test was run only after build success.",
+    "userWasInformed": true
+  },
+  "initialDbPreview": {
+    "directory": "db-snapshot-20261102181851",
+    "description": "The host writable preview checkpointed the copied WAL. Original files.json capture hashes are not hashes of normalized current DB. normalization-notes.json records the derived current hash. Do not treat this directory as retained raw binary evidence.",
+    "correction": "Future pull-db snapshots preserve raw files separately and create previews from a working copy. Instrumentation expected/actual JSON is the primary functional evidence."
+  }
+}

@@ -1,0 +1,1724 @@
+{
+  "checks": [
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "R01-multiline-local/confidence"
+    },
+    {
+      "actual": "12345.67",
+      "pass": true,
+      "expected": "12345.67",
+      "id": "R01-multiline-local/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R01-multiline-local/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R01-multiline-local/currency"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R01-multiline-local/noRawNote"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "R01-multiline-local/highHasNoReasons"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "R02-cyrillic-tenge/confidence"
+    },
+    {
+      "actual": "78.90",
+      "pass": true,
+      "expected": "78.90",
+      "id": "R02-cyrillic-tenge/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R02-cyrillic-tenge/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R02-cyrillic-tenge/currency"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R02-cyrillic-tenge/noRawNote"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "R02-cyrillic-tenge/highHasNoReasons"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "R03-alias-tenge/confidence"
+    },
+    {
+      "actual": "45.10",
+      "pass": true,
+      "expected": "45.10",
+      "id": "R03-alias-tenge/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R03-alias-tenge/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R03-alias-tenge/currency"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R03-alias-tenge/noRawNote"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "R03-alias-tenge/highHasNoReasons"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "R04-equal-total-status/confidence"
+    },
+    {
+      "actual": "9.99",
+      "pass": true,
+      "expected": "9.99",
+      "id": "R04-equal-total-status/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R04-equal-total-status/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R04-equal-total-status/currency"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R04-equal-total-status/noRawNote"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "R04-equal-total-status/highHasNoReasons"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "R05-fiscal-multiline/confidence"
+    },
+    {
+      "actual": "1250.00",
+      "pass": true,
+      "expected": "1250.00",
+      "id": "R05-fiscal-multiline/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R05-fiscal-multiline/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R05-fiscal-multiline/currency"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R05-fiscal-multiline/noRawNote"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "R05-fiscal-multiline/highHasNoReasons"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "R06-fiscal-one-line/confidence"
+    },
+    {
+      "actual": "22.22",
+      "pass": true,
+      "expected": "22.22",
+      "id": "R06-fiscal-one-line/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R06-fiscal-one-line/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R06-fiscal-one-line/currency"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R06-fiscal-one-line/noRawNote"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "R06-fiscal-one-line/highHasNoReasons"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R07-bare-total/confidence"
+    },
+    {
+      "actual": "1250.00",
+      "pass": true,
+      "expected": "1250.00",
+      "id": "R07-bare-total/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R07-bare-total/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R07-bare-total/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R07-bare-total/reason/UNSUPPORTED_EVENT"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R07-bare-total/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R08-negated-paid/confidence"
+    },
+    {
+      "actual": "1250.00",
+      "pass": true,
+      "expected": "1250.00",
+      "id": "R08-negated-paid/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R08-negated-paid/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R08-negated-paid/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R08-negated-paid/reason/UNSUPPORTED_EVENT"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R08-negated-paid/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R09-mismatch-card/confidence"
+    },
+    {
+      "actual": "1250.00",
+      "pass": true,
+      "expected": "1250.00",
+      "id": "R09-mismatch-card/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R09-mismatch-card/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R09-mismatch-card/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R09-mismatch-card/reason/UNSUPPORTED_EVENT"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R09-mismatch-card/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R10-two-settlements/confidence"
+    },
+    {
+      "actual": "1250.00",
+      "pass": true,
+      "expected": "1250.00",
+      "id": "R10-two-settlements/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R10-two-settlements/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R10-two-settlements/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R10-two-settlements/reason/AMBIGUOUS_TOTAL"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R10-two-settlements/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R11-no-sale/confidence"
+    },
+    {
+      "actual": "1250.00",
+      "pass": true,
+      "expected": "1250.00",
+      "id": "R11-no-sale/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R11-no-sale/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R11-no-sale/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R11-no-sale/reason/UNSUPPORTED_EVENT"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R11-no-sale/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R12-no-fiscal/confidence"
+    },
+    {
+      "actual": "1250.00",
+      "pass": true,
+      "expected": "1250.00",
+      "id": "R12-no-fiscal/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R12-no-fiscal/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R12-no-fiscal/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R12-no-fiscal/reason/UNSUPPORTED_EVENT"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R12-no-fiscal/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R13-return/confidence"
+    },
+    {
+      "actual": "1250.00",
+      "pass": true,
+      "expected": "1250.00",
+      "id": "R13-return/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R13-return/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R13-return/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R13-return/reason/UNSUPPORTED_EVENT"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R13-return/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R14-different-totals/confidence"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R14-different-totals/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R14-different-totals/date"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R14-different-totals/reason/AMBIGUOUS_TOTAL"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R14-different-totals/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R15-item-not-total/confidence"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R15-item-not-total/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R15-item-not-total/date"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R15-item-not-total/reason/AMOUNT_MISSING"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R15-item-not-total/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R16-phone-not-total/confidence"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R16-phone-not-total/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R16-phone-not-total/date"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R16-phone-not-total/reason/AMOUNT_MISSING"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R16-phone-not-total/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R17-no-date/confidence"
+    },
+    {
+      "actual": "2.50",
+      "pass": true,
+      "expected": "2.50",
+      "id": "R17-no-date/amount"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R17-no-date/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R17-no-date/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R17-no-date/reason/DATE_MISSING"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R17-no-date/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R18-invalid-date/confidence"
+    },
+    {
+      "actual": "2.50",
+      "pass": true,
+      "expected": "2.50",
+      "id": "R18-invalid-date/amount"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R18-invalid-date/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R18-invalid-date/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R18-invalid-date/reason/DATE_INVALID"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R18-invalid-date/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R19-cash-change/confidence"
+    },
+    {
+      "actual": "5.00",
+      "pass": true,
+      "expected": "5.00",
+      "id": "R19-cash-change/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R19-cash-change/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R19-cash-change/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R19-cash-change/reason/UNSUPPORTED_EVENT"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R19-cash-change/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R20-ambiguous-separator/confidence"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R20-ambiguous-separator/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R20-ambiguous-separator/date"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R20-ambiguous-separator/reason/AMBIGUOUS_SEPARATOR"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R20-ambiguous-separator/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R21-cross-currency/confidence"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R21-cross-currency/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R21-cross-currency/date"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R21-cross-currency/reason/CURRENCY_UNKNOWN"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R21-cross-currency/noRawNote"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R22-zero/confidence"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R22-zero/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R22-zero/date"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R22-zero/reason/AMOUNT_MISSING"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R22-zero/noRawNote"
+    },
+    {
+      "actual": "unavailable",
+      "pass": true,
+      "expected": "unavailable",
+      "id": "R23-blank/confidence"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R23-blank/amount"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "R23-blank/date"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R23-blank/reason/UNAVAILABLE"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R23-blank/noRawNote"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "R24-next-blank-line/confidence"
+    },
+    {
+      "actual": "6.40",
+      "pass": true,
+      "expected": "6.40",
+      "id": "R24-next-blank-line/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R24-next-blank-line/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R24-next-blank-line/currency"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R24-next-blank-line/noRawNote"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "R24-next-blank-line/highHasNoReasons"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "R25-paid-question/confidence"
+    },
+    {
+      "actual": "6.40",
+      "pass": true,
+      "expected": "6.40",
+      "id": "R25-paid-question/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R25-paid-question/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R25-paid-question/currency"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "R25-paid-question/reason/UNSUPPORTED_EVENT"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R25-paid-question/noRawNote"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "R26-larger-than-double/confidence"
+    },
+    {
+      "actual": "9007199254740993.01",
+      "pass": true,
+      "expected": "9007199254740993.01",
+      "id": "R26-larger-than-double/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R26-larger-than-double/date"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "R26-larger-than-double/currency"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R26-larger-than-double/noRawNote"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "R26-larger-than-double/highHasNoReasons"
+    },
+    {
+      "actual": "high",
+      "pass": false,
+      "expected": "uncertain",
+      "id": "R27-tax-not-final-total/confidence"
+    },
+    {
+      "actual": "50.00",
+      "pass": false,
+      "expected": null,
+      "id": "R27-tax-not-final-total/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R27-tax-not-final-total/date"
+    },
+    {
+      "actual": false,
+      "pass": false,
+      "expected": true,
+      "id": "R27-tax-not-final-total/reason/AMOUNT_MISSING"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R27-tax-not-final-total/noRawNote"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "R27-tax-not-final-total/highHasNoReasons"
+    },
+    {
+      "actual": "uncertain",
+      "pass": false,
+      "expected": "high",
+      "id": "R28-tax-before-actual-total/confidence"
+    },
+    {
+      "actual": null,
+      "pass": false,
+      "expected": "500.00",
+      "id": "R28-tax-before-actual-total/amount"
+    },
+    {
+      "actual": "2026-11-03",
+      "pass": true,
+      "expected": "2026-11-03",
+      "id": "R28-tax-before-actual-total/date"
+    },
+    {
+      "actual": null,
+      "pass": false,
+      "expected": "KZT",
+      "id": "R28-tax-before-actual-total/currency"
+    },
+    {
+      "actual": "",
+      "pass": true,
+      "expected": "",
+      "id": "R28-tax-before-actual-total/noRawNote"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "B01-paid/confidence"
+    },
+    {
+      "actual": "12.00",
+      "pass": true,
+      "expected": "12.00",
+      "id": "B01-paid/amount"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "B01-paid/kind"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "B02-income/confidence"
+    },
+    {
+      "actual": "0.01",
+      "pass": true,
+      "expected": "0.01",
+      "id": "B02-income/amount"
+    },
+    {
+      "actual": "income",
+      "pass": true,
+      "expected": "income",
+      "id": "B02-income/kind"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "B03-scheduled/confidence"
+    },
+    {
+      "actual": "12.00",
+      "pass": true,
+      "expected": "12.00",
+      "id": "B03-scheduled/amount"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "B03-scheduled/kind"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "B04-negated/confidence"
+    },
+    {
+      "actual": "12.00",
+      "pass": true,
+      "expected": "12.00",
+      "id": "B04-negated/amount"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "B04-negated/kind"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "B05-balance/confidence"
+    },
+    {
+      "actual": "12.00",
+      "pass": true,
+      "expected": "12.00",
+      "id": "B05-balance/amount"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "B05-balance/kind"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "B06-unsupported-local-alias/confidence"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "B06-unsupported-local-alias/amount"
+    },
+    {
+      "actual": "expense",
+      "pass": true,
+      "expected": "expense",
+      "id": "B06-unsupported-local-alias/kind"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "B07-transfer/confidence"
+    },
+    {
+      "actual": "12.00",
+      "pass": true,
+      "expected": "12.00",
+      "id": "B07-transfer/amount"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "B07-transfer/kind"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "B08-refund/confidence"
+    },
+    {
+      "actual": "12.00",
+      "pass": true,
+      "expected": "12.00",
+      "id": "B08-refund/amount"
+    },
+    {
+      "actual": "income",
+      "pass": true,
+      "expected": "income",
+      "id": "B08-refund/kind"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "B09-expense-income/confidence"
+    },
+    {
+      "actual": "12.00",
+      "pass": true,
+      "expected": "12.00",
+      "id": "B09-expense-income/amount"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "B09-expense-income/kind"
+    }
+  ],
+  "cases": [
+    {
+      "input": "03.11.2026\nИтого\n12 345.67 тг\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "12345.67",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R01-multiline-local"
+    },
+    {
+      "input": "03.11.2026\nИтог: 78,90 теңге\nОплата выполнена",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "78.90",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R02-cyrillic-tenge"
+    },
+    {
+      "input": "03.11.2026\nОплачено 45.10 тенге",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "45.10",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R03-alias-tenge"
+    },
+    {
+      "input": "03.11.2026\nИТОГО 9.99 KZT\nСумма 9.99 KZT\nОплачено 9.99 KZT",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "9.99",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R04-equal-total-status"
+    },
+    {
+      "input": "03.11.2026\nФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\nИтого\n1250.00 тг\nКартой\n1250.00 тг",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "1250.00",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R05-fiscal-multiline"
+    },
+    {
+      "input": "03.11.2026\nФискальный чек\nТип операции: Продажа\nИтого 22.22 KZT\nБезналичный расчет 22.22 KZT",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "22.22",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R06-fiscal-one-line"
+    },
+    {
+      "input": "03.11.2026\nИтого\n1250.00 тг",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "1250.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R07-bare-total"
+    },
+    {
+      "input": "03.11.2026\nИтого 1250.00 тг\nНе оплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "1250.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R08-negated-paid"
+    },
+    {
+      "input": "03.11.2026\nФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\nИтого 1250.00 тг\nКартой 1500.00 тг",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "1250.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R09-mismatch-card"
+    },
+    {
+      "input": "03.11.2026\nФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\nИтого 1250.00 тг\nКартой 1250.00 тг\nКартой 1250.00 тг",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "1250.00",
+        "reasons": [
+          "AMBIGUOUS_TOTAL",
+          "UNSUPPORTED_EVENT"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R10-two-settlements"
+    },
+    {
+      "input": "03.11.2026\nФИСКАЛЬНЫЙ ЧЕК\nИтого 1250.00 тг\nКартой 1250.00 тг",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "1250.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R11-no-sale"
+    },
+    {
+      "input": "03.11.2026\nПРИХОД\nИтого 1250.00 тг\nКартой 1250.00 тг",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "1250.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R12-no-fiscal"
+    },
+    {
+      "input": "03.11.2026\nФИСКАЛЬНЫЙ ЧЕК\nПРИХОД\nВозврат\nИтого 1250.00 тг\nКартой 1250.00 тг",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "1250.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R13-return"
+    },
+    {
+      "input": "03.11.2026\nИтого 12.00 KZT\nСумма 13.00 KZT\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": null,
+        "reasons": [
+          "AMBIGUOUS_TOTAL",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": null
+      },
+      "id": "R14-different-totals"
+    },
+    {
+      "input": "03.11.2026\nИтого\nТовар 1250.00 KZT\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": null,
+        "reasons": [
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": null
+      },
+      "id": "R15-item-not-total"
+    },
+    {
+      "input": "03.11.2026\nИтого\nТелефон +77771234567\nВалюта KZT\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": null,
+        "reasons": [
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": null
+      },
+      "id": "R16-phone-not-total"
+    },
+    {
+      "input": "Итого 2.50 KZT\nОплачено",
+      "actual": {
+        "date": null,
+        "note": "",
+        "amount": "2.50",
+        "reasons": ["DATE_MISSING"],
+        "kind": "expense",
+        "dateOrigin": null,
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R17-no-date"
+    },
+    {
+      "input": "29.02.2026\nИтого 2.50 KZT\nОплачено",
+      "actual": {
+        "date": null,
+        "note": "",
+        "amount": "2.50",
+        "reasons": [
+          "DATE_INVALID",
+          "DATE_MISSING"
+        ],
+        "kind": "expense",
+        "dateOrigin": null,
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R18-invalid-date"
+    },
+    {
+      "input": "03.11.2026\nИтого 5.00 KZT\nВнесено наличными 10.00 KZT\nСдача 5.00 KZT",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "5.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R19-cash-change"
+    },
+    {
+      "input": "03.11.2026\nИтого 1,234 KZT\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": null,
+        "reasons": [
+          "AMBIGUOUS_SEPARATOR",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": null
+      },
+      "id": "R20-ambiguous-separator"
+    },
+    {
+      "input": "03.11.2026\nИтого 12.00 KZT\nОплачено\nБаланс 10.00 USD",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": null,
+        "reasons": [
+          "CURRENCY_UNKNOWN",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": null
+      },
+      "id": "R21-cross-currency"
+    },
+    {
+      "input": "03.11.2026\nИтого 0.00 KZT\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": null,
+        "reasons": [
+          "AMBIGUOUS_SEPARATOR",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": null
+      },
+      "id": "R22-zero"
+    },
+    {
+      "input": "",
+      "actual": {
+        "date": null,
+        "note": "",
+        "amount": null,
+        "reasons": ["UNAVAILABLE"],
+        "kind": null,
+        "dateOrigin": null,
+        "confidence": "unavailable",
+        "paymentReference": null,
+        "currency": null
+      },
+      "id": "R23-blank"
+    },
+    {
+      "input": "03.11.2026\nИтого:\n\n6.40 тг\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "6.40",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R24-next-blank-line"
+    },
+    {
+      "input": "03.11.2026\nИтого 6.40 KZT\nОплачено?",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "6.40",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R25-paid-question"
+    },
+    {
+      "input": "03.11.2026\nИтого 9007199254740993.01 тг\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "9007199254740993.01",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R26-larger-than-double"
+    },
+    {
+      "input": "03.11.2026\nСумма НДС 50.00 тг\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "50.00",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "R27-tax-not-final-total"
+    },
+    {
+      "input": "03.11.2026\nСумма НДС 50.00 тг\nИтого 500.00 тг\nОплачено",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": null,
+        "reasons": [
+          "AMBIGUOUS_TOTAL",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": null
+      },
+      "id": "R28-tax-before-actual-total"
+    },
+    {
+      "input": "Оплачено 12.00 KZT 2026-11-03",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "12.00",
+        "reasons": [],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "B01-paid"
+    },
+    {
+      "input": "Зачислено 0.01 KZT 2026-11-03",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "0.01",
+        "reasons": [],
+        "kind": "income",
+        "dateOrigin": "source",
+        "confidence": "high",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "B02-income"
+    },
+    {
+      "input": "Запланирована покупка 12.00 KZT 2026-11-03",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "12.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "B03-scheduled"
+    },
+    {
+      "input": "Оплата 12.00 KZT не произведена 2026-11-03",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "12.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "B04-negated"
+    },
+    {
+      "input": "Покупка 12.00 KZT 2026-11-03\nБаланс 45.00 KZT",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "12.00",
+        "reasons": ["AMBIGUOUS_TOTAL"],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "B05-balance"
+    },
+    {
+      "input": "Оплачено 12.00 тг 2026-11-03",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": null,
+        "reasons": [
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING"
+        ],
+        "kind": "expense",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": null
+      },
+      "id": "B06-unsupported-local-alias"
+    },
+    {
+      "input": "Перевод получен 12.00 KZT 2026-11-03",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "12.00",
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "UNKNOWN_KIND"
+        ],
+        "kind": null,
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "B07-transfer"
+    },
+    {
+      "input": "Refund received 12.00 KZT 2026-11-03",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "12.00",
+        "reasons": ["UNSUPPORTED_EVENT"],
+        "kind": "income",
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "B08-refund"
+    },
+    {
+      "input": "Credited and debited 12.00 KZT 2026-11-03",
+      "actual": {
+        "date": "2026-11-03",
+        "note": "",
+        "amount": "12.00",
+        "reasons": ["UNKNOWN_KIND"],
+        "kind": null,
+        "dateOrigin": "source",
+        "confidence": "uncertain",
+        "paymentReference": null,
+        "currency": "KZT"
+      },
+      "id": "B09-expense-income"
+    }
+  ],
+  "scope": "Independent synthetic JVM receipt/bank checks; not real OCR/photo or Android UI",
+  "assertions": 187,
+  "failed": 6
+}

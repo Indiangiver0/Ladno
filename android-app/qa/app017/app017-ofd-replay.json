@@ -1,0 +1,195 @@
+{
+  "suite": "app017-ofd-replay",
+  "startedAt": "2026-11-04T08:32:37.225Z",
+  "pid": 2454,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "0.3 ignored replay outcome",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "0.3 ignored same candidate",
+      "expected": "144e5df5-92fb-42ea-9036-10b0d2601763",
+      "actual": "144e5df5-92fb-42ea-9036-10b0d2601763",
+      "pass": true
+    },
+    {
+      "id": "0.3 ignored status preserved",
+      "expected": "ignored",
+      "actual": "ignored",
+      "pass": true
+    },
+    {
+      "id": "0.3 ignored revision preserved",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "0.3 ignored no expense",
+      "expected": 12,
+      "actual": 12,
+      "pass": true
+    },
+    {
+      "id": "posted after manual edit is duplicate",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "posted edited record ID retained",
+      "expected": "14a1e72e-596e-46fc-a83c-2bbd965283a0",
+      "actual": "14a1e72e-596e-46fc-a83c-2bbd965283a0",
+      "pass": true
+    },
+    {
+      "id": "posted edited amount retained",
+      "expected": "81793781157228.18",
+      "actual": "81793781157228.18",
+      "pass": true
+    },
+    {
+      "id": "posted edited date retained",
+      "expected": "2026-11-01",
+      "actual": "2026-11-01",
+      "pass": true
+    },
+    {
+      "id": "posted edited note retained",
+      "expected": "retained synthetic manual edit",
+      "actual": "retained synthetic manual edit",
+      "pass": true
+    },
+    {
+      "id": "posted edited revision retained",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "posted replay no second expense",
+      "expected": 13,
+      "actual": 13,
+      "pass": true
+    },
+    {
+      "id": "network fallback API replay same candidate",
+      "expected": "e881e9dd-5ffb-4974-89fb-d1d5d0d3118c",
+      "actual": "e881e9dd-5ffb-4974-89fb-d1d5d0d3118c",
+      "pass": true
+    },
+    {
+      "id": "network fallback safe review retained",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "network fallback no new review",
+      "expected": 20,
+      "actual": 20,
+      "pass": true
+    },
+    {
+      "id": "network fallback no new expense",
+      "expected": 13,
+      "actual": 13,
+      "pass": true
+    },
+    {
+      "id": "first new verified sale auto-posts",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "same QR metadata-independent repeat",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "same QR keeps record ID",
+      "expected": "20a647aa-6433-4b3b-babe-28b5dfe11816",
+      "actual": "20a647aa-6433-4b3b-babe-28b5dfe11816",
+      "pass": true
+    },
+    {
+      "id": "different equal amount receipt not automatically merged",
+      "expected": "review",
+      "actual": "review",
+      "pass": true
+    },
+    {
+      "id": "different equal amount has own candidate",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "different equal amount possible match requires decision",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "separate receipt no silent second expense",
+      "expected": 14,
+      "actual": 14,
+      "pass": true
+    },
+    {
+      "id": "legacy explicit link decision retained",
+      "expected": "linked",
+      "actual": "linked",
+      "pass": true
+    },
+    {
+      "id": "legacy link target retained",
+      "expected": "c0db7040-9718-4b58-b75a-7078f71f3578",
+      "actual": "c0db7040-9718-4b58-b75a-7078f71f3578",
+      "pass": true
+    },
+    {
+      "id": "legacy link no new expense",
+      "expected": 15,
+      "actual": 15,
+      "pass": true
+    },
+    {
+      "id": "deleted posted QR remains duplicate",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "deleted record is not resurrected",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "deleted replay does not restore money",
+      "expected": 14,
+      "actual": 14,
+      "pass": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "scope",
+      "actual": "Synthetic direct parser\/storage regression only; no HTTP, original photos, Activity or bank data. Exact original QR source+revision tokens are identical before\/after API."
+    }
+  ],
+  "finishedAt": "2026-11-04T08:32:37.392Z"
+}

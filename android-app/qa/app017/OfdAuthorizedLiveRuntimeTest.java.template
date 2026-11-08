@@ -1,0 +1,119 @@
+package com.ladno.finance;
+
+import android.content.Context;
+import android.os.Build;
+import android.os.Bundle;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
+import com.ladno.finance.core.ContractException;
+import com.ladno.finance.core.FiscalQrParser;
+import com.ladno.finance.core.ImportCandidate;
+import com.ladno.finance.core.OfdReceiptParser;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.time.Instant;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.junit.Assert;
+import org.junit.Assume;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+/** Explicitly opted-in own receipts only. No Runtime, store, ingest, UI, or ledger writes. */
+@RunWith(AndroidJUnit4.class)
+public final class OfdAuthorizedLiveRuntimeTest {
+    private static final String INPUT = "qa-ofd-authorized.json";
+    private static final String SCOPE = "APP-017-SAMPLES-4-5";
+
+    @Test public void authorizedOwnReceiptsLookupWithoutIngest() throws Exception {
+        Bundle args = InstrumentationRegistry.getArguments();
+        Assume.assumeTrue("Live own-receipt test requires explicit opt-in", SCOPE.equals(args.getString("ladnoLiveOfdScope")));
+        Assert.assertEquals("Dedicated synthetic AVD required", "Ladno_QA_API30", args.getString("ladnoSyntheticAvd"));
+        Assert.assertTrue("Only synthetic emulator allowed", "ranchu".equals(Build.HARDWARE) || "goldfish".equals(Build.HARDWARE));
+        Context context = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        JSONObject evidence = new JSONObject();
+        evidence.put("startedAt", Instant.now().toString()).put("scope", SCOPE)
+            .put("nativeDefaultClient", true).put("ledgerIngestCalled", false).put("uiExercised", false);
+        JSONArray results = new JSONArray(); evidence.put("results", results);
+        JSONObject before = ledgerBytes(context);
+        boolean passed = false;
+        try {
+            byte[] bytes;
+            try (InputStream in = context.openFileInput(INPUT); ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+                byte[] buffer = new byte[2048]; int n;
+                while ((n = in.read(buffer)) != -1) {
+                    if ((long) out.size() + n > 16384) throw new AssertionError("Authorized input exceeds fixed bound");
+                    out.write(buffer, 0, n);
+                }
+                bytes = out.toByteArray();
+            }
+            JSONObject input = new JSONObject(new String(bytes, StandardCharsets.UTF_8));
+            bytes = null;
+            if (!SCOPE.equals(input.optString("scope"))) throw new AssertionError("Authorized scope mismatch");
+            JSONArray samples = input.getJSONArray("samples");
+            if (samples.length() != 2) throw new AssertionError("Exactly two authorized samples required");
+            // Validate BOTH inputs before any HTTP, never accepting arbitrary paths/hosts/fixtures.
+            FiscalQrParser.Result[] qr = new FiscalQrParser.Result[2];
+            String[] expected = {"4395.00", "3547.00"};
+            for (int i = 0; i < 2; i++) {
+                JSONObject sample = samples.getJSONObject(i);
+                if (sample.getInt("sample") != i + 4) throw new AssertionError("Authorized sample order mismatch");
+                qr[i] = FiscalQrParser.parse(sample.getString("qr"));
+                if (!OfdReceiptParser.Request.from(qr[i]).supported() || !expected[i].equals(qr[i].amount)
+                    || !"2026-11-03".equals(qr[i].date)) throw new AssertionError("Authorized fiscal scope mismatch");
+            }
+            input = null; samples = null;
+            OfdReceiptClient client = new OfdReceiptClient();
+            boolean all = true;
+            for (int i = 0; i < 2; i++) {
+                ImportCandidate result = client.lookup(qr[i]);
+                boolean verified = "expense".equals(result.kind) && "high".equals(result.confidence)
+                    && expected[i].equals(result.amount) && "KZT".equals(result.currency)
+                    && "2026-11-03".equals(result.date) && result.reasons.isEmpty();
+                JSONObject safe = new JSONObject();
+                safe.put("sample", i + 4).put("amount", result.amount == null ? JSONObject.NULL : result.amount)
+                    .put("currency", result.currency == null ? JSONObject.NULL : result.currency)
+                    .put("date", result.date == null ? JSONObject.NULL : result.date)
+                    .put("kind", result.kind == null ? JSONObject.NULL : result.kind)
+                    .put("confidence", result.confidence).put("verifiedIdentityAndFinalSale", verified);
+                results.put(safe); all &= verified; qr[i] = null;
+            }
+            if (!all) throw new AssertionError("Authorized OFD client did not verify both permitted receipts");
+            if (!before.toString().equals(ledgerBytes(context).toString())) throw new AssertionError("Ledger bytes changed during read-only lookup");
+            evidence.put("noLedgerWrite", true); passed = true;
+        } catch (Throwable error) {
+            // Do not attach original exception/cause: it may carry raw URL/query data.
+            evidence.put("safeFailureType", error.getClass().getSimpleName());
+            if (error instanceof ContractException) evidence.put("safeFailureCode", ((ContractException) error).code);
+            throw new AssertionError("Authorized read-only OFD check failed; inspect safe evidence");
+        } finally {
+            evidence.put("passed", passed).put("finishedAt", Instant.now().toString());
+            context.deleteFile(INPUT);
+            evidence.put("privateInputRemoved", !new File(context.getFilesDir(), INPUT).exists());
+            try (FileOutputStream out = context.openFileOutput("qa-app017-authorized-live.json", Context.MODE_PRIVATE)) {
+                out.write((evidence.toString(2) + "\n").getBytes(StandardCharsets.UTF_8)); out.getFD().sync();
+            }
+        }
+    }
+
+    private static JSONObject ledgerBytes(Context context) throws Exception {
+        JSONObject result = new JSONObject();
+        for (String name : new String[]{"ledger.db", "ledger.db-wal"}) {
+            File file = context.getDatabasePath(name);
+            if (!file.isFile()) { result.put(name, JSONObject.NULL); continue; }
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            try (InputStream in = new FileInputStream(file)) {
+                byte[] bytes = new byte[32768]; int n; while ((n = in.read(bytes)) != -1) digest.update(bytes, 0, n);
+            }
+            StringBuilder text = new StringBuilder();
+            for (byte value : digest.digest()) text.append(String.format(java.util.Locale.ROOT, "%02x", value & 255));
+            result.put(name, text.toString());
+        }
+        return result;
+    }
+}

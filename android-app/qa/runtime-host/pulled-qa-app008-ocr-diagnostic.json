@@ -1,0 +1,403 @@
+{
+  "scope": "author diagnostic; synthetic fixture only; no UI or ledger mutation",
+  "startedAt": "2026-11-03T09:31:47.475Z",
+  "fixture": "en-multiline-paid.png",
+  "expectedAmount": "754.32",
+  "variants": [
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "original",
+      "width": 2100,
+      "height": 1300,
+      "psm": 3,
+      "text": "PAID\n\nTOTAL\n\n794.32 KZT\n\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "original",
+      "width": 2100,
+      "height": 1300,
+      "psm": 6,
+      "text": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "original",
+      "width": 2100,
+      "height": 1300,
+      "psm": 11,
+      "text": "PAID\n\nTOTAL\n\n794.32 KZT\n\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng",
+      "imageVariant": "original",
+      "width": 2100,
+      "height": 1300,
+      "psm": 6,
+      "text": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus",
+      "imageVariant": "original",
+      "width": 2100,
+      "height": 1300,
+      "psm": 6,
+      "text": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "rus+eng+kaz",
+      "imageVariant": "original",
+      "width": 2100,
+      "height": 1300,
+      "psm": 6,
+      "text": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "kaz+rus+eng",
+      "imageVariant": "original",
+      "width": 2100,
+      "height": 1300,
+      "psm": 6,
+      "text": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "scaled-filtered-75",
+      "width": 1575,
+      "height": 975,
+      "psm": 6,
+      "text": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "scaled-filtered-150",
+      "width": 3150,
+      "height": 1950,
+      "psm": 6,
+      "text": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "binary-threshold-180",
+      "width": 2100,
+      "height": 1300,
+      "psm": 6,
+      "text": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+      "meanConfidence": 93,
+      "parsed": {
+        "kind": "expense",
+        "amount": "794.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "fast-numeric-word-0",
+      "width": 254,
+      "height": 93,
+      "psm": 7,
+      "text": "194.32",
+      "meanConfidence": 85,
+      "parsed": {
+        "kind": "expense",
+        "amount": null,
+        "currency": null,
+        "date": null,
+        "dateOrigin": null,
+        "note": "",
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING",
+          "DATE_MISSING"
+        ],
+        "confidence": "uncertain",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "fast-numeric-whitelist-0",
+      "width": 254,
+      "height": 93,
+      "psm": 7,
+      "text": "194.32",
+      "meanConfidence": 85,
+      "parsed": {
+        "kind": "expense",
+        "amount": null,
+        "currency": null,
+        "date": null,
+        "dateOrigin": null,
+        "note": "",
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING",
+          "DATE_MISSING"
+        ],
+        "confidence": "uncertain",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "fast-numeric-word-0",
+      "width": 254,
+      "height": 93,
+      "psm": 13,
+      "text": "754.32",
+      "meanConfidence": 65,
+      "parsed": {
+        "kind": "expense",
+        "amount": null,
+        "currency": null,
+        "date": null,
+        "dateOrigin": null,
+        "note": "",
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING",
+          "DATE_MISSING"
+        ],
+        "confidence": "uncertain",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng+rus+kaz",
+      "imageVariant": "fast-numeric-whitelist-0",
+      "width": 254,
+      "height": 93,
+      "psm": 13,
+      "text": "754.32",
+      "meanConfidence": 65,
+      "parsed": {
+        "kind": "expense",
+        "amount": null,
+        "currency": null,
+        "date": null,
+        "dateOrigin": null,
+        "note": "",
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING",
+          "DATE_MISSING"
+        ],
+        "confidence": "uncertain",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    },
+    {
+      "languages": "eng-best",
+      "imageVariant": "best-original",
+      "width": 2100,
+      "height": 1300,
+      "psm": 3,
+      "text": "PAID\n\nTOTAL\n\n754.32 KZT\n\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "754.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": true
+    },
+    {
+      "languages": "eng-best",
+      "imageVariant": "best-original",
+      "width": 2100,
+      "height": 1300,
+      "psm": 6,
+      "text": "PAID\nTOTAL\n754.32 KZT\n2026-11-03",
+      "meanConfidence": 94,
+      "parsed": {
+        "kind": "expense",
+        "amount": "754.32",
+        "currency": "KZT",
+        "date": "2026-11-03",
+        "dateOrigin": "source",
+        "note": "",
+        "reasons": [],
+        "confidence": "high",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": true
+    },
+    {
+      "languages": "eng-best",
+      "imageVariant": "best-numeric-word-0",
+      "width": 254,
+      "height": 93,
+      "psm": 7,
+      "text": "754.32",
+      "meanConfidence": 89,
+      "parsed": {
+        "kind": "expense",
+        "amount": null,
+        "currency": null,
+        "date": null,
+        "dateOrigin": null,
+        "note": "",
+        "reasons": [
+          "UNSUPPORTED_EVENT",
+          "AMOUNT_MISSING",
+          "CURRENCY_MISSING",
+          "DATE_MISSING"
+        ],
+        "confidence": "uncertain",
+        "paymentReference": null
+      },
+      "matchesExpectedAmount": false
+    }
+  ],
+  "originalSha256": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+  "width": 2100,
+  "height": 1300,
+  "numericWordBoxes": [
+    [
+      103,
+      438,
+      317,
+      491
+    ]
+  ],
+  "finalSha256": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+  "finishedAt": "2026-11-03T09:31:55.419Z"
+}

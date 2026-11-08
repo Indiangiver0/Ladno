@@ -1,0 +1,30 @@
+{
+  "action": "test",
+  "suite": "receipt-layout",
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-03T09:42:12.831519+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.ladno.finance.ReceiptLayoutRuntimeTest",
+        "com.ladno.finance.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "exitCode": 0,
+      "passed": false,
+      "stdout": "INSTRUMENTATION_STATUS: class=com.ladno.finance.ReceiptLayoutRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=\ncom.ladno.finance.ReceiptLayoutRuntimeTest:\nINSTRUMENTATION_STATUS: test=syntheticMultilineAndFiscalImages\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / real Tesseract initialized: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / original counterexample PNG unchanged: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / en-multiline-paid/amount: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / en-multiline-paid/currency: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / en-multiline-paid/date: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / en-multiline-paid/completed-paid evidence: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / counterexample verifier retains alternative794.32: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / counterexample disagreement disallows auto: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA receipt-layout-runtime / ru-fiscal-card/amount: FAIL\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: class=com.ladno.finance.ReceiptLayoutRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stack=java.lang.AssertionError: ru-fiscal-card/amount expected:<8765.43> but was:<null>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:120)\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\n\tat com.ladno.finance.ReceiptLayoutRuntimeTest.syntheticMultilineAndFiscalImages(ReceiptLayoutRuntimeTest.java:56)\n\nINSTRUMENTATION_STATUS: stream=\nError in syntheticMultilineAndFiscalImages(com.ladno.finance.ReceiptLayoutRuntimeTest):\njava.lang.AssertionError: ru-fiscal-card/amount expected:<8765.43> but was:<null>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:120)\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\n\tat com.ladno.finance.ReceiptLayoutRuntimeTest.syntheticMultilineAndFiscalImages(ReceiptLayoutRuntimeTest.java:56)\n\nINSTRUMENTATION_STATUS: test=syntheticMultilineAndFiscalImages\nINSTRUMENTATION_STATUS_CODE: -2\nINSTRUMENTATION_RESULT: stream=\n\nTime: 4.663\nThere was 1 failure:\n1) syntheticMultilineAndFiscalImages(com.ladno.finance.ReceiptLayoutRuntimeTest)\njava.lang.AssertionError: ru-fiscal-card/amount expected:<8765.43> but was:<null>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:120)\n\tat com.ladno.finance.NativeRuntimeFixtures.equal(NativeRuntimeFixtures.java:56)\n\tat com.ladno.finance.ReceiptLayoutRuntimeTest.syntheticMultilineAndFiscalImages(ReceiptLayoutRuntimeTest.java:56)\n\nFAILURES!!!\nTests run: 1,  Failures: 1\n\n\nINSTRUMENTATION_CODE: -1\n",
+      "stderr": ""
+    }
+  ],
+  "passed": false
+}

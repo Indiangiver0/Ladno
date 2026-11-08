@@ -1,0 +1,11 @@
+{
+  "source": "android-app/app/src/androidTest/java/com/ladno/finance/ReceiptLayoutRuntimeTest.java",
+  "sha256": "6495b49e9120ee8ad1807fb9a691ed0f6200ea4894676c8f1c89c1e8df25fccc",
+  "originalAmountUnchanged": "754.32",
+  "originalImageSha256": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+  "originalKztFiscalInputUnchanged": true,
+  "documentedObservation": "BEST OCR KAT suffix at total, another explicit KZT at payment; FAST OCR KIT suffix at payment. These unsupported OCR tokens must never be aliases or permit auto. Bounded prefill may retain8765.43/KZT plus CURRENCY_UNKNOWN, nativeLOWCONFreview.",
+  "newAdditionalPositive": "ru-fiscal-tenge6543.21 тг withfiscal-sale/card, expectedtwo-passcorrectagreement+posted",
+  "allCasesExecute": "Assertions are collected per fixture and per direct/native phase; finalJUnitfail ifanyfailure. No changing original PNG/font/amount to forcepass.",
+  "status": "awaiting root final build/runtime"
+}

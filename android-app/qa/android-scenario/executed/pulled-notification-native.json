@@ -1,0 +1,1622 @@
+{
+  "suite": "notification-native",
+  "startedAt": "2026-11-02T17:19:09.184Z",
+  "pid": 2430,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "AndroidKeyStore available",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "production key alias exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "key material not exportable",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "id": "HMAC hex64",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "same input stable across SourceTokens objects",
+      "expected": "2f6e241a8d1454255ed1c8fec1d57fbb5afb264fcc4ab960b58f3bd6651e452a",
+      "actual": "2f6e241a8d1454255ed1c8fec1d57fbb5afb264fcc4ab960b58f3bd6651e452a",
+      "pass": true
+    },
+    {
+      "id": "purpose scoped",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "namespace scoped",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "field framing",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "new lifecycle identity confident",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "completed parser confidence",
+      "expected": "high",
+      "actual": "high",
+      "pass": true
+    },
+    {
+      "id": "completed amount independent input",
+      "expected": "31949295.11",
+      "actual": "31949295.11",
+      "pass": true
+    },
+    {
+      "id": "safe note empty",
+      "expected": "",
+      "actual": "",
+      "pass": true
+    },
+    {
+      "id": "safe reference null",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "id": "native complete auto-post",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "native posted amount",
+      "expected": "31949295.11",
+      "actual": "31949295.11",
+      "pass": true
+    },
+    {
+      "id": "nullable category",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "record delta",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "exact source key stable",
+      "expected": "82a377dbe5e06547643aab6af822de5baef784a5f9506dc312185cfa5f95074d",
+      "actual": "82a377dbe5e06547643aab6af822de5baef784a5f9506dc312185cfa5f95074d",
+      "pass": true
+    },
+    {
+      "id": "exact revision stable",
+      "expected": "f3c59b783e9611fa3c21cd03bb6c7f4c31cd7ef06cb930cfc19636f7b4acd22c",
+      "actual": "f3c59b783e9611fa3c21cd03bb6c7f4c31cd7ef06cb930cfc19636f7b4acd22c",
+      "pass": true
+    },
+    {
+      "id": "exact replay outcome",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "exact replay same candidate",
+      "expected": "5ef2a875-7fde-41ec-b940-6444ca4106d8",
+      "actual": "5ef2a875-7fde-41ec-b940-6444ca4106d8",
+      "pass": true
+    },
+    {
+      "id": "exact replay no second record",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "replay preserves manual note",
+      "expected": "QA manual edit",
+      "actual": "QA manual edit",
+      "pass": true
+    },
+    {
+      "id": "tombstone replay not resurrected",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "non-final or hidden parser review 0",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "non-final or hidden not auto-post 0",
+      "expected": "review",
+      "actual": "review",
+      "pass": true
+    },
+    {
+      "id": "non-final or hidden parser review 1",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "non-final or hidden not auto-post 1",
+      "expected": "review",
+      "actual": "review",
+      "pass": true
+    },
+    {
+      "id": "non-final or hidden parser review 2",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "non-final or hidden not auto-post 2",
+      "expected": "review",
+      "actual": "review",
+      "pass": true
+    },
+    {
+      "id": "gap on existing lifecycle uncertain",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "new revision after gap review",
+      "expected": "review",
+      "actual": "review",
+      "pass": true
+    },
+    {
+      "id": "gap reason persisted",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "raw markers absent in database cells",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "raw markers absent in lifecycle preferences",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "final structured state",
+      "actual": {
+        "schemaVersion": 1,
+        "settings": {
+          "initialized": true,
+          "primaryCurrency": "KZT",
+          "zoneId": "Asia\/Qyzylorda",
+          "datePolicy": "POST_TIME_IN_ZONE"
+        },
+        "currencies": [
+          {
+            "code": "ADP",
+            "scale": 0
+          },
+          {
+            "code": "AED",
+            "scale": 2
+          },
+          {
+            "code": "AFA",
+            "scale": 2
+          },
+          {
+            "code": "AFN",
+            "scale": 0
+          },
+          {
+            "code": "ALK",
+            "scale": 2
+          },
+          {
+            "code": "ALL",
+            "scale": 0
+          },
+          {
+            "code": "AMD",
+            "scale": 2
+          },
+          {
+            "code": "ANG",
+            "scale": 2
+          },
+          {
+            "code": "AOA",
+            "scale": 2
+          },
+          {
+            "code": "AOK",
+            "scale": 2
+          },
+          {
+            "code": "AON",
+            "scale": 2
+          },
+          {
+            "code": "AOR",
+            "scale": 2
+          },
+          {
+            "code": "ARA",
+            "scale": 2
+          },
+          {
+            "code": "ARL",
+            "scale": 2
+          },
+          {
+            "code": "ARM",
+            "scale": 2
+          },
+          {
+            "code": "ARP",
+            "scale": 2
+          },
+          {
+            "code": "ARS",
+            "scale": 2
+          },
+          {
+            "code": "ATS",
+            "scale": 2
+          },
+          {
+            "code": "AUD",
+            "scale": 2
+          },
+          {
+            "code": "AWG",
+            "scale": 2
+          },
+          {
+            "code": "AZM",
+            "scale": 2
+          },
+          {
+            "code": "AZN",
+            "scale": 2
+          },
+          {
+            "code": "BAD",
+            "scale": 2
+          },
+          {
+            "code": "BAM",
+            "scale": 2
+          },
+          {
+            "code": "BAN",
+            "scale": 2
+          },
+          {
+            "code": "BBD",
+            "scale": 2
+          },
+          {
+            "code": "BDT",
+            "scale": 2
+          },
+          {
+            "code": "BEC",
+            "scale": 2
+          },
+          {
+            "code": "BEF",
+            "scale": 2
+          },
+          {
+            "code": "BEL",
+            "scale": 2
+          },
+          {
+            "code": "BGL",
+            "scale": 2
+          },
+          {
+            "code": "BGM",
+            "scale": 2
+          },
+          {
+            "code": "BGN",
+            "scale": 2
+          },
+          {
+            "code": "BGO",
+            "scale": 2
+          },
+          {
+            "code": "BHD",
+            "scale": 3
+          },
+          {
+            "code": "BIF",
+            "scale": 0
+          },
+          {
+            "code": "BMD",
+            "scale": 2
+          },
+          {
+            "code": "BND",
+            "scale": 2
+          },
+          {
+            "code": "BOB",
+            "scale": 2
+          },
+          {
+            "code": "BOL",
+            "scale": 2
+          },
+          {
+            "code": "BOP",
+            "scale": 2
+          },
+          {
+            "code": "BOV",
+            "scale": 2
+          },
+          {
+            "code": "BRB",
+            "scale": 2
+          },
+          {
+            "code": "BRC",
+            "scale": 2
+          },
+          {
+            "code": "BRE",
+            "scale": 2
+          },
+          {
+            "code": "BRL",
+            "scale": 2
+          },
+          {
+            "code": "BRN",
+            "scale": 2
+          },
+          {
+            "code": "BRR",
+            "scale": 2
+          },
+          {
+            "code": "BRZ",
+            "scale": 2
+          },
+          {
+            "code": "BSD",
+            "scale": 2
+          },
+          {
+            "code": "BTN",
+            "scale": 2
+          },
+          {
+            "code": "BUK",
+            "scale": 2
+          },
+          {
+            "code": "BWP",
+            "scale": 2
+          },
+          {
+            "code": "BYB",
+            "scale": 2
+          },
+          {
+            "code": "BYN",
+            "scale": 2
+          },
+          {
+            "code": "BYR",
+            "scale": 0
+          },
+          {
+            "code": "BZD",
+            "scale": 2
+          },
+          {
+            "code": "CAD",
+            "scale": 2
+          },
+          {
+            "code": "CDF",
+            "scale": 2
+          },
+          {
+            "code": "CHE",
+            "scale": 2
+          },
+          {
+            "code": "CHF",
+            "scale": 2
+          },
+          {
+            "code": "CHW",
+            "scale": 2
+          },
+          {
+            "code": "CLE",
+            "scale": 2
+          },
+          {
+            "code": "CLF",
+            "scale": 4
+          },
+          {
+            "code": "CLP",
+            "scale": 0
+          },
+          {
+            "code": "CNH",
+            "scale": 2
+          },
+          {
+            "code": "CNX",
+            "scale": 2
+          },
+          {
+            "code": "CNY",
+            "scale": 2
+          },
+          {
+            "code": "COP",
+            "scale": 2
+          },
+          {
+            "code": "COU",
+            "scale": 2
+          },
+          {
+            "code": "CRC",
+            "scale": 2
+          },
+          {
+            "code": "CSD",
+            "scale": 2
+          },
+          {
+            "code": "CSK",
+            "scale": 2
+          },
+          {
+            "code": "CUC",
+            "scale": 2
+          },
+          {
+            "code": "CUP",
+            "scale": 2
+          },
+          {
+            "code": "CVE",
+            "scale": 2
+          },
+          {
+            "code": "CYP",
+            "scale": 2
+          },
+          {
+            "code": "CZK",
+            "scale": 2
+          },
+          {
+            "code": "DDM",
+            "scale": 2
+          },
+          {
+            "code": "DEM",
+            "scale": 2
+          },
+          {
+            "code": "DJF",
+            "scale": 0
+          },
+          {
+            "code": "DKK",
+            "scale": 2
+          },
+          {
+            "code": "DOP",
+            "scale": 2
+          },
+          {
+            "code": "DZD",
+            "scale": 2
+          },
+          {
+            "code": "ECS",
+            "scale": 2
+          },
+          {
+            "code": "ECV",
+            "scale": 2
+          },
+          {
+            "code": "EEK",
+            "scale": 2
+          },
+          {
+            "code": "EGP",
+            "scale": 2
+          },
+          {
+            "code": "ERN",
+            "scale": 2
+          },
+          {
+            "code": "ESA",
+            "scale": 2
+          },
+          {
+            "code": "ESB",
+            "scale": 2
+          },
+          {
+            "code": "ESP",
+            "scale": 0
+          },
+          {
+            "code": "ETB",
+            "scale": 2
+          },
+          {
+            "code": "EUR",
+            "scale": 2
+          },
+          {
+            "code": "FIM",
+            "scale": 2
+          },
+          {
+            "code": "FJD",
+            "scale": 2
+          },
+          {
+            "code": "FKP",
+            "scale": 2
+          },
+          {
+            "code": "FRF",
+            "scale": 2
+          },
+          {
+            "code": "GBP",
+            "scale": 2
+          },
+          {
+            "code": "GEK",
+            "scale": 2
+          },
+          {
+            "code": "GEL",
+            "scale": 2
+          },
+          {
+            "code": "GHC",
+            "scale": 2
+          },
+          {
+            "code": "GHS",
+            "scale": 2
+          },
+          {
+            "code": "GIP",
+            "scale": 2
+          },
+          {
+            "code": "GMD",
+            "scale": 2
+          },
+          {
+            "code": "GNF",
+            "scale": 0
+          },
+          {
+            "code": "GNS",
+            "scale": 2
+          },
+          {
+            "code": "GQE",
+            "scale": 2
+          },
+          {
+            "code": "GRD",
+            "scale": 2
+          },
+          {
+            "code": "GTQ",
+            "scale": 2
+          },
+          {
+            "code": "GWE",
+            "scale": 2
+          },
+          {
+            "code": "GWP",
+            "scale": 2
+          },
+          {
+            "code": "GYD",
+            "scale": 2
+          },
+          {
+            "code": "HKD",
+            "scale": 2
+          },
+          {
+            "code": "HNL",
+            "scale": 2
+          },
+          {
+            "code": "HRD",
+            "scale": 2
+          },
+          {
+            "code": "HRK",
+            "scale": 2
+          },
+          {
+            "code": "HTG",
+            "scale": 2
+          },
+          {
+            "code": "HUF",
+            "scale": 2
+          },
+          {
+            "code": "IDR",
+            "scale": 2
+          },
+          {
+            "code": "IEP",
+            "scale": 2
+          },
+          {
+            "code": "ILP",
+            "scale": 2
+          },
+          {
+            "code": "ILR",
+            "scale": 2
+          },
+          {
+            "code": "ILS",
+            "scale": 2
+          },
+          {
+            "code": "INR",
+            "scale": 2
+          },
+          {
+            "code": "IQD",
+            "scale": 0
+          },
+          {
+            "code": "IRR",
+            "scale": 0
+          },
+          {
+            "code": "ISJ",
+            "scale": 2
+          },
+          {
+            "code": "ISK",
+            "scale": 0
+          },
+          {
+            "code": "ITL",
+            "scale": 0
+          },
+          {
+            "code": "JMD",
+            "scale": 2
+          },
+          {
+            "code": "JOD",
+            "scale": 3
+          },
+          {
+            "code": "JPY",
+            "scale": 0
+          },
+          {
+            "code": "KES",
+            "scale": 2
+          },
+          {
+            "code": "KGS",
+            "scale": 2
+          },
+          {
+            "code": "KHR",
+            "scale": 2
+          },
+          {
+            "code": "KMF",
+            "scale": 0
+          },
+          {
+            "code": "KPW",
+            "scale": 0
+          },
+          {
+            "code": "KRH",
+            "scale": 2
+          },
+          {
+            "code": "KRO",
+            "scale": 2
+          },
+          {
+            "code": "KRW",
+            "scale": 0
+          },
+          {
+            "code": "KWD",
+            "scale": 3
+          },
+          {
+            "code": "KYD",
+            "scale": 2
+          },
+          {
+            "code": "KZT",
+            "scale": 2
+          },
+          {
+            "code": "LAK",
+            "scale": 0
+          },
+          {
+            "code": "LBP",
+            "scale": 0
+          },
+          {
+            "code": "LKR",
+            "scale": 2
+          },
+          {
+            "code": "LRD",
+            "scale": 2
+          },
+          {
+            "code": "LSL",
+            "scale": 2
+          },
+          {
+            "code": "LTL",
+            "scale": 2
+          },
+          {
+            "code": "LTT",
+            "scale": 2
+          },
+          {
+            "code": "LUC",
+            "scale": 2
+          },
+          {
+            "code": "LUF",
+            "scale": 0
+          },
+          {
+            "code": "LUL",
+            "scale": 2
+          },
+          {
+            "code": "LVL",
+            "scale": 2
+          },
+          {
+            "code": "LVR",
+            "scale": 2
+          },
+          {
+            "code": "LYD",
+            "scale": 3
+          },
+          {
+            "code": "MAD",
+            "scale": 2
+          },
+          {
+            "code": "MAF",
+            "scale": 2
+          },
+          {
+            "code": "MCF",
+            "scale": 2
+          },
+          {
+            "code": "MDC",
+            "scale": 2
+          },
+          {
+            "code": "MDL",
+            "scale": 2
+          },
+          {
+            "code": "MGA",
+            "scale": 0
+          },
+          {
+            "code": "MGF",
+            "scale": 0
+          },
+          {
+            "code": "MKD",
+            "scale": 2
+          },
+          {
+            "code": "MKN",
+            "scale": 2
+          },
+          {
+            "code": "MLF",
+            "scale": 2
+          },
+          {
+            "code": "MMK",
+            "scale": 0
+          },
+          {
+            "code": "MNT",
+            "scale": 2
+          },
+          {
+            "code": "MOP",
+            "scale": 2
+          },
+          {
+            "code": "MRO",
+            "scale": 0
+          },
+          {
+            "code": "MRU",
+            "scale": 2
+          },
+          {
+            "code": "MTL",
+            "scale": 2
+          },
+          {
+            "code": "MTP",
+            "scale": 2
+          },
+          {
+            "code": "MUR",
+            "scale": 2
+          },
+          {
+            "code": "MVP",
+            "scale": 2
+          },
+          {
+            "code": "MVR",
+            "scale": 2
+          },
+          {
+            "code": "MWK",
+            "scale": 2
+          },
+          {
+            "code": "MXN",
+            "scale": 2
+          },
+          {
+            "code": "MXP",
+            "scale": 2
+          },
+          {
+            "code": "MXV",
+            "scale": 2
+          },
+          {
+            "code": "MYR",
+            "scale": 2
+          },
+          {
+            "code": "MZE",
+            "scale": 2
+          },
+          {
+            "code": "MZM",
+            "scale": 2
+          },
+          {
+            "code": "MZN",
+            "scale": 2
+          },
+          {
+            "code": "NAD",
+            "scale": 2
+          },
+          {
+            "code": "NGN",
+            "scale": 2
+          },
+          {
+            "code": "NIC",
+            "scale": 2
+          },
+          {
+            "code": "NIO",
+            "scale": 2
+          },
+          {
+            "code": "NLG",
+            "scale": 2
+          },
+          {
+            "code": "NOK",
+            "scale": 2
+          },
+          {
+            "code": "NPR",
+            "scale": 2
+          },
+          {
+            "code": "NZD",
+            "scale": 2
+          },
+          {
+            "code": "OMR",
+            "scale": 3
+          },
+          {
+            "code": "PAB",
+            "scale": 2
+          },
+          {
+            "code": "PEI",
+            "scale": 2
+          },
+          {
+            "code": "PEN",
+            "scale": 2
+          },
+          {
+            "code": "PES",
+            "scale": 2
+          },
+          {
+            "code": "PGK",
+            "scale": 2
+          },
+          {
+            "code": "PHP",
+            "scale": 2
+          },
+          {
+            "code": "PKR",
+            "scale": 2
+          },
+          {
+            "code": "PLN",
+            "scale": 2
+          },
+          {
+            "code": "PLZ",
+            "scale": 2
+          },
+          {
+            "code": "PTE",
+            "scale": 2
+          },
+          {
+            "code": "PYG",
+            "scale": 0
+          },
+          {
+            "code": "QAR",
+            "scale": 2
+          },
+          {
+            "code": "RHD",
+            "scale": 2
+          },
+          {
+            "code": "ROL",
+            "scale": 2
+          },
+          {
+            "code": "RON",
+            "scale": 2
+          },
+          {
+            "code": "RSD",
+            "scale": 0
+          },
+          {
+            "code": "RUB",
+            "scale": 2
+          },
+          {
+            "code": "RUR",
+            "scale": 2
+          },
+          {
+            "code": "RWF",
+            "scale": 0
+          },
+          {
+            "code": "SAR",
+            "scale": 2
+          },
+          {
+            "code": "SBD",
+            "scale": 2
+          },
+          {
+            "code": "SCR",
+            "scale": 2
+          },
+          {
+            "code": "SDD",
+            "scale": 2
+          },
+          {
+            "code": "SDG",
+            "scale": 2
+          },
+          {
+            "code": "SDP",
+            "scale": 2
+          },
+          {
+            "code": "SEK",
+            "scale": 2
+          },
+          {
+            "code": "SGD",
+            "scale": 2
+          },
+          {
+            "code": "SHP",
+            "scale": 2
+          },
+          {
+            "code": "SIT",
+            "scale": 2
+          },
+          {
+            "code": "SKK",
+            "scale": 2
+          },
+          {
+            "code": "SLL",
+            "scale": 0
+          },
+          {
+            "code": "SOS",
+            "scale": 0
+          },
+          {
+            "code": "SRD",
+            "scale": 2
+          },
+          {
+            "code": "SRG",
+            "scale": 2
+          },
+          {
+            "code": "SSP",
+            "scale": 2
+          },
+          {
+            "code": "STD",
+            "scale": 0
+          },
+          {
+            "code": "STN",
+            "scale": 2
+          },
+          {
+            "code": "SUR",
+            "scale": 2
+          },
+          {
+            "code": "SVC",
+            "scale": 2
+          },
+          {
+            "code": "SYP",
+            "scale": 0
+          },
+          {
+            "code": "SZL",
+            "scale": 2
+          },
+          {
+            "code": "THB",
+            "scale": 2
+          },
+          {
+            "code": "TJR",
+            "scale": 2
+          },
+          {
+            "code": "TJS",
+            "scale": 2
+          },
+          {
+            "code": "TMM",
+            "scale": 0
+          },
+          {
+            "code": "TMT",
+            "scale": 2
+          },
+          {
+            "code": "TND",
+            "scale": 3
+          },
+          {
+            "code": "TOP",
+            "scale": 2
+          },
+          {
+            "code": "TPE",
+            "scale": 2
+          },
+          {
+            "code": "TRL",
+            "scale": 0
+          },
+          {
+            "code": "TRY",
+            "scale": 2
+          },
+          {
+            "code": "TTD",
+            "scale": 2
+          },
+          {
+            "code": "TWD",
+            "scale": 2
+          },
+          {
+            "code": "TZS",
+            "scale": 2
+          },
+          {
+            "code": "UAH",
+            "scale": 2
+          },
+          {
+            "code": "UAK",
+            "scale": 2
+          },
+          {
+            "code": "UGS",
+            "scale": 2
+          },
+          {
+            "code": "UGX",
+            "scale": 0
+          },
+          {
+            "code": "USD",
+            "scale": 2
+          },
+          {
+            "code": "USN",
+            "scale": 2
+          },
+          {
+            "code": "USS",
+            "scale": 2
+          },
+          {
+            "code": "UYI",
+            "scale": 0
+          },
+          {
+            "code": "UYP",
+            "scale": 2
+          },
+          {
+            "code": "UYU",
+            "scale": 2
+          },
+          {
+            "code": "UYW",
+            "scale": 4
+          },
+          {
+            "code": "UZS",
+            "scale": 2
+          },
+          {
+            "code": "VEB",
+            "scale": 2
+          },
+          {
+            "code": "VEF",
+            "scale": 2
+          },
+          {
+            "code": "VES",
+            "scale": 2
+          },
+          {
+            "code": "VND",
+            "scale": 0
+          },
+          {
+            "code": "VNN",
+            "scale": 2
+          },
+          {
+            "code": "VUV",
+            "scale": 0
+          },
+          {
+            "code": "WST",
+            "scale": 2
+          },
+          {
+            "code": "XAF",
+            "scale": 0
+          },
+          {
+            "code": "XAG",
+            "scale": 2
+          },
+          {
+            "code": "XAU",
+            "scale": 2
+          },
+          {
+            "code": "XBA",
+            "scale": 2
+          },
+          {
+            "code": "XBB",
+            "scale": 2
+          },
+          {
+            "code": "XBC",
+            "scale": 2
+          },
+          {
+            "code": "XBD",
+            "scale": 2
+          },
+          {
+            "code": "XCD",
+            "scale": 2
+          },
+          {
+            "code": "XDR",
+            "scale": 2
+          },
+          {
+            "code": "XEU",
+            "scale": 2
+          },
+          {
+            "code": "XFO",
+            "scale": 2
+          },
+          {
+            "code": "XFU",
+            "scale": 2
+          },
+          {
+            "code": "XOF",
+            "scale": 0
+          },
+          {
+            "code": "XPD",
+            "scale": 2
+          },
+          {
+            "code": "XPF",
+            "scale": 0
+          },
+          {
+            "code": "XPT",
+            "scale": 2
+          },
+          {
+            "code": "XRE",
+            "scale": 2
+          },
+          {
+            "code": "XSU",
+            "scale": 2
+          },
+          {
+            "code": "XTS",
+            "scale": 2
+          },
+          {
+            "code": "XUA",
+            "scale": 2
+          },
+          {
+            "code": "YDD",
+            "scale": 2
+          },
+          {
+            "code": "YER",
+            "scale": 0
+          },
+          {
+            "code": "YUD",
+            "scale": 2
+          },
+          {
+            "code": "YUM",
+            "scale": 2
+          },
+          {
+            "code": "YUN",
+            "scale": 2
+          },
+          {
+            "code": "YUR",
+            "scale": 2
+          },
+          {
+            "code": "ZAL",
+            "scale": 2
+          },
+          {
+            "code": "ZAR",
+            "scale": 2
+          },
+          {
+            "code": "ZMK",
+            "scale": 0
+          },
+          {
+            "code": "ZMW",
+            "scale": 2
+          },
+          {
+            "code": "ZRN",
+            "scale": 2
+          },
+          {
+            "code": "ZRZ",
+            "scale": 2
+          },
+          {
+            "code": "ZWD",
+            "scale": 0
+          },
+          {
+            "code": "ZWL",
+            "scale": 2
+          },
+          {
+            "code": "ZWR",
+            "scale": 2
+          }
+        ],
+        "selection": {
+          "month": "2026-11",
+          "currency": "KZT"
+        },
+        "records": [
+          {
+            "id": "8af9e646-c58d-4c10-b076-57f1073ace2b",
+            "revision": 4,
+            "kind": "expense",
+            "date": "2026-11-01",
+            "amount": "1.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "note": "moved QA",
+            "source": "manual",
+            "createdAt": "2026-11-02T17:16:55.214Z",
+            "updatedAt": "2026-11-02T17:16:55.321Z"
+          }
+        ],
+        "categories": [
+          {
+            "id": "96d0d2f9-8806-4206-b1c7-d8c07ad052ac",
+            "revision": 1,
+            "name": "Зарплата QA",
+            "kind": "income"
+          }
+        ],
+        "imports": [
+          {
+            "id": "0aa04ff0-d2d0-427b-b08c-4ddea96828c8",
+            "revision": 1,
+            "status": "needs_review",
+            "source": "notification",
+            "sourceLabel": "Уведомление",
+            "receivedAt": "2026-11-02T17:19:09.464Z",
+            "kind": "expense",
+            "amount": "31949295.11",
+            "currency": "KZT",
+            "scale": 2,
+            "date": "2026-11-02",
+            "dateOrigin": "source",
+            "note": "",
+            "reasons": [
+              "IDENTITY_UNCERTAIN"
+            ],
+            "confidence": "uncertain",
+            "transactionId": null,
+            "possibleMatchIds": []
+          },
+          {
+            "id": "ef21409c-27bb-480b-a844-cdc153835654",
+            "revision": 1,
+            "status": "needs_review",
+            "source": "notification",
+            "sourceLabel": "Уведомление",
+            "receivedAt": "2026-11-02T17:19:09.449Z",
+            "kind": "expense",
+            "amount": null,
+            "currency": null,
+            "scale": null,
+            "date": "2026-11-02",
+            "dateOrigin": "source",
+            "note": "",
+            "reasons": [
+              "AMOUNT_MISSING",
+              "CURRENCY_MISSING",
+              "LOW_CONFIDENCE"
+            ],
+            "confidence": "uncertain",
+            "transactionId": null,
+            "possibleMatchIds": []
+          },
+          {
+            "id": "2e5e2474-55ac-47af-94a8-8e651e9ab76c",
+            "revision": 1,
+            "status": "needs_review",
+            "source": "notification",
+            "sourceLabel": "Уведомление",
+            "receivedAt": "2026-11-02T17:19:09.431Z",
+            "kind": "expense",
+            "amount": "31949295.11",
+            "currency": "KZT",
+            "scale": 2,
+            "date": "2026-11-02",
+            "dateOrigin": "source",
+            "note": "",
+            "reasons": [
+              "UNSUPPORTED_EVENT"
+            ],
+            "confidence": "uncertain",
+            "transactionId": null,
+            "possibleMatchIds": []
+          },
+          {
+            "id": "dfb2715a-216f-49b5-88f2-b1e631d5e0f3",
+            "revision": 1,
+            "status": "needs_review",
+            "source": "notification",
+            "sourceLabel": "Уведомление",
+            "receivedAt": "2026-11-02T17:19:09.411Z",
+            "kind": "expense",
+            "amount": "31949295.11",
+            "currency": "KZT",
+            "scale": 2,
+            "date": "2026-11-02",
+            "dateOrigin": "source",
+            "note": "",
+            "reasons": [
+              "UNSUPPORTED_EVENT"
+            ],
+            "confidence": "uncertain",
+            "transactionId": null,
+            "possibleMatchIds": []
+          },
+          {
+            "id": "ae3c1c6a-1b6a-465d-ab62-4de411c33801",
+            "revision": 1,
+            "status": "needs_review",
+            "source": "receipt",
+            "sourceLabel": "Чек",
+            "receivedAt": "2026-11-02T00:00:00Z",
+            "kind": "expense",
+            "amount": "6.66",
+            "currency": "KZT",
+            "scale": 2,
+            "date": "2026-06-20",
+            "dateOrigin": "source",
+            "note": "",
+            "reasons": [
+              "IDENTITY_UNCERTAIN"
+            ],
+            "confidence": "high",
+            "transactionId": null,
+            "possibleMatchIds": []
+          },
+          {
+            "id": "f7f8ad6c-8894-4d0d-aafb-c7f65936243d",
+            "revision": 1,
+            "status": "needs_review",
+            "source": "notification",
+            "sourceLabel": "Уведомление",
+            "receivedAt": "2026-11-02T00:00:00Z",
+            "kind": "expense",
+            "amount": "13.34",
+            "currency": "KZT",
+            "scale": 2,
+            "date": "2026-06-02",
+            "dateOrigin": "source",
+            "note": "",
+            "reasons": [
+              "IDENTITY_UNCERTAIN",
+              "POSSIBLE_DUPLICATE"
+            ],
+            "confidence": "high",
+            "transactionId": null,
+            "possibleMatchIds": [
+              "fc55475a-b7a2-4388-87be-bac6bc54ef84"
+            ]
+          }
+        ],
+        "sources": [
+          "com.ladno.finance",
+          "com.ladno.qa.bank"
+        ],
+        "summary": {
+          "month": "2026-11",
+          "currency": "KZT",
+          "scale": 2,
+          "income": "0.00",
+          "expense": "1.20",
+          "net": "-1.20"
+        }
+      }
+    }
+  ],
+  "finishedAt": "2026-11-02T17:19:09.545Z"
+}

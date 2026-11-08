@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\emulator\\emulator.exe",
+    "-accel-check"
+  ],
+  "exitCode": 0,
+  "stdout": "accel:\n0\nWHPX(10.0.26300) is installed and usable.\naccel\n",
+  "stderr": "",
+  "hostSettingsChanged": false,
+  "deviceOrAvdCreated": false
+}

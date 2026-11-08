@@ -1,0 +1,30 @@
+{
+  "action": "test",
+  "suite": "notifications",
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-02T18:38:28.130381+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.ladno.finance.NotificationRuntimeTest#osGrantedDelivery",
+        "com.ladno.finance.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "INSTRUMENTATION_STATUS: class=com.ladno.finance.NotificationRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=\ncom.ladno.finance.NotificationRuntimeTest:\nINSTRUMENTATION_STATUS: test=osGrantedDelivery\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / actual OS NLS grant: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / real OS readiness commit / READY_TIMEOUT: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / readiness public DB quiet window: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / only new probe ignored 0: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / readiness did not create financial record: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / no new probe pending before baseline: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / unselected source/no records or pending imports during 3s: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / actual OS expense delivery: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / OS expense source: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / OS expense date: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / OS expense no category: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / OS expense record delta: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / OS updated notification needs review: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / OS repeat no second expense: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / actual OS income delivery: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / OS income and expense count: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / actual OS negated operation review: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-granted / OS negated no expense: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: class=com.ladno.finance.NotificationRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=osGrantedDelivery\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_RESULT: stream=\n\nTime: 10.899\n\nOK (1 test)\n\n\nINSTRUMENTATION_CODE: -1\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

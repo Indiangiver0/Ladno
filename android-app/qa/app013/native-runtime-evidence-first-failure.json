@@ -1,0 +1,228 @@
+{
+  "suite": "app013-qr-runtime",
+  "startedAt": "2026-11-03T20:51:57.022Z",
+  "pid": 2029,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "first\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "first\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "first\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "first\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "first registered job status",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "first outcome review",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "first outcome month",
+      "expected": "2026-11",
+      "actual": "2026-11",
+      "pass": true
+    },
+    {
+      "id": "first outcome currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "first no transaction ID",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "native amount exact",
+      "expected": "1234.50",
+      "actual": "1234.50",
+      "pass": true
+    },
+    {
+      "id": "native date from QR",
+      "expected": "2026-11-04",
+      "actual": "2026-11-04",
+      "pass": true
+    },
+    {
+      "id": "native kind unknown",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "native confidence uncertain",
+      "expected": "uncertain",
+      "actual": "uncertain",
+      "pass": true
+    },
+    {
+      "id": "native reason unknown kind",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "no automatic ledger record",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "raw synthetic QR not persisted",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "same QR new file\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "same QR new file\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "same QR new file\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "same QR new file\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "repeat status",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "repeat candidate preserved",
+      "expected": "61e2de73-b7d6-4355-a0dd-14b36c143128",
+      "actual": "61e2de73-b7d6-4355-a0dd-14b36c143128",
+      "pass": true
+    },
+    {
+      "id": "ignored repeated QR\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ignored repeated QR\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ignored repeated QR\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ignored repeated QR\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ignored repeat stays ignored",
+      "expected": "ignored",
+      "actual": "duplicate",
+      "pass": false
+    }
+  ],
+  "observations": [
+    {
+      "id": "first\/job",
+      "actual": {
+        "jobId": "42ced5ec-dd25-43cf-a4e9-61bea6d29be8",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "needs_review",
+          "candidateId": "61e2de73-b7d6-4355-a0dd-14b36c143128",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "same QR new file\/job",
+      "actual": {
+        "jobId": "311d421e-bfb9-460f-89c1-97fed951ac3a",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "61e2de73-b7d6-4355-a0dd-14b36c143128",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "ignored repeated QR\/job",
+      "actual": {
+        "jobId": "73384318-5046-49f1-8452-d17a507d15ef",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "61e2de73-b7d6-4355-a0dd-14b36c143128",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    }
+  ],
+  "failure": "org.junit.ComparisonFailure: ignored repeat stays ignored expected:<[ignored]> but was:<[duplicate]>",
+  "finishedAt": "2026-11-03T20:52:00.568Z"
+}

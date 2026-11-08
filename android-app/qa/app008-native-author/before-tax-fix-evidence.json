@@ -1,0 +1,28 @@
+{
+  "scope": "author targeted pure Java checks, not independent QA, no Android/device/camera runtime",
+  "command": "javac -encoding UTF-8 -cp org.json:20240303;junit:4.13.2;hamcrest-core:1.3 -d android-app/.local/app008-native-checks core/*.java NativeJson.java ScanOutcome.java ParserTest.java ScanOutcomeTest.java; java -cp compiled-classes;dependencies org.junit.runner.JUnitCore com.ladno.finance.core.ParserTest com.ladno.finance.ScanOutcomeTest",
+  "exitCode": 0,
+  "junitMethods": 20,
+  "files": [
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NativeRuntime.java",
+      "sha256": "77158ce5b90d8335e4a7a7fd2ebd1fd4a3d30cc9faff844e04d4c1043853a8c8"
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/ScanOutcome.java",
+      "sha256": "fc105480468a9b261f0dabef675edc6314f3ab4c77e70cfd589756f655f68118"
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "sha256": "95710cb5aee5ab1f2de2e621f7b71ddae1f0c26fa5a1275d03292db125fb7e41"
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/ScanOutcomeTest.java",
+      "sha256": "0f877f7423445809aea4b99a5afc63b71527c756dfbcebd54ab02350bceb82a0"
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/core/ParserTest.java",
+      "sha256": "4a7e70cec3397a9f733f9a1735edefbfe9c47b6913ece9a665bbb791e3210ff7"
+    }
+  ]
+}

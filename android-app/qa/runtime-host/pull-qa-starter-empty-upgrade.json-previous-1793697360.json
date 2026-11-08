@@ -1,0 +1,26 @@
+{
+  "action": "pull",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-03T09:16:00.448574+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "cat",
+        "files/qa-starter-empty-upgrade.json"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "{\n  \"phase\": \"empty-upgrade\",\n  \"assertions\": [\n    {\n      \"id\": \"empty upgrade version\",\n      \"expected\": 2,\n      \"actual\": 2,\n      \"pass\": true\n    },\n    {\n      \"id\": \"empty upgrade starters\",\n      \"expected\": 15,\n      \"actual\": 15,\n      \"pass\": true\n    },\n    {\n      \"id\": \"no financial records invented\",\n      \"expected\": 0,\n      \"actual\": 0,\n      \"pass\": true\n    },\n    {\n      \"id\": \"currency not guessed\",\n      \"expected\": 0,\n      \"actual\": 0,\n      \"pass\": true\n    }\n  ],\n  \"error\": null\n}\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

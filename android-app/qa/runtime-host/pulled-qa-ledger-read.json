@@ -1,0 +1,591 @@
+{
+  "task": "APP-006",
+  "criterion": "N1",
+  "phase": "read",
+  "pid": 2388,
+  "api": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "completed": true,
+  "assertionCount": 96,
+  "assertions": [
+    {
+      "id": "restart\/newPID",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "restart\/initialized",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "restart\/zone",
+      "expected": "Asia\/Qyzylorda",
+      "actual": "Asia\/Qyzylorda",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/KZT\/month",
+      "expected": "2026-10",
+      "actual": "2026-10",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/KZT\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/KZT\/income",
+      "expected": "0.30",
+      "actual": "0.30",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/KZT\/expense",
+      "expected": "2.30",
+      "actual": "2.30",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/KZT\/net",
+      "expected": "-2.00",
+      "actual": "-2.00",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/KZT\/records",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/KZT\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/USD\/month",
+      "expected": "2026-10",
+      "actual": "2026-10",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/USD\/currency",
+      "expected": "USD",
+      "actual": "USD",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/USD\/income",
+      "expected": "0.00",
+      "actual": "0.00",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/USD\/expense",
+      "expected": "7.89",
+      "actual": "7.89",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/USD\/net",
+      "expected": "-7.89",
+      "actual": "-7.89",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/USD\/records",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-10\/USD\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-11\/KZT\/month",
+      "expected": "2026-11",
+      "actual": "2026-11",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-11\/KZT\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-11\/KZT\/income",
+      "expected": "0.00",
+      "actual": "0.00",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-11\/KZT\/expense",
+      "expected": "1.20",
+      "actual": "1.20",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-11\/KZT\/net",
+      "expected": "-1.20",
+      "actual": "-1.20",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-11\/KZT\/records",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-11\/KZT\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-09\/KZT\/month",
+      "expected": "2026-09",
+      "actual": "2026-09",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-09\/KZT\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-09\/KZT\/income",
+      "expected": "9007199254740993.03",
+      "actual": "9007199254740993.03",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-09\/KZT\/expense",
+      "expected": "9007199254740992.99",
+      "actual": "9007199254740992.99",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-09\/KZT\/net",
+      "expected": "0.04",
+      "actual": "0.04",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-09\/KZT\/records",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-09\/KZT\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-08\/KZT\/month",
+      "expected": "2026-08",
+      "actual": "2026-08",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-08\/KZT\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-08\/KZT\/income",
+      "expected": "1999999999999999999999999.98",
+      "actual": "1999999999999999999999999.98",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-08\/KZT\/expense",
+      "expected": "0.00",
+      "actual": "0.00",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-08\/KZT\/net",
+      "expected": "1999999999999999999999999.98",
+      "actual": "1999999999999999999999999.98",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-08\/KZT\/records",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-08\/KZT\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/JPY\/month",
+      "expected": "2026-07",
+      "actual": "2026-07",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/JPY\/currency",
+      "expected": "JPY",
+      "actual": "JPY",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/JPY\/income",
+      "expected": "0",
+      "actual": "0",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/JPY\/expense",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/JPY\/net",
+      "expected": "-7",
+      "actual": "-7",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/JPY\/records",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/JPY\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/KWD\/month",
+      "expected": "2026-07",
+      "actual": "2026-07",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/KWD\/currency",
+      "expected": "KWD",
+      "actual": "KWD",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/KWD\/income",
+      "expected": "1.200",
+      "actual": "1.200",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/KWD\/expense",
+      "expected": "0.000",
+      "actual": "0.000",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/KWD\/net",
+      "expected": "1.200",
+      "actual": "1.200",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/KWD\/records",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-07\/KWD\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/9999-12\/KZT\/month",
+      "expected": "9999-12",
+      "actual": "9999-12",
+      "pass": true
+    },
+    {
+      "id": "restart\/9999-12\/KZT\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "restart\/9999-12\/KZT\/income",
+      "expected": "0.00",
+      "actual": "0.00",
+      "pass": true
+    },
+    {
+      "id": "restart\/9999-12\/KZT\/expense",
+      "expected": "0.01",
+      "actual": "0.01",
+      "pass": true
+    },
+    {
+      "id": "restart\/9999-12\/KZT\/net",
+      "expected": "-0.01",
+      "actual": "-0.01",
+      "pass": true
+    },
+    {
+      "id": "restart\/9999-12\/KZT\/records",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "restart\/9999-12\/KZT\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-06\/KZT\/month",
+      "expected": "2026-06",
+      "actual": "2026-06",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-06\/KZT\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-06\/KZT\/income",
+      "expected": "0.00",
+      "actual": "0.00",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-06\/KZT\/expense",
+      "expected": "21.23",
+      "actual": "21.23",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-06\/KZT\/net",
+      "expected": "-21.23",
+      "actual": "-21.23",
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-06\/KZT\/records",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "restart\/2026-06\/KZT\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/movedRevision",
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "id": "restart\/movedAmount",
+      "expected": "1.20",
+      "actual": "1.20",
+      "pass": true
+    },
+    {
+      "id": "restart\/movedDate",
+      "expected": "2026-11-01",
+      "actual": "2026-11-01",
+      "pass": true
+    },
+    {
+      "id": "restart\/movedNote",
+      "expected": "moved QA",
+      "actual": "moved QA",
+      "pass": true
+    },
+    {
+      "id": "restart\/movedCategory",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/categoryDeletedRecordKept",
+      "expected": "2.30",
+      "actual": "2.30",
+      "pass": true
+    },
+    {
+      "id": "restart\/categoryCount",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "restart\/categoryIdentity",
+      "expected": "96d0d2f9-8806-4206-b1c7-d8c07ad052ac",
+      "actual": "96d0d2f9-8806-4206-b1c7-d8c07ad052ac",
+      "pass": true
+    },
+    {
+      "id": "restart\/categoryName",
+      "expected": "Зарплата QA",
+      "actual": "Зарплата QA",
+      "pass": true
+    },
+    {
+      "id": "restart\/selectedSources",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "restart\/selectedBank",
+      "expected": "com.ladno.qa.bank",
+      "actual": "com.ladno.qa.bank",
+      "pass": true
+    },
+    {
+      "id": "restart\/pendingRevision",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "restart\/pendingIdentity",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "restart\/pendingCount",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "restart\/distinctRecord",
+      "expected": "13.34",
+      "actual": "13.34",
+      "pass": true
+    },
+    {
+      "id": "restart\/explicitPostRecord",
+      "expected": "7.89",
+      "actual": "7.89",
+      "pass": true
+    },
+    {
+      "id": "restart\/tombstoneHidden",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "id": "restart\/exactReplayOutcome",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "restart\/tombstoneNotResurrected",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/ignoredReplayOutcome",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "restart\/ignoredStatus",
+      "expected": "ignored",
+      "actual": "ignored",
+      "pass": true
+    },
+    {
+      "id": "restart\/ignoredNoRecord",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "restart\/afterReplays\/month",
+      "expected": "2026-06",
+      "actual": "2026-06",
+      "pass": true
+    },
+    {
+      "id": "restart\/afterReplays\/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "restart\/afterReplays\/income",
+      "expected": "0.00",
+      "actual": "0.00",
+      "pass": true
+    },
+    {
+      "id": "restart\/afterReplays\/expense",
+      "expected": "21.23",
+      "actual": "21.23",
+      "pass": true
+    },
+    {
+      "id": "restart\/afterReplays\/net",
+      "expected": "-21.23",
+      "actual": "-21.23",
+      "pass": true
+    },
+    {
+      "id": "restart\/afterReplays\/records",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "restart\/afterReplays\/amountType",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# APP-013/014 — первичная позиция критика
+
+Версия: 0.3.0/code3; APK SHA256 `a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76`; frozen manifest `9e992a831fa5be3a758c71c51529638fb5be37728631258ee6a0f17faa51f7ce`. Исполнитель `/root/qr_court_critic` независим от реализации. Позиции адвокатов не читал; это не вердикт.
+
+Выполнено: прочитаны правила, дело, контракт, QA, relevant decoder/JVM/native harness/runner и APP-015 triage. Read-only `python -` с hashlib/JSON/ElementTree сверил все 140 frozen файлов: ожидание — совпадение SHA, факт — 0 расхождений. Агрегация 13 JUnit XML: 80 listed, 79 pass, 0 failures/errors, 1 skipped; JSON: 82/82 native и 108/108 identity assertions `pass=true`. Новые продуктовые тесты не запускал.
+
+Доказательства счётчиков: [JUnit](../../android-app/dist/test-results/testDebugUnitTest/), [native](../../android-app/qa/app013/native-runtime-evidence.json), [identity](../../android-app/qa/app013/artifact-identity.json). [Native test](../../android-app/app/src/androidTest/java/com/ladno/finance/QrImportRuntimeTest.java) задаёт независимые суммы/даты и прямые SQL проверки ignore. Исправления harness обоснованы; эти результаты подтверждают synthetic media/storage API, а не Activity/камеру/OS callback. Подтверждённой неверной финансовой проводки не установлено.
+
+- **CR13-01 / P1 / подтверждено невыполнение основного запроса:** пользователь просил API, но сетевого adapter нет ([дело](APP-013.md), [QA](../reports/APP-013-qa-review.md)). Ожидание — получение данных через API; факт — только локальное предзаполнение. Это блокирует признание общего запроса выполненным, не доказывает регрессию LC1–LC5. Нужны реальный QR/provider, успешная схема/доступ и отдельная реализация с QA.
+- **CR14-01 / P2 / недостаточно данных:** Freedom/Halyk видны в Android, результатов пользователь не видит на 0.2.0; исправление на 0.3.0 не доказано. Generic parser tests не проверяют доставку. [APP-015](../reports/APP-015-capture-triage.md) не установил причину. Нужны package/profile/connected metadata и результат нового события в разборе/журнале; наличие grant не доказывает connected.
+- **CR13-02 / P2 / подтверждённое ограничение:** повреждённый соседний QR ранее принят; исходный [test](../../android-app/app/src/test/java/com/ladno/finance/ReceiptQrDecoderTest.java) теперь `@Ignore`, исправление отсутствует. Не считать PASS; LC3 ограничен decoded QR, поэтому нарушения этого узкого критерия не утверждаю. Сохранить ограничение и review/noauto.
+- **CR13-03 / P2 / недостаточно данных:** [QA13-02](../reports/APP-013-qa-review.md) оставляет реальный чек и видимый camera/gallery workflow непроверенными. Нужна отдельная проверка перед заявлением готовности сценария.
+
+Рекомендация: общий запрос оставить открытым. Передачу точного APK допускаю как ограниченный эксперимент с явным раскрытием этих четырёх пунктов; не представлять его исправлением capture или выполненным API. Итоговое решение — судье после обмена возражениями.

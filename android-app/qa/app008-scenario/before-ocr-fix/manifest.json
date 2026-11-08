@@ -1,0 +1,46 @@
+{
+  "version": "APP008 candidate before OCR P1 repair",
+  "apkSha256": "dc6e4f4fc559183e31de844e0dace842972b0e3b601afabed081165cf9ec0024",
+  "files": [
+    {
+      "path": "android-app/qa/runtime-host/test-receipt-layout.json",
+      "sha256": "ef5697c730c1fb603311206b8fcd91b29baad022c0d0bc2d9a88138970f6a8d0"
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-qa-app008-receipt-layout.json.json",
+      "sha256": "512a04dbf080d70bcbd5afa1fbee5eebeb8d6e305548afbd7fa6eeae23b2a17a"
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-qa-app008-receipt-layout.json",
+      "sha256": "ad304f217cd49c87bd4edde5eba167fba001b3698759809c14a9cc7c14ae02d3"
+    },
+    {
+      "path": "android-app/dist/build-result.json",
+      "sha256": "57834839e52405153d1a29f35bcb0d9208f59690ee3da33bfd6ed93321519fbd"
+    },
+    {
+      "path": "android-app/dist/build-source-manifest.json",
+      "sha256": "230c19cd944081947694bbaecf837963b497efb19b00e856a77cbe8df9b88337"
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/OcrEngine.java",
+      "sha256": "8351a1fd4939afa31587d2d1b874e10dc5c8e6eae25b6e9995e7ce52dfc81bcb"
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "sha256": "cd1ad90d954e2ff851a67b6c348ded8c2b093b97799510bebe8f8ed71b9d2c8f"
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NativeRuntime.java",
+      "sha256": "77158ce5b90d8335e4a7a7fd2ebd1fd4a3d30cc9faff844e04d4c1043853a8c8"
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/ReceiptLayoutRuntimeTest.java",
+      "sha256": "56f30bf638d8eeac42051b9fe282ae716c1357316d621a6135aa56ef68bdda85"
+    },
+    {
+      "path": "android-app/qa/app008-scenario/apk-results.json",
+      "sha256": "927d6b10f75506b082d7e58e51f2adb622e0210193babfb8a7fd0c55cb14325d"
+    }
+  ]
+}

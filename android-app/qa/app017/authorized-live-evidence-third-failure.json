@@ -1,0 +1,64 @@
+{
+  "startedAt": "2026-11-04T08:07:17.649Z",
+  "scope": "APP-017-SAMPLES-4-5",
+  "nativeDefaultClient": false,
+  "realDelegatingTransport": true,
+  "ledgerIngestCalled": false,
+  "uiExercised": false,
+  "results": [
+    {
+      "sample": 4,
+      "amount": "4395.00",
+      "currency": "KZT",
+      "date": "2026-11-03",
+      "kind": null,
+      "confidence": "uncertain",
+      "reasons": [
+        "UNKNOWN_KIND",
+        "LOW_CONFIDENCE",
+        "IDENTITY_UNCERTAIN",
+        "OFD_UNAVAILABLE"
+      ],
+      "verifiedIdentityAndFinalSale": false
+    },
+    {
+      "sample": 5,
+      "amount": "3547.00",
+      "currency": "KZT",
+      "date": "2026-11-03",
+      "kind": null,
+      "confidence": "uncertain",
+      "reasons": [
+        "UNKNOWN_KIND",
+        "LOW_CONFIDENCE",
+        "IDENTITY_UNCERTAIN",
+        "OFD_UNAVAILABLE"
+      ],
+      "verifiedIdentityAndFinalSale": false
+    }
+  ],
+  "safeFailureType": "AssertionError",
+  "passed": false,
+  "finishedAt": "2026-11-04T08:07:17.872Z",
+  "transportDiagnostics": [
+    {
+      "connectionOpened": true,
+      "redirectsEnabled": false,
+      "connectTimeoutMillis": 5000,
+      "readTimeoutMillis": 5000,
+      "exceptionPhase": "getResponseCode",
+      "exceptionClass": "javax.net.ssl.SSLHandshakeException",
+      "disconnected": true
+    },
+    {
+      "connectionOpened": true,
+      "redirectsEnabled": false,
+      "connectTimeoutMillis": 5000,
+      "readTimeoutMillis": 5000,
+      "exceptionPhase": "getResponseCode",
+      "exceptionClass": "javax.net.ssl.SSLHandshakeException",
+      "disconnected": true
+    }
+  ],
+  "privateInputRemoved": true
+}

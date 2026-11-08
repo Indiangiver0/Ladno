@@ -1,0 +1,20 @@
+{
+  "task": "APP-002-VISUAL",
+  "date": "2026-11-02",
+  "syntax": {
+    "standalonePluginBodies": 4,
+    "combinedCoreStageReadback": "pass",
+    "executionInFigma": "not-performed-by-this-check"
+  },
+  "frozen": {
+    "files": 26,
+    "changed": []
+  },
+  "hashes": {
+    "design/v2/figma-core.js": "214e82bdfedcf4d3530ba0a0f47f7e0a5b6522c12ac4c882556445065c82f1e2",
+    "design/v2/figma-05-states-form.js": "3da67e267fe49a389ce026c47db451cd0e9422c2874893b4f1220c9b5f7d4912",
+    "design/v2/figma-readback.js": "d7c8163f29867988bf13155122c593465b2ef13e66df25b17131fee736d2cc8e",
+    "design/v2/figma-build-only.js": "8b6e6b77f548e2c9a1171175f5d0642b2d807e61899cd2b7d9dd53c4a0eb5935"
+  },
+  "interruptedCombinedSourceSha256": "2764bfbd166b1ceee05bc514f5056321c99941804ffc6fe1dc136c708fc0d8a8"
+}

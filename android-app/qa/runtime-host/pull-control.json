@@ -1,0 +1,26 @@
+{
+  "action": "pull-control",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-02T17:17:32.189915+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "run-as",
+        "com.ladno.finance",
+        "cat",
+        "files/qa-ledger-control.json"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "{\n  \"writePid\": 2343,\n  \"summaries\": [\n    {\n      \"month\": \"2026-10\",\n      \"currency\": \"KZT\",\n      \"income\": \"0.30\",\n      \"expense\": \"2.30\",\n      \"net\": \"-2.00\",\n      \"count\": 3\n    },\n    {\n      \"month\": \"2026-10\",\n      \"currency\": \"USD\",\n      \"income\": \"0.00\",\n      \"expense\": \"7.89\",\n      \"net\": \"-7.89\",\n      \"count\": 1\n    },\n    {\n      \"month\": \"2026-11\",\n      \"currency\": \"KZT\",\n      \"income\": \"0.00\",\n      \"expense\": \"1.20\",\n      \"net\": \"-1.20\",\n      \"count\": 1\n    },\n    {\n      \"month\": \"2026-09\",\n      \"currency\": \"KZT\",\n      \"income\": \"9007199254740993.03\",\n      \"expense\": \"9007199254740992.99\",\n      \"net\": \"0.04\",\n      \"count\": 3\n    },\n    {\n      \"month\": \"2026-08\",\n      \"currency\": \"KZT\",\n      \"income\": \"1999999999999999999999999.98\",\n      \"expense\": \"0.00\",\n      \"net\": \"1999999999999999999999999.98\",\n      \"count\": 2\n    },\n    {\n      \"month\": \"2026-07\",\n      \"currency\": \"JPY\",\n      \"income\": \"0\",\n      \"expense\": \"7\",\n      \"net\": \"-7\",\n      \"count\": 1\n    },\n    {\n      \"month\": \"2026-07\",\n      \"currency\": \"KWD\",\n      \"income\": \"1.200\",\n      \"expense\": \"0.000\",\n      \"net\": \"1.200\",\n      \"count\": 1\n    },\n    {\n      \"month\": \"9999-12\",\n      \"currency\": \"KZT\",\n      \"income\": \"0.00\",\n      \"expense\": \"0.01\",\n      \"net\": \"-0.01\",\n      \"count\": 1\n    },\n    {\n      \"month\": \"2026-06\",\n      \"currency\": \"KZT\",\n      \"income\": \"0.00\",\n      \"expense\": \"21.23\",\n      \"net\": \"-21.23\",\n      \"count\": 2\n    }\n  ],\n  \"movedID\": \"8af9e646-c58d-4c10-b076-57f1073ace2b\",\n  \"categorizedID\": \"a766caa6-628c-48a1-9708-a324251d4be4\",\n  \"incomeCategoryID\": \"96d0d2f9-8806-4206-b1c7-d8c07ad052ac\",\n  \"deletedCategoryID\": \"3d33a2ba-7378-40ae-bb7c-01ebdbbf292d\",\n  \"deletedRecordID\": \"fc55475a-b7a2-4388-87be-bac6bc54ef84\",\n  \"originalSource\": {\n    \"kind\": \"notification\",\n    \"eventId\": \"0857adce-dee1-4b4b-8529-261dea4dae0b\",\n    \"sourceKeyToken\": \"9b64220849d7873d4772b32cdc351abf7ff9401fc33cfbb7b915f1717bbd7ed3\",\n    \"revisionToken\": \"754d9cd69a40cb00c5999f60b7971ccdf9a0686484b9cf664b39c8a7301e6e55\",\n    \"accountSurrogate\": \"585b671b2bd026149a58e0327452aa128937a5a230b34e22a29bf42e177966a6\",\n    \"paymentRefToken\": \"dfc72c56e0216f8e16069f78b7a917d7634b4178169ddfb003a93c033aed9a96\",\n    \"packageName\": \"com.ladno.qa.bank\",\n    \"label\": \"Уведомление\",\n    \"capturedAt\": \"2026-11-02T00:00:00Z\",\n    \"postTime\": 1793577600000\n  },\n  \"ignoredSource\": {\n    \"kind\": \"receipt\",\n    \"eventId\": \"795aa81b-ef4d-4b71-80e2-0423a9d3b9f5\",\n    \"sourceKeyToken\": \"62a47e5b1346df294824b9835292e1b2b14f72fe9eb4db394a0669000a007b4d\",\n    \"revisionToken\": \"ceb2bc3ebee6eae77c2daa459ed4418429b9a36eb8b31624801aa1823400577a\",\n    \"accountSurrogate\": null,\n    \"paymentRefToken\": null,\n    \"packageName\": \"com.ladno.qa.bank\",\n    \"label\": \"Чек\",\n    \"capturedAt\": \"2026-11-02T00:00:00Z\",\n    \"postTime\": 1793577600000\n  },\n  \"pendingRevisionID\": \"f7f8ad6c-8894-4d0d-aafb-c7f65936243d\",\n  \"pendingNoIdentityID\": \"ae3c1c6a-1b6a-465d-ab62-4de411c33801\",\n  \"distinctID\": \"475be5cd-3fa8-485e-a6c5-2baccc0fa996\",\n  \"explicitPostID\": \"d4d16713-9232-4c96-9941-81bd64d5f670\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

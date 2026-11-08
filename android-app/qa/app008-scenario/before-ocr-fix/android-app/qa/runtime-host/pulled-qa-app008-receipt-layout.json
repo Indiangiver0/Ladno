@@ -1,0 +1,54 @@
+{
+  "suite": "receipt-layout-runtime",
+  "startedAt": "2026-11-03T09:16:32.080Z",
+  "pid": 2081,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "real Tesseract initialized",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid\/amount",
+      "expected": "754.32",
+      "actual": "794.32",
+      "pass": false
+    }
+  ],
+  "observations": [
+    {
+      "id": "en-multiline-paid\/synthetic OCR",
+      "actual": {
+        "lines": [
+          "PAID",
+          "TOTAL",
+          "754.32 KZT",
+          "2026-11-03"
+        ],
+        "actualText": "PAID\nTOTAL\n794.32 KZT\n2026-11-03",
+        "meanConfidence": 94,
+        "parsed": {
+          "kind": "expense",
+          "amount": "794.32",
+          "currency": "KZT",
+          "date": "2026-11-03",
+          "dateOrigin": "source",
+          "note": "",
+          "reasons": [],
+          "confidence": "high",
+          "paymentReference": null
+        }
+      }
+    }
+  ],
+  "failure": "org.junit.ComparisonFailure: en-multiline-paid\/amount expected:<7[5]4.32> but was:<7[9]4.32>",
+  "finishedAt": "2026-11-03T09:16:33.343Z"
+}

@@ -1,0 +1,26 @@
+{
+  "action": "revoke-nls",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-02T18:30:33.535377+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "cmd",
+        "notification",
+        "disallow_listener",
+        "com.ladno.finance/.BankNotificationService"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,30 @@
+{
+  "action": "test",
+  "suite": "notifications",
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-02T18:31:14.796727+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.ladno.finance.NotificationRuntimeTest#osRevokedNoCapture",
+        "com.ladno.finance.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "INSTRUMENTATION_STATUS: class=com.ladno.finance.NotificationRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=\ncom.ladno.finance.NotificationRuntimeTest:\nINSTRUMENTATION_STATUS: test=osRevokedNoCapture\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-revoked / actual OS access revoked: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: stream=LadnoQA notification-os-revoked / revoked access/no records or pending imports during 3s: PASS\n\nINSTRUMENTATION_STATUS_CODE: 2\nINSTRUMENTATION_STATUS: class=com.ladno.finance.NotificationRuntimeTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=osRevokedNoCapture\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_RESULT: stream=\n\nTime: 3.567\n\nOK (1 test)\n\n\nINSTRUMENTATION_CODE: -1\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

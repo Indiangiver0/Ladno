@@ -1,0 +1,631 @@
+{
+  "suite": "app017-ofd-independent",
+  "startedAt": "2026-11-04T07:42:21.382Z",
+  "pid": 2055,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "new verified sale\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "new verified sale\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "new verified sale\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "verified sale job completes",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "verified sale posts",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "Android exact decimal survives above double range",
+      "expected": "90071793778141487.01",
+      "actual": "90071793778141487.01",
+      "pass": true
+    },
+    {
+      "id": "sale KZT",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "sale source day",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "one sale expense",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "new photo same verified sale\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "new photo same verified sale\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "new photo same verified sale\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "new photo is exact duplicate",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "new photo same candidate",
+      "expected": "84a34612-ddd3-4d05-a639-802efdd70d90",
+      "actual": "84a34612-ddd3-4d05-a639-802efdd70d90",
+      "pass": true
+    },
+    {
+      "id": "repeat no second expense",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "observation tokens exist",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "literal 0.3 source token unchanged",
+      "expected": "1c631ab76e01b72c716be72aa2679f083948ac59625a59a3a7e93c49ebf486cf",
+      "actual": "1c631ab76e01b72c716be72aa2679f083948ac59625a59a3a7e93c49ebf486cf",
+      "pass": true
+    },
+    {
+      "id": "literal 0.3 revision token unchanged",
+      "expected": "8b5b93af29ab9a93470a74fe3a77c31429a73f598ff3dfd44caf69add160af4e",
+      "actual": "8b5b93af29ab9a93470a74fe3a77c31429a73f598ff3dfd44caf69add160af4e",
+      "pass": true
+    },
+    {
+      "id": "legacy ignored then API\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "legacy ignored then API\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "legacy ignored then API\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "ignored legacy outcome duplicate",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "ignored legacy same candidate",
+      "expected": "c6043126-626f-49e5-87a1-3fa5edc1de14",
+      "actual": "c6043126-626f-49e5-87a1-3fa5edc1de14",
+      "pass": true
+    },
+    {
+      "id": "ignored decision persists",
+      "expected": "ignored",
+      "actual": "ignored",
+      "pass": true
+    },
+    {
+      "id": "ignored no new candidate",
+      "expected": 9,
+      "actual": 9,
+      "pass": true
+    },
+    {
+      "id": "ignored no new expense",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "legacy user-edited post then API\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "legacy user-edited post then API\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "legacy user-edited post then API\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "edited legacy replay is duplicate",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "manual amount retained",
+      "expected": "831793778141487.74",
+      "actual": "831793778141487.74",
+      "pass": true
+    },
+    {
+      "id": "manual date retained outside weak-match month",
+      "expected": "2026-10-01",
+      "actual": "2026-10-01",
+      "pass": true
+    },
+    {
+      "id": "manual note retained",
+      "expected": "retain this manual correction",
+      "actual": "retain this manual correction",
+      "pass": true
+    },
+    {
+      "id": "manual record revision retained",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "manual replay no second expense",
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "id": "legacy fallback pending then success\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "legacy fallback pending then success\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "legacy fallback pending then success\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "pending same candidate",
+      "expected": "f85b8cb9-e985-4b93-aaf6-319643dfbc00",
+      "actual": "f85b8cb9-e985-4b93-aaf6-319643dfbc00",
+      "pass": true
+    },
+    {
+      "id": "pending not silently promoted",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "pending no new row",
+      "expected": 11,
+      "actual": 11,
+      "pass": true
+    },
+    {
+      "id": "pending no extra expense",
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "id": "legacy linked then API\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "legacy linked then API\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "legacy linked then API\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "linked decision retained",
+      "expected": "linked",
+      "actual": "linked",
+      "pass": true
+    },
+    {
+      "id": "linked target retained",
+      "expected": "25210bb3-eb56-41da-bfd6-4d8e13e1f5bd",
+      "actual": "25210bb3-eb56-41da-bfd6-4d8e13e1f5bd",
+      "pass": true
+    },
+    {
+      "id": "link no extra expense",
+      "expected": 5,
+      "actual": 5,
+      "pass": true
+    },
+    {
+      "id": "synthetic unavailable network\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "synthetic unavailable network\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "synthetic unavailable network\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "failure keeps local sum",
+      "expected": "861793778141487.06",
+      "actual": "861793778141487.06",
+      "pass": true
+    },
+    {
+      "id": "failure has unknown direction",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "failure is review",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "failure one useful candidate",
+      "expected": 13,
+      "actual": 13,
+      "pass": true
+    },
+    {
+      "id": "failure no automatic expense",
+      "expected": 5,
+      "actual": 5,
+      "pass": true
+    },
+    {
+      "id": "notification\/synthetic existing event posted",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "notification followed by same purchase QR\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "notification followed by same purchase QR\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "notification followed by same purchase QR\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "notification\/weak match review",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "notification\/no automatic second expense",
+      "expected": 6,
+      "actual": 6,
+      "pass": true
+    },
+    {
+      "id": "receipt\/synthetic existing event posted",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "receipt followed by same purchase QR\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "receipt followed by same purchase QR\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "receipt followed by same purchase QR\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "receipt\/weak match review",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "receipt\/no automatic second expense",
+      "expected": 7,
+      "actual": 7,
+      "pass": true
+    },
+    {
+      "id": "deleted verified transaction replay\/registered terminal job",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "deleted verified transaction replay\/private input cleanup",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "deleted verified transaction replay\/completed",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "deleted transaction not resurrected",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "deleted replay no expense restored",
+      "expected": 6,
+      "actual": 6,
+      "pass": true
+    },
+    {
+      "id": "only synthetic transport factories used",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "synthetic raw request not persisted",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "new verified sale\/job",
+      "actual": {
+        "jobId": "5ca462dc-71e0-4465-8384-12425e33a46f",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "posted",
+          "candidateId": "84a34612-ddd3-4d05-a639-802efdd70d90",
+          "transactionId": "836b035f-6bae-4e6a-aedf-824b7782c5cb",
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "new photo same verified sale\/job",
+      "actual": {
+        "jobId": "eecfa5a8-8b91-479e-9322-a62ddf51718f",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "84a34612-ddd3-4d05-a639-802efdd70d90",
+          "transactionId": "836b035f-6bae-4e6a-aedf-824b7782c5cb",
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "legacy ignored then API\/job",
+      "actual": {
+        "jobId": "a880ddb0-d958-4887-8ca4-98c83c4394ee",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "c6043126-626f-49e5-87a1-3fa5edc1de14",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "legacy user-edited post then API\/job",
+      "actual": {
+        "jobId": "7fd87279-0893-473f-8f08-2f74bb980fcc",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "9dd3c36c-e172-4f85-953c-82cb7b6069fb",
+          "transactionId": "b6f3f2e4-277d-423a-a8cc-48d9e5d2a6c1",
+          "month": "2026-10",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "legacy fallback pending then success\/job",
+      "actual": {
+        "jobId": "d0416661-dce4-4a87-9fe0-25d06d3d8fff",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "f85b8cb9-e985-4b93-aaf6-319643dfbc00",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "legacy linked then API\/job",
+      "actual": {
+        "jobId": "e1c27528-b36c-4ad9-8ce7-712beb093ced",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "587f1080-bf10-49a4-8835-206ea04d89bb",
+          "transactionId": "25210bb3-eb56-41da-bfd6-4d8e13e1f5bd",
+          "month": "2026-10",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "synthetic unavailable network\/job",
+      "actual": {
+        "jobId": "40615d79-1c40-4c44-a299-2e2641e3222e",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "needs_review",
+          "candidateId": "0e89e418-05a3-4a82-b46d-906dbcb57a3a",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "notification followed by same purchase QR\/job",
+      "actual": {
+        "jobId": "049e6f74-7e1b-4653-8782-5e6f8d237465",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "needs_review",
+          "candidateId": "3047fc53-76b7-4139-ad35-50800571ee64",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "receipt followed by same purchase QR\/job",
+      "actual": {
+        "jobId": "efd504d4-6726-40eb-945b-1f79e1155af0",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "needs_review",
+          "candidateId": "bfe4c428-4c61-4429-b60f-14bf66eace86",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "deleted verified transaction replay\/job",
+      "actual": {
+        "jobId": "f1bea756-f3e2-4132-ad43-711b586a2dc7",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "84a34612-ddd3-4d05-a639-802efdd70d90",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "scope",
+      "actual": "Synthetic PNG -> native QR scanner -> fixed client with injected fake HTTPS connection -> strict parser -> registered internal job -> SQLite. Original 0.3 HMAC pair seeded literally. No real HTTP or user data, no Activity\/queueAction\/camera UI, no actual bank notification delivery."
+    }
+  ],
+  "finishedAt": "2026-11-04T07:42:27.258Z"
+}

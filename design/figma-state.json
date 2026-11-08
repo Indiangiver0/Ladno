@@ -1,0 +1,452 @@
+{
+  "pageId": "0:1",
+  "createdNodeIds": [
+    "6:56",
+    "6:57",
+    "6:75",
+    "I6:75;68:16010",
+    "6:76",
+    "6:77",
+    "I6:77;68:16114",
+    "6:58",
+    "6:78",
+    "6:79",
+    "6:80",
+    "6:59",
+    "6:81",
+    "6:82",
+    "6:83",
+    "6:60",
+    "6:84",
+    "6:85",
+    "6:86",
+    "6:61",
+    "6:87",
+    "6:88",
+    "6:89",
+    "6:62",
+    "6:90",
+    "6:91",
+    "6:92",
+    "6:63",
+    "6:93",
+    "6:94",
+    "6:95",
+    "6:64",
+    "6:96",
+    "6:97",
+    "6:98",
+    "6:65",
+    "6:99",
+    "6:100",
+    "6:101",
+    "6:66",
+    "6:102",
+    "6:103",
+    "6:104",
+    "6:67",
+    "6:105",
+    "6:106",
+    "6:107",
+    "6:68",
+    "6:108",
+    "6:109",
+    "6:110",
+    "6:69",
+    "6:111",
+    "6:112",
+    "6:113",
+    "6:70",
+    "6:114",
+    "6:115",
+    "6:116",
+    "6:71",
+    "6:117",
+    "6:118",
+    "6:119",
+    "6:72",
+    "6:120",
+    "6:121",
+    "6:122",
+    "6:73",
+    "6:123",
+    "6:124",
+    "6:125",
+    "6:74",
+    "6:126",
+    "6:127",
+    "6:128",
+    "6:142",
+    "6:143",
+    "6:149",
+    "6:150",
+    "6:151",
+    "6:152",
+    "6:153",
+    "6:144",
+    "6:154",
+    "6:155",
+    "6:156",
+    "6:157",
+    "6:158",
+    "6:145",
+    "6:159",
+    "6:160",
+    "6:161",
+    "6:162",
+    "6:163",
+    "6:146",
+    "6:164",
+    "6:165",
+    "6:166",
+    "6:167",
+    "6:168",
+    "6:147",
+    "6:169",
+    "6:170",
+    "6:171",
+    "6:172",
+    "6:173",
+    "6:148",
+    "6:174",
+    "6:175",
+    "6:176",
+    "6:177",
+    "6:178",
+    "6:222",
+    "6:223",
+    "6:224",
+    "6:225",
+    "6:226",
+    "6:227",
+    "6:228",
+    "6:229",
+    "I6:229;4185:3781",
+    "6:237",
+    "I6:237;587:17089",
+    "I6:237;587:17090",
+    "I6:237;587:17091",
+    "6:243"
+  ],
+  "mutatedNodeIds": [
+    "0:1"
+  ],
+  "collectionId": "VariableCollectionId:6:182",
+  "variables": {
+    "canvas": "VariableID:6:184",
+    "ink": "VariableID:6:186",
+    "muted": "VariableID:6:188",
+    "green": "VariableID:6:190",
+    "tint": "VariableID:6:192",
+    "line": "VariableID:6:194",
+    "red": "VariableID:6:196",
+    "redTint": "VariableID:6:198",
+    "amber": "VariableID:6:200",
+    "amberTint": "VariableID:6:202",
+    "white": "VariableID:6:204",
+    "dark": "VariableID:6:206",
+    "track": "VariableID:6:208",
+    "gap8": "VariableID:6:209",
+    "gap12": "VariableID:6:210",
+    "gap24": "VariableID:6:211",
+    "gap32": "VariableID:6:212",
+    "radius12": "VariableID:6:213",
+    "radius20": "VariableID:6:214"
+  },
+  "importedVariables": {
+    "surface": {
+      "id": "VariableID:a4865545b526a5b3399a512667f40c9efe0c2fc4/5613:370",
+      "name": "Background/Default/Default"
+    },
+    "border": {
+      "id": "VariableID:395870afebb3397e858358930ffdd69a5ec0f73d/5613:437",
+      "name": "Border/Default/Default"
+    },
+    "space16": {
+      "id": "VariableID:16bc6f84b6e7e20e4234ef79030ee580ec0f4505/564:258",
+      "name": "Space/400"
+    }
+  },
+  "styles": {
+    "Display": "S:8738dbde5557b0e3350f8e9c93956dbaa6b1c1c6,",
+    "Title": "S:ab654cc4874cb169b8271b353035c08845d07520,",
+    "Heading": "S:b9f1326778f08b136fc429c21806213dd97283d6,",
+    "Body": "S:a6c181bd230506479758e1239149092fcb365443,",
+    "Label": "S:4239fb3e6ab27c7ba299bcb2daff59c79a9e3082,",
+    "Caption": "S:1628d000d6281742c78e4d0ceaadf0fe970d7f19,",
+    "Money": "S:01b22b6dfd41f9253994ad2c5143185545e16ec0,"
+  },
+  "bodyStyle": {
+    "id": "S:dd16ffab542d022b9a2d78275ed222c2cb4646b4,3017:75",
+    "name": "Body Small",
+    "font": {
+      "family": "Inter",
+      "style": "Regular",
+      "variationSettings": {
+        "wght": 400,
+        "slnt": 0
+      }
+    },
+    "size": 14
+  },
+  "components": [
+    {
+      "id": "6:56",
+      "name": "Button",
+      "variants": [
+        {
+          "id": "6:57",
+          "name": "Variant=Primary, State=Default, Size=Medium"
+        },
+        {
+          "id": "6:58",
+          "name": "Variant=Primary, State=Hover, Size=Medium"
+        },
+        {
+          "id": "6:59",
+          "name": "Variant=Primary, State=Disabled, Size=Medium"
+        },
+        {
+          "id": "6:60",
+          "name": "Variant=Neutral, State=Default, Size=Medium"
+        },
+        {
+          "id": "6:61",
+          "name": "Variant=Neutral, State=Hover, Size=Medium"
+        },
+        {
+          "id": "6:62",
+          "name": "Variant=Neutral, State=Disabled, Size=Medium"
+        },
+        {
+          "id": "6:63",
+          "name": "Variant=Subtle, State=Default, Size=Medium"
+        },
+        {
+          "id": "6:64",
+          "name": "Variant=Subtle, State=Hover, Size=Medium"
+        },
+        {
+          "id": "6:65",
+          "name": "Variant=Subtle, State=Disabled, Size=Medium"
+        },
+        {
+          "id": "6:66",
+          "name": "Variant=Primary, State=Default, Size=Small"
+        },
+        {
+          "id": "6:67",
+          "name": "Variant=Primary, State=Hover, Size=Small"
+        },
+        {
+          "id": "6:68",
+          "name": "Variant=Primary, State=Disabled, Size=Small"
+        },
+        {
+          "id": "6:69",
+          "name": "Variant=Neutral, State=Default, Size=Small"
+        },
+        {
+          "id": "6:70",
+          "name": "Variant=Neutral, State=Hover, Size=Small"
+        },
+        {
+          "id": "6:71",
+          "name": "Variant=Neutral, State=Disabled, Size=Small"
+        },
+        {
+          "id": "6:72",
+          "name": "Variant=Subtle, State=Default, Size=Small"
+        },
+        {
+          "id": "6:73",
+          "name": "Variant=Subtle, State=Hover, Size=Small"
+        },
+        {
+          "id": "6:74",
+          "name": "Variant=Subtle, State=Disabled, Size=Small"
+        }
+      ],
+      "properties": [
+        {
+          "key": "Label#2:0",
+          "type": "TEXT"
+        },
+        {
+          "key": "Icon End#4:0",
+          "type": "INSTANCE_SWAP"
+        },
+        {
+          "key": "Has Icon End#4:64",
+          "type": "BOOLEAN"
+        },
+        {
+          "key": "Has Icon Start#4:128",
+          "type": "BOOLEAN"
+        },
+        {
+          "key": "Icon Start#4:192",
+          "type": "INSTANCE_SWAP"
+        },
+        {
+          "key": "Variant",
+          "type": "VARIANT"
+        },
+        {
+          "key": "State",
+          "type": "VARIANT"
+        },
+        {
+          "key": "Size",
+          "type": "VARIANT"
+        }
+      ]
+    },
+    {
+      "id": "6:142",
+      "name": "Input Field",
+      "variants": [
+        {
+          "id": "6:143",
+          "name": "State=Default, Value Type=Placeholder"
+        },
+        {
+          "id": "6:144",
+          "name": "State=Default, Value Type=Default"
+        },
+        {
+          "id": "6:145",
+          "name": "State=Error, Value Type=Placeholder"
+        },
+        {
+          "id": "6:146",
+          "name": "State=Error, Value Type=Default"
+        },
+        {
+          "id": "6:147",
+          "name": "State=Disabled, Value Type=Placeholder"
+        },
+        {
+          "id": "6:148",
+          "name": "State=Disabled, Value Type=Default"
+        }
+      ],
+      "properties": [
+        {
+          "key": "Has Label#57:0",
+          "type": "BOOLEAN"
+        },
+        {
+          "key": "Has Error#72:6",
+          "type": "BOOLEAN"
+        },
+        {
+          "key": "Label#280:41",
+          "type": "TEXT"
+        },
+        {
+          "key": "Error#280:44",
+          "type": "TEXT"
+        },
+        {
+          "key": "Has Description#611:20",
+          "type": "BOOLEAN"
+        },
+        {
+          "key": "Description#611:27",
+          "type": "TEXT"
+        },
+        {
+          "key": "Value#630:14",
+          "type": "TEXT"
+        },
+        {
+          "key": "State",
+          "type": "VARIANT"
+        },
+        {
+          "key": "Value Type",
+          "type": "VARIANT"
+        }
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "id": "6:222",
+      "name": "SC-01 · Обзор / desktop",
+      "width": 1440,
+      "height": 1120
+    },
+    {
+      "id": "6:223",
+      "name": "SC-02 · Операции / desktop",
+      "width": 1440,
+      "height": 1120
+    },
+    {
+      "id": "6:224",
+      "name": "SC-03 · Цели / desktop",
+      "width": 1440,
+      "height": 1120
+    },
+    {
+      "id": "6:225",
+      "name": "SC-04 · Долги / desktop",
+      "width": 1440,
+      "height": 1120
+    },
+    {
+      "id": "6:226",
+      "name": "SC-01 · Обзор / mobile",
+      "width": 390,
+      "height": 2050
+    },
+    {
+      "id": "6:227",
+      "name": "AN-01 · Состояния SC-01–04",
+      "width": 1440,
+      "height": 1120
+    },
+    {
+      "id": "6:228",
+      "name": "AN-02 · Форма операции / ошибка",
+      "width": 480,
+      "height": 950
+    }
+  ],
+  "fonts": [
+    {
+      "family": "Manrope",
+      "style": "Regular"
+    },
+    {
+      "family": "Manrope",
+      "style": "Medium"
+    },
+    {
+      "family": "Manrope",
+      "style": "SemiBold"
+    },
+    {
+      "family": "Manrope",
+      "style": "Bold"
+    },
+    {
+      "family": "Inter",
+      "style": "Regular"
+    },
+    {
+      "family": "Inter",
+      "style": "Medium"
+    },
+    {
+      "family": "Inter",
+      "style": "Semi Bold"
+    },
+    {
+      "family": "Inter",
+      "style": "Bold"
+    }
+  ]
+}

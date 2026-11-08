@@ -1,0 +1,27 @@
+// Local artifact checks only: no Figma execution and no application tests.
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
+const base = path.resolve(__dirname);
+const files = ['figma-01-foundations.js','figma-core.js','figma-02-overview.js','figma-02a-layout-fix.js','figma-03-screens.js','figma-04-mobile.js','figma-05-states-form.js'];
+for (const file of files) new AsyncFunction(fs.readFileSync(path.join(base,file),'utf8'));
+const core = fs.readFileSync(path.join(base,'figma-core.js'),'utf8');
+for (const stage of ['figma-02-overview.js','figma-03-screens.js','figma-04-mobile.js','figma-05-states-form.js']) new AsyncFunction(core+'\n'+fs.readFileSync(path.join(base,stage),'utf8'));
+const manifest = JSON.parse(fs.readFileSync(path.join(base,'figma-manifest.json'),'utf8'));
+if(manifest.frames.length!==5 || new Set(manifest.frames.map(f=>f.id)).size!==5) throw Error('Expected five unique composed Figma frame IDs');
+if(manifest.frames.filter(f=>f.w===1440).length!==4 || manifest.frames.filter(f=>f.w===390).length!==1) throw Error('Unexpected frame widths');
+if(manifest.frames.some(f=>f.imageFillNodes.length)) throw Error('Full UI must not use image fills');
+if(manifest.annotations.some(a=>a.compositionApplied)) throw Error('Blocked annotations must not be claimed applied');
+const fixture = fs.readFileSync(path.join(base,'demo-data.json'));
+const fixtureHash = crypto.createHash('sha256').update(fixture).digest('hex');
+if(fixtureHash!=='8c6bb181ed342867e453640c1f3f61384dc2c4425a1789d813d01236a79e3c81') throw Error('Fixture D1 changed');
+const d1=JSON.parse(fixture);if(d1.operations.length!==4 || d1.accounts[0].opening!==null)throw Error('Unexpected D1 data');
+const preview = fs.readFileSync(path.join(base,'previews/SC-01-desktop.png'));
+if(preview.toString('hex',0,8)!=='89504e470d0a1a0a') throw Error('Invalid PNG');
+const image={width:preview.readUInt32BE(16),height:preview.readUInt32BE(20)};
+if(image.width!==1440 || image.height!==1120) throw Error('Unexpected PNG dimensions');
+const hashes={};for(const file of [...files,'figma-manifest.json','figma-evidence.json','previews/SC-01-desktop.png'])hashes[file]=crypto.createHash('sha256').update(fs.readFileSync(path.join(base,file))).digest('hex');
+const result={task:'APP-001-DESIGN-VISUAL',version:'v1-partial',command:'node design/figma-check.js',checks:{pluginBodiesSyntax:files.length,concatenatedStagesSyntax:4,jsonManifest:'passed',uniqueComposedFrames:5,desktopWidths:4,mobileWidths:1,reportedImageFillNodes:0,blockedAnnotationsNotClaimedDone:true,fixtureD1Unchanged:true,fixtureOperations:4,openingBalanceUnknown:true,SC01PreviewPNG:image},totalsFromSuccessfulFigmaWrites:{editableText:manifest.frames.reduce((s,f)=>s+f.types.TEXT,0),instances:manifest.frames.reduce((s,f)=>s+f.types.INSTANCE,0)},notVerified:['Figma rendering except SC-01 desktop','Figma application of pending stage 05','Prototype interactions','Application runtime','Independent QA','Court'],hashes};
+fs.writeFileSync(path.join(base,'figma-local-checks.json'),JSON.stringify(result,null,2)+'\n');
+process.stdout.write(JSON.stringify({checks:result.checks,totals:result.totalsFromSuccessfulFigmaWrites,output:'design/figma-local-checks.json'})+'\n');

@@ -1,0 +1,10 @@
+{
+  "serial": "emulator-5580",
+  "avd": "Ladno_QA_API30",
+  "pid": 25028,
+  "bootSeconds": 44,
+  "hostSettingsChanged": false,
+  "release": "11",
+  "api": "30",
+  "abi": "x86_64"
+}

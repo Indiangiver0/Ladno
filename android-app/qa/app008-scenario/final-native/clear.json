@@ -1,0 +1,25 @@
+{
+  "action": "clear",
+  "suite": null,
+  "avd": "Ladno_QA_API30",
+  "serial": "emulator-5580",
+  "createdAtUtc": "2026-11-03T09:50:17.145202+00:00",
+  "results": [
+    {
+      "command": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "pm",
+        "clear",
+        "com.ladno.finance"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "stdout": "Success\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

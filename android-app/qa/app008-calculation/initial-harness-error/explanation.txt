@@ -1,0 +1,1 @@
+QA-only error: conditional-expression precedence duplicated visual sectors for <=6 groups. Product model not modified; numeric/percentage group values and original19finance fixtures passed. Initial failed run preserved.

@@ -1,0 +1,16 @@
+Picked up JAVA_TOOL_OPTIONS: -Duser.language=en -Duser.country=US
+WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Use Android CLI instead.
+The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+
+Info: Parsing legacy package: C:\Users\04068\.cache\ladno-android\sdk\cmdline-tools\latest
+Info: SDK Manager found the following installed packages: build-tools;35.0.0 emulator platform-tools platforms;android-36
+                                                                                
+Info: Preparing "Install Intel x86_64 Atom System Image API 30 (revision 11)".
+                                                                                
+Info: "Install Intel x86_64 Atom System Image API 30 (revision 11)" ready.
+                                                                                
+Info: Installing Intel x86_64 Atom System Image in C:\Users\04068\.cache\ladno-android\sdk\system-images\android-30\default\x86_64
+Info: "Install Intel x86_64 Atom System Image API 30 (revision 11)" complete.
+Info: "Install Intel x86_64 Atom System Image API 30 (revision 11)" finished.
+

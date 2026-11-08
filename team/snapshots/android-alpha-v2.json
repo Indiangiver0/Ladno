@@ -1,0 +1,1092 @@
+{
+  "version": "android-alpha-v2",
+  "createdAtUtc": "2026-11-02T18:54:17.373811+00:00",
+  "scope": "APP-005/006 installable alpha; Android11 native SQLite/KeyStore/NLS/Tesseract API evidence; MainActivity/camera/gallery UI and real-bank/photo corpus explicitly unverified",
+  "previousProtectedSnapshot": "be7ef8f3e912744b04804a7a225fdee44ad6917254de68529f97a2af728e354e",
+  "previousProtectedFilesUnchanged": 46,
+  "apkSha256": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+  "sourceFingerprint": "d001bbd85c2faeef77d3a88ceeecc63798717144adcde1d8dd3bd20edd84146d",
+  "canonicalization": "SHA-256 two-spaces POSIX-path LF, sorted paths, exact bytes",
+  "manifestSha256": "b92d7a8f600e73720c415ad18579aaf70ec2166e1ca4a3009314cce1aec6bc16",
+  "files": [
+    {
+      "path": "android-app/.gitignore",
+      "sha256": "3b5c4a1f7ff509109b819243abd332e85b9cecf28bb73f8ac3baed5666f74f7b",
+      "bytes": 102
+    },
+    {
+      "path": "android-app/README.md",
+      "sha256": "2e64aae99d496577c49af5ec33cbad73e6fc16ca5f4a89f0a159a07c7061c741",
+      "bytes": 6688
+    },
+    {
+      "path": "android-app/app/build.gradle",
+      "sha256": "57f29e5e42f78bd5de0c8957f18001c16150ac78ef8d0aa4e3aaccdd367e36f9",
+      "bytes": 2206
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/NativeRuntimeFixtures.java",
+      "sha256": "bc886ed956e451d0c1bbc22f5cf4db9c84fe303ac6db235c435d0d205d6d84f4",
+      "bytes": 9109
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/NotificationRuntimeTest.java",
+      "sha256": "7bb1312445c6deda3e65a1879e22c6a2d9abf74a9340c3c8b33b1d82f36f9ba5",
+      "bytes": 21822
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/OcrRuntimeTest.java",
+      "sha256": "ac492a5307e344131abb0997309054b37c041270cc0998baaacc190992cae1e3",
+      "bytes": 11596
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeFixtures.java",
+      "sha256": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+      "bytes": 7574
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeReadTest.java",
+      "sha256": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+      "bytes": 4497
+    },
+    {
+      "path": "android-app/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeWriteTest.java",
+      "sha256": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903",
+      "bytes": 14786
+    },
+    {
+      "path": "android-app/app/src/main/AndroidManifest.xml",
+      "sha256": "757d8ea2e8ab5e4df74d1fbfc7f3b2d6577d2b9fd3519749e43cb135cc63f246",
+      "bytes": 2091
+    },
+    {
+      "path": "android-app/app/src/main/assets/db/schema.sql",
+      "sha256": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "bytes": 8170
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/Apache-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/IJG-JPEG.txt",
+      "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+      "bytes": 18719
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/Leptonica.txt",
+      "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+      "bytes": 1521
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/THIRD_PARTY_NOTICES.txt",
+      "sha256": "2a0491fbdcef603061562ea17b674ee1983b355fbe86891858cbd001f99c1593",
+      "bytes": 1306
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/libpng.txt",
+      "sha256": "16d9daaafbf63a31a5bdc91d4600972548fef5aaa1244202393288dbd079c49a",
+      "bytes": 5345
+    },
+    {
+      "path": "android-app/app/src/main/assets/licenses/sources.json",
+      "sha256": "6d5b8a9588d9d85717800353c5205f033990099700391b8206b560fc7bed5ac5",
+      "bytes": 969
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata/eng.traineddata",
+      "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "bytes": 4113088
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata/kaz.traineddata",
+      "sha256": "fcc01eed3815a42b9c6321c4c9d3606f39b166cbf95ade98b7d8d12063eae53d",
+      "bytes": 4734644
+    },
+    {
+      "path": "android-app/app/src/main/assets/tessdata/rus.traineddata",
+      "sha256": "e16e5e036cce1d9ec2b00063cf8b54472625b9e14d893a169e2b0dedeb4df225",
+      "bytes": 3861738
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/app.js",
+      "sha256": "fa684ae1ca4f4b237861138fb2eeaa4a7f97cace31c7a1d94d418b47fcf16952",
+      "bytes": 26584
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/bridge.js",
+      "sha256": "4241148a4a12c50eeccfb5965a1247711fdb07d5d369e1a1f825d39fdc98c6e2",
+      "bytes": 5452
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/index.html",
+      "sha256": "7e9dd72daee9df50ab69b5b260f3f5c0bf087663c674a7fc75b2c1652a511e01",
+      "bytes": 1216
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/preview-adapter.js",
+      "sha256": "3033679bd41cc6a288f9a3fb1ec03362410b6aa4977519db67049e555c65a80e",
+      "bytes": 12076
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/styles.css",
+      "sha256": "6dfb7742f7d090c61b9a242303ba40d5857110c33275733c307e166d92143a0d",
+      "bytes": 16943
+    },
+    {
+      "path": "android-app/app/src/main/assets/www/view.js",
+      "sha256": "8ce8edb22cd7cb5fa2eddade470db2ae26a29a9619e3fb32d4bfc75a69bdfac3",
+      "bytes": 45975
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/AppBridge.java",
+      "sha256": "47c5780139e069231d2c193fcb90d7aa437a1f80ed178cad0b1ed4b21358ae0b",
+      "bytes": 7625
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/BankNotificationService.java",
+      "sha256": "ef1d6da43e4f1be253d6371055dcd23f9bcf5d638a99aff3ae9ea80a50b76c76",
+      "bytes": 8229
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/LocalAssets.java",
+      "sha256": "877dfa97b7259d289575c72939c516ef975115088a2acac6c554db5ddccd4f40",
+      "bytes": 813
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/MainActivity.java",
+      "sha256": "fe161aea8c84cbf03a9f1da136159702d3fc1a0f77d62a27b499411600b6dc4f",
+      "bytes": 12886
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NativeJson.java",
+      "sha256": "4d6cbc0baa55fa6349f3eb1e9ab48463f1e61541b5cb904d36728b602408dfd1",
+      "bytes": 8195
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NativeRuntime.java",
+      "sha256": "55e1c1eb3a3c1467aaec0694db51d7c34925e6de1e32408533da62164b5b2705",
+      "bytes": 18671
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NoBackupAgent.java",
+      "sha256": "345e7b5588edafc68f07afbfefb80eac870da9b6f6f861f27147cb35eb611925",
+      "bytes": 1455
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/NotificationStatus.java",
+      "sha256": "bc3cee982de669d3fbbcda31f17a6fb0cf7f7a4d00b085c0e628bc31a00bfaca",
+      "bytes": 464
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/OcrEngine.java",
+      "sha256": "8351a1fd4939afa31587d2d1b874e10dc5c8e6eae25b6e9995e7ce52dfc81bcb",
+      "bytes": 7897
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/SourceTokens.java",
+      "sha256": "576ec0ff9a16febe1bae6c411f3ae3701fe30decb8ba1fc70ed2c978d1b8a9fa",
+      "bytes": 6047
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/BankMessageParser.java",
+      "sha256": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+      "bytes": 2969
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ContractException.java",
+      "sha256": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "bytes": 400
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ImportCandidate.java",
+      "sha256": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "bytes": 3526
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/JsonChecks.java",
+      "sha256": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "bytes": 5157
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/Money.java",
+      "sha256": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "bytes": 5830
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ParseSupport.java",
+      "sha256": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "bytes": 6720
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "sha256": "c7290550715bf853d52304c4bf87700c4e14d734b46d0105d062580091527c43",
+      "bytes": 4332
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/storage/IngestSource.java",
+      "sha256": "8698a9e321e905b0969431cc2c58cb50dd2d8a25c4f8d78f0bcee3b5ae86c3b0",
+      "bytes": 2757
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/storage/LedgerStore.java",
+      "sha256": "bf58b0d8f6a9a4b6abba103a4fd050aa66e632cb5d04fff3a7041e530f70fdba",
+      "bytes": 36246
+    },
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/storage/StorageApi.java",
+      "sha256": "d9d7c475f22cfa356f7200221ed85f767445d4ed95f86881b3e9b3c06f34353e",
+      "bytes": 334
+    },
+    {
+      "path": "android-app/app/src/main/res/drawable/ic_launcher.xml",
+      "sha256": "4bb92a9b5309c2a0232d074e0d1bd91d6c93d369a3f5cf94165f5b187f584c76",
+      "bytes": 439
+    },
+    {
+      "path": "android-app/app/src/main/res/values/strings.xml",
+      "sha256": "4862818a50d70a0675b9dec848f3562cfd5bf1e1e5af303796e6112fdab76f59",
+      "bytes": 232
+    },
+    {
+      "path": "android-app/app/src/main/res/values/styles.xml",
+      "sha256": "7f0ef49a3e707fe9c8133db6f9f0f544937f92a62992827290e1d274c682e05f",
+      "bytes": 457
+    },
+    {
+      "path": "android-app/app/src/main/res/xml/backup_rules.xml",
+      "sha256": "865cae97840e81b9950d70457a05c5c1125a68364b0a83f44cd3daa030bc7e96",
+      "bytes": 487
+    },
+    {
+      "path": "android-app/app/src/main/res/xml/capture_paths.xml",
+      "sha256": "d289feecffdc65f6bd51c9715cfbc8d0cbb77bfcf3b50186353c2cd0117f8ae0",
+      "bytes": 173
+    },
+    {
+      "path": "android-app/app/src/main/res/xml/data_extraction_rules.xml",
+      "sha256": "23be8f0e337039bad566d125d29c0dceac8c66d21aba280147212c9385e20ce0",
+      "bytes": 1189
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/core/MoneyTest.java",
+      "sha256": "01e79291afa12637b2288f86f19760c40097d88e81cd29ac3b8c1e4a6228a5a1",
+      "bytes": 8501
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/core/ParserTest.java",
+      "sha256": "79fd47f1620a0b5162d2d80143651c2f88ba8363da89ff659c9d9da7d3341c58",
+      "bytes": 10525
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/nativebridge/LocalAssetsTest.java",
+      "sha256": "421097fd52441b6dc616c3c20ff211a3a77cae513b342bd0c927f34506e05107",
+      "bytes": 1638
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/nativebridge/NativeJsonGuardTest.java",
+      "sha256": "ca57d7a976ed643b71d0bb63e012bc58dc3da2aba6c67fbdb6bb618b9f81b2cc",
+      "bytes": 2996
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/nativebridge/NotificationStatusTest.java",
+      "sha256": "07d51a8b20ee8c4da0c2acebac81a51477fa911bc9e4fe2b50456918089e11d3",
+      "bytes": 2788
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/storage/IngestSourceTest.java",
+      "sha256": "0b3ed97eeb5d2416c0769eda3336bcd710c5bbe51de05de5b120aadbe1e25f3e",
+      "bytes": 2261
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/storage/schema_contract_test.py",
+      "sha256": "3337219fd96b4fdc797fd6601182c32e3dff0e96de85ac3d8b314f20e42948d7",
+      "bytes": 8115
+    },
+    {
+      "path": "android-app/build-versions.json",
+      "sha256": "92f8989fe38b30044135927dd47af71caf46b2dc59805e7ddda19d68031eef95",
+      "bytes": 947
+    },
+    {
+      "path": "android-app/build.gradle",
+      "sha256": "6844d442e0ae87ec0b784c8afe5598878784c4fa41aced1e9389a9b3bfb25666",
+      "bytes": 74
+    },
+    {
+      "path": "android-app/dist/build-result.json",
+      "sha256": "5a4783451028f193a8709b8673369cb3a6f9d2921051b8008541850b42bea51e",
+      "bytes": 511
+    },
+    {
+      "path": "android-app/dist/build-source-manifest.json",
+      "sha256": "7bb788bd4f9709cac5fc7e78c120137de68341b6ee6c3b3caffdaac0b8e28afc",
+      "bytes": 11145
+    },
+    {
+      "path": "android-app/dist/gradle-build.log",
+      "sha256": "b7e68b0c728680141069829fa341f7444f316fb6ac6da59b149572c479eed28c",
+      "bytes": 5442
+    },
+    {
+      "path": "android-app/dist/interface-preview.jpg",
+      "sha256": "ee2efed3b55c1319a0ca5d492ea6b06f21e5531641e117dca97b65dfbb5ab499",
+      "bytes": 36150
+    },
+    {
+      "path": "android-app/dist/ladno-0.1.0-androidTest.apk",
+      "sha256": "ac23d80872e07b52a075249f94c39b7c710edde2e1954ce87a2fe342da7e7602",
+      "bytes": 415699
+    },
+    {
+      "path": "android-app/dist/ladno-0.1.0-debug.apk",
+      "sha256": "38c9d4490419eda3685e7187281d5f1ecfb958a95d77c57f7f59633febcfbd5a",
+      "bytes": 37404606
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.LocalAssetsTest.xml",
+      "sha256": "0333ba86c19d7af236becec3247fcc55ba804e1c8a23c3c07d230c5f0becac70",
+      "bytes": 441
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.NativeJsonGuardTest.xml",
+      "sha256": "0e3822eee9abe847ae31a4913c4daa645ae090fe4433578c177f8ccd4d6f6f81",
+      "bytes": 724
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.NotificationStatusTest.xml",
+      "sha256": "6561d8ae061ee1d70482a535c5d9e36b0d6e0443a8a4a53c4c819cd00d0eee33",
+      "bytes": 596
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.core.MoneyTest.xml",
+      "sha256": "6b4b57b95596df2f14005a6b09db3770752ae403d478a2fe73e977038c64aec4",
+      "bytes": 904
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.core.ParserTest.xml",
+      "sha256": "99050f45cbe576244c1c35633779e13e77c42ff6f1c2cfd96626848de1858352",
+      "bytes": 1583
+    },
+    {
+      "path": "android-app/dist/test-results/testDebugUnitTest/TEST-com.ladno.finance.storage.IngestSourceTest.xml",
+      "sha256": "06463a8aaa2da353affaff4c28827e110d1583b4e81b0c92aa12ce37f119540a",
+      "bytes": 765
+    },
+    {
+      "path": "android-app/fixtures/money-cases.json",
+      "sha256": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "bytes": 55230
+    },
+    {
+      "path": "android-app/gradle.properties",
+      "sha256": "4584b119086c0d659b3659855382aa69e65604fe9964662a1f65d0db291af310",
+      "bytes": 206
+    },
+    {
+      "path": "android-app/ocr-models.lock.json",
+      "sha256": "76e6608d2821b4a4395f9f699a29c4c3235ec73a804d227e28c21b7443ac7368",
+      "bytes": 740
+    },
+    {
+      "path": "android-app/qa/android-calculation/PLAN.md",
+      "sha256": "2f979334b10943afd9130b21757c096698d557184f715d6bdea85dbad4065295",
+      "bytes": 4077
+    },
+    {
+      "path": "android-app/qa/android-calculation/REPORT.md",
+      "sha256": "6c20dccccf18b379fc084d5d17e5e5ddd7003aced1016990ee82f5fb0ae7466c",
+      "bytes": 11243
+    },
+    {
+      "path": "android-app/qa/android-calculation/result-summary.json",
+      "sha256": "9646a7bb3d4e601d7b13ba9af66e271e6832fa23b478bc5f5fdcdcae8ec21be1",
+      "bytes": 31448
+    },
+    {
+      "path": "android-app/qa/android-calculation/test-source-hashes.json",
+      "sha256": "af7941d34d500c6e8aad932a4025188a7309620bf0cb9984a4762eeef78b6851",
+      "bytes": 498
+    },
+    {
+      "path": "android-app/qa/android-scenario/DIAGNOSIS.md",
+      "sha256": "ea3982e9b55cfc3f036a17fccc64445f034d9657b9547d5e765e8a4984adc157",
+      "bytes": 6537
+    },
+    {
+      "path": "android-app/qa/android-scenario/PLAN.md",
+      "sha256": "0524ee5b1c30828dcc6e31f5eaefb7e3be3d03a4c40d05a12b788408e4a41299",
+      "bytes": 8815
+    },
+    {
+      "path": "android-app/qa/android-scenario/REPORT.md",
+      "sha256": "b3371b5343d959cbb8a2d346379f3702fac8dc5f9bf178b81c17b0f29dcba15c",
+      "bytes": 10944
+    },
+    {
+      "path": "android-app/qa/android-scenario/collect_results.py",
+      "sha256": "465e2057b0eec02cd7de7d6c82196ff6f1bbee103ac88b434dd9a04c1eb08345",
+      "bytes": 5417
+    },
+    {
+      "path": "android-app/qa/android-scenario/diagnostic-run/diagnose.json",
+      "sha256": "deb70ac219e32d78372b5999e108ce1a26af6fcd48167491e350637adad2c752",
+      "bytes": 67650
+    },
+    {
+      "path": "android-app/qa/android-scenario/diagnostic-run/manifest.json",
+      "sha256": "90f43692aaa1999d9b8efd6f4f5ed0e186bf755c09811ec1af9ee63d10ce9eba",
+      "bytes": 484
+    },
+    {
+      "path": "android-app/qa/android-scenario/diagnostic-run/pulled-notification-os-granted.json",
+      "sha256": "2f1cc3cdafe30a0879ef83568c6bb6ec5080f9cd9496aa2396ad58bc6e9e0110",
+      "bytes": 33921
+    },
+    {
+      "path": "android-app/qa/android-scenario/diagnostic-run/test-notifications-osGrantedDelivery.json",
+      "sha256": "d87dd3568e37593727e9e2d46797f76d2641f642341fe23c9c6675ebb54858be",
+      "bytes": 3914
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/emulator-state.json",
+      "sha256": "745166f453bcaa99e537e4cdd56d9162cc6fe5933e797ce5b9dd2faf317cb348",
+      "bytes": 191
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/grant-nls.json",
+      "sha256": "f199e5488ff89fd3d892096534df995a2b2c9650742e208fcda053cce68a1208",
+      "bytes": 596
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/install.json",
+      "sha256": "1159373e57ddb29722f3bebb10c6322df4a480b65b2b55316e62fee4e162de02",
+      "bytes": 1511
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/pulled-notification-native.json",
+      "sha256": "950a7e0624614480b25a6a77a39b1c8635b4ad0b1b954039d3c68ece892f0bc1",
+      "bytes": 35040
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/pulled-notification-os-granted.json",
+      "sha256": "4b41bbdd2a16a7ee86fa7ec9a2fd1d4755198f58fdcd87ee815a287f60612cd9",
+      "bytes": 43084
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/pulled-notification-os-revoked.json",
+      "sha256": "6afd1172ca101419d5215ed4ab78652b4a6a014765e2d071210d36f93c4b5bac",
+      "bytes": 599
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/pulled-ocr-runtime.json",
+      "sha256": "2a09f52328c48fc2fa18942ff898152587a873a900cbbabdfb3aafff589d57a9",
+      "bytes": 20499
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/revoke-nls.json",
+      "sha256": "84745e8530a0f64fc843126bb7215a29dfac723d0f98c66135fa0ebdd7d960fb",
+      "bytes": 600
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/test-notifications-keystoreParserStorage.json",
+      "sha256": "387a362aad4416507348d031faeb4606122958bd738793bb514cee99707661f9",
+      "bytes": 6021
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/test-notifications-osGrantedDelivery.json",
+      "sha256": "7b43d30ccc2339f28e81c7e31ee2b834887c98a4b365eb65bd2a1bbd4c87a994",
+      "bytes": 3922
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/test-notifications-osRevokedNoCapture.json",
+      "sha256": "057f94def58f60e8f5361c4d247ce7f2d13e0ac1fd6bea2a9cb0b8c69ddd5d15",
+      "bytes": 1768
+    },
+    {
+      "path": "android-app/qa/android-scenario/executed/test-ocr.json",
+      "sha256": "62e4022d0f988a1b73fc7514df0d1b7c02b01590f213c895a842720e3c34d59b",
+      "bytes": 10322
+    },
+    {
+      "path": "android-app/qa/android-scenario/initial/database-preview-summary.json",
+      "sha256": "551b602b0c05cd131f9ab1c7ed415672c0e5ca6ec921708951e0edcb2af9b543",
+      "bytes": 247
+    },
+    {
+      "path": "android-app/qa/android-scenario/initial/diagnose.json",
+      "sha256": "e9a650010f9cceb23524de49f8aedba34d06a51d8960281824ab89b8251954ba",
+      "bytes": 63958
+    },
+    {
+      "path": "android-app/qa/android-scenario/initial/manifest.json",
+      "sha256": "15df8d284a7c11d962b046a68540384880b7943850f24550a288dbd9d5af65c2",
+      "bytes": 977
+    },
+    {
+      "path": "android-app/qa/android-scenario/initial/pulled-notification-native.json",
+      "sha256": "950a7e0624614480b25a6a77a39b1c8635b4ad0b1b954039d3c68ece892f0bc1",
+      "bytes": 35040
+    },
+    {
+      "path": "android-app/qa/android-scenario/initial/pulled-notification-os-granted.json",
+      "sha256": "ba1b3ba6f34971253846eb880bf259af6fc3c6166ba04f8c91bef80431557a03",
+      "bytes": 845
+    },
+    {
+      "path": "android-app/qa/android-scenario/initial/test-notifications-keystoreParserStorage.json",
+      "sha256": "387a362aad4416507348d031faeb4606122958bd738793bb514cee99707661f9",
+      "bytes": 6021
+    },
+    {
+      "path": "android-app/qa/android-scenario/initial/test-notifications-osGrantedDelivery.json",
+      "sha256": "01051abd9d158a8f865df52da35d5282ae97f339ab6267d212fb6676e85f013c",
+      "bytes": 3914
+    },
+    {
+      "path": "android-app/qa/android-scenario/pre-readiness-attempts/test-notifications-osGrantedDelivery-previous-1793640000.json",
+      "sha256": "01051abd9d158a8f865df52da35d5282ae97f339ab6267d212fb6676e85f013c",
+      "bytes": 3914
+    },
+    {
+      "path": "android-app/qa/android-scenario/pre-readiness-attempts/test-notifications-osGrantedDelivery-previous-1793643706.json",
+      "sha256": "d87dd3568e37593727e9e2d46797f76d2641f642341fe23c9c6675ebb54858be",
+      "bytes": 3914
+    },
+    {
+      "path": "android-app/qa/android-scenario/pre-readiness-attempts/test-notifications-osGrantedDelivery-previous-1793644575.json",
+      "sha256": "50580241cd28f7e63c0e9fd6b908703298668d2e4b7e2559cc8d70f344b66ff3",
+      "bytes": 3914
+    },
+    {
+      "path": "android-app/qa/android-scenario/pulled-notification-os-revoked.json",
+      "sha256": "6afd1172ca101419d5215ed4ab78652b4a6a014765e2d071210d36f93c4b5bac",
+      "bytes": 599
+    },
+    {
+      "path": "android-app/qa/android-scenario/pulled-ocr-runtime.json",
+      "sha256": "2a09f52328c48fc2fa18942ff898152587a873a900cbbabdfb3aafff589d57a9",
+      "bytes": 20499
+    },
+    {
+      "path": "android-app/qa/android-scenario/results-summary.json",
+      "sha256": "ca9b4c37d81330524f42d748daac74abc3a7bd1162f67597c50461cb32a906c5",
+      "bytes": 13458
+    },
+    {
+      "path": "android-app/qa/calculation/CalculationQa.java",
+      "sha256": "ce4d5afd5531ded6339f40763195f4071d64cdc060dd8fabcb829cfa8bc15d7b",
+      "bytes": 12580
+    },
+    {
+      "path": "android-app/qa/calculation/REPORT.md",
+      "sha256": "6d44bcb1e1985bdd757f1d2435f81c3fea050a7546196375469a4935ee6f28d1",
+      "bytes": 8868
+    },
+    {
+      "path": "android-app/qa/calculation/commands.json",
+      "sha256": "72c12929a658bcf3e731941503d2c169a5c7477a5ecbbda74e36bd5feb65c082",
+      "bytes": 3569
+    },
+    {
+      "path": "android-app/qa/calculation/java.log",
+      "sha256": "b5a3d3d9d5abcf34fab8ad8a99ade24062a2bab8d49771b7c654e244c300c82a",
+      "bytes": 46
+    },
+    {
+      "path": "android-app/qa/calculation/javac.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "android-app/qa/calculation/jvm-results-before-fix.json",
+      "sha256": "f0e6a231a83fa756eadfafc717f2df1c3f5c898373ba08d4fd4955fa5f5b2a9c",
+      "bytes": 24781
+    },
+    {
+      "path": "android-app/qa/calculation/jvm-results.json",
+      "sha256": "f28cf132b902fbefc92e3902e9fd9f273524991ffc481b4b8c4540f2ef469126",
+      "bytes": 26577
+    },
+    {
+      "path": "android-app/qa/calculation/run_qa.py",
+      "sha256": "91bbc591802c6245b2131bd884a32bb8abbea0c78f650c57e8586f2b56279f63",
+      "bytes": 2103
+    },
+    {
+      "path": "android-app/qa/calculation/schema-results.json",
+      "sha256": "f0053239be7e07b6c5799478e3229ce5f0159a0ab578ea03e013c14bac2ed64f",
+      "bytes": 5949
+    },
+    {
+      "path": "android-app/qa/calculation/schema_qa.py",
+      "sha256": "465fd2bb49b0bc3175f14f88b0c4994d65a56f67582fe6d15437eaa6c81f0847",
+      "bytes": 7444
+    },
+    {
+      "path": "android-app/qa/calculation/tested-source-hashes-before-fix.json",
+      "sha256": "370c8f2d7654e04bb249d673e48eabe4d26a86add5aab9d222ce5c6a26a85ee8",
+      "bytes": 1194
+    },
+    {
+      "path": "android-app/qa/calculation/tested-source-hashes.json",
+      "sha256": "be6377b326487f6cb212a164734250dd6a96b6d16f928999b677ec64ba99fc17",
+      "bytes": 1194
+    },
+    {
+      "path": "android-app/qa/runtime-host/NotificationRuntimeTest.before-diagnostic.java",
+      "sha256": "8025b9b154cd93859316792c343bb3bb672f54fa5a4c29d25a239abddabcfbf0",
+      "bytes": 15325
+    },
+    {
+      "path": "android-app/qa/runtime-host/NotificationRuntimeTest.before-readiness.java",
+      "sha256": "a46a5da69ab93daee747e0e9223b4c7ee6090ff2b2d143b549b1c9fa88fd0f79",
+      "bytes": 17603
+    },
+    {
+      "path": "android-app/qa/runtime-host/acceleration.json",
+      "sha256": "72782ffd9d3259afa5fd547b727a98a4d2d3aeb28297d83d1352ec423b94229d",
+      "bytes": 302
+    },
+    {
+      "path": "android-app/qa/runtime-host/avd-create.log",
+      "sha256": "58eeb9602c242cc2d22abaf5b6f373ef5faa8c1b66e985a1286aa4ddec55c017",
+      "bytes": 329
+    },
+    {
+      "path": "android-app/qa/runtime-host/db-snapshot-20261102181851/files.json",
+      "sha256": "d5e0fe60f0430ec184dfeda3402657da0e451e03c68367c3574d36b2fe509b5f",
+      "bytes": 435
+    },
+    {
+      "path": "android-app/qa/runtime-host/db-snapshot-20261102181851/normalization-notes.json",
+      "sha256": "876566e4c7781c93537a86e3622017587c388251049ac9bb9d3c82cd70a68d37",
+      "bytes": 473
+    },
+    {
+      "path": "android-app/qa/runtime-host/db-snapshot-20261102181851/preview.json",
+      "sha256": "f5aa132c225c19271f7e1c70f3fc46346616f7661b5cc75adeb23807f02d1c69",
+      "bytes": 21500
+    },
+    {
+      "path": "android-app/qa/runtime-host/diagnose-previous-1793643367.json",
+      "sha256": "e9a650010f9cceb23524de49f8aedba34d06a51d8960281824ab89b8251954ba",
+      "bytes": 63958
+    },
+    {
+      "path": "android-app/qa/runtime-host/diagnose.json",
+      "sha256": "deb70ac219e32d78372b5999e108ce1a26af6fcd48167491e350637adad2c752",
+      "bytes": 67650
+    },
+    {
+      "path": "android-app/qa/runtime-host/emulator-state.json",
+      "sha256": "745166f453bcaa99e537e4cdd56d9162cc6fe5933e797ce5b9dd2faf317cb348",
+      "bytes": 191
+    },
+    {
+      "path": "android-app/qa/runtime-host/emulator.log",
+      "sha256": "1ae43dc87790e0cf6a47f9bacfd4719d2e4fbc855618de54cf47fe1a50013794",
+      "bytes": 7901
+    },
+    {
+      "path": "android-app/qa/runtime-host/grant-nls-previous-1793639963.json",
+      "sha256": "5b587b8d8d4aff38283d5e287d0313ba70c71a8eba6dd1c2583786d312b25476",
+      "bytes": 596
+    },
+    {
+      "path": "android-app/qa/runtime-host/grant-nls-previous-1793644537.json",
+      "sha256": "2286412dbc0ce2e03101de7ff39ddb12c0df7567086fc30343e532ba2ea5c872",
+      "bytes": 596
+    },
+    {
+      "path": "android-app/qa/runtime-host/grant-nls.json",
+      "sha256": "f199e5488ff89fd3d892096534df995a2b2c9650742e208fcda053cce68a1208",
+      "bytes": 596
+    },
+    {
+      "path": "android-app/qa/runtime-host/install-previous-1793639808.json",
+      "sha256": "62a90f58e849440926146400490ef2171b084815e2746744ba0935461ae68eab",
+      "bytes": 1162
+    },
+    {
+      "path": "android-app/qa/runtime-host/install-previous-1793643669.json",
+      "sha256": "dc0508b9fe1f5f33d321a2a72cf14238d7affffcb386cfc9280dcec514dce192",
+      "bytes": 1162
+    },
+    {
+      "path": "android-app/qa/runtime-host/install-previous-1793644535.json",
+      "sha256": "8e99841c74a81520e2c311ca883a7a2a9a2a8cd1002784330899813714a9be23",
+      "bytes": 1162
+    },
+    {
+      "path": "android-app/qa/runtime-host/install.json",
+      "sha256": "1159373e57ddb29722f3bebb10c6322df4a480b65b2b55316e62fee4e162de02",
+      "bytes": 1511
+    },
+    {
+      "path": "android-app/qa/runtime-host/ledger-control.json",
+      "sha256": "4dbfcdf371b68ffbec58dd88e43af5f338267bc76ec1724a2c28c3868e0a572d",
+      "bytes": 3235
+    },
+    {
+      "path": "android-app/qa/runtime-host/logcat-2737.json",
+      "sha256": "e768e7a6ee8b53d272cda1c7eb52852f5d31492d74e067338bdfed392845272c",
+      "bytes": 9601
+    },
+    {
+      "path": "android-app/qa/runtime-host/nls-diagnostic-test.apk",
+      "sha256": "40f5c220ef7a5a17b0b67c5b17503ad498ff325d41976f16142cbc9e0373b3ae",
+      "bytes": 413675
+    },
+    {
+      "path": "android-app/qa/runtime-host/nls-initial-test.apk",
+      "sha256": "94c418df927a16256aba740d733de8fa6afab56da0ade12b674ea05911cda334",
+      "bytes": 412623
+    },
+    {
+      "path": "android-app/qa/runtime-host/orchestration-notes.json",
+      "sha256": "c84651ad4036d1de6ff2670e4a7f808234f43d9cc742caa8b90f9cd7e1172ed5",
+      "bytes": 1350
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-control.json",
+      "sha256": "38101f174fb57de0260eee0b4699bb93adeaf8a76011944c9929ffee466c41da",
+      "bytes": 4131
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-qa-ledger-read.json.json",
+      "sha256": "de5faa8e9e330022a5943e55493c56ab33433f524adaf251fc12cae381110412",
+      "bytes": 15136
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-qa-ledger-write.json.json",
+      "sha256": "4aa2f8a0339d156b1864f084f478967076afb78e288ce8dbf03c5877532a7a7c",
+      "bytes": 25041
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-scenario-notification-native.json.json",
+      "sha256": "5b2d85a19dbb526b8f2d87664673bd35dbd935f01fab9671ab05437229f8e924",
+      "bytes": 38394
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-scenario-notification-os-granted.json-previous-1793643195.json",
+      "sha256": "b086590818b5dc47c1cdb590662d63c690350e2e7065bd512d001a7761a56815",
+      "bytes": 1525
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-scenario-notification-os-granted.json-previous-1793643734.json",
+      "sha256": "d40124382e6aa7eb5a33721af6c6b94d627e9229e9a2e4ec7aa9b8171ea8ad51",
+      "bytes": 37146
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-scenario-notification-os-granted.json.json",
+      "sha256": "681777f1c1d18feecc715e257b66561c8ad7e2bc0db2b258532a13aef92b6845",
+      "bytes": 47072
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-scenario-notification-os-revoked.json.json",
+      "sha256": "6b1cd8c049093d4b7d99ac946ae04d83bdcfafed005b460c9e728fd39131cf8f",
+      "bytes": 1263
+    },
+    {
+      "path": "android-app/qa/runtime-host/pull-scenario-ocr-runtime.json.json",
+      "sha256": "dda927f090ddfb774c0ea7432b10d556eee975688cfe7cfc33e96db82e6f492b",
+      "bytes": 22989
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-notification-native.json",
+      "sha256": "950a7e0624614480b25a6a77a39b1c8635b4ad0b1b954039d3c68ece892f0bc1",
+      "bytes": 35040
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-notification-os-granted-diagnostic-fail.json",
+      "sha256": "2f1cc3cdafe30a0879ef83568c6bb6ec5080f9cd9496aa2396ad58bc6e9e0110",
+      "bytes": 33921
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-notification-os-granted-initial-fail.json",
+      "sha256": "ba1b3ba6f34971253846eb880bf259af6fc3c6166ba04f8c91bef80431557a03",
+      "bytes": 845
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-notification-os-granted.json",
+      "sha256": "4b41bbdd2a16a7ee86fa7ec9a2fd1d4755198f58fdcd87ee815a287f60612cd9",
+      "bytes": 43084
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-notification-os-revoked.json",
+      "sha256": "6afd1172ca101419d5215ed4ab78652b4a6a014765e2d071210d36f93c4b5bac",
+      "bytes": 599
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-ocr-runtime.json",
+      "sha256": "2a09f52328c48fc2fa18942ff898152587a873a900cbbabdfb3aafff589d57a9",
+      "bytes": 20499
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-qa-ledger-read.json",
+      "sha256": "d5d8fc597bf069151c9dbb09f0744345a34dda920a199f907654f0053fd0e85d",
+      "bytes": 13082
+    },
+    {
+      "path": "android-app/qa/runtime-host/pulled-qa-ledger-write.json",
+      "sha256": "16976b3df90190a80e579fa0d423ea7f25b90bbb33db9635b6b8940ea565dd2d",
+      "bytes": 22032
+    },
+    {
+      "path": "android-app/qa/runtime-host/revoke-nls-previous-1793644233.json",
+      "sha256": "a9d1a34039dc48dd1c43e01da9df19a6c2e52972268aac55c58e222138a5d054",
+      "bytes": 600
+    },
+    {
+      "path": "android-app/qa/runtime-host/revoke-nls.json",
+      "sha256": "84745e8530a0f64fc843126bb7215a29dfac723d0f98c66135fa0ebdd7d960fb",
+      "bytes": 600
+    },
+    {
+      "path": "android-app/qa/runtime-host/sdk-emulator-install.log",
+      "sha256": "d07221668eb9a353c924770b67f64f412909d3f9f6f8e3790cc2b386c155d09d",
+      "bytes": 1166
+    },
+    {
+      "path": "android-app/qa/runtime-host/sdk-image-install.log",
+      "sha256": "bf5745f383b5b6543fb67ca6debbdaa0906610f79428a93d0e32b9ecea415eeb",
+      "bytes": 1320
+    },
+    {
+      "path": "android-app/qa/runtime-host/shutdown.json",
+      "sha256": "a9889c7aca1471e059b21875cec16b7ce436f1e1261f829ff3980c2a252f44ae",
+      "bytes": 526
+    },
+    {
+      "path": "android-app/qa/runtime-host/stop-previous-1793639855.json",
+      "sha256": "6c0098d7484c844bed1cf559f650bf8c8f35a44f5f176e52a370ade9d42f126d",
+      "bytes": 536
+    },
+    {
+      "path": "android-app/qa/runtime-host/stop-previous-1793643527.json",
+      "sha256": "bcd1ffb235b77225018ec408932d869685a2410db147c07d8c6c1f40425955cf",
+      "bytes": 536
+    },
+    {
+      "path": "android-app/qa/runtime-host/stop.json",
+      "sha256": "f750cb3fc259132f2c2940f1fb2c5e55e0f1229b98d81333bcc6ce66cc9e7cd6",
+      "bytes": 536
+    },
+    {
+      "path": "android-app/qa/runtime-host/test-notifications-keystoreParserStorage.json",
+      "sha256": "387a362aad4416507348d031faeb4606122958bd738793bb514cee99707661f9",
+      "bytes": 6021
+    },
+    {
+      "path": "android-app/qa/runtime-host/test-notifications-osGrantedDelivery-previous-1793640000.json",
+      "sha256": "01051abd9d158a8f865df52da35d5282ae97f339ab6267d212fb6676e85f013c",
+      "bytes": 3914
+    },
+    {
+      "path": "android-app/qa/runtime-host/test-notifications-osGrantedDelivery-previous-1793643706.json",
+      "sha256": "d87dd3568e37593727e9e2d46797f76d2641f642341fe23c9c6675ebb54858be",
+      "bytes": 3914
+    },
+    {
+      "path": "android-app/qa/runtime-host/test-notifications-osGrantedDelivery-previous-1793644575.json",
+      "sha256": "50580241cd28f7e63c0e9fd6b908703298668d2e4b7e2559cc8d70f344b66ff3",
+      "bytes": 3914
+    },
+    {
+      "path": "android-app/qa/runtime-host/test-notifications-osGrantedDelivery.json",
+      "sha256": "7b43d30ccc2339f28e81c7e31ee2b834887c98a4b365eb65bd2a1bbd4c87a994",
+      "bytes": 3922
+    },
+    {
+      "path": "android-app/qa/runtime-host/test-notifications-osRevokedNoCapture.json",
+      "sha256": "057f94def58f60e8f5361c4d247ce7f2d13e0ac1fd6bea2a9cb0b8c69ddd5d15",
+      "bytes": 1768
+    },
+    {
+      "path": "android-app/qa/runtime-host/test-ocr.json",
+      "sha256": "62e4022d0f988a1b73fc7514df0d1b7c02b01590f213c895a842720e3c34d59b",
+      "bytes": 10322
+    },
+    {
+      "path": "android-app/qa/runtime-host/test-read.json",
+      "sha256": "5bb2a87a2f864e6b7cf1093a96bc84a6a055ce58bdc89de6249764de523ec628",
+      "bytes": 14928
+    },
+    {
+      "path": "android-app/qa/runtime-host/test-write.json",
+      "sha256": "d09f721960f982c9970e44aeeda3f54f99015355bb6bad1a69bd33a812cf6b35",
+      "bytes": 24555
+    },
+    {
+      "path": "android-app/qa/scenario/REPORT.md",
+      "sha256": "6fa29813be5bc0abd934bdd43d804c894b4455fbc163079387dbf64e45051d9e",
+      "bytes": 8856
+    },
+    {
+      "path": "android-app/qa/scenario/apk-results-initial-harness.json",
+      "sha256": "ac7ec4ebd46343c60119baea0492bcb0f107d3ee951c5991557a75a6857c8d61",
+      "bytes": 23586
+    },
+    {
+      "path": "android-app/qa/scenario/apk-results.json",
+      "sha256": "26f5608a13da158f55e2be0cb454d3c2767a63507dffb77d8b5a8497a931cb8f",
+      "bytes": 36212
+    },
+    {
+      "path": "android-app/qa/scenario/badging.txt",
+      "sha256": "bff6d922cd1a32223f4e16550b8c4ac5854026663f7382b34ac4001082d07e12",
+      "bytes": 4689
+    },
+    {
+      "path": "android-app/qa/scenario/final-build-reports-summary.json",
+      "sha256": "2ae51b5f699370e599031f7c6c01a1562eca37ed5140af2fa521f39a00e0443d",
+      "bytes": 1260
+    },
+    {
+      "path": "android-app/qa/scenario/final_apk_qa.py",
+      "sha256": "8876465aaaa6be1f6778734051e7b96660ffb95994f9c1c6bd03d4cb0405fb45",
+      "bytes": 8442
+    },
+    {
+      "path": "android-app/qa/scenario/manifest.txt",
+      "sha256": "c6439a9ff94729fc57410d01855fc8c0834b921bc95abe365e86b7a0ef810d57",
+      "bytes": 8352
+    },
+    {
+      "path": "android-app/qa/scenario/mobile-preview.jpg",
+      "sha256": "fdb7c02a7b9242fedc10f4874161b9aef9000674789ee90d6ac68fe4b8b36226",
+      "bytes": 34441
+    },
+    {
+      "path": "android-app/qa/scenario/permissions.txt",
+      "sha256": "79a524a826e2ba4b827635660e5eb0c7ae660b1b69b97f271693f6842721c898",
+      "bytes": 187
+    },
+    {
+      "path": "android-app/qa/scenario/signature.txt",
+      "sha256": "ef8018fe428f654c3ef43ec4e058ed318c7429b3ac30325546d97abad19f677d",
+      "bytes": 991
+    },
+    {
+      "path": "android-app/qa/scenario/tested-ui-hashes.json",
+      "sha256": "e650b57085274ebe22a45fc23a64f070906b239f11a2a1a56ba8981129410e5d",
+      "bytes": 729
+    },
+    {
+      "path": "android-app/qa/scenario/ui-continuity.json",
+      "sha256": "70beebb067bef4ebb141ecaf5de1da37e0d95f6aad42ae4489c3bee8aa573829",
+      "bytes": 1655
+    },
+    {
+      "path": "android-app/qa/scenario/ui-results.json",
+      "sha256": "357ee7838b09e7801e2b83c61282b81c412e0c9573b225158f65ec552716a6c8",
+      "bytes": 51326
+    },
+    {
+      "path": "android-app/qa/scenario/zipalign-16kb.txt",
+      "sha256": "08840f1d9cabde9ccf39acfdec8655c045e43460aa702889383f5a86913cea42",
+      "bytes": 6562
+    },
+    {
+      "path": "android-app/scripts/build_android.py",
+      "sha256": "41e9df34192b33790b75ae8daf49e21ecc7f82c5a5f438ece5d6ed6d5a64eb9f",
+      "bytes": 14666
+    },
+    {
+      "path": "android-app/settings.gradle",
+      "sha256": "cc3a94c9d7a6e2928b27e8bf51e85c61730711811207b2d50e9447991574d5d2",
+      "bytes": 353
+    },
+    {
+      "path": "docs/android/CONTRACT.md",
+      "sha256": "0effd4e40379f3feab3b6000ab29ebcbd4a0e56ffe49540afb0b3e93e9db8e31",
+      "bytes": 27266
+    },
+    {
+      "path": "docs/android/MONEY.md",
+      "sha256": "add32dc37931af0079236866b5248019aa59a3ae9c120b2e8030ed9a75c1cdcb",
+      "bytes": 15847
+    },
+    {
+      "path": "docs/android/SECURITY-REVIEW.md",
+      "sha256": "4c771b0ac1f635a0b7ca607ab32f3ed60cd46807bd682592f812fcd79d650d9a",
+      "bytes": 25531
+    },
+    {
+      "path": "docs/product/AUTO-ENTRY-ACCEPTANCE.md",
+      "sha256": "4ba6cf00a2b5cdaa72e56a1556d7d4bd6f03273686e164976ab1b47e41366db5",
+      "bytes": 17072
+    },
+    {
+      "path": "docs/product/PERSONAL-MVP.md",
+      "sha256": "1b821c0d14da89891c2b260a18fc0f17c7a0b5db812e0544759ac1efac0a3440",
+      "bytes": 13880
+    },
+    {
+      "path": "scripts/android_runtime_tools.py",
+      "sha256": "92620b79bc9c6117f3b6346a705186c97a970602301bffbf2593549be55b1280",
+      "bytes": 6146
+    },
+    {
+      "path": "scripts/run_android_runtime.py",
+      "sha256": "10a8837731f64cbffe912212210dba744645abf5615788df7957bf147153c87f",
+      "bytes": 9864
+    },
+    {
+      "path": "scripts/snapshot_android.py",
+      "sha256": "19339af2c6ce9af98f82c69d77e2f1a1c3ea6a350e3080200abb5d61950b6d02",
+      "bytes": 5824
+    },
+    {
+      "path": "team/reports/APP-005-architecture-review.md",
+      "sha256": "a3e3c7aedf3c55539c3996e2853467b239237243d06e88ec07bbe3916233d5b2",
+      "bytes": 15641
+    },
+    {
+      "path": "team/reports/APP-005-backend-review.md",
+      "sha256": "fb47e23e72bdd54e37930db1e5d3a40c30cbed2fb48d2423cb2f58558987efb4",
+      "bytes": 21235
+    },
+    {
+      "path": "team/reports/APP-005-finance-review.md",
+      "sha256": "6a5bdc8780d7d6c7d78111802e6bbe6b78720c0315a6c108c891fa9cdfe222e2",
+      "bytes": 10368
+    },
+    {
+      "path": "team/reports/APP-005-frontend-review.md",
+      "sha256": "2df209cf69f33ca5d7c55dae3765142a7bf7f4ef95c20ee85bc611321ac801e8",
+      "bytes": 15464
+    },
+    {
+      "path": "team/reports/APP-005-qa-review.md",
+      "sha256": "4244e5d86788f35ee91c4bd5f035e6fcd5e9884ef7d5855f0ea972426213eb28",
+      "bytes": 12801
+    },
+    {
+      "path": "team/reports/APP-005-runtime-plan.md",
+      "sha256": "c71ebac8ace57052a19f889ae48599957996cfcf9bbb7ba15c5c4f7e18fa199e",
+      "bytes": 14232
+    },
+    {
+      "path": "team/reports/APP-006-backend-triage.md",
+      "sha256": "ff1b73f65238681fcbbd8c23becffb5660e76a227b04c1528fe89cf7a245115f",
+      "bytes": 14612
+    },
+    {
+      "path": "team/reports/APP-006-qa-review.md",
+      "sha256": "f40895b3d48cfaf3366b8bd4507c41285bb97c257157cd1d7fbc4bfbf66994e4",
+      "bytes": 14969
+    }
+  ],
+  "parent": "android-alpha-v1",
+  "parentManifestSha256": "87b8a045ac6e104e802cca11e6bbae40cceb5d688e13e681e654a990f4f99864",
+  "parentArchive": "team/snapshots/android-alpha-v1-files",
+  "parentArchiveFilesVerified": 108
+}

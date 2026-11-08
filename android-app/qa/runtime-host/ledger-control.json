@@ -1,0 +1,110 @@
+{
+  "writePid": 2343,
+  "summaries": [
+    {
+      "month": "2026-10",
+      "currency": "KZT",
+      "income": "0.30",
+      "expense": "2.30",
+      "net": "-2.00",
+      "count": 3
+    },
+    {
+      "month": "2026-10",
+      "currency": "USD",
+      "income": "0.00",
+      "expense": "7.89",
+      "net": "-7.89",
+      "count": 1
+    },
+    {
+      "month": "2026-11",
+      "currency": "KZT",
+      "income": "0.00",
+      "expense": "1.20",
+      "net": "-1.20",
+      "count": 1
+    },
+    {
+      "month": "2026-09",
+      "currency": "KZT",
+      "income": "9007199254740993.03",
+      "expense": "9007199254740992.99",
+      "net": "0.04",
+      "count": 3
+    },
+    {
+      "month": "2026-08",
+      "currency": "KZT",
+      "income": "1999999999999999999999999.98",
+      "expense": "0.00",
+      "net": "1999999999999999999999999.98",
+      "count": 2
+    },
+    {
+      "month": "2026-07",
+      "currency": "JPY",
+      "income": "0",
+      "expense": "7",
+      "net": "-7",
+      "count": 1
+    },
+    {
+      "month": "2026-07",
+      "currency": "KWD",
+      "income": "1.200",
+      "expense": "0.000",
+      "net": "1.200",
+      "count": 1
+    },
+    {
+      "month": "9999-12",
+      "currency": "KZT",
+      "income": "0.00",
+      "expense": "0.01",
+      "net": "-0.01",
+      "count": 1
+    },
+    {
+      "month": "2026-06",
+      "currency": "KZT",
+      "income": "0.00",
+      "expense": "21.23",
+      "net": "-21.23",
+      "count": 2
+    }
+  ],
+  "movedID": "8af9e646-c58d-4c10-b076-57f1073ace2b",
+  "categorizedID": "a766caa6-628c-48a1-9708-a324251d4be4",
+  "incomeCategoryID": "96d0d2f9-8806-4206-b1c7-d8c07ad052ac",
+  "deletedCategoryID": "3d33a2ba-7378-40ae-bb7c-01ebdbbf292d",
+  "deletedRecordID": "fc55475a-b7a2-4388-87be-bac6bc54ef84",
+  "originalSource": {
+    "kind": "notification",
+    "eventId": "0857adce-dee1-4b4b-8529-261dea4dae0b",
+    "sourceKeyToken": "9b64220849d7873d4772b32cdc351abf7ff9401fc33cfbb7b915f1717bbd7ed3",
+    "revisionToken": "754d9cd69a40cb00c5999f60b7971ccdf9a0686484b9cf664b39c8a7301e6e55",
+    "accountSurrogate": "585b671b2bd026149a58e0327452aa128937a5a230b34e22a29bf42e177966a6",
+    "paymentRefToken": "dfc72c56e0216f8e16069f78b7a917d7634b4178169ddfb003a93c033aed9a96",
+    "packageName": "com.ladno.qa.bank",
+    "label": "Уведомление",
+    "capturedAt": "2026-11-02T00:00:00Z",
+    "postTime": 1793577600000
+  },
+  "ignoredSource": {
+    "kind": "receipt",
+    "eventId": "795aa81b-ef4d-4b71-80e2-0423a9d3b9f5",
+    "sourceKeyToken": "62a47e5b1346df294824b9835292e1b2b14f72fe9eb4db394a0669000a007b4d",
+    "revisionToken": "ceb2bc3ebee6eae77c2daa459ed4418429b9a36eb8b31624801aa1823400577a",
+    "accountSurrogate": null,
+    "paymentRefToken": null,
+    "packageName": "com.ladno.qa.bank",
+    "label": "Чек",
+    "capturedAt": "2026-11-02T00:00:00Z",
+    "postTime": 1793577600000
+  },
+  "pendingRevisionID": "f7f8ad6c-8894-4d0d-aafb-c7f65936243d",
+  "pendingNoIdentityID": "ae3c1c6a-1b6a-465d-ab62-4de411c33801",
+  "distinctID": "475be5cd-3fa8-485e-a6c5-2baccc0fa996",
+  "explicitPostID": "d4d16713-9232-4c96-9941-81bd64d5f670"
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "author pure Java unknown-suffix safe prefill regression; not independent QA/native OCR",
+  "exitCode": 0,
+  "junitMethods": 28,
+  "commands": [
+    [
+      "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\javac.exe",
+      "-encoding",
+      "UTF-8",
+      "-cp",
+      "C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.json\\json\\20240303\\ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a\\json-20240303.jar;C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\junit\\junit\\4.13.2\\8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12\\junit-4.13.2.jar;C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.hamcrest\\hamcrest-core\\1.3\\42a25dc3219429f0e5d060061f71acb49bf010a0\\hamcrest-core-1.3.jar",
+      "-d",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\.local\\app008-native-checks",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\BankMessageParser.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ContractException.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ImportCandidate.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\JsonChecks.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\Money.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ParseSupport.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ReceiptParser.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\NativeJson.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\ScanOutcome.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\test\\java\\com\\ladno\\finance\\core\\ParserTest.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\test\\java\\com\\ladno\\finance\\ScanOutcomeTest.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ReceiptOcrConsensus.java",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\app\\src\\test\\java\\com\\ladno\\finance\\core\\ReceiptOcrConsensusTest.java"
+    ],
+    [
+      "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\java.exe",
+      "-cp",
+      "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\.local\\app008-native-checks;C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.json\\json\\20240303\\ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a\\json-20240303.jar;C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\junit\\junit\\4.13.2\\8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12\\junit-4.13.2.jar;C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.hamcrest\\hamcrest-core\\1.3\\42a25dc3219429f0e5d060061f71acb49bf010a0\\hamcrest-core-1.3.jar",
+      "org.junit.runner.JUnitCore",
+      "com.ladno.finance.core.ParserTest",
+      "com.ladno.finance.ScanOutcomeTest",
+      "com.ladno.finance.core.ReceiptOcrConsensusTest"
+    ]
+  ],
+  "files": [
+    {
+      "path": "android-app/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "sha256": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2"
+    },
+    {
+      "path": "android-app/app/src/test/java/com/ladno/finance/core/ParserTest.java",
+      "sha256": "90d79651b3aac9cde2250dbd07ff1aaf216adddb3119030a01679c130cd908f4"
+    }
+  ]
+}

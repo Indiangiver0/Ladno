@@ -1,0 +1,2431 @@
+{
+  "scope": "independent audit of root actual native API execution; not own Android execution or UI",
+  "apkSha256": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+  "sourceFingerprint": "d20ab8f54d5aede6bf35af8b1b1b01caacd5bc890bece57d303023514b444fe8",
+  "nativeAssertions": 71,
+  "auditChecks": [
+    {
+      "id": "final main APK pin",
+      "expected": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+      "actual": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+      "pass": true
+    },
+    {
+      "id": "installed same main APK",
+      "expected": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+      "actual": "f73e04a0202418ee1dc59c1e669a57228988607de9fb1f60bd388b8e4a20beac",
+      "pass": true
+    },
+    {
+      "id": "same source fingerprint",
+      "expected": "d20ab8f54d5aede6bf35af8b1b1b01caacd5bc890bece57d303023514b444fe8",
+      "actual": "d20ab8f54d5aede6bf35af8b1b1b01caacd5bc890bece57d303023514b444fe8",
+      "pass": true
+    },
+    {
+      "id": "same staged source fingerprint",
+      "expected": "d20ab8f54d5aede6bf35af8b1b1b01caacd5bc890bece57d303023514b444fe8",
+      "actual": "d20ab8f54d5aede6bf35af8b1b1b01caacd5bc890bece57d303023514b444fe8",
+      "pass": true
+    },
+    {
+      "id": "installed actual test APK",
+      "expected": "bd7030dfef1ce979528e2936aa6a3b2fc90c405e5c6a3eec166503cd5bc109e3",
+      "actual": "bd7030dfef1ce979528e2936aa6a3b2fc90c405e5c6a3eec166503cd5bc109e3",
+      "pass": true
+    },
+    {
+      "id": "install/dedicated AVD",
+      "expected": "Ladno_QA_API30",
+      "actual": "Ladno_QA_API30",
+      "pass": true
+    },
+    {
+      "id": "install/dedicated serial",
+      "expected": "emulator-5580",
+      "actual": "emulator-5580",
+      "pass": true
+    },
+    {
+      "id": "install/command passed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "clear/dedicated AVD",
+      "expected": "Ladno_QA_API30",
+      "actual": "Ladno_QA_API30",
+      "pass": true
+    },
+    {
+      "id": "clear/dedicated serial",
+      "expected": "emulator-5580",
+      "actual": "emulator-5580",
+      "pass": true
+    },
+    {
+      "id": "clear/command passed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "instrument/dedicated AVD",
+      "expected": "Ladno_QA_API30",
+      "actual": "Ladno_QA_API30",
+      "pass": true
+    },
+    {
+      "id": "instrument/dedicated serial",
+      "expected": "emulator-5580",
+      "actual": "emulator-5580",
+      "pass": true
+    },
+    {
+      "id": "instrument/command passed",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "clear followed install",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "actual instrumentation class",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "actual successful one test",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "no instrumentation failures",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "native API30",
+      "expected": 30,
+      "actual": 30,
+      "pass": true
+    },
+    {
+      "id": "native x86_64",
+      "expected": "x86_64",
+      "actual": "x86_64",
+      "pass": true
+    },
+    {
+      "id": "private no failure",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "private71assertions",
+      "expected": 71,
+      "actual": 71,
+      "pass": true
+    },
+    {
+      "id": "assertion/0/real Tesseract initialized",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/0",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/0",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/1/original counterexample PNG unchanged",
+      "expected": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+      "actual": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/1",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/1",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/2/en-multiline-paid/amount",
+      "expected": "754.32",
+      "actual": "754.32",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/2",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/2",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/3/en-multiline-paid/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/3",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/3",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/4/en-multiline-paid/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/4",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/4",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/5/en-multiline-paid/OCR completed-paid evidence",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/5",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/5",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/6/counterexample verifier retains alternative794.32",
+      "expected": "794.32",
+      "actual": "794.32",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/6",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/6",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/7/counterexample disagreement disallows auto",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/7",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/7",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/8/ru-fiscal-card/amount",
+      "expected": "8765.43",
+      "actual": "8765.43",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/8",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/8",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/9/ru-fiscal-card/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/9",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/9",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/10/ru-fiscal-card/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/10",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/10",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/11/ru-fiscal-card/OCR completed-paid evidence",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/11",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/11",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/12/unsupported currency spelling requires review",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/12",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/12",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/13/ru-unpaid/amount",
+      "expected": "99.85",
+      "actual": "99.85",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/13",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/13",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/14/ru-unpaid/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/14",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/14",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/15/ru-unpaid/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/15",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/15",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/16/ru-unpaid/OCR completed-paid evidence",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/16",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/16",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/17/en-agreement-paid/amount",
+      "expected": "123.45",
+      "actual": "123.45",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/17",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/17",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/18/en-agreement-paid/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/18",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/18",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/19/en-agreement-paid/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/19",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/19",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/20/en-agreement-paid/OCR completed-paid evidence",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/20",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/20",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/21/en-agreement-paid/known agreement proves automatic path",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/21",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/21",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/22/ru-fiscal-tenge/amount",
+      "expected": "6543.21",
+      "actual": "6543.21",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/22",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/22",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/23/ru-fiscal-tenge/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/23",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/23",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/24/ru-fiscal-tenge/date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/24",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/24",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/25/ru-fiscal-tenge/OCR completed-paid evidence",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/25",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/25",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/26/ru-fiscal-tenge/known agreement proves automatic path",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/26",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/26",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/27/runtime OCR initialized",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/27",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/27",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/28/en-multiline-paid/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/28",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/28",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/29/en-multiline-paid/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/29",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/29",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/30/en-multiline-paid/native amount",
+      "expected": "754.32",
+      "actual": "754.32",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/30",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/30",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/31/en-multiline-paid/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/31",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/31",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/32/en-multiline-paid/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/32",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/32",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/33/en-multiline-paid/native status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/33",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/33",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/34/en-multiline-paid/ledger delta",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/34",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/34",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/35/en-multiline-paid/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/35",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/35",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/36/en-multiline-paid/disagreement explains review",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/36",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/36",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/37/ru-fiscal-card/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/37",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/37",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/38/ru-fiscal-card/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/38",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/38",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/39/ru-fiscal-card/native amount",
+      "expected": "8765.43",
+      "actual": "8765.43",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/39",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/39",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/40/ru-fiscal-card/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/40",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/40",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/41/ru-fiscal-card/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/41",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/41",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/42/ru-fiscal-card/native status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/42",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/42",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/43/ru-fiscal-card/ledger delta",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/43",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/43",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/44/ru-fiscal-card/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/44",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/44",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/45/ru-fiscal-card/disagreement explains review",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/45",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/45",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/46/native fiscal unsupported currency remains review",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/46",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/46",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/47/ru-unpaid/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/47",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/47",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/48/ru-unpaid/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/48",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/48",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/49/ru-unpaid/native amount",
+      "expected": "99.85",
+      "actual": "99.85",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/49",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/49",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/50/ru-unpaid/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/50",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/50",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/51/ru-unpaid/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/51",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/51",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/52/ru-unpaid/native status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/52",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/52",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/53/ru-unpaid/ledger delta",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/53",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/53",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/54/ru-unpaid/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/54",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/54",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/55/en-agreement-paid/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/55",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/55",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/56/en-agreement-paid/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/56",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/56",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/57/en-agreement-paid/native amount",
+      "expected": "123.45",
+      "actual": "123.45",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/57",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/57",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/58/en-agreement-paid/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/58",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/58",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/59/en-agreement-paid/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/59",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/59",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/60/en-agreement-paid/native status",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/60",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/60",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/61/en-agreement-paid/ledger delta",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/61",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/61",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/62/en-agreement-paid/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/62",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/62",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/63/ru-fiscal-tenge/private image cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/63",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/63",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/64/ru-fiscal-tenge/native candidate exists",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/64",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/64",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/65/ru-fiscal-tenge/native amount",
+      "expected": "6543.21",
+      "actual": "6543.21",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/65",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/65",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/66/ru-fiscal-tenge/native currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/66",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/66",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/67/ru-fiscal-tenge/native date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/67",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/67",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/68/ru-fiscal-tenge/native status",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/68",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/68",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/69/ru-fiscal-tenge/ledger delta",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/69",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/69",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "assertion/70/ru-fiscal-tenge/no794.32 receipt autoexpense",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "assertion pass flag/70",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "command includes assertion/70",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/independent ground truth/amount",
+      "expected": "754.32",
+      "actual": "754.32",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/independent ground truth/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/independent ground truth/kind",
+      "expected": "expense",
+      "actual": "expense",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/independent ground truth/operation_date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/independent ground truth/status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/independent ground truth/reasons",
+      "expected": [
+        "LOW_CONFIDENCE"
+      ],
+      "actual": [
+        "LOW_CONFIDENCE"
+      ],
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/transaction only if posted",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/primary actual amount correct",
+      "expected": "754.32",
+      "actual": "754.32",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/both passes executed",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/primaryMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/verificationMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/independent ground truth/amount",
+      "expected": "8765.43",
+      "actual": "8765.43",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/independent ground truth/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/independent ground truth/kind",
+      "expected": "expense",
+      "actual": "expense",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/independent ground truth/operation_date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/independent ground truth/status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/independent ground truth/reasons",
+      "expected": [
+        "CURRENCY_UNKNOWN",
+        "LOW_CONFIDENCE"
+      ],
+      "actual": [
+        "CURRENCY_UNKNOWN",
+        "LOW_CONFIDENCE"
+      ],
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/transaction only if posted",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/primary actual amount correct",
+      "expected": "8765.43",
+      "actual": "8765.43",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/both passes executed",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/primaryMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/verificationMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/independent ground truth/amount",
+      "expected": "99.85",
+      "actual": "99.85",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/independent ground truth/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/independent ground truth/kind",
+      "expected": "expense",
+      "actual": "expense",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/independent ground truth/operation_date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/independent ground truth/status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/independent ground truth/reasons",
+      "expected": [
+        "UNSUPPORTED_EVENT",
+        "LOW_CONFIDENCE"
+      ],
+      "actual": [
+        "UNSUPPORTED_EVENT",
+        "LOW_CONFIDENCE"
+      ],
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/transaction only if posted",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/primary actual amount correct",
+      "expected": "99.85",
+      "actual": "99.85",
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/both passes executed",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/primaryMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/verificationMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/independent ground truth/amount",
+      "expected": "123.45",
+      "actual": "123.45",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/independent ground truth/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/independent ground truth/kind",
+      "expected": "expense",
+      "actual": "expense",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/independent ground truth/operation_date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/independent ground truth/status",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/independent ground truth/reasons",
+      "expected": [],
+      "actual": [],
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/transaction only if posted",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/primary actual amount correct",
+      "expected": "123.45",
+      "actual": "123.45",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/both passes executed",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/verifier correct amount",
+      "expected": "123.45",
+      "actual": "123.45",
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/primaryMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/verificationMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/independent ground truth/amount",
+      "expected": "6543.21",
+      "actual": "6543.21",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/independent ground truth/currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/independent ground truth/kind",
+      "expected": "expense",
+      "actual": "expense",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/independent ground truth/operation_date",
+      "expected": "2026-11-03",
+      "actual": "2026-11-03",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/independent ground truth/status",
+      "expected": "posted",
+      "actual": "posted",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/independent ground truth/reasons",
+      "expected": [],
+      "actual": [],
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/transaction only if posted",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/primary actual amount correct",
+      "expected": "6543.21",
+      "actual": "6543.21",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/both passes executed",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/verifier correct amount",
+      "expected": "6543.21",
+      "actual": "6543.21",
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/primaryMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/verificationMillis nonnegative integer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "known alternative stays794.32",
+      "expected": "794.32",
+      "actual": "794.32",
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/independent accumulated record count",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/independent accumulated record count",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/independent accumulated record count",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/independent accumulated record count",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/independent accumulated record count",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "en-multiline-paid/no794.32 receipt autoexpense/independent zero",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-card/no794.32 receipt autoexpense/independent zero",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "ru-unpaid/no794.32 receipt autoexpense/independent zero",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "en-agreement-paid/no794.32 receipt autoexpense/independent zero",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "ru-fiscal-tenge/no794.32 receipt autoexpense/independent zero",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "original PNG preserved independently",
+      "expected": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+      "actual": "03d1e86729936c8be09a39af09eedba6f6d2aece07ff97196edce4a09ae7af2d",
+      "pass": true
+    },
+    {
+      "id": "final source/.gitignore",
+      "expected": "3b5c4a1f7ff509109b819243abd332e85b9cecf28bb73f8ac3baed5666f74f7b",
+      "actual": "3b5c4a1f7ff509109b819243abd332e85b9cecf28bb73f8ac3baed5666f74f7b",
+      "pass": true
+    },
+    {
+      "id": "final source/app/build.gradle",
+      "expected": "e11c048cbb2172780ea1f6c3761617941736ce4343b874d3f0d365dce3f9f90a",
+      "actual": "e11c048cbb2172780ea1f6c3761617941736ce4343b874d3f0d365dce3f9f90a",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/assets/tessdata-best/eng.traineddata",
+      "expected": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "actual": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/assets/tessdata-best/LICENSE.txt",
+      "expected": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "actual": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/java/com/ladno/finance/AuthorOcrDiagnosticTest.java",
+      "expected": "7a097156c82a03305023a6388a5390859bc63b6027341a92e1e3a47efd063f34",
+      "actual": "7a097156c82a03305023a6388a5390859bc63b6027341a92e1e3a47efd063f34",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/java/com/ladno/finance/NativeRuntimeFixtures.java",
+      "expected": "bc886ed956e451d0c1bbc22f5cf4db9c84fe303ac6db235c435d0d205d6d84f4",
+      "actual": "bc886ed956e451d0c1bbc22f5cf4db9c84fe303ac6db235c435d0d205d6d84f4",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/java/com/ladno/finance/NotificationRuntimeTest.java",
+      "expected": "7bb1312445c6deda3e65a1879e22c6a2d9abf74a9340c3c8b33b1d82f36f9ba5",
+      "actual": "7bb1312445c6deda3e65a1879e22c6a2d9abf74a9340c3c8b33b1d82f36f9ba5",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/java/com/ladno/finance/OcrRuntimeTest.java",
+      "expected": "ac492a5307e344131abb0997309054b37c041270cc0998baaacc190992cae1e3",
+      "actual": "ac492a5307e344131abb0997309054b37c041270cc0998baaacc190992cae1e3",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/java/com/ladno/finance/ReceiptLayoutRuntimeTest.java",
+      "expected": "6495b49e9120ee8ad1807fb9a691ed0f6200ea4894676c8f1c89c1e8df25fccc",
+      "actual": "6495b49e9120ee8ad1807fb9a691ed0f6200ea4894676c8f1c89c1e8df25fccc",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeFixtures.java",
+      "expected": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+      "actual": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeReadTest.java",
+      "expected": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+      "actual": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeWriteTest.java",
+      "expected": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903",
+      "actual": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/androidTest/java/com/ladno/finance/storage/StarterCategoryMigrationTest.java",
+      "expected": "c6bee4ef559c8e4ce1c81809422cd07967efe086ba0d058a1c8ba53a990f84f6",
+      "actual": "c6bee4ef559c8e4ce1c81809422cd07967efe086ba0d058a1c8ba53a990f84f6",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/AndroidManifest.xml",
+      "expected": "757d8ea2e8ab5e4df74d1fbfc7f3b2d6577d2b9fd3519749e43cb135cc63f246",
+      "actual": "757d8ea2e8ab5e4df74d1fbfc7f3b2d6577d2b9fd3519749e43cb135cc63f246",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/db/schema.sql",
+      "expected": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "actual": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/licenses/Apache-2.0.txt",
+      "expected": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "actual": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/licenses/IJG-JPEG.txt",
+      "expected": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+      "actual": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/licenses/Leptonica.txt",
+      "expected": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+      "actual": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/licenses/libpng.txt",
+      "expected": "16d9daaafbf63a31a5bdc91d4600972548fef5aaa1244202393288dbd079c49a",
+      "actual": "16d9daaafbf63a31a5bdc91d4600972548fef5aaa1244202393288dbd079c49a",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/licenses/sources.json",
+      "expected": "6d5b8a9588d9d85717800353c5205f033990099700391b8206b560fc7bed5ac5",
+      "actual": "6d5b8a9588d9d85717800353c5205f033990099700391b8206b560fc7bed5ac5",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/licenses/THIRD_PARTY_NOTICES.txt",
+      "expected": "2a0491fbdcef603061562ea17b674ee1983b355fbe86891858cbd001f99c1593",
+      "actual": "2a0491fbdcef603061562ea17b674ee1983b355fbe86891858cbd001f99c1593",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/tessdata/eng.traineddata",
+      "expected": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "actual": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/tessdata/kaz.traineddata",
+      "expected": "fcc01eed3815a42b9c6321c4c9d3606f39b166cbf95ade98b7d8d12063eae53d",
+      "actual": "fcc01eed3815a42b9c6321c4c9d3606f39b166cbf95ade98b7d8d12063eae53d",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/tessdata/LICENSE.txt",
+      "expected": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "actual": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/tessdata/rus.traineddata",
+      "expected": "e16e5e036cce1d9ec2b00063cf8b54472625b9e14d893a169e2b0dedeb4df225",
+      "actual": "e16e5e036cce1d9ec2b00063cf8b54472625b9e14d893a169e2b0dedeb4df225",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/tessdata-best/eng.traineddata",
+      "expected": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "actual": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/tessdata-best/kaz.traineddata",
+      "expected": "34cbd9204b1ff3cc813d50b29e3c0ae3752bcc201f261a4a393ceca3895aea9d",
+      "actual": "34cbd9204b1ff3cc813d50b29e3c0ae3752bcc201f261a4a393ceca3895aea9d",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/tessdata-best/LICENSE.txt",
+      "expected": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "actual": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/tessdata-best/rus.traineddata",
+      "expected": "b617eb6830ffabaaa795dd87ea7fd251adfe9cf0efe05eb9a2e8128b7728d6b6",
+      "actual": "b617eb6830ffabaaa795dd87ea7fd251adfe9cf0efe05eb9a2e8128b7728d6b6",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/www/app.js",
+      "expected": "2ffcfeca79dd221b2c6043f1ac40b8b180bdcd2108609de43b5ac25920ed11fe",
+      "actual": "2ffcfeca79dd221b2c6043f1ac40b8b180bdcd2108609de43b5ac25920ed11fe",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/www/bridge.js",
+      "expected": "4241148a4a12c50eeccfb5965a1247711fdb07d5d369e1a1f825d39fdc98c6e2",
+      "actual": "4241148a4a12c50eeccfb5965a1247711fdb07d5d369e1a1f825d39fdc98c6e2",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/www/index.html",
+      "expected": "7e9dd72daee9df50ab69b5b260f3f5c0bf087663c674a7fc75b2c1652a511e01",
+      "actual": "7e9dd72daee9df50ab69b5b260f3f5c0bf087663c674a7fc75b2c1652a511e01",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/www/preview-adapter.js",
+      "expected": "1f096640f1cbc16d014cf535b20f51174a585e979d6ea68bfd9a6a0424000611",
+      "actual": "1f096640f1cbc16d014cf535b20f51174a585e979d6ea68bfd9a6a0424000611",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/www/styles.css",
+      "expected": "eec74046d44208c6a878776a8a5bfa66eef5f6f1cb691894de30ff04c2aabb64",
+      "actual": "eec74046d44208c6a878776a8a5bfa66eef5f6f1cb691894de30ff04c2aabb64",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/assets/www/view.js",
+      "expected": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "actual": "964bd72a0204329c340d3a3778fc1d893d997f37001c0db68f199a5a602bed98",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/AppBridge.java",
+      "expected": "47c5780139e069231d2c193fcb90d7aa437a1f80ed178cad0b1ed4b21358ae0b",
+      "actual": "47c5780139e069231d2c193fcb90d7aa437a1f80ed178cad0b1ed4b21358ae0b",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/BankNotificationService.java",
+      "expected": "ef1d6da43e4f1be253d6371055dcd23f9bcf5d638a99aff3ae9ea80a50b76c76",
+      "actual": "ef1d6da43e4f1be253d6371055dcd23f9bcf5d638a99aff3ae9ea80a50b76c76",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/core/BankMessageParser.java",
+      "expected": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+      "actual": "7bb3ca3e3a0714df7317b8e03a55cddc5d3551f45429bb10af8e13dde949cc3a",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/core/ContractException.java",
+      "expected": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "actual": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/core/ImportCandidate.java",
+      "expected": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "actual": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/core/JsonChecks.java",
+      "expected": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "actual": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/core/Money.java",
+      "expected": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "actual": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/core/ParseSupport.java",
+      "expected": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "actual": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/core/ReceiptOcrConsensus.java",
+      "expected": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "actual": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "expected": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "actual": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/LocalAssets.java",
+      "expected": "877dfa97b7259d289575c72939c516ef975115088a2acac6c554db5ddccd4f40",
+      "actual": "877dfa97b7259d289575c72939c516ef975115088a2acac6c554db5ddccd4f40",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/MainActivity.java",
+      "expected": "fe161aea8c84cbf03a9f1da136159702d3fc1a0f77d62a27b499411600b6dc4f",
+      "actual": "fe161aea8c84cbf03a9f1da136159702d3fc1a0f77d62a27b499411600b6dc4f",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/NativeJson.java",
+      "expected": "4d6cbc0baa55fa6349f3eb1e9ab48463f1e61541b5cb904d36728b602408dfd1",
+      "actual": "4d6cbc0baa55fa6349f3eb1e9ab48463f1e61541b5cb904d36728b602408dfd1",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/NativeRuntime.java",
+      "expected": "64201514a727437650a2ada237762c48cfe454b369e064acab9fb7da60ca7419",
+      "actual": "64201514a727437650a2ada237762c48cfe454b369e064acab9fb7da60ca7419",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/NoBackupAgent.java",
+      "expected": "345e7b5588edafc68f07afbfefb80eac870da9b6f6f861f27147cb35eb611925",
+      "actual": "345e7b5588edafc68f07afbfefb80eac870da9b6f6f861f27147cb35eb611925",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/NotificationStatus.java",
+      "expected": "bc3cee982de669d3fbbcda31f17a6fb0cf7f7a4d00b085c0e628bc31a00bfaca",
+      "actual": "bc3cee982de669d3fbbcda31f17a6fb0cf7f7a4d00b085c0e628bc31a00bfaca",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/OcrEngine.java",
+      "expected": "7a6feaecbac6257794fdb812cbadfe7a45501dcf2a51ed89e0ecc562adfa4fab",
+      "actual": "7a6feaecbac6257794fdb812cbadfe7a45501dcf2a51ed89e0ecc562adfa4fab",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/ScanOutcome.java",
+      "expected": "fc105480468a9b261f0dabef675edc6314f3ab4c77e70cfd589756f655f68118",
+      "actual": "fc105480468a9b261f0dabef675edc6314f3ab4c77e70cfd589756f655f68118",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/SourceTokens.java",
+      "expected": "576ec0ff9a16febe1bae6c411f3ae3701fe30decb8ba1fc70ed2c978d1b8a9fa",
+      "actual": "576ec0ff9a16febe1bae6c411f3ae3701fe30decb8ba1fc70ed2c978d1b8a9fa",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/storage/IngestSource.java",
+      "expected": "8698a9e321e905b0969431cc2c58cb50dd2d8a25c4f8d78f0bcee3b5ae86c3b0",
+      "actual": "8698a9e321e905b0969431cc2c58cb50dd2d8a25c4f8d78f0bcee3b5ae86c3b0",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/storage/LedgerStore.java",
+      "expected": "92d55537dc60ab672b7e6950b70bbf21c587386edf4f77eddacd3156c273d986",
+      "actual": "92d55537dc60ab672b7e6950b70bbf21c587386edf4f77eddacd3156c273d986",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/storage/StarterCategories.java",
+      "expected": "d6d30f2a1990d9a1ae40b473b3a1ba981762fddfedc593d8e3c7a1595df6d013",
+      "actual": "d6d30f2a1990d9a1ae40b473b3a1ba981762fddfedc593d8e3c7a1595df6d013",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/java/com/ladno/finance/storage/StorageApi.java",
+      "expected": "d9d7c475f22cfa356f7200221ed85f767445d4ed95f86881b3e9b3c06f34353e",
+      "actual": "d9d7c475f22cfa356f7200221ed85f767445d4ed95f86881b3e9b3c06f34353e",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/res/drawable/ic_launcher.xml",
+      "expected": "4bb92a9b5309c2a0232d074e0d1bd91d6c93d369a3f5cf94165f5b187f584c76",
+      "actual": "4bb92a9b5309c2a0232d074e0d1bd91d6c93d369a3f5cf94165f5b187f584c76",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/res/values/strings.xml",
+      "expected": "4862818a50d70a0675b9dec848f3562cfd5bf1e1e5af303796e6112fdab76f59",
+      "actual": "4862818a50d70a0675b9dec848f3562cfd5bf1e1e5af303796e6112fdab76f59",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/res/values/styles.xml",
+      "expected": "7f0ef49a3e707fe9c8133db6f9f0f544937f92a62992827290e1d274c682e05f",
+      "actual": "7f0ef49a3e707fe9c8133db6f9f0f544937f92a62992827290e1d274c682e05f",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/res/xml/backup_rules.xml",
+      "expected": "865cae97840e81b9950d70457a05c5c1125a68364b0a83f44cd3daa030bc7e96",
+      "actual": "865cae97840e81b9950d70457a05c5c1125a68364b0a83f44cd3daa030bc7e96",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/res/xml/capture_paths.xml",
+      "expected": "d289feecffdc65f6bd51c9715cfbc8d0cbb77bfcf3b50186353c2cd0117f8ae0",
+      "actual": "d289feecffdc65f6bd51c9715cfbc8d0cbb77bfcf3b50186353c2cd0117f8ae0",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/main/res/xml/data_extraction_rules.xml",
+      "expected": "23be8f0e337039bad566d125d29c0dceac8c66d21aba280147212c9385e20ce0",
+      "actual": "23be8f0e337039bad566d125d29c0dceac8c66d21aba280147212c9385e20ce0",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/test/java/com/ladno/finance/core/MoneyTest.java",
+      "expected": "01e79291afa12637b2288f86f19760c40097d88e81cd29ac3b8c1e4a6228a5a1",
+      "actual": "01e79291afa12637b2288f86f19760c40097d88e81cd29ac3b8c1e4a6228a5a1",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/test/java/com/ladno/finance/core/ParserTest.java",
+      "expected": "90d79651b3aac9cde2250dbd07ff1aaf216adddb3119030a01679c130cd908f4",
+      "actual": "90d79651b3aac9cde2250dbd07ff1aaf216adddb3119030a01679c130cd908f4",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/test/java/com/ladno/finance/core/ReceiptOcrConsensusTest.java",
+      "expected": "9fd05517fef7a80b65b1d33487287d8d46ee2a20247ebfd6d162f63f690af532",
+      "actual": "9fd05517fef7a80b65b1d33487287d8d46ee2a20247ebfd6d162f63f690af532",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/test/java/com/ladno/finance/nativebridge/LocalAssetsTest.java",
+      "expected": "421097fd52441b6dc616c3c20ff211a3a77cae513b342bd0c927f34506e05107",
+      "actual": "421097fd52441b6dc616c3c20ff211a3a77cae513b342bd0c927f34506e05107",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/test/java/com/ladno/finance/nativebridge/NativeJsonGuardTest.java",
+      "expected": "ca57d7a976ed643b71d0bb63e012bc58dc3da2aba6c67fbdb6bb618b9f81b2cc",
+      "actual": "ca57d7a976ed643b71d0bb63e012bc58dc3da2aba6c67fbdb6bb618b9f81b2cc",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/test/java/com/ladno/finance/nativebridge/NotificationStatusTest.java",
+      "expected": "07d51a8b20ee8c4da0c2acebac81a51477fa911bc9e4fe2b50456918089e11d3",
+      "actual": "07d51a8b20ee8c4da0c2acebac81a51477fa911bc9e4fe2b50456918089e11d3",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/test/java/com/ladno/finance/ScanOutcomeTest.java",
+      "expected": "0f877f7423445809aea4b99a5afc63b71527c756dfbcebd54ab02350bceb82a0",
+      "actual": "0f877f7423445809aea4b99a5afc63b71527c756dfbcebd54ab02350bceb82a0",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/test/java/com/ladno/finance/storage/IngestSourceTest.java",
+      "expected": "0b3ed97eeb5d2416c0769eda3336bcd710c5bbe51de05de5b120aadbe1e25f3e",
+      "actual": "0b3ed97eeb5d2416c0769eda3336bcd710c5bbe51de05de5b120aadbe1e25f3e",
+      "pass": true
+    },
+    {
+      "id": "final source/app/src/test/java/com/ladno/finance/storage/schema_contract_test.py",
+      "expected": "3337219fd96b4fdc797fd6601182c32e3dff0e96de85ac3d8b314f20e42948d7",
+      "actual": "3337219fd96b4fdc797fd6601182c32e3dff0e96de85ac3d8b314f20e42948d7",
+      "pass": true
+    },
+    {
+      "id": "final source/build-versions.json",
+      "expected": "92f8989fe38b30044135927dd47af71caf46b2dc59805e7ddda19d68031eef95",
+      "actual": "92f8989fe38b30044135927dd47af71caf46b2dc59805e7ddda19d68031eef95",
+      "pass": true
+    },
+    {
+      "id": "final source/build.gradle",
+      "expected": "6844d442e0ae87ec0b784c8afe5598878784c4fa41aced1e9389a9b3bfb25666",
+      "actual": "6844d442e0ae87ec0b784c8afe5598878784c4fa41aced1e9389a9b3bfb25666",
+      "pass": true
+    },
+    {
+      "id": "final source/fixtures/money-cases.json",
+      "expected": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "actual": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "pass": true
+    },
+    {
+      "id": "final source/gradle.properties",
+      "expected": "4584b119086c0d659b3659855382aa69e65604fe9964662a1f65d0db291af310",
+      "actual": "4584b119086c0d659b3659855382aa69e65604fe9964662a1f65d0db291af310",
+      "pass": true
+    },
+    {
+      "id": "final source/ocr-models.lock.json",
+      "expected": "76e6608d2821b4a4395f9f699a29c4c3235ec73a804d227e28c21b7443ac7368",
+      "actual": "76e6608d2821b4a4395f9f699a29c4c3235ec73a804d227e28c21b7443ac7368",
+      "pass": true
+    },
+    {
+      "id": "final source/ocr-verification-model.lock.json",
+      "expected": "ac3f74ae94e40270795aa3438326e31be040c9d675f0869d7bc849f56089ff5e",
+      "actual": "ac3f74ae94e40270795aa3438326e31be040c9d675f0869d7bc849f56089ff5e",
+      "pass": true
+    },
+    {
+      "id": "final source/README.md",
+      "expected": "a96385f0dac9ea34e1b0251c2e0f88336b9461cfaa5e586eb6925f3a205a9fc2",
+      "actual": "a96385f0dac9ea34e1b0251c2e0f88336b9461cfaa5e586eb6925f3a205a9fc2",
+      "pass": true
+    },
+    {
+      "id": "final source/scripts/build_android.py",
+      "expected": "6fb316971f4eedbe2db8d974abf577c8117e1cd9ae922821feff551fc77678cf",
+      "actual": "6fb316971f4eedbe2db8d974abf577c8117e1cd9ae922821feff551fc77678cf",
+      "pass": true
+    },
+    {
+      "id": "final source/settings.gradle",
+      "expected": "cc3a94c9d7a6e2928b27e8bf51e85c61730711811207b2d50e9447991574d5d2",
+      "actual": "cc3a94c9d7a6e2928b27e8bf51e85c61730711811207b2d50e9447991574d5d2",
+      "pass": true
+    },
+    {
+      "id": "root unit tests42",
+      "expected": 42,
+      "actual": 42,
+      "pass": true
+    },
+    {
+      "id": "root unit no failures",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "root unit no errors",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    }
+  ],
+  "timings": [
+    {
+      "fixture": "en-multiline-paid",
+      "primaryMillis": 515,
+      "verificationMillis": 330,
+      "primaryConfidence": 94,
+      "verificationConfidence": 94
+    },
+    {
+      "fixture": "ru-fiscal-card",
+      "primaryMillis": 1328,
+      "verificationMillis": 275,
+      "primaryConfidence": 88,
+      "verificationConfidence": 92
+    },
+    {
+      "fixture": "ru-unpaid",
+      "primaryMillis": 750,
+      "verificationMillis": 290,
+      "primaryConfidence": 92,
+      "verificationConfidence": 86
+    },
+    {
+      "fixture": "en-agreement-paid",
+      "primaryMillis": 510,
+      "verificationMillis": 442,
+      "primaryConfidence": 93,
+      "verificationConfidence": 94
+    },
+    {
+      "fixture": "ru-fiscal-tenge",
+      "primaryMillis": 940,
+      "verificationMillis": 269,
+      "primaryConfidence": 94,
+      "verificationConfidence": 94
+    }
+  ],
+  "rootUnitSummary": {
+    "tests": 42,
+    "failures": 0,
+    "errors": 0
+  },
+  "copiedEvidence": [
+    {
+      "file": "install.json",
+      "sha256": "b35118594e9225f9cdab24eeb98c86916d89c06bcb2b1e309167974598fbf855"
+    },
+    {
+      "file": "clear.json",
+      "sha256": "e51dc915d697042e20a9afdc40b1d9a56e3f6e92091f7111059f143a8330edce"
+    },
+    {
+      "file": "test-receipt-layout.json",
+      "sha256": "47f44f8a4f3e4321a5da40c02250dc5059542cf898070f77a8c192049b780817"
+    },
+    {
+      "file": "pulled-qa-app008-receipt-layout.json",
+      "sha256": "ba705d8a3d335c521bede20db7b631eb69930754c137d7b588b438a50af9bc80"
+    },
+    {
+      "file": "pull-qa-app008-receipt-layout.json.json",
+      "sha256": "4dc8d9b7dd80985e3daeef721d96117912903fefad39dfa34487c4bfaf141578"
+    },
+    {
+      "file": "build-result.json",
+      "sha256": "7c907c08a1bbb2ac04bf5f12207034032833d64567a7779c09c296bfeb8bee38"
+    },
+    {
+      "file": "build-source-manifest.json",
+      "sha256": "769ffcca8fdaa1a9c11132e801bf985f726ccd4ca4fa00da6bf33b9305676efc"
+    }
+  ],
+  "failed": []
+}

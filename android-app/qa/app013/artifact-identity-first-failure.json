@@ -1,0 +1,679 @@
+{
+  "createdAtUtc": "2026-11-03T20:56:37.844351+00:00",
+  "checks": [
+    {
+      "id": "main APK bytes",
+      "expected": 68393641,
+      "actual": 68393641,
+      "pass": true
+    },
+    {
+      "id": "main APK actual SHA",
+      "expected": "a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76",
+      "actual": "a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76",
+      "pass": true
+    },
+    {
+      "id": "metadata SHA",
+      "expected": "a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76",
+      "actual": "a8ec70cd97674fb6f9c8d224e10139611c52a4ac25f69f6cd26143f7d88e5b76",
+      "pass": true
+    },
+    {
+      "id": "metadata versionName",
+      "expected": "0.3.0",
+      "actual": "0.3.0",
+      "pass": true
+    },
+    {
+      "id": "metadata versionCode",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "source fingerprint",
+      "expected": "85db77f1cbb5412032dfdc869c4c14faadc07def9992ab620d9a6e05ead03284",
+      "actual": "85db77f1cbb5412032dfdc869c4c14faadc07def9992ab620d9a6e05ead03284",
+      "pass": true
+    },
+    {
+      "id": "source manifest fingerprint",
+      "expected": "85db77f1cbb5412032dfdc869c4c14faadc07def9992ab620d9a6e05ead03284",
+      "actual": "85db77f1cbb5412032dfdc869c4c14faadc07def9992ab620d9a6e05ead03284",
+      "pass": true
+    },
+    {
+      "id": "source bytes: .gitignore",
+      "expected": "3b5c4a1f7ff509109b819243abd332e85b9cecf28bb73f8ac3baed5666f74f7b",
+      "actual": "3b5c4a1f7ff509109b819243abd332e85b9cecf28bb73f8ac3baed5666f74f7b",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/build.gradle",
+      "expected": "add7af9c76218529890082c1510ae1ddd82273f32644f57f6adfc73c80a6aaba",
+      "actual": "add7af9c76218529890082c1510ae1ddd82273f32644f57f6adfc73c80a6aaba",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/assets/tessdata-best/eng.traineddata",
+      "expected": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "actual": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/assets/tessdata-best/LICENSE.txt",
+      "expected": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "actual": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/AuthorOcrDiagnosticTest.java",
+      "expected": "7a097156c82a03305023a6388a5390859bc63b6027341a92e1e3a47efd063f34",
+      "actual": "7a097156c82a03305023a6388a5390859bc63b6027341a92e1e3a47efd063f34",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/NativeRuntimeFixtures.java",
+      "expected": "bc886ed956e451d0c1bbc22f5cf4db9c84fe303ac6db235c435d0d205d6d84f4",
+      "actual": "bc886ed956e451d0c1bbc22f5cf4db9c84fe303ac6db235c435d0d205d6d84f4",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/NotificationRuntimeTest.java",
+      "expected": "7bb1312445c6deda3e65a1879e22c6a2d9abf74a9340c3c8b33b1d82f36f9ba5",
+      "actual": "7bb1312445c6deda3e65a1879e22c6a2d9abf74a9340c3c8b33b1d82f36f9ba5",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/OcrRuntimeTest.java",
+      "expected": "ac492a5307e344131abb0997309054b37c041270cc0998baaacc190992cae1e3",
+      "actual": "ac492a5307e344131abb0997309054b37c041270cc0998baaacc190992cae1e3",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/QrImportRuntimeTest.java",
+      "expected": "5f044e5ef55f7aa4b9d95daaf1fccdb557d5b00e5a6a894b04f63b82c3632639",
+      "actual": "5f044e5ef55f7aa4b9d95daaf1fccdb557d5b00e5a6a894b04f63b82c3632639",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/ReceiptLayoutRuntimeTest.java",
+      "expected": "6495b49e9120ee8ad1807fb9a691ed0f6200ea4894676c8f1c89c1e8df25fccc",
+      "actual": "6495b49e9120ee8ad1807fb9a691ed0f6200ea4894676c8f1c89c1e8df25fccc",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeFixtures.java",
+      "expected": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+      "actual": "6e4cff286bd8c05b5833dadb2ae93e2363f2c606a1f34413ccbe2869b077016b",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeReadTest.java",
+      "expected": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+      "actual": "576456bf2db96343bc4cd47e718329e2cb4cb6e2b467ad0a777315677e19ef36",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/storage/LedgerRuntimeWriteTest.java",
+      "expected": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903",
+      "actual": "005fc5622cfccaa0a8b6bdc3270ee1b549dd73ef082ec71dbb0634d5d9574903",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/androidTest/java/com/ladno/finance/storage/StarterCategoryMigrationTest.java",
+      "expected": "c6bee4ef559c8e4ce1c81809422cd07967efe086ba0d058a1c8ba53a990f84f6",
+      "actual": "c6bee4ef559c8e4ce1c81809422cd07967efe086ba0d058a1c8ba53a990f84f6",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/AndroidManifest.xml",
+      "expected": "757d8ea2e8ab5e4df74d1fbfc7f3b2d6577d2b9fd3519749e43cb135cc63f246",
+      "actual": "757d8ea2e8ab5e4df74d1fbfc7f3b2d6577d2b9fd3519749e43cb135cc63f246",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/db/schema.sql",
+      "expected": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "actual": "4f09fb9958feebf818e9a51cdce1bd5b58e97afdb79fc77ca4974145cd96d49d",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/licenses/Apache-2.0.txt",
+      "expected": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "actual": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/licenses/IJG-JPEG.txt",
+      "expected": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+      "actual": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/licenses/Leptonica.txt",
+      "expected": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+      "actual": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/licenses/libpng.txt",
+      "expected": "16d9daaafbf63a31a5bdc91d4600972548fef5aaa1244202393288dbd079c49a",
+      "actual": "16d9daaafbf63a31a5bdc91d4600972548fef5aaa1244202393288dbd079c49a",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/licenses/sources.json",
+      "expected": "6d5b8a9588d9d85717800353c5205f033990099700391b8206b560fc7bed5ac5",
+      "actual": "6d5b8a9588d9d85717800353c5205f033990099700391b8206b560fc7bed5ac5",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/licenses/THIRD_PARTY_NOTICES.txt",
+      "expected": "2a0491fbdcef603061562ea17b674ee1983b355fbe86891858cbd001f99c1593",
+      "actual": "2a0491fbdcef603061562ea17b674ee1983b355fbe86891858cbd001f99c1593",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/licenses/ZXing-3.5.3-LICENSE.txt",
+      "expected": "3f62881f0566227a24b12e5a754cc79f39aaa94883038e95c94812e1f50af42f",
+      "actual": "3f62881f0566227a24b12e5a754cc79f39aaa94883038e95c94812e1f50af42f",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/licenses/ZXing-NOTICE.txt",
+      "expected": "fbb2ec6344d1ebf854133d8649213605d2be85ae6b26cd9940143c4176851c59",
+      "actual": "fbb2ec6344d1ebf854133d8649213605d2be85ae6b26cd9940143c4176851c59",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/tessdata/eng.traineddata",
+      "expected": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "actual": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/tessdata/kaz.traineddata",
+      "expected": "fcc01eed3815a42b9c6321c4c9d3606f39b166cbf95ade98b7d8d12063eae53d",
+      "actual": "fcc01eed3815a42b9c6321c4c9d3606f39b166cbf95ade98b7d8d12063eae53d",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/tessdata/LICENSE.txt",
+      "expected": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "actual": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/tessdata/rus.traineddata",
+      "expected": "e16e5e036cce1d9ec2b00063cf8b54472625b9e14d893a169e2b0dedeb4df225",
+      "actual": "e16e5e036cce1d9ec2b00063cf8b54472625b9e14d893a169e2b0dedeb4df225",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/tessdata-best/eng.traineddata",
+      "expected": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "actual": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/tessdata-best/kaz.traineddata",
+      "expected": "34cbd9204b1ff3cc813d50b29e3c0ae3752bcc201f261a4a393ceca3895aea9d",
+      "actual": "34cbd9204b1ff3cc813d50b29e3c0ae3752bcc201f261a4a393ceca3895aea9d",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/tessdata-best/LICENSE.txt",
+      "expected": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "actual": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/tessdata-best/rus.traineddata",
+      "expected": "b617eb6830ffabaaa795dd87ea7fd251adfe9cf0efe05eb9a2e8128b7728d6b6",
+      "actual": "b617eb6830ffabaaa795dd87ea7fd251adfe9cf0efe05eb9a2e8128b7728d6b6",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/www/app.js",
+      "expected": "2ffcfeca79dd221b2c6043f1ac40b8b180bdcd2108609de43b5ac25920ed11fe",
+      "actual": "2ffcfeca79dd221b2c6043f1ac40b8b180bdcd2108609de43b5ac25920ed11fe",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/www/bridge.js",
+      "expected": "4241148a4a12c50eeccfb5965a1247711fdb07d5d369e1a1f825d39fdc98c6e2",
+      "actual": "4241148a4a12c50eeccfb5965a1247711fdb07d5d369e1a1f825d39fdc98c6e2",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/www/index.html",
+      "expected": "7e9dd72daee9df50ab69b5b260f3f5c0bf087663c674a7fc75b2c1652a511e01",
+      "actual": "7e9dd72daee9df50ab69b5b260f3f5c0bf087663c674a7fc75b2c1652a511e01",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/www/preview-adapter.js",
+      "expected": "1f096640f1cbc16d014cf535b20f51174a585e979d6ea68bfd9a6a0424000611",
+      "actual": "1f096640f1cbc16d014cf535b20f51174a585e979d6ea68bfd9a6a0424000611",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/www/styles.css",
+      "expected": "eec74046d44208c6a878776a8a5bfa66eef5f6f1cb691894de30ff04c2aabb64",
+      "actual": "eec74046d44208c6a878776a8a5bfa66eef5f6f1cb691894de30ff04c2aabb64",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/assets/www/view.js",
+      "expected": "9658349d6890b62a2cd64a8a3301ebcb4dfc389fa049136efbb928ce6f4661d2",
+      "actual": "9658349d6890b62a2cd64a8a3301ebcb4dfc389fa049136efbb928ce6f4661d2",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/AppBridge.java",
+      "expected": "47c5780139e069231d2c193fcb90d7aa437a1f80ed178cad0b1ed4b21358ae0b",
+      "actual": "47c5780139e069231d2c193fcb90d7aa437a1f80ed178cad0b1ed4b21358ae0b",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/BankNotificationService.java",
+      "expected": "f642b386022efcf465cf347ba74ecae3c1abee3ba94cc0783b3de2b3988b393d",
+      "actual": "f642b386022efcf465cf347ba74ecae3c1abee3ba94cc0783b3de2b3988b393d",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/core/BankMessageParser.java",
+      "expected": "2cc03a6c3c5f18f45126712f8d82220b45884d5279f950cd50170906b6fce440",
+      "actual": "2cc03a6c3c5f18f45126712f8d82220b45884d5279f950cd50170906b6fce440",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/core/ContractException.java",
+      "expected": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "actual": "36d2843bb2ca00281eb6e355af710dcc1f17868f922b8fde4c1644aded5e19d6",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/core/FiscalQrParser.java",
+      "expected": "81268416ab6a7530d6e3a045a5f58e74aee48150c2ee472ccf11accd7e3f775e",
+      "actual": "81268416ab6a7530d6e3a045a5f58e74aee48150c2ee472ccf11accd7e3f775e",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/core/ImportCandidate.java",
+      "expected": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "actual": "4777377a417efc86513e997b54f214eea015b7ccc9ee9fb0ed794a44742a10cf",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/core/JsonChecks.java",
+      "expected": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "actual": "a8f87670aceda79071d76fbe7017524e2bf31a16b6092d788e0a4310318f1e1b",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/core/Money.java",
+      "expected": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "actual": "86ce1b8848c63608ebce9831b9a6f230cf2304c1a2b7674f0d542ab21ef7fc73",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/core/ParseSupport.java",
+      "expected": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "actual": "55a9cc3221d0d71d67c3012a9a562521861117935796ed65b880cb0c603cea11",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/core/ReceiptOcrConsensus.java",
+      "expected": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "actual": "addcba7595f742555bc0fe5cd55f228904f67c82caae9dbc9775e75c9c937760",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/core/ReceiptParser.java",
+      "expected": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "actual": "34cd21ef680f2d431aeb5f5979b9aba08ccf222076ec5b5206a237fc4eb9dbc2",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/LocalAssets.java",
+      "expected": "877dfa97b7259d289575c72939c516ef975115088a2acac6c554db5ddccd4f40",
+      "actual": "877dfa97b7259d289575c72939c516ef975115088a2acac6c554db5ddccd4f40",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/MainActivity.java",
+      "expected": "fe161aea8c84cbf03a9f1da136159702d3fc1a0f77d62a27b499411600b6dc4f",
+      "actual": "fe161aea8c84cbf03a9f1da136159702d3fc1a0f77d62a27b499411600b6dc4f",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/NativeJson.java",
+      "expected": "4d6cbc0baa55fa6349f3eb1e9ab48463f1e61541b5cb904d36728b602408dfd1",
+      "actual": "4d6cbc0baa55fa6349f3eb1e9ab48463f1e61541b5cb904d36728b602408dfd1",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/NativeRuntime.java",
+      "expected": "1dcf1979b90e81496f59e19ea4093d6ab1a2cea1004f96d69cf24b8b60c89d62",
+      "actual": "1dcf1979b90e81496f59e19ea4093d6ab1a2cea1004f96d69cf24b8b60c89d62",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/NoBackupAgent.java",
+      "expected": "345e7b5588edafc68f07afbfefb80eac870da9b6f6f861f27147cb35eb611925",
+      "actual": "345e7b5588edafc68f07afbfefb80eac870da9b6f6f861f27147cb35eb611925",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/NotificationStatus.java",
+      "expected": "bc3cee982de669d3fbbcda31f17a6fb0cf7f7a4d00b085c0e628bc31a00bfaca",
+      "actual": "bc3cee982de669d3fbbcda31f17a6fb0cf7f7a4d00b085c0e628bc31a00bfaca",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/NotificationText.java",
+      "expected": "85ef2f257e5881b78f98cbe55669ebf8ab367e433698a5de99ddcffaaf23bb26",
+      "actual": "85ef2f257e5881b78f98cbe55669ebf8ab367e433698a5de99ddcffaaf23bb26",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/OcrEngine.java",
+      "expected": "7a6feaecbac6257794fdb812cbadfe7a45501dcf2a51ed89e0ecc562adfa4fab",
+      "actual": "7a6feaecbac6257794fdb812cbadfe7a45501dcf2a51ed89e0ecc562adfa4fab",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/ReceiptQrDecoder.java",
+      "expected": "ce6542817bf4df4e0a5cbf851b3a7650907f7889b11e2131c130e6a711fd046d",
+      "actual": "ce6542817bf4df4e0a5cbf851b3a7650907f7889b11e2131c130e6a711fd046d",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/ReceiptQrScanner.java",
+      "expected": "f031962ef9baf0c9420d93a1309d15fd59931a541c586fc69c4a9a8da6fd152f",
+      "actual": "f031962ef9baf0c9420d93a1309d15fd59931a541c586fc69c4a9a8da6fd152f",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/ScanOutcome.java",
+      "expected": "fc105480468a9b261f0dabef675edc6314f3ab4c77e70cfd589756f655f68118",
+      "actual": "fc105480468a9b261f0dabef675edc6314f3ab4c77e70cfd589756f655f68118",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/SourceTokens.java",
+      "expected": "576ec0ff9a16febe1bae6c411f3ae3701fe30decb8ba1fc70ed2c978d1b8a9fa",
+      "actual": "576ec0ff9a16febe1bae6c411f3ae3701fe30decb8ba1fc70ed2c978d1b8a9fa",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/storage/IngestSource.java",
+      "expected": "8698a9e321e905b0969431cc2c58cb50dd2d8a25c4f8d78f0bcee3b5ae86c3b0",
+      "actual": "8698a9e321e905b0969431cc2c58cb50dd2d8a25c4f8d78f0bcee3b5ae86c3b0",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/storage/LedgerStore.java",
+      "expected": "92d55537dc60ab672b7e6950b70bbf21c587386edf4f77eddacd3156c273d986",
+      "actual": "92d55537dc60ab672b7e6950b70bbf21c587386edf4f77eddacd3156c273d986",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/storage/StarterCategories.java",
+      "expected": "d6d30f2a1990d9a1ae40b473b3a1ba981762fddfedc593d8e3c7a1595df6d013",
+      "actual": "d6d30f2a1990d9a1ae40b473b3a1ba981762fddfedc593d8e3c7a1595df6d013",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/java/com/ladno/finance/storage/StorageApi.java",
+      "expected": "d9d7c475f22cfa356f7200221ed85f767445d4ed95f86881b3e9b3c06f34353e",
+      "actual": "d9d7c475f22cfa356f7200221ed85f767445d4ed95f86881b3e9b3c06f34353e",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/res/drawable/ic_launcher.xml",
+      "expected": "4bb92a9b5309c2a0232d074e0d1bd91d6c93d369a3f5cf94165f5b187f584c76",
+      "actual": "4bb92a9b5309c2a0232d074e0d1bd91d6c93d369a3f5cf94165f5b187f584c76",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/res/values/strings.xml",
+      "expected": "4862818a50d70a0675b9dec848f3562cfd5bf1e1e5af303796e6112fdab76f59",
+      "actual": "4862818a50d70a0675b9dec848f3562cfd5bf1e1e5af303796e6112fdab76f59",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/res/values/styles.xml",
+      "expected": "7f0ef49a3e707fe9c8133db6f9f0f544937f92a62992827290e1d274c682e05f",
+      "actual": "7f0ef49a3e707fe9c8133db6f9f0f544937f92a62992827290e1d274c682e05f",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/res/xml/backup_rules.xml",
+      "expected": "865cae97840e81b9950d70457a05c5c1125a68364b0a83f44cd3daa030bc7e96",
+      "actual": "865cae97840e81b9950d70457a05c5c1125a68364b0a83f44cd3daa030bc7e96",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/res/xml/capture_paths.xml",
+      "expected": "d289feecffdc65f6bd51c9715cfbc8d0cbb77bfcf3b50186353c2cd0117f8ae0",
+      "actual": "d289feecffdc65f6bd51c9715cfbc8d0cbb77bfcf3b50186353c2cd0117f8ae0",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/main/res/xml/data_extraction_rules.xml",
+      "expected": "23be8f0e337039bad566d125d29c0dceac8c66d21aba280147212c9385e20ce0",
+      "actual": "23be8f0e337039bad566d125d29c0dceac8c66d21aba280147212c9385e20ce0",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/core/BankMessageExpansionTest.java",
+      "expected": "3bfb195e0bb65868b0cdb248aedf153188fda34f68be4049c2827b8fc60c4b59",
+      "actual": "3bfb195e0bb65868b0cdb248aedf153188fda34f68be4049c2827b8fc60c4b59",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/core/FiscalQrParserTest.java",
+      "expected": "a1089671bf146aea01e7ef5ca2f1417121e084c81ca51a167a077baa0236f680",
+      "actual": "a1089671bf146aea01e7ef5ca2f1417121e084c81ca51a167a077baa0236f680",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/core/MoneyTest.java",
+      "expected": "01e79291afa12637b2288f86f19760c40097d88e81cd29ac3b8c1e4a6228a5a1",
+      "actual": "01e79291afa12637b2288f86f19760c40097d88e81cd29ac3b8c1e4a6228a5a1",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/core/ParserTest.java",
+      "expected": "90d79651b3aac9cde2250dbd07ff1aaf216adddb3119030a01679c130cd908f4",
+      "actual": "90d79651b3aac9cde2250dbd07ff1aaf216adddb3119030a01679c130cd908f4",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/core/ReceiptOcrConsensusTest.java",
+      "expected": "9fd05517fef7a80b65b1d33487287d8d46ee2a20247ebfd6d162f63f690af532",
+      "actual": "9fd05517fef7a80b65b1d33487287d8d46ee2a20247ebfd6d162f63f690af532",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/nativebridge/LocalAssetsTest.java",
+      "expected": "421097fd52441b6dc616c3c20ff211a3a77cae513b342bd0c927f34506e05107",
+      "actual": "421097fd52441b6dc616c3c20ff211a3a77cae513b342bd0c927f34506e05107",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/nativebridge/NativeJsonGuardTest.java",
+      "expected": "ca57d7a976ed643b71d0bb63e012bc58dc3da2aba6c67fbdb6bb618b9f81b2cc",
+      "actual": "ca57d7a976ed643b71d0bb63e012bc58dc3da2aba6c67fbdb6bb618b9f81b2cc",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/nativebridge/NotificationStatusTest.java",
+      "expected": "07d51a8b20ee8c4da0c2acebac81a51477fa911bc9e4fe2b50456918089e11d3",
+      "actual": "07d51a8b20ee8c4da0c2acebac81a51477fa911bc9e4fe2b50456918089e11d3",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/NotificationTextTest.java",
+      "expected": "9a4748905be4c2361e0f2a550387fe2ccd097e46f6da8020232e9f67db9382bb",
+      "actual": "9a4748905be4c2361e0f2a550387fe2ccd097e46f6da8020232e9f67db9382bb",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/QrIndependentTest.java",
+      "expected": "6c509d99b4fecbd137dcd8824b0a7c1b98e7134b793943f78ccaf61f049b4008",
+      "actual": "6c509d99b4fecbd137dcd8824b0a7c1b98e7134b793943f78ccaf61f049b4008",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/ReceiptQrDecoderTest.java",
+      "expected": "9d9d2413ae106b31ac1f87d7a796158bdd0738b2dbc362f2f4b15c8711bcc371",
+      "actual": "9d9d2413ae106b31ac1f87d7a796158bdd0738b2dbc362f2f4b15c8711bcc371",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/ScanOutcomeTest.java",
+      "expected": "0f877f7423445809aea4b99a5afc63b71527c756dfbcebd54ab02350bceb82a0",
+      "actual": "0f877f7423445809aea4b99a5afc63b71527c756dfbcebd54ab02350bceb82a0",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/storage/IngestSourceTest.java",
+      "expected": "0b3ed97eeb5d2416c0769eda3336bcd710c5bbe51de05de5b120aadbe1e25f3e",
+      "actual": "0b3ed97eeb5d2416c0769eda3336bcd710c5bbe51de05de5b120aadbe1e25f3e",
+      "pass": true
+    },
+    {
+      "id": "source bytes: app/src/test/java/com/ladno/finance/storage/schema_contract_test.py",
+      "expected": "3337219fd96b4fdc797fd6601182c32e3dff0e96de85ac3d8b314f20e42948d7",
+      "actual": "3337219fd96b4fdc797fd6601182c32e3dff0e96de85ac3d8b314f20e42948d7",
+      "pass": true
+    },
+    {
+      "id": "source bytes: build-versions.json",
+      "expected": "92f8989fe38b30044135927dd47af71caf46b2dc59805e7ddda19d68031eef95",
+      "actual": "92f8989fe38b30044135927dd47af71caf46b2dc59805e7ddda19d68031eef95",
+      "pass": true
+    },
+    {
+      "id": "source bytes: build.gradle",
+      "expected": "6844d442e0ae87ec0b784c8afe5598878784c4fa41aced1e9389a9b3bfb25666",
+      "actual": "6844d442e0ae87ec0b784c8afe5598878784c4fa41aced1e9389a9b3bfb25666",
+      "pass": true
+    },
+    {
+      "id": "source bytes: fixtures/money-cases.json",
+      "expected": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "actual": "aed74de9b8f0f3032edf0509b5078e97143e707b5163ead30bf15a11f54df726",
+      "pass": true
+    },
+    {
+      "id": "source bytes: gradle.properties",
+      "expected": "4584b119086c0d659b3659855382aa69e65604fe9964662a1f65d0db291af310",
+      "actual": "4584b119086c0d659b3659855382aa69e65604fe9964662a1f65d0db291af310",
+      "pass": true
+    },
+    {
+      "id": "source bytes: ocr-models.lock.json",
+      "expected": "76e6608d2821b4a4395f9f699a29c4c3235ec73a804d227e28c21b7443ac7368",
+      "actual": "76e6608d2821b4a4395f9f699a29c4c3235ec73a804d227e28c21b7443ac7368",
+      "pass": true
+    },
+    {
+      "id": "source bytes: ocr-verification-model.lock.json",
+      "expected": "ac3f74ae94e40270795aa3438326e31be040c9d675f0869d7bc849f56089ff5e",
+      "actual": "ac3f74ae94e40270795aa3438326e31be040c9d675f0869d7bc849f56089ff5e",
+      "pass": true
+    },
+    {
+      "id": "source bytes: README.md",
+      "expected": "a96385f0dac9ea34e1b0251c2e0f88336b9461cfaa5e586eb6925f3a205a9fc2",
+      "actual": "a96385f0dac9ea34e1b0251c2e0f88336b9461cfaa5e586eb6925f3a205a9fc2",
+      "pass": true
+    },
+    {
+      "id": "source bytes: scripts/build_android.py",
+      "expected": "6fb316971f4eedbe2db8d974abf577c8117e1cd9ae922821feff551fc77678cf",
+      "actual": "6fb316971f4eedbe2db8d974abf577c8117e1cd9ae922821feff551fc77678cf",
+      "pass": true
+    },
+    {
+      "id": "source bytes: settings.gradle",
+      "expected": "cc3a94c9d7a6e2928b27e8bf51e85c61730711811207b2d50e9447991574d5d2",
+      "actual": "cc3a94c9d7a6e2928b27e8bf51e85c61730711811207b2d50e9447991574d5d2",
+      "pass": true
+    },
+    {
+      "id": "same signing certificate as archived 0.2.0",
+      "expected": "08f77eff74101bd48dc2cccb52403216620cc8e1bb3a86fd685c640c9a64ec27",
+      "actual": "08f77eff74101bd48dc2cccb52403216620cc8e1bb3a86fd685c640c9a64ec27",
+      "pass": true
+    },
+    {
+      "id": "APK package",
+      "expected": "com.ladno.finance",
+      "actual": "com.ladno.finance",
+      "pass": true
+    },
+    {
+      "id": "APK versionCode",
+      "expected": "3",
+      "actual": "3",
+      "pass": true
+    },
+    {
+      "id": "APK versionName",
+      "expected": "0.3.0",
+      "actual": "0.3.0",
+      "pass": true
+    },
+    {
+      "id": "APK minimum SDK",
+      "expected": true,
+      "actual": false,
+      "pass": false
+    }
+  ],
+  "commands": [
+    {
+      "args": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\build-tools\\35.0.0\\apksigner.bat",
+        "verify",
+        "--print-certs",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.3.0-debug.apk"
+      ],
+      "exitCode": 0,
+      "stdout": "Signer #1 certificate DN: CN=Ladno Development, O=Local, C=ZZ\nSigner #1 certificate SHA-256 digest: 08f77eff74101bd48dc2cccb52403216620cc8e1bb3a86fd685c640c9a64ec27\nSigner #1 certificate SHA-1 digest: 4b3f5577e89c156478858e020f4ee5f7e0f28e58\nSigner #1 certificate MD5 digest: 6df1f99a9dfa6cfbcaf07e722daf7bd3\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\build-tools\\35.0.0\\apksigner.bat",
+        "verify",
+        "--print-certs",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\team\\snapshots\\android-alpha-v3-files\\android-app\\dist\\ladno-0.2.0-debug.apk"
+      ],
+      "exitCode": 0,
+      "stdout": "Signer #1 certificate DN: CN=Ladno Development, O=Local, C=ZZ\nSigner #1 certificate SHA-256 digest: 08f77eff74101bd48dc2cccb52403216620cc8e1bb3a86fd685c640c9a64ec27\nSigner #1 certificate SHA-1 digest: 4b3f5577e89c156478858e020f4ee5f7e0f28e58\nSigner #1 certificate MD5 digest: 6df1f99a9dfa6cfbcaf07e722daf7bd3\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Users\\04068\\.cache\\ladno-android\\sdk\\build-tools\\35.0.0\\aapt2.exe",
+        "dump",
+        "badging",
+        "C:\\Users\\04068\\OneDrive\\Документы\\ChatGPT\\финансы йопта\\android-app\\dist\\ladno-0.3.0-debug.apk"
+      ],
+      "exitCode": 0,
+      "stdout": "package: name='com.ladno.finance' versionCode='3' versionName='0.3.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'\nminSdkVersion:'26'\ntargetSdkVersion:'36'\nuses-permission: name='com.ladno.finance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\napplication-label:'Ладно'\napplication-label-af:'Ладно'\napplication-label-am:'Ладно'\napplication-label-ar:'Ладно'\napplication-label-as:'Ладно'\napplication-label-az:'Ладно'\napplication-label-be:'Ладно'\napplication-label-bg:'Ладно'\napplication-label-bn:'Ладно'\napplication-label-bs:'Ладно'\napplication-label-ca:'Ладно'\napplication-label-cs:'Ладно'\napplication-label-da:'Ладно'\napplication-label-de:'Ладно'\napplication-label-el:'Ладно'\napplication-label-en-AU:'Ладно'\napplication-label-en-CA:'Ладно'\napplication-label-en-GB:'Ладно'\napplication-label-en-IN:'Ладно'\napplication-label-en-XC:'Ладно'\napplication-label-es:'Ладно'\napplication-label-es-US:'Ладно'\napplication-label-et:'Ладно'\napplication-label-eu:'Ладно'\napplication-label-fa:'Ладно'\napplication-label-fi:'Ладно'\napplication-label-fr:'Ладно'\napplication-label-fr-CA:'Ладно'\napplication-label-gl:'Ладно'\napplication-label-gu:'Ладно'\napplication-label-hi:'Ладно'\napplication-label-hr:'Ладно'\napplication-label-hu:'Ладно'\napplication-label-hy:'Ладно'\napplication-label-in:'Ладно'\napplication-label-is:'Ладно'\napplication-label-it:'Ладно'\napplication-label-iw:'Ладно'\napplication-label-ja:'Ладно'\napplication-label-ka:'Ладно'\napplication-label-kk:'Ладно'\napplication-label-km:'Ладно'\napplication-label-kn:'Ладно'\napplication-label-ko:'Ладно'\napplication-label-ky:'Ладно'\napplication-label-lo:'Ладно'\napplication-label-lt:'Ладно'\napplication-label-lv:'Ладно'\napplication-label-mk:'Ладно'\napplication-label-ml:'Ладно'\napplication-label-mn:'Ладно'\napplication-label-mr:'Ладно'\napplication-label-ms:'Ладно'\napplication-label-my:'Ладно'\napplication-label-nb:'Ладно'\napplication-label-ne:'Ладно'\napplication-label-nl:'Ладно'\napplication-label-or:'Ладно'\napplication-label-pa:'Ладно'\napplication-label-pl:'Ладно'\napplication-label-pt:'Ладно'\napplication-label-pt-BR:'Ладно'\napplication-label-pt-PT:'Ладно'\napplication-label-ro:'Ладно'\napplication-label-ru:'Ладно'\napplication-label-si:'Ладно'\napplication-label-sk:'Ладно'\napplication-label-sl:'Ладно'\napplication-label-sq:'Ладно'\napplication-label-sr:'Ладно'\napplication-label-sr-Latn:'Ладно'\napplication-label-sv:'Ладно'\napplication-label-sw:'Ладно'\napplication-label-ta:'Ладно'\napplication-label-te:'Ладно'\napplication-label-th:'Ладно'\napplication-label-tl:'Ладно'\napplication-label-tr:'Ладно'\napplication-label-uk:'Ладно'\napplication-label-ur:'Ладно'\napplication-label-uz:'Ладно'\napplication-label-vi:'Ладно'\napplication-label-zh-CN:'Ладно'\napplication-label-zh-HK:'Ладно'\napplication-label-zh-TW:'Ладно'\napplication-label-zu:'Ладно'\napplication-icon-160:'res/drawable/ic_launcher.xml'\napplication-icon-240:'res/drawable/ic_launcher.xml'\napplication-icon-320:'res/drawable/ic_launcher.xml'\napplication: label='Ладно' icon='res/drawable/ic_launcher.xml'\napplication-debuggable\nlaunchable-activity: name='com.ladno.finance.MainActivity'  label='' icon=''\nfeature-group: label=''\n  uses-feature: name='android.hardware.faketouch'\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\nprovides-component:'notification-listener'\nmain\nother-receivers\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\nsupports-any-density: 'true'\nlocales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'\ndensities: '160' '240' '320'\nnative-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'\n",
+      "stderr": ""
+    }
+  ],
+  "sourceFilesVerified": 94,
+  "passed": false,
+  "error": "APK minimum SDK"
+}

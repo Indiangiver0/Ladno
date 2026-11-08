@@ -1,0 +1,1189 @@
+{
+  "javaVersion": "21.0.13",
+  "assertions": 197,
+  "failed": 1,
+  "results": [
+    {
+      "actual": 40,
+      "pass": true,
+      "expected": 40,
+      "id": "fixture/groupCount"
+    },
+    {
+      "actual": "7",
+      "pass": true,
+      "expected": "7",
+      "id": "MONEY-002/0/amount"
+    },
+    {
+      "actual": "7",
+      "pass": true,
+      "expected": "7",
+      "id": "MONEY-002/0/minor"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "MONEY-002/0/scale"
+    },
+    {
+      "actual": "JPY",
+      "pass": true,
+      "expected": "JPY",
+      "id": "MONEY-002/0/currency"
+    },
+    {
+      "actual": "1",
+      "pass": true,
+      "expected": "1",
+      "id": "MONEY-002/1/amount"
+    },
+    {
+      "actual": "1",
+      "pass": true,
+      "expected": "1",
+      "id": "MONEY-002/1/minor"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "MONEY-002/1/scale"
+    },
+    {
+      "actual": "JPY",
+      "pass": true,
+      "expected": "JPY",
+      "id": "MONEY-002/1/currency"
+    },
+    {
+      "actual": "1.20",
+      "pass": true,
+      "expected": "1.20",
+      "id": "MONEY-003/0/amount"
+    },
+    {
+      "actual": "120",
+      "pass": true,
+      "expected": "120",
+      "id": "MONEY-003/0/minor"
+    },
+    {
+      "actual": 2,
+      "pass": true,
+      "expected": 2,
+      "id": "MONEY-003/0/scale"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "MONEY-003/0/currency"
+    },
+    {
+      "actual": "1.00",
+      "pass": true,
+      "expected": "1.00",
+      "id": "MONEY-003/1/amount"
+    },
+    {
+      "actual": "100",
+      "pass": true,
+      "expected": "100",
+      "id": "MONEY-003/1/minor"
+    },
+    {
+      "actual": 2,
+      "pass": true,
+      "expected": 2,
+      "id": "MONEY-003/1/scale"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "MONEY-003/1/currency"
+    },
+    {
+      "actual": "0.01",
+      "pass": true,
+      "expected": "0.01",
+      "id": "MONEY-003/2/amount"
+    },
+    {
+      "actual": "1",
+      "pass": true,
+      "expected": "1",
+      "id": "MONEY-003/2/minor"
+    },
+    {
+      "actual": 2,
+      "pass": true,
+      "expected": 2,
+      "id": "MONEY-003/2/scale"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "MONEY-003/2/currency"
+    },
+    {
+      "actual": "0.10",
+      "pass": true,
+      "expected": "0.10",
+      "id": "MONEY-003/3/amount"
+    },
+    {
+      "actual": "10",
+      "pass": true,
+      "expected": "10",
+      "id": "MONEY-003/3/minor"
+    },
+    {
+      "actual": 2,
+      "pass": true,
+      "expected": 2,
+      "id": "MONEY-003/3/scale"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "MONEY-003/3/currency"
+    },
+    {
+      "actual": "1.200",
+      "pass": true,
+      "expected": "1.200",
+      "id": "MONEY-004/0/amount"
+    },
+    {
+      "actual": "1200",
+      "pass": true,
+      "expected": "1200",
+      "id": "MONEY-004/0/minor"
+    },
+    {
+      "actual": 3,
+      "pass": true,
+      "expected": 3,
+      "id": "MONEY-004/0/scale"
+    },
+    {
+      "actual": "KWD",
+      "pass": true,
+      "expected": "KWD",
+      "id": "MONEY-004/0/currency"
+    },
+    {
+      "actual": "1.000",
+      "pass": true,
+      "expected": "1.000",
+      "id": "MONEY-004/1/amount"
+    },
+    {
+      "actual": "1000",
+      "pass": true,
+      "expected": "1000",
+      "id": "MONEY-004/1/minor"
+    },
+    {
+      "actual": 3,
+      "pass": true,
+      "expected": 3,
+      "id": "MONEY-004/1/scale"
+    },
+    {
+      "actual": "KWD",
+      "pass": true,
+      "expected": "KWD",
+      "id": "MONEY-004/1/currency"
+    },
+    {
+      "actual": "0.001",
+      "pass": true,
+      "expected": "0.001",
+      "id": "MONEY-004/2/amount"
+    },
+    {
+      "actual": "1",
+      "pass": true,
+      "expected": "1",
+      "id": "MONEY-004/2/minor"
+    },
+    {
+      "actual": 3,
+      "pass": true,
+      "expected": 3,
+      "id": "MONEY-004/2/scale"
+    },
+    {
+      "actual": "KWD",
+      "pass": true,
+      "expected": "KWD",
+      "id": "MONEY-004/2/currency"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/0"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/1"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/2"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/3"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/4"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/5"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/6"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/7"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/8"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/9"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/10"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/11"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/12"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-006/13"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-007/0"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-007/1"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-007/2"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-007/3"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-007/4"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-008/0"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-008/1"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-008/2"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-008/3"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-008/4"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-009/0"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-009/1"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-009/2"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-009/3"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-009/4"
+    },
+    {
+      "actual": "1.234",
+      "pass": true,
+      "expected": "1.234",
+      "id": "MONEY-009/5/amount"
+    },
+    {
+      "actual": "1234",
+      "pass": true,
+      "expected": "1234",
+      "id": "MONEY-009/5/minor"
+    },
+    {
+      "actual": 3,
+      "pass": true,
+      "expected": 3,
+      "id": "MONEY-009/5/scale"
+    },
+    {
+      "actual": "KWD",
+      "pass": true,
+      "expected": "KWD",
+      "id": "MONEY-009/5/currency"
+    },
+    {
+      "actual": "1.234",
+      "pass": true,
+      "expected": "1.234",
+      "id": "MONEY-009/6/amount"
+    },
+    {
+      "actual": "1234",
+      "pass": true,
+      "expected": "1234",
+      "id": "MONEY-009/6/minor"
+    },
+    {
+      "actual": 3,
+      "pass": true,
+      "expected": 3,
+      "id": "MONEY-009/6/scale"
+    },
+    {
+      "actual": "KWD",
+      "pass": true,
+      "expected": "KWD",
+      "id": "MONEY-009/6/currency"
+    },
+    {
+      "actual": "999999999999999999999999",
+      "pass": true,
+      "expected": "999999999999999999999999",
+      "id": "MONEY-013/0/amount"
+    },
+    {
+      "actual": "999999999999999999999999",
+      "pass": true,
+      "expected": "999999999999999999999999",
+      "id": "MONEY-013/0/minor"
+    },
+    {
+      "actual": 0,
+      "pass": true,
+      "expected": 0,
+      "id": "MONEY-013/0/scale"
+    },
+    {
+      "actual": "JPY",
+      "pass": true,
+      "expected": "JPY",
+      "id": "MONEY-013/0/currency"
+    },
+    {
+      "actual": "999999999999999999999999.99",
+      "pass": true,
+      "expected": "999999999999999999999999.99",
+      "id": "MONEY-013/1/amount"
+    },
+    {
+      "actual": "99999999999999999999999999",
+      "pass": true,
+      "expected": "99999999999999999999999999",
+      "id": "MONEY-013/1/minor"
+    },
+    {
+      "actual": 2,
+      "pass": true,
+      "expected": 2,
+      "id": "MONEY-013/1/scale"
+    },
+    {
+      "actual": "KZT",
+      "pass": true,
+      "expected": "KZT",
+      "id": "MONEY-013/1/currency"
+    },
+    {
+      "actual": "999999999999999999999999.999",
+      "pass": true,
+      "expected": "999999999999999999999999.999",
+      "id": "MONEY-013/2/amount"
+    },
+    {
+      "actual": "999999999999999999999999999",
+      "pass": true,
+      "expected": "999999999999999999999999999",
+      "id": "MONEY-013/2/minor"
+    },
+    {
+      "actual": 3,
+      "pass": true,
+      "expected": 3,
+      "id": "MONEY-013/2/scale"
+    },
+    {
+      "actual": "KWD",
+      "pass": true,
+      "expected": "KWD",
+      "id": "MONEY-013/2/currency"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-013/3"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-013/4"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-013/5"
+    },
+    {
+      "actual": "1",
+      "pass": true,
+      "expected": "1",
+      "id": "MONEY-005/valid/0"
+    },
+    {
+      "actual": "1.00",
+      "pass": true,
+      "expected": "1.00",
+      "id": "MONEY-005/valid/1"
+    },
+    {
+      "actual": "1.000",
+      "pass": true,
+      "expected": "1.000",
+      "id": "MONEY-005/valid/2"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-005/nonCanonical/0"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-005/nonCanonical/1"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-005/nonCanonical/2"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-005/nonCanonical/3"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-005/nonCanonical/4"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-005/nonCanonical/5"
+    },
+    {
+      "actual": "1234.50",
+      "pass": true,
+      "expected": "1234.50",
+      "id": "MONEY-010/0/amount"
+    },
+    {
+      "actual": "123450",
+      "pass": true,
+      "expected": "123450",
+      "id": "MONEY-010/0/minor"
+    },
+    {
+      "actual": "1234.50",
+      "pass": true,
+      "expected": "1234.50",
+      "id": "MONEY-010/1/amount"
+    },
+    {
+      "actual": "123450",
+      "pass": true,
+      "expected": "123450",
+      "id": "MONEY-010/1/minor"
+    },
+    {
+      "actual": "1234.50",
+      "pass": true,
+      "expected": "1234.50",
+      "id": "MONEY-010/2/amount"
+    },
+    {
+      "actual": "123450",
+      "pass": true,
+      "expected": "123450",
+      "id": "MONEY-010/2/minor"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-010/3"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-010/4"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-010/5"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-011/0"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-011/1"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-011/2"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-011/3"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-012/currency/ZZZ"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-012/currency/XXX"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-012/currency/kzt"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-012/currency/$"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-030/scaleMismatch"
+    },
+    {
+      "actual": "1",
+      "pass": true,
+      "expected": "1",
+      "id": "MONEY-014/0/operand/0"
+    },
+    {
+      "actual": "2",
+      "pass": true,
+      "expected": "2",
+      "id": "MONEY-014/0/operand/1"
+    },
+    {
+      "actual": "0.03",
+      "pass": true,
+      "expected": "0.03",
+      "id": "MONEY-014/0/sum"
+    },
+    {
+      "actual": "10",
+      "pass": true,
+      "expected": "10",
+      "id": "MONEY-014/1/operand/0"
+    },
+    {
+      "actual": "20",
+      "pass": true,
+      "expected": "20",
+      "id": "MONEY-014/1/operand/1"
+    },
+    {
+      "actual": "0.30",
+      "pass": true,
+      "expected": "0.30",
+      "id": "MONEY-014/1/sum"
+    },
+    {
+      "actual": "9007199254740993.03",
+      "pass": true,
+      "expected": "9007199254740993.03",
+      "id": "MONEY-015/coreIncomePrecision"
+    },
+    {
+      "actual": "9007199254740992.99",
+      "pass": true,
+      "expected": "9007199254740992.99",
+      "id": "MONEY-015/coreExpensePrecision"
+    },
+    {
+      "actual": "0.04",
+      "pass": true,
+      "expected": "0.04",
+      "id": "MONEY-015/coreNetPrecision"
+    },
+    {
+      "actual": "1999999999999999999999999.98",
+      "pass": true,
+      "expected": "1999999999999999999999999.98",
+      "id": "MONEY-016/coreIncomePrecision"
+    },
+    {
+      "actual": "0.00",
+      "pass": true,
+      "expected": "0.00",
+      "id": "MONEY-016/coreExpensePrecision"
+    },
+    {
+      "actual": "1999999999999999999999999.98",
+      "pass": true,
+      "expected": "1999999999999999999999999.98",
+      "id": "MONEY-016/coreNetPrecision"
+    },
+    {
+      "actual": "1.00",
+      "pass": true,
+      "expected": "1.00",
+      "id": "MONEY-018/coreIncomePrecision"
+    },
+    {
+      "actual": "1.20",
+      "pass": true,
+      "expected": "1.20",
+      "id": "MONEY-018/coreExpensePrecision"
+    },
+    {
+      "actual": "-0.20",
+      "pass": true,
+      "expected": "-0.20",
+      "id": "MONEY-018/coreNetPrecision"
+    },
+    {
+      "actual": "0",
+      "pass": true,
+      "expected": "0",
+      "id": "MONEY-017/zero/0"
+    },
+    {
+      "actual": "0.00",
+      "pass": true,
+      "expected": "0.00",
+      "id": "MONEY-017/zero/2"
+    },
+    {
+      "actual": "0.000",
+      "pass": true,
+      "expected": "0.000",
+      "id": "MONEY-017/zero/3"
+    },
+    {
+      "actual": "2024-02-29",
+      "pass": true,
+      "expected": "2024-02-29",
+      "id": "MONEY-020/0"
+    },
+    {
+      "actual": "2000-02-29",
+      "pass": true,
+      "expected": "2000-02-29",
+      "id": "MONEY-020/1"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-020/2"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-020/3"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-020/4"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-020/5"
+    },
+    {
+      "actual": "0001-01-01",
+      "pass": true,
+      "expected": "0001-01-01",
+      "id": "MONEY-020/6"
+    },
+    {
+      "actual": "9999-12-31",
+      "pass": true,
+      "expected": "9999-12-31",
+      "id": "MONEY-020/7"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-020/8"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-020/9"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "MONEY-020/10"
+    },
+    {
+      "actual": "2026-10-01",
+      "pass": true,
+      "expected": "2026-10-01",
+      "id": "MONEY-019/monthStart"
+    },
+    {
+      "actual": "2026-11-01",
+      "pass": true,
+      "expected": "2026-11-01",
+      "id": "MONEY-019/monthEnd"
+    },
+    {
+      "actual": "+10000-01-01",
+      "pass": true,
+      "expected": "+10000-01-01",
+      "id": "MONEY-020/terminalBoundary"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "strictMonth/0000-01"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "strictMonth/2026-13"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "strictMonth/2026-1"
+    },
+    {
+      "actual": "VALIDATION",
+      "pass": true,
+      "expected": "VALIDATION",
+      "id": "strictMonth/2026-10-01"
+    },
+    {
+      "actual": "2026-10-31",
+      "pass": true,
+      "expected": "2026-10-31",
+      "id": "MONEY-023/UTC"
+    },
+    {
+      "actual": "2026-11-01",
+      "pass": true,
+      "expected": "2026-11-01",
+      "id": "MONEY-023/Tokyo"
+    },
+    {
+      "actual": "post_time",
+      "pass": true,
+      "expected": "post_time",
+      "id": "MONEY-023/origin"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "MONEY-024/zone/null"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "MONEY-024/zone/Unknown/Zone"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "MONEY-024/noConsent"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "MONEY-024/noPostTime"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "MONEY-022/sourceDate/confidence"
+    },
+    {
+      "actual": "1.20",
+      "pass": true,
+      "expected": "1.20",
+      "id": "MONEY-022/sourceDate/amount"
+    },
+    {
+      "actual": "2026-10-30",
+      "pass": true,
+      "expected": "2026-10-30",
+      "id": "MONEY-022/sourceDate/date"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-025/invalidExplicitDate/confidence"
+    },
+    {
+      "actual": "1.20",
+      "pass": true,
+      "expected": "1.20",
+      "id": "MONEY-025/invalidExplicitDate/amount"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "MONEY-025/noManufacturedDate"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/Scheduled purchase 1.20 KZT 2026-10-31/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/Payment pending 1.20 KZT 2026-10-31/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/Payment completed 1.20 KZT 2026-10-31 cancelled/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/Refund 1.20 KZT 2026-10-31/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/Transfer received 1.20 KZT 2026-10-31/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/Credited and debited 1.20 KZT 2026-10-31/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/-1.20 KZT 2026-10-31/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/Запланирована покупка 10.00 RUB 2026-11-02/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/Оплата 10.00 RUB 2026-11-02 не произведена/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-032/Покупка не состоялась 1.20 KZT 2026-10-31/confidence"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "completedRussian/confidence"
+    },
+    {
+      "actual": "10.00",
+      "pass": true,
+      "expected": "10.00",
+      "id": "completedRussian/amount"
+    },
+    {
+      "actual": "2026-11-02",
+      "pass": true,
+      "expected": "2026-11-02",
+      "id": "completedRussian/date"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "completedIncome/confidence"
+    },
+    {
+      "actual": "10.00",
+      "pass": true,
+      "expected": "10.00",
+      "id": "completedIncome/amount"
+    },
+    {
+      "actual": "2026-11-02",
+      "pass": true,
+      "expected": "2026-11-02",
+      "id": "completedIncome/date"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-033/balanceOnly/confidence"
+    },
+    {
+      "actual": null,
+      "pass": true,
+      "expected": null,
+      "id": "MONEY-033/balanceNotAmount"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-033/multiple/confidence"
+    },
+    {
+      "actual": "123.45",
+      "pass": true,
+      "expected": "123.45",
+      "id": "MONEY-033/multiple/amount"
+    },
+    {
+      "actual": "2026-10-31",
+      "pass": true,
+      "expected": "2026-10-31",
+      "id": "MONEY-033/multiple/date"
+    },
+    {
+      "actual": "high",
+      "pass": true,
+      "expected": "high",
+      "id": "MONEY-034/paid/confidence"
+    },
+    {
+      "actual": "123.45",
+      "pass": true,
+      "expected": "123.45",
+      "id": "MONEY-034/paid/amount"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-034/noFinal/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-034/multipleFinal/confidence"
+    },
+    {
+      "actual": "uncertain",
+      "pass": true,
+      "expected": "uncertain",
+      "id": "MONEY-025/noReceiptDate/confidence"
+    },
+    {
+      "actual": "123.45",
+      "pass": true,
+      "expected": "123.45",
+      "id": "MONEY-025/noReceiptDate/amount"
+    },
+    {
+      "actual": "high",
+      "pass": false,
+      "expected": "uncertain",
+      "id": "QA-RECEIPT-FINALITY/confidence"
+    },
+    {
+      "actual": "123.45",
+      "pass": true,
+      "expected": "123.45",
+      "id": "QA-RECEIPT-FINALITY/amount"
+    },
+    {
+      "actual": true,
+      "pass": true,
+      "expected": true,
+      "id": "MONEY-040/JSONString"
+    },
+    {
+      "actual": "9007199254740993.01",
+      "pass": true,
+      "expected": "9007199254740993.01",
+      "id": "MONEY-040/roundTrip"
+    },
+    {
+      "actual": "900719925474099301",
+      "pass": true,
+      "expected": "900719925474099301",
+      "id": "MONEY-040/minor"
+    }
+  ]
+}

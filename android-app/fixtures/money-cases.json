@@ -1,0 +1,1098 @@
+{
+  "schemaVersion": "APP-005-MONEY-CASES-v1",
+  "task": "APP-005",
+  "contractVersions": ["APP-005-MONEY v2","APP-005 CONTRACT v2"],
+  "purpose": "Synthetic independent domain oracles for finance-head/QA review; not APK, Java, SQLite, OCR, UI, bank or device test results.",
+  "notation": {
+    "caseGroupCount": 40,
+    "monetaryTypes": "All amounts, minor values, totals and formatted monetary values are JSON strings. No monetary value is a JSON number.",
+    "numericTypes": "JSON numbers are restricted to scale, counts and epoch-millisecond timestamps.",
+    "inputs": "Domain scenarios, not verbatim bridge payloads. Field names such as raw/detectedFields/variants describe evidence for a test adapter.",
+    "expected": "Policy assertions and independently computed arithmetic; decision/reason labels without a CONTRACT enum are descriptive fixture labels.",
+    "operationState": "An operation explicitly marked posted is confirmed. Draft/needs_review entries are not ledger records.",
+    "currencyMetadata": "JPY scale 0, KZT scale 2 and KWD scale 3 are explicit synthetic test catalog entries; the target runtime catalog must be checked separately.",
+    "identity": "UUIDs and token strings are synthetic placeholders, not real bank/customer data or a specification of HMAC serialization. Trusted identity requires CONTRACT namespace checks.",
+    "sourcePosting": "Positive/currency/date examples alone do not imply auto-post. All other high-confidence, source-selection and safe-identity preconditions in CONTRACT still apply.",
+    "rawPreservation": "rawSourceUnmodified/inputPreserved means retain the evidence/input during normalization or review. It does not authorize persisting raw source text or exposing it in Import/UI/logs.",
+    "fallback": "allowPostTimeDate is the parser boolean. Persisted settings only accept POST_TIME_IN_ZONE after explicit setup."
+  },
+  "independentMethod": {
+    "arithmetic": "Hand reduction to integer minor units and Python decimal.Decimal at precision 100, without reading application implementation.",
+    "dateArithmetic": "Gregorian calendar checks and exact UTC epoch-millisecond instants; UTC/Tokyo conversion is checked independently.",
+    "rounding": "No monetary rounding, truncation, float conversion or limited-precision aggregate is permitted.",
+    "reviewBoundary": "The finance lead reviews these fixtures; independent QA and court have not been completed by this file."
+  },
+  "caseGroups": [
+    {
+      "id": "MONEY-001",
+      "scope": "explicit_setup",
+      "input": {
+        "deviceLocale": "kk-KZ",
+        "suggestedCurrency": "KZT",
+        "settings": {"initialized":false,"primaryCurrency":null,"zoneId":null,"datePolicy":null},
+        "userSelection": {"primaryCurrency":"KWD","zoneId":"UTC","datePolicy":"POST_TIME_IN_ZONE"}
+      },
+      "expected": {
+        "beforeSelection": {"decision":"setup_required","primaryCurrency":null,"summary":null,"operationCount":0},
+        "afterExplicitSelection": {"primaryCurrency":"KWD","zoneId":"UTC","summary":{"month":"2026-10","currency":"KWD","scale":3,"income":"0.000","expense":"0.000","net":"0.000"}}
+      },
+      "derivation": "Locale is a suggestion only. Explicit KWD selection gives three-place zeros; no transaction or assumed KZT is created."
+    },
+    {
+      "id": "MONEY-002",
+      "scope": "manual_scale_zero_JPY",
+      "input": {
+        "variants": [
+          {"input":{"raw":"7","currency":"JPY","scale":0},"expected":{"decision":"accept","amount":"7","currency":"JPY","scale":0,"minor":"7"}},
+          {"input":{"raw":"1","currency":"JPY","scale":0},"expected":{"decision":"accept","amount":"1","currency":"JPY","scale":0,"minor":"1"}}
+        ]
+      },
+      "expected": {"rounding":"none","formatExample":"7 JPY"},
+      "derivation": "At scale 0, one major unit is one minor unit: 7 × 1 = 7. No decimal point is emitted."
+    },
+    {
+      "id": "MONEY-003",
+      "scope": "manual_scale_two_KZT",
+      "input": {
+        "variants": [
+          {"input":{"raw":"1,2","currency":"KZT","scale":2},"expected":{"decision":"accept","amount":"1.20","currency":"KZT","scale":2,"minor":"120"}},
+          {"input":{"raw":"1","currency":"KZT","scale":2},"expected":{"decision":"accept","amount":"1.00","currency":"KZT","scale":2,"minor":"100"}},
+          {"input":{"raw":"0.01","currency":"KZT","scale":2},"expected":{"decision":"accept","amount":"0.01","currency":"KZT","scale":2,"minor":"1"}},
+          {"input":{"raw":"0,1","currency":"KZT","scale":2},"expected":{"decision":"accept","amount":"0.10","currency":"KZT","scale":2,"minor":"10"}}
+        ]
+      },
+      "expected": {"rounding":"none","formatExample":"1,20 KZT"},
+      "derivation": "Multiply exact decimals by 100: 1.20 → 120; 1.00 → 100; 0.01 → 1; 0.10 → 10. Missing places are right-padded, never rounded."
+    },
+    {
+      "id": "MONEY-004",
+      "scope": "manual_scale_three_KWD",
+      "input": {
+        "variants": [
+          {"input":{"raw":"1.2","currency":"KWD","scale":3},"expected":{"decision":"accept","amount":"1.200","currency":"KWD","scale":3,"minor":"1200"}},
+          {"input":{"raw":"1","currency":"KWD","scale":3},"expected":{"decision":"accept","amount":"1.000","currency":"KWD","scale":3,"minor":"1000"}},
+          {"input":{"raw":"0,001","currency":"KWD","scale":3},"expected":{"decision":"accept","amount":"0.001","currency":"KWD","scale":3,"minor":"1"}}
+        ]
+      },
+      "expected": {"rounding":"none","formatExample":"1,200 KWD"},
+      "derivation": "Multiply by 1000: 1.200 → 1200; 1.000 → 1000; 0.001 → 1. KWD is explicit in every input."
+    },
+    {
+      "id": "MONEY-005",
+      "scope": "canonical_DTO_is_stricter_than_manual_normalization",
+      "input": {
+        "valid": [{"amount":"1","currency":"JPY","scale":0},{"amount":"1.00","currency":"KZT","scale":2},{"amount":"1.000","currency":"KWD","scale":3}],
+        "nonCanonical": [
+          {"amount":"1","currency":"KZT","scale":2},
+          {"amount":"1.0","currency":"KZT","scale":2},
+          {"amount":"1,00","currency":"KZT","scale":2},
+          {"amount":"01.00","currency":"KZT","scale":2},
+          {"amount":"+1.00","currency":"KZT","scale":2},
+          {"amount":"1.00","currency":"JPY","scale":0}
+        ]
+      },
+      "expected": {"validDecisions":["accept","accept","accept"],"nonCanonicalDecision":"reject","nonCanonicalNewOperationCount":0},
+      "derivation": "Stored/bridge MoneyDTO already has exactly scale places and ASCII dot syntax. Manual padding is not permission to accept malformed canonical DTOs."
+    },
+    {
+      "id": "MONEY-006",
+      "scope": "empty_zero_sign_exponent_nonfinite",
+      "input": {
+        "variants": [
+          {"input":{"raw":"","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"empty"}},
+          {"input":{"raw":"0","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"not_positive"}},
+          {"input":{"raw":"0.00","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"not_positive"}},
+          {"input":{"raw":"-1","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"sign_forbidden"}},
+          {"input":{"raw":"+1","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"sign_forbidden"}},
+          {"input":{"raw":"-0","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"sign_forbidden"}},
+          {"input":{"raw":"-0.00","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"sign_forbidden"}},
+          {"input":{"raw":"1e2","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"exponent_forbidden"}},
+          {"input":{"raw":"NaN","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"not_decimal_digits"}},
+          {
+            "input": {"raw":"Infinity","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"not_decimal_digits"}
+          },
+          {
+            "input": {"raw":" 1.00","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"whitespace_forbidden"}
+          },
+          {
+            "input": {"raw":"1.00 ","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"whitespace_forbidden"}
+          },
+          {"input":{"raw":".50","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"integer_part_required"}},
+          {
+            "input": {"raw":"1.","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"fraction_digits_required"}
+          }
+        ]
+      },
+      "expected": {"rounding":"none","operationCount":0},
+      "derivation": "A transaction amount must be strictly positive and lexically valid before decimal arithmetic. Empty, zero and signed zero do not become a saved zero."
+    },
+    {
+      "id": "MONEY-007",
+      "scope": "leading_zero_and_non_ASCII_rejection",
+      "input": {
+        "variants": [
+          {"input":{"raw":"01.00","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"leading_zero"}},
+          {"input":{"raw":"00.01","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"leading_zero"}},
+          {"input":{"raw":"00","currency":"JPY","scale":0},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"leading_zero"}},
+          {"input":{"raw":"０.０１","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"non_ASCII_digits"}},
+          {"input":{"raw":"١.٢٠","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"non_ASCII_digits"}}
+        ]
+      },
+      "expected": {"operationCount":0},
+      "derivation": "Only integer part 0 or a nonzero ASCII digit followed by ASCII digits is valid. Equivalent numeric value does not cure invalid lexical form."
+    },
+    {
+      "id": "MONEY-008",
+      "scope": "extra_precision_including_zeroes",
+      "input": {
+        "variants": [
+          {
+            "input": {"raw":"1.200","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"fraction_exceeds_scale"}
+          },
+          {
+            "input": {"raw":"1.239","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"fraction_exceeds_scale"}
+          },
+          {
+            "input": {"raw":"0.010","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"fraction_exceeds_scale"}
+          },
+          {
+            "input": {"raw":"1.0","currency":"JPY","scale":0},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"fraction_exceeds_scale"}
+          },
+          {
+            "input": {"raw":"1.0000","currency":"KWD","scale":3},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"fraction_exceeds_scale"}
+          }
+        ]
+      },
+      "expected": {"rounding":"forbidden","operationCount":0},
+      "derivation": "Count fractional characters before conversion. At scale 2, 1.200 has three characters and is rejected even though deleting its last zero would be exact."
+    },
+    {
+      "id": "MONEY-009",
+      "scope": "manual_field_has_no_grouping",
+      "input": {
+        "variants": [
+          {
+            "input": {"raw":"1 234,50","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"grouping_forbidden"}
+          },
+          {
+            "input": {"raw":"1,234.50","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"multiple_separator_kinds"}
+          },
+          {"input":{"raw":"1,,20","currency":"KZT","scale":2},"expected":{"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"repeated_separator"}},
+          {
+            "input": {"raw":"1,234","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"fraction_exceeds_scale"}
+          },
+          {
+            "input": {"raw":"1.234","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"fraction_exceeds_scale"}
+          },
+          {"input":{"raw":"1,234","currency":"KWD","scale":3},"expected":{"decision":"accept","amount":"1.234","currency":"KWD","scale":3,"minor":"1234"}},
+          {"input":{"raw":"1.234","currency":"KWD","scale":3},"expected":{"decision":"accept","amount":"1.234","currency":"KWD","scale":3,"minor":"1234"}}
+        ]
+      },
+      "expected": {"manualInterpretation":"declared_decimal_separator"},
+      "derivation": "Manual scale 3 explicitly interprets a single comma/dot as decimal, so 1,234 means 1.234 KWD. Manual scale 2 rejects the same three-place input; no thousands are inferred."
+    },
+    {
+      "id": "MONEY-010",
+      "scope": "source_space_grouping",
+      "input": {
+        "currency": "KZT",
+        "scale": 2,
+        "unambiguousSourceFields": true,
+        "variants": [
+          {"raw":"1 234,50","expected":{"decision":"normalize","amount":"1234.50","currency":"KZT","scale":2,"minor":"123450"}},
+          {"raw":"1 234,50","expected":{"decision":"normalize","amount":"1234.50","currency":"KZT","scale":2,"minor":"123450"}},
+          {"raw":"1 234.50","expected":{"decision":"normalize","amount":"1234.50","currency":"KZT","scale":2,"minor":"123450"}},
+          {"raw":"12 34,50","expected":{"decision":"needs_review","newOperationCount":0}},
+          {"raw":"1 234 567,89","expected":{"decision":"needs_review","newOperationCount":0}},
+          {"raw":"01 234,50","expected":{"decision":"needs_review","newOperationCount":0}}
+        ]
+      },
+      "expected": {"rawSourceUnmodified":true},
+      "derivation": "Valid source groups are 1..3 leading digits then groups of exactly three, using one space kind. 1234 × 100 + 50 = 123450; malformed/mixed groups are not repaired."
+    },
+    {
+      "id": "MONEY-011",
+      "scope": "source_punctuation_and_precision",
+      "input": {
+        "verifiedSourcePunctuationPattern": null,
+        "variants": [
+          {"raw":"1,234","currency":"KZT","scale":2},
+          {"raw":"1.234","currency":"KWD","scale":3},
+          {"raw":"1.200","currency":"KZT","scale":2},
+          {"raw":"1,2000","currency":"KWD","scale":3}
+        ]
+      },
+      "expected": {"allDecisions":"needs_review","newOperationCount":0,"rawSourceUnmodified":true,"rounding":"forbidden"},
+      "derivation": "Generic punctuation may mean grouping or a decimal fraction. The KWD scale-3 example remains ambiguous despite fitting precision. Source precision is never repaired by trimming zeros."
+    },
+    {
+      "id": "MONEY-012",
+      "scope": "explicit_source_currency_and_catalog",
+      "input": {
+        "explicitPrimaryCurrency": "KWD",
+        "variants": [
+          {"sourceCurrency":"KZT","amount":"1.20","catalogScale":2,"expected":{"decision":"accept","amount":"1.20","currency":"KZT","scale":2}},
+          {"sourceCurrency":null,"amount":"1.20","expected":{"decision":"needs_review","newOperationCount":0}},
+          {"sourceCurrencySymbol":"$","sourceCurrency":null,"amount":"1.20","expected":{"decision":"needs_review","newOperationCount":0}},
+          {"sourceCurrency":"ZZZ","amount":"1.20","catalogContainsCode":false,"expected":{"decision":"needs_review","newOperationCount":0}},
+          {"sourceCurrency":"XXX","amount":"1","catalogScale":-1,"expected":{"decision":"needs_review","newOperationCount":0}},
+          {"sourceCurrency":"KZT","amount":"1.0000000","catalogScale":7,"syntheticMetadataFault":true,"expected":{"decision":"reject","newOperationCount":0}}
+        ]
+      },
+      "expected": {"primaryCurrencyUsedToFillMissingSourceCurrency":false},
+      "derivation": "An explicit KZT source stays KZT even with primary KWD. Missing/ambiguous/unknown currency is not guessed. Undefined scale -1 and injected scale 7 are outside the admitted 0..6 range."
+    },
+    {
+      "id": "MONEY-013",
+      "scope": "individual_input_24_integer_digit_limit",
+      "input": {
+        "variants": [
+          {
+            "input": {"raw":"999999999999999999999999","currency":"JPY","scale":0},
+            "expected": {"decision":"accept","amount":"999999999999999999999999","currency":"JPY","scale":0,"minor":"999999999999999999999999"}
+          },
+          {
+            "input": {"raw":"999999999999999999999999.99","currency":"KZT","scale":2},
+            "expected": {"decision":"accept","amount":"999999999999999999999999.99","currency":"KZT","scale":2,"minor":"99999999999999999999999999"}
+          },
+          {
+            "input": {"raw":"999999999999999999999999.999","currency":"KWD","scale":3},
+            "expected": {"decision":"accept","amount":"999999999999999999999999.999","currency":"KWD","scale":3,"minor":"999999999999999999999999999"}
+          },
+          {
+            "input": {"raw":"1000000000000000000000000","currency":"JPY","scale":0},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"integer_digits_exceed_24"}
+          },
+          {
+            "input": {"raw":"1000000000000000000000000.00","currency":"KZT","scale":2},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"integer_digits_exceed_24"}
+          },
+          {
+            "input": {"raw":"1000000000000000000000000.000","currency":"KWD","scale":3},
+            "expected": {"decision":"reject","newOperationCount":0,"inputPreserved":true,"reason":"integer_digits_exceed_24"}
+          }
+        ]
+      },
+      "expected": {"integerDigitCountLimit":24,"rounding":"none"},
+      "derivation": "For scale s, largest accepted individual amount is 10^24 − 10^(−s). Its minor value has 24+s nines; 10^24 has 25 integer digits and is rejected."
+    },
+    {
+      "id": "MONEY-014",
+      "scope": "exact_small_decimal_addition",
+      "input": {
+        "variants": [
+          {
+            "operands": [{"amount":"0.01","currency":"KZT","scale":2},{"amount":"0.02","currency":"KZT","scale":2}],
+            "expected": {"sum":"0.03","minorOperands":["1","2"],"minorSum":"3"}
+          },
+          {
+            "operands": [{"amount":"0.10","currency":"KZT","scale":2},{"amount":"0.20","currency":"KZT","scale":2}],
+            "expected": {"sum":"0.30","minorOperands":["10","20"],"minorSum":"30"}
+          }
+        ]
+      },
+      "expected": {"rounding":"none","currency":"KZT","scale":2},
+      "derivation": "Independent integer sums are 1+2=3 and 10+20=30 minor units. Padding to two places gives 0.03 and 0.30 exactly."
+    },
+    {
+      "id": "MONEY-015",
+      "scope": "amount_above_binary_safe_integer",
+      "input": {
+        "operations": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "kind": "income",
+            "date": "2026-10-31",
+            "amount": "9007199254740993.01",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          },
+          {"id":"10000000-0000-4000-8000-000000000002","kind":"income","date":"2026-10-31","amount":"0.02","currency":"KZT","scale":2,"categoryId":null,"status":"posted"},
+          {
+            "id": "10000000-0000-4000-8000-000000000003",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "9007199254740992.99",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          }
+        ]
+      },
+      "expected": {
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"9007199254740993.03","expense":"9007199254740992.99","net":"0.04"},
+        "incomeMinor": "900719925474099303",
+        "expenseMinor": "900719925474099299",
+        "netMinor": "4",
+        "operationCount": 3
+      },
+      "derivation": "Income minor = 900719925474099301 + 2 = 900719925474099303; subtract 900719925474099299 = 4. No binary floating point or bounded integer is used."
+    },
+    {
+      "id": "MONEY-016",
+      "scope": "aggregate_may_exceed_input_digit_limit",
+      "input": {
+        "operations": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "kind": "income",
+            "date": "2026-10-31",
+            "amount": "999999999999999999999999.99",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "kind": "income",
+            "date": "2026-10-31",
+            "amount": "999999999999999999999999.99",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          }
+        ]
+      },
+      "expected": {
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"1999999999999999999999999.98","expense":"0.00","net":"1999999999999999999999999.98"},
+        "incomeMinor": "199999999999999999999999998",
+        "aggregateIntegerDigitCount": 25,
+        "operationCount": 2,
+        "completeResultRequired": true
+      },
+      "derivation": "2 × 99999999999999999999999999 minor = 199999999999999999999999998 minor = 1999999999999999999999999.98. The 24-digit transaction-input guard does not truncate an aggregate."
+    },
+    {
+      "id": "MONEY-017",
+      "scope": "empty_summaries",
+      "input": {"operations":[],"requestedCurrencies":[{"currency":"JPY","scale":0},{"currency":"KZT","scale":2},{"currency":"KWD","scale":3}]},
+      "expected": {
+        "summaries": [
+          {"month":"2026-10","currency":"JPY","scale":0,"income":"0","expense":"0","net":"0"},
+          {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"0.00","net":"0.00"},
+          {"month":"2026-10","currency":"KWD","scale":3,"income":"0.000","expense":"0.000","net":"0.000"}
+        ],
+        "operationCount": 0
+      },
+      "derivation": "The empty sum is the exact additive identity. Rendering keeps each currency's declared number of fractional places."
+    },
+    {
+      "id": "MONEY-018",
+      "scope": "positive_operation_and_signed_net",
+      "input": {
+        "operations": [
+          {"id":"10000000-0000-4000-8000-000000000001","kind":"income","date":"2026-10-31","amount":"1.00","currency":"KZT","scale":2,"categoryId":null,"status":"posted"},
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "1.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          }
+        ],
+        "attemptedNewOperationAmounts": ["-0.20","0.00"]
+      },
+      "expected": {
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"1.00","expense":"1.20","net":"-0.20"},
+        "incomeMinor": "100",
+        "expenseMinor": "120",
+        "netMinor": "-20",
+        "attemptedNewOperationsDecision": "reject",
+        "operationCount": 2
+      },
+      "derivation": "100 − 120 = −20 minor = −0.20 KZT. Aggregate net may be negative; neither a negative net nor zero becomes a valid positive transaction input."
+    },
+    {
+      "id": "MONEY-019",
+      "scope": "month_is_half_open_LocalDate_range",
+      "input": {
+        "operations": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "kind": "expense",
+            "date": "2026-10-01",
+            "amount": "1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "2.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000003",
+            "kind": "expense",
+            "date": "2026-11-01",
+            "amount": "4.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000004",
+            "kind": "expense",
+            "date": "2026-09-30",
+            "amount": "8.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          }
+        ]
+      },
+      "expected": {
+        "summaries": [
+          {"month":"2026-09","currency":"KZT","scale":2,"income":"0.00","expense":"8.00","net":"-8.00"},
+          {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"3.00","net":"-3.00"},
+          {"month":"2026-11","currency":"KZT","scale":2,"income":"0.00","expense":"4.00","net":"-4.00"}
+        ],
+        "octoberIncludedIds": ["10000000-0000-4000-8000-000000000001","10000000-0000-4000-8000-000000000002"],
+        "octoberRange": {"inclusiveStart":"2026-10-01","exclusiveEnd":"2026-11-01"}
+      },
+      "derivation": "October includes both October boundaries and excludes November 1: 100+200=300 minor. September 30 and November 1 remain in their own months."
+    },
+    {
+      "id": "MONEY-020",
+      "scope": "strict_calendar_leap_and_terminal_year",
+      "input": {
+        "dates": ["2024-02-29","2000-02-29","2026-02-29","1900-02-29","2026-04-31","0000-01-01","0001-01-01","9999-12-31","2026-10-31T00:00:00Z","2026-13-01","2026-2-01"],
+        "terminalMonthOperation": {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "kind": "expense",
+          "date": "9999-12-31",
+          "amount": "0.01",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "status": "posted"
+        }
+      },
+      "expected": {
+        "dateDecisions": ["accept","accept","reject","reject","reject","reject","accept","accept","reject","reject","reject"],
+        "terminalSummary": {"month":"9999-12","currency":"KZT","scale":2,"income":"0.00","expense":"0.01","net":"-0.01"},
+        "exclusiveUpperBoundaryForCalculationOnly": "10000-01-01"
+      },
+      "derivation": "Gregorian leap years are divisible by 4 except centuries not divisible by 400: 2024/2000 leap, 2026/1900 not. Valid saved years are 0001..9999; the next-month boundary is not a saved operation date."
+    },
+    {
+      "id": "MONEY-021",
+      "scope": "saved_manual_date_survives_zone_change",
+      "input": {
+        "operation": {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "kind": "expense",
+          "date": "2026-10-31",
+          "amount": "1.20",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "status": "posted"
+        },
+        "zoneBefore": "UTC",
+        "zoneAfter": "Asia/Tokyo",
+        "capturedAt": "2026-11-01T00:30:00Z"
+      },
+      "expected": {
+        "date": "2026-10-31",
+        "id": "10000000-0000-4000-8000-000000000001",
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"1.20","net":"-1.20"},
+        "novemberSummary": {"month":"2026-11","currency":"KZT","scale":2,"income":"0.00","expense":"0.00","net":"0.00"},
+        "operationCount": 1
+      },
+      "derivation": "A selected LocalDate is not an Instant. Changing the zone or inspecting a later capture timestamp cannot move 120 minor out of October."
+    },
+    {
+      "id": "MONEY-022",
+      "scope": "notification_explicit_date_precedes_capture_and_post_time",
+      "input": {
+        "candidate": {"kind":"expense","amount":"2.30","currency":"KZT","scale":2,"date":"2026-10-31","dateOrigin":"source"},
+        "postTime": 1793493000000,
+        "capturedAt": "2026-11-01T00:30:00Z",
+        "zoneId": "UTC",
+        "allowPostTimeDate": true
+      },
+      "expected": {
+        "date": "2026-10-31",
+        "dateOrigin": "source",
+        "summaryAfterPosting": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"2.30","net":"-2.30"},
+        "novemberSummary": {"month":"2026-11","currency":"KZT","scale":2,"income":"0.00","expense":"0.00","net":"0.00"}
+      },
+      "derivation": "postTime is 2026-11-01T00:30:00Z, but the explicit bank date is October 31. The 230 minor belong to October."
+    },
+    {
+      "id": "MONEY-023",
+      "scope": "notification_post_time_fallback_with_consent_and_known_zone",
+      "input": {
+        "sourceDate": null,
+        "postTime": 1793478600000,
+        "allowPostTimeDate": true,
+        "variants": [{"zoneId":"UTC"},{"zoneId":"Asia/Tokyo"}],
+        "amount": {"amount":"1.20","currency":"KZT","scale":2}
+      },
+      "expected": {
+        "variants": [
+          {"zoneId":"UTC","date":"2026-10-31","dateOrigin":"post_time","month":"2026-10"},
+          {"zoneId":"Asia/Tokyo","date":"2026-11-01","dateOrigin":"post_time","month":"2026-11"}
+        ]
+      },
+      "derivation": "The instant is 2026-10-31T20:30:00Z. UTC retains October 31; Tokyo +09:00 yields November 1 at 05:30. Both require explicit fallback consent."
+    },
+    {
+      "id": "MONEY-024",
+      "scope": "no_unauthorized_or_unknown_zone_fallback",
+      "input": {
+        "sourceDate": null,
+        "postTime": 1793478600000,
+        "capturedAt": "2026-10-31T20:30:00Z",
+        "variants": [
+          {"allowPostTimeDate":false,"zoneId":"UTC"},
+          {"allowPostTimeDate":true,"zoneId":null},
+          {"allowPostTimeDate":true,"zoneId":"Unknown/Zone"},
+          {"allowPostTimeDate":true,"zoneId":"UTC","postTime":null}
+        ]
+      },
+      "expected": {"allDecisions":"needs_review","date":null,"dateOrigin":null,"newOperationCount":0},
+      "derivation": "Without source date, consent, known zone and postTime must all be available. Parser allowPostTimeDate=false models absent consent; it is not a supported persisted Settings.datePolicy value."
+    },
+    {
+      "id": "MONEY-025",
+      "scope": "receipt_and_invalid_source_date_do_not_use_capture_date",
+      "input": {
+        "capturedAt": "2026-11-01T00:30:00Z",
+        "zoneId": "UTC",
+        "variants": [
+          {"source":"receipt","sourceDate":null},
+          {"source":"receipt","sourceDate":"01/02/26"},
+          {"source":"notification","sourceDate":"2026-02-29","postTime":1793493000000,"allowPostTimeDate":true}
+        ]
+      },
+      "expected": {"allDecisions":"needs_review","newOperationCount":0,"manufacturedDate":false},
+      "derivation": "OCR capture is not a purchase date. An ambiguous receipt date or an explicitly damaged bank date requires review; the missing-date fallback does not repair a known invalid date."
+    },
+    {
+      "id": "MONEY-026",
+      "scope": "posted_only",
+      "input": {
+        "posted": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "2.50",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          }
+        ],
+        "draft": [
+          {"id":"10000000-0000-4000-8000-000000000002","kind":"expense","date":"2026-10-31","amount":"3.50","currency":"KZT","scale":2,"categoryId":null,"status":"draft"}
+        ],
+        "imports": [{"status":"needs_review","kind":"expense","amount":"4.50","currency":"KZT","scale":2,"date":"2026-10-31"}]
+      },
+      "expected": {
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"2.50","net":"-2.50"},
+        "operationCount": 1,
+        "includedIds": ["10000000-0000-4000-8000-000000000001"]
+      },
+      "derivation": "Only the confirmed posted 250 minor enter totals. A draft 350 and unresolved import 450 add zero until explicitly posted."
+    },
+    {
+      "id": "MONEY-027",
+      "scope": "null_category_then_assign_same_id",
+      "input": {
+        "operations": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "1.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "2.30",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "30000000-0000-4000-8000-000000000001",
+            "status": "posted"
+          }
+        ],
+        "edit": {"id":"10000000-0000-4000-8000-000000000001","categoryId":"30000000-0000-4000-8000-000000000001"}
+      },
+      "expected": {
+        "before": {
+          "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"3.50","net":"-3.50"},
+          "expenseByCategory": [{"categoryId":null,"amount":"1.20"},{"categoryId":"30000000-0000-4000-8000-000000000001","amount":"2.30"}]
+        },
+        "after": {
+          "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"3.50","net":"-3.50"},
+          "expenseByCategory": [{"categoryId":"30000000-0000-4000-8000-000000000001","amount":"3.50"}],
+          "operationIds": ["10000000-0000-4000-8000-000000000001","10000000-0000-4000-8000-000000000002"],
+          "operationCount": 2
+        }
+      },
+      "derivation": "120+230=350 minor before and after assignment. Null is a real partition of expense; assigning a category moves 120 between partitions without creating a transaction."
+    },
+    {
+      "id": "MONEY-028",
+      "scope": "category_change_and_delete_preserve_ledger",
+      "input": {
+        "operations": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "1.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "30000000-0000-4000-8000-000000000001",
+            "status": "posted"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "2.30",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": "30000000-0000-4000-8000-000000000001",
+            "status": "posted"
+          }
+        ],
+        "steps": [
+          {"action":"change_category","id":"10000000-0000-4000-8000-000000000001","categoryId":"30000000-0000-4000-8000-000000000002"},
+          {"action":"delete_category","categoryId":"30000000-0000-4000-8000-000000000002"}
+        ]
+      },
+      "expected": {
+        "afterChange": {
+          "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"3.50","net":"-3.50"},
+          "expenseByCategory": [{"categoryId":"30000000-0000-4000-8000-000000000001","amount":"2.30"},{"categoryId":"30000000-0000-4000-8000-000000000002","amount":"1.20"}]
+        },
+        "afterDelete": {
+          "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"3.50","net":"-3.50"},
+          "expenseByCategory": [{"categoryId":"30000000-0000-4000-8000-000000000001","amount":"2.30"},{"categoryId":null,"amount":"1.20"}],
+          "unchangedMoneyAndDates": true,
+          "operationIds": ["10000000-0000-4000-8000-000000000001","10000000-0000-4000-8000-000000000002"],
+          "operationCount": 2
+        }
+      },
+      "derivation": "Changing the partition and deleting its category preserve 120+230=350 minor and both IDs. Partition sums are not added to expense a second time."
+    },
+    {
+      "id": "MONEY-029",
+      "scope": "atomic_date_edit_and_failed_edit",
+      "input": {
+        "operations": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "1.20",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "kind": "expense",
+            "date": "2026-11-01",
+            "amount": "2.30",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          }
+        ],
+        "successfulEdit": {"id":"10000000-0000-4000-8000-000000000001","date":"2026-11-01"},
+        "subsequentInvalidEdit": {"id":"10000000-0000-4000-8000-000000000001","date":"2026-11-02","amount":"1.200"}
+      },
+      "expected": {
+        "afterSuccessfulEdit": {
+          "october": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"0.00","net":"0.00"},
+          "november": {"month":"2026-11","currency":"KZT","scale":2,"income":"0.00","expense":"3.50","net":"-3.50"},
+          "operationIds": ["10000000-0000-4000-8000-000000000001","10000000-0000-4000-8000-000000000002"],
+          "operationCount": 2
+        },
+        "afterInvalidEdit": {
+          "decision": "reject",
+          "record": {"id":"10000000-0000-4000-8000-000000000001","date":"2026-11-01","amount":"1.20","currency":"KZT","scale":2},
+          "october": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"0.00","net":"0.00"},
+          "november": {"month":"2026-11","currency":"KZT","scale":2,"income":"0.00","expense":"3.50","net":"-3.50"},
+          "operationCount": 2
+        }
+      },
+      "derivation": "Move the same 120 minor once: October 120−120=0; November 230+120=350. The later precision error preserves the complete last committed version, including November 1."
+    },
+    {
+      "id": "MONEY-030",
+      "scope": "currency_separation_and_scale_mismatch",
+      "input": {
+        "operations": [
+          {
+            "id": "10000000-0000-4000-8000-000000000001",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "1.00",
+            "currency": "KZT",
+            "scale": 2,
+            "categoryId": null,
+            "status": "posted"
+          },
+          {
+            "id": "10000000-0000-4000-8000-000000000002",
+            "kind": "expense",
+            "date": "2026-10-31",
+            "amount": "2.000",
+            "currency": "KWD",
+            "scale": 3,
+            "categoryId": null,
+            "status": "posted"
+          },
+          {"id":"10000000-0000-4000-8000-000000000003","kind":"income","date":"2026-10-31","amount":"3","currency":"JPY","scale":0,"categoryId":null,"status":"posted"}
+        ],
+        "attemptedMixedSum": [{"amount":"1.00","currency":"KZT","scale":2},{"amount":"2.000","currency":"KWD","scale":3}],
+        "attemptedScaleMismatch": {"amount":"1.000","currency":"KZT","scale":3,"catalogScale":2}
+      },
+      "expected": {
+        "summaries": [
+          {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"1.00","net":"-1.00"},
+          {"month":"2026-10","currency":"KWD","scale":3,"income":"0.000","expense":"2.000","net":"-2.000"},
+          {"month":"2026-10","currency":"JPY","scale":0,"income":"3","expense":"0","net":"3"}
+        ],
+        "combinedMonetaryTotal": null,
+        "mixedSumDecision": "reject",
+        "scaleMismatchDecision": "reject",
+        "operationCount": 3
+      },
+      "derivation": "100 KZT minor, 2000 KWD minor and 3 JPY minor are different units. They have no common total here; a KZT scale-3 DTO cannot be silently rescaled."
+    },
+    {
+      "id": "MONEY-031",
+      "scope": "exact_replay_after_manual_edit_is_idempotent",
+      "input": {
+        "source": {"eventId":"20000000-0000-4000-8000-000000000001","sourceKeyToken":"synthetic:notification:lifecycle-A","revisionToken":"synthetic:revision-A"},
+        "firstPosted": {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "kind": "expense",
+          "date": "2026-10-31",
+          "amount": "1.20",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "status": "posted"
+        },
+        "manualEdit": {"id":"10000000-0000-4000-8000-000000000001","amount":"2.50","categoryId":"30000000-0000-4000-8000-000000000001"},
+        "replay": {
+          "eventId": "20000000-0000-4000-8000-000000000001",
+          "sourceKeyToken": "synthetic:notification:lifecycle-A",
+          "revisionToken": "synthetic:revision-A",
+          "candidateAmount": "1.20"
+        }
+      },
+      "expected": {
+        "newOperationCount": 0,
+        "operationCount": 1,
+        "record": {"id":"10000000-0000-4000-8000-000000000001","amount":"2.50","currency":"KZT","scale":2,"categoryId":"30000000-0000-4000-8000-000000000001"},
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"2.50","net":"-2.50"}
+      },
+      "derivation": "The same event/revision is one observation, including after restart. A user-edited 250 minor remain 250; replay neither adds 120 nor overwrites the edit."
+    },
+    {
+      "id": "MONEY-032",
+      "scope": "unresolved_event_kinds_never_ordinary_automatic_entries",
+      "input": {
+        "currency": "KZT",
+        "scale": 2,
+        "date": "2026-10-31",
+        "variants": [
+          {"event":"unknown","rawAmount":"1.00"},
+          {"event":"pending","rawAmount":"1.00"},
+          {"event":"cancelled","rawAmount":"1.00"},
+          {"event":"refund","rawAmount":"1.00"},
+          {"event":"transfer","rawAmount":"1.00"},
+          {"event":"contradictory_income_expense","rawAmount":"1.00"},
+          {"event":"direction_unknown","rawAmount":"-1.00"}
+        ]
+      },
+      "expected": {"allDecisions":"needs_review","newOperationCount":0,"summary":{"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"0.00","net":"0.00"}},
+      "derivation": "No confirmed ordinary income/expense is specified. The magnitude or minus sign alone does not determine kind; no refund/transfer financial treatment is invented."
+    },
+    {
+      "id": "MONEY-033",
+      "scope": "bank_balance_is_not_transaction_amount_or_net_balance",
+      "input": {
+        "variants": [
+          {
+            "source": "notification",
+            "scope": "generic_parser",
+            "detectedFields": {"balance":"9999.99","currency":"KZT","date":"2026-10-31"},
+            "expected": {"decision":"needs_review","amount":null,"newOperationCount":0}
+          },
+          {
+            "source": "notification",
+            "scope": "generic_parser",
+            "detectedFields": {"operationAmount":"123.45","balance":"9999.99","currency":"KZT","date":"2026-10-31"},
+            "expected": {"decision":"needs_review","newOperationCount":0,"reason":"multiple_monetary_values"},
+            "explicitUserResolution": {"kind":"expense","amount":"123.45","currency":"KZT","scale":2,"date":"2026-10-31"},
+            "afterResolution": {"summary":{"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"123.45","net":"-123.45"},"bankBalance":null,"operationCount":1}
+          }
+        ]
+      },
+      "expected": {"balanceUsedAsPaidTotal":false},
+      "derivation": "Generic multi-amount notifications require review under CONTRACT. After explicit selection, only 12345 minor are expense; 999999 balance minor are excluded. The net flow −123.45 does not reconstruct a bank balance."
+    },
+    {
+      "id": "MONEY-034",
+      "scope": "receipt_final_paid_total_not_tender_change_or_line_sum",
+      "input": {
+        "variants": [
+          {
+            "detectedFields": {"finalPaidTotal":"123.45","cashTender":"200.00","change":"76.55","lineItems":["100.00","23.45"],"currency":"KZT","date":"2026-10-31"},
+            "allRolesUnambiguous": true,
+            "expected": {"decision":"post_if_identity_safe","amount":"123.45","currency":"KZT","scale":2,"expense":"123.45","net":"-123.45","newOperationCount":1}
+          },
+          {
+            "detectedFields": {"cashTender":"200.00","change":"76.55","currency":"KZT","date":"2026-10-31"},
+            "expected": {"decision":"needs_review","amount":null,"newOperationCount":0}
+          },
+          {"detectedFields":{"possiblePaidTotals":["123.45","124.45"],"currency":"KZT","date":"2026-10-31"},"expected":{"decision":"needs_review","newOperationCount":0}}
+        ]
+      },
+      "expected": {"tenderUsedAsPaidTotal":false,"changeUsedAsPaidTotal":false,"lineItemsAddedAgain":false},
+      "derivation": "An explicit unambiguous final total is 12345 minor. Independently, 20000−7655=12345 and 10000+2345=12345 confirm it; neither derivation licenses inventing a missing total or adding lines to it."
+    },
+    {
+      "id": "MONEY-035",
+      "scope": "receipt_push_trusted_identity_link",
+      "input": {
+        "existing": {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "kind": "expense",
+          "date": "2026-10-31",
+          "amount": "10.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "status": "posted"
+        },
+        "existingSource": {"kind":"notification","eventId":"20000000-0000-4000-8000-000000000001","paymentRefToken":"synthetic:provider-A:account-A:reference-A"},
+        "incomingSource": {"kind":"receipt","eventId":"20000000-0000-4000-8000-000000000002","paymentRefToken":"synthetic:provider-A:account-A:reference-A"},
+        "identityEvidence": {"trusted":true,"sameProvider":true,"sameAccount":true,"sameReferenceNamespace":true,"fieldsAgree":true},
+        "incomingCandidate": {"kind":"expense","amount":"10.00","currency":"KZT","scale":2,"date":"2026-10-31"}
+      },
+      "expected": {
+        "outcome": "linked",
+        "transactionId": "10000000-0000-4000-8000-000000000001",
+        "newOperationCount": 0,
+        "operationCount": 1,
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"10.00","net":"-10.00"}
+      },
+      "derivation": "A trusted token in the identical provider/account/reference namespace identifies the existing purchase. Linking evidence adds zero minor and preserves the stable ID; token equality is not inferred from amount/time."
+    },
+    {
+      "id": "MONEY-036",
+      "scope": "receipt_push_weak_match_then_user_link",
+      "input": {
+        "existing": {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "kind": "expense",
+          "date": "2026-10-31",
+          "amount": "10.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "status": "posted"
+        },
+        "existingSource": {"kind":"notification","eventId":"20000000-0000-4000-8000-000000000001","postTime":1793448000000,"paymentRefToken":null},
+        "incomingSource": {"kind":"receipt","eventId":"20000000-0000-4000-8000-000000000002","postTime":1793448060000,"paymentRefToken":null},
+        "incomingCandidate": {"kind":"expense","amount":"10.00","currency":"KZT","scale":2,"date":"2026-10-31"},
+        "identityEvidence": {"sameAmount":true,"nearbyTime":true,"trustedIdentity":false},
+        "userDecision": {"decision":"link","transactionId":"10000000-0000-4000-8000-000000000001"}
+      },
+      "expected": {
+        "beforeDecision": {
+          "status": "needs_review",
+          "possibleMatchIds": ["10000000-0000-4000-8000-000000000001"],
+          "newOperationCount": 0,
+          "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"10.00","net":"-10.00"}
+        },
+        "afterLink": {
+          "status": "linked",
+          "transactionId": "10000000-0000-4000-8000-000000000001",
+          "newOperationCount": 0,
+          "operationCount": 1,
+          "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"10.00","net":"-10.00"}
+        }
+      },
+      "derivation": "Equal 1000-minor amounts one minute apart are only a possible match. The review candidate contributes zero; explicit linking still leaves exactly 1000 expense minor."
+    },
+    {
+      "id": "MONEY-037",
+      "scope": "two_nearby_equal_purchases_require_distinct_confirmation",
+      "input": {
+        "existing": {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "kind": "expense",
+          "date": "2026-10-31",
+          "amount": "10.00",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "status": "posted"
+        },
+        "existingSource": {"kind":"notification","eventId":"20000000-0000-4000-8000-000000000001","postTime":1793448000000},
+        "incomingSource": {"kind":"receipt","eventId":"20000000-0000-4000-8000-000000000002","postTime":1793448060000},
+        "incomingCandidate": {"kind":"expense","amount":"10.00","currency":"KZT","scale":2,"date":"2026-10-31"},
+        "identityEvidence": {"sameAmount":true,"nearbyTime":true,"receiptFiscalIdentityIsNotBankIdentity":true,"trustedIdentity":false},
+        "attemptedPost": {"confirmDistinct":false},
+        "confirmedPost": {"confirmDistinct":true,"newTransactionId":"10000000-0000-4000-8000-000000000002"}
+      },
+      "expected": {
+        "beforeDecision": {
+          "status": "needs_review",
+          "possibleMatchIds": ["10000000-0000-4000-8000-000000000001"],
+          "operationCount": 1,
+          "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"10.00","net":"-10.00"}
+        },
+        "withoutConfirmation": {"decision":"reject","newOperationCount":0},
+        "afterDistinctConfirmation": {
+          "operationIds": ["10000000-0000-4000-8000-000000000001","10000000-0000-4000-8000-000000000002"],
+          "operationCount": 2,
+          "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"20.00","net":"-20.00"},
+          "sourcesMerged": false
+        }
+      },
+      "derivation": "The same 1000-minor amount cannot establish one purchase. Once the user confirms two purchases, 1000+1000=2000 minor; both IDs remain, without automatic merging."
+    },
+    {
+      "id": "MONEY-038",
+      "scope": "different_notification_identity_not_deduplicated_by_amount",
+      "input": {
+        "sources": [
+          {
+            "eventId": "20000000-0000-4000-8000-000000000001",
+            "kind": "notification",
+            "revisionToken": "synthetic:revision-A",
+            "paymentRefToken": "synthetic:provider-A:account-A:reference-A",
+            "postTime": 1793448000000
+          },
+          {
+            "eventId": "20000000-0000-4000-8000-000000000002",
+            "kind": "notification",
+            "revisionToken": "synthetic:revision-B",
+            "paymentRefToken": "synthetic:provider-A:account-A:reference-B",
+            "postTime": 1793448060000
+          }
+        ],
+        "candidates": [
+          {"kind":"expense","amount":"10.00","currency":"KZT","scale":2,"date":"2026-10-31"},
+          {"kind":"expense","amount":"10.00","currency":"KZT","scale":2,"date":"2026-10-31"}
+        ],
+        "identityEvidence": {"trustedDistinctPaymentReferences":true,"unresolvedCrossSourceMatch":false}
+      },
+      "expected": {
+        "operationIds": ["10000000-0000-4000-8000-000000000001","10000000-0000-4000-8000-000000000002"],
+        "operationCount": 2,
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"20.00","net":"-20.00"},
+        "automaticallyMerged": false
+      },
+      "derivation": "Distinct trusted reference tokens identify two purchases even with equal amounts and close timestamps. 1000+1000=2000 minor; amount/date equality is not a replay key."
+    },
+    {
+      "id": "MONEY-039",
+      "scope": "delete_then_replay_does_not_resurrect",
+      "input": {
+        "original": {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "kind": "expense",
+          "date": "2026-10-31",
+          "amount": "1.20",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "status": "posted"
+        },
+        "source": {"eventId":"20000000-0000-4000-8000-000000000001","sourceKeyToken":"synthetic:notification:lifecycle-A","revisionToken":"synthetic:revision-A"},
+        "steps": [
+          {"action":"delete_transaction","id":"10000000-0000-4000-8000-000000000001"},
+          {"action":"replay_exact_source","eventId":"20000000-0000-4000-8000-000000000001","revisionToken":"synthetic:revision-A"}
+        ]
+      },
+      "expected": {
+        "activeOperationCount": 0,
+        "newOperationCount": 0,
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"0.00","net":"0.00"},
+        "tombstoneAndSourceLinkRetained": true,
+        "resurrected": false
+      },
+      "derivation": "Deleting the posted 120 minor removes them once. The preserved identity/tombstone prevents exact replay from adding those 120 back."
+    },
+    {
+      "id": "MONEY-040",
+      "scope": "exact_string_persistence_bridge_and_display",
+      "input": {
+        "record": {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "kind": "expense",
+          "date": "2026-10-31",
+          "amount": "9007199254740993.01",
+          "currency": "KZT",
+          "scale": 2,
+          "categoryId": null,
+          "status": "posted"
+        },
+        "persistedSqliteAffinity": "TEXT",
+        "jsonAmount": "9007199254740993.01",
+        "display": "9 007 199 254 740 993,01 KZT"
+      },
+      "expected": {
+        "storedAmount": "9007199254740993.01",
+        "bridgeAmount": "9007199254740993.01",
+        "minor": "900719925474099301",
+        "summary": {"month":"2026-10","currency":"KZT","scale":2,"income":"0.00","expense":"9007199254740993.01","net":"-9007199254740993.01"},
+        "displayIsNotCanonicalInput": true,
+        "operationCount": 1
+      },
+      "derivation": "Remove the decimal point only after valid scale metadata: 9007199254740993.01 × 100 = 900719925474099301 minor. The display is derived from that string and never parsed as a replacement monetary source."
+    }
+  ]
+}
+

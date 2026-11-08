@@ -1,0 +1,29 @@
+{
+  "compile": [
+    "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\javac.exe",
+    "--release",
+    "17",
+    "-encoding",
+    "UTF-8",
+    "-cp",
+    "C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.json\\json\\20240303\\ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a\\json-20240303.jar",
+    "-d",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\qa\\calculation\\classes",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\BankMessageParser.java",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ContractException.java",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ImportCandidate.java",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\JsonChecks.java",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\Money.java",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ParseSupport.java",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\app\\src\\main\\java\\com\\ladno\\finance\\core\\ReceiptParser.java",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\qa\\calculation\\CalculationQa.java"
+  ],
+  "run": [
+    "C:\\Users\\04068\\.cache\\ladno-android\\jdk21\\jdk-21.0.13+9\\bin\\java.exe",
+    "-cp",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\qa\\calculation\\classes;C:\\Users\\04068\\.cache\\ladno-android\\gradle-cache\\caches\\modules-2\\files-2.1\\org.json\\json\\20240303\\ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a\\json-20240303.jar",
+    "CalculationQa",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\fixtures\\money-cases.json",
+    "C:\\Users\\04068\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\ChatGPT\\\u0444\u0438\u043d\u0430\u043d\u0441\u044b \u0439\u043e\u043f\u0442\u0430\\android-app\\qa\\calculation\\jvm-results.json"
+  ]
+}

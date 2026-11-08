@@ -1,0 +1,7 @@
+.gradle/
+**/build/
+local.properties
+dist/
+*.keystore
+*.jks
+app/src/main/assets/tessdata/*.traineddata

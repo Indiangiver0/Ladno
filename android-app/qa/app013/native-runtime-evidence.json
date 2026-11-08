@@ -1,0 +1,631 @@
+{
+  "suite": "app013-qr-runtime",
+  "startedAt": "2026-11-03T20:55:24.958Z",
+  "pid": 2105,
+  "apiLevel": 30,
+  "abis": [
+    "x86_64",
+    "x86"
+  ],
+  "package": "com.ladno.finance",
+  "data": "synthetic-only",
+  "checks": [
+    {
+      "id": "first\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "first\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "first\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "first\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "first registered job status",
+      "expected": "completed",
+      "actual": "completed",
+      "pass": true
+    },
+    {
+      "id": "first outcome review",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "pass": true
+    },
+    {
+      "id": "first outcome month",
+      "expected": "2026-11",
+      "actual": "2026-11",
+      "pass": true
+    },
+    {
+      "id": "first outcome currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "first no transaction ID",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "native amount exact",
+      "expected": "1234.50",
+      "actual": "1234.50",
+      "pass": true
+    },
+    {
+      "id": "native date from QR",
+      "expected": "2026-11-04",
+      "actual": "2026-11-04",
+      "pass": true
+    },
+    {
+      "id": "native kind unknown",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "native confidence uncertain",
+      "expected": "uncertain",
+      "actual": "uncertain",
+      "pass": true
+    },
+    {
+      "id": "native reason unknown kind",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "no automatic ledger record",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "raw synthetic QR not persisted",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "same QR new file\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "same QR new file\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "same QR new file\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "same QR new file\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "repeat status",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "repeat candidate preserved",
+      "expected": "8511c8c8-6f8d-44d6-87f1-53caa7556b14",
+      "actual": "8511c8c8-6f8d-44d6-87f1-53caa7556b14",
+      "pass": true
+    },
+    {
+      "id": "ignored repeated QR\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ignored repeated QR\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ignored repeated QR\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ignored repeated QR\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "ignored exact source repeat outcome",
+      "expected": "duplicate",
+      "actual": "duplicate",
+      "pass": true
+    },
+    {
+      "id": "ignored repeat same candidate",
+      "expected": "8511c8c8-6f8d-44d6-87f1-53caa7556b14",
+      "actual": "8511c8c8-6f8d-44d6-87f1-53caa7556b14",
+      "pass": true
+    },
+    {
+      "id": "ignored persisted decision retained",
+      "expected": "ignored",
+      "actual": "ignored",
+      "pass": true
+    },
+    {
+      "id": "ignored persisted revision retained",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "ignored repeat no new candidate",
+      "expected": 7,
+      "actual": 7,
+      "pass": true
+    },
+    {
+      "id": "ignored repeat no record",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "excess precision\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "excess precision\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "excess precision\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "excess precision\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "excess precision\/job failed",
+      "expected": "failed",
+      "actual": "failed",
+      "pass": true
+    },
+    {
+      "id": "excess precision\/visible error",
+      "expected": "QR_AMOUNT_INVALID",
+      "actual": "QR_AMOUNT_INVALID",
+      "pass": true
+    },
+    {
+      "id": "excess precision\/no successful outcome",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "excess precision\/no empty incoming",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "excess precision\/no record",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "invalid date\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "invalid date\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "invalid date\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "invalid date\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "invalid date\/job failed",
+      "expected": "failed",
+      "actual": "failed",
+      "pass": true
+    },
+    {
+      "id": "invalid date\/visible error",
+      "expected": "QR_DATE_INVALID",
+      "actual": "QR_DATE_INVALID",
+      "pass": true
+    },
+    {
+      "id": "invalid date\/no successful outcome",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "invalid date\/no empty incoming",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "invalid date\/no record",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "payment QR\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "payment QR\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "payment QR\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "payment QR\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "payment QR\/job failed",
+      "expected": "failed",
+      "actual": "failed",
+      "pass": true
+    },
+    {
+      "id": "payment QR\/visible error",
+      "expected": "QR_UNSUPPORTED",
+      "actual": "QR_UNSUPPORTED",
+      "pass": true
+    },
+    {
+      "id": "payment QR\/no successful outcome",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "payment QR\/no empty incoming",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "payment QR\/no record",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "two fiscal QR\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "two fiscal QR\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "two fiscal QR\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "two fiscal QR\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "two fiscal QR\/job failed",
+      "expected": "failed",
+      "actual": "failed",
+      "pass": true
+    },
+    {
+      "id": "two fiscal QR\/visible error",
+      "expected": "QR_MULTIPLE",
+      "actual": "QR_MULTIPLE",
+      "pass": true
+    },
+    {
+      "id": "two fiscal QR\/no successful outcome",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "two fiscal QR\/no empty incoming",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "two fiscal QR\/no record",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "mixed QR\/registered completion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "mixed QR\/owned input cleaned",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "mixed QR\/media slot released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "mixed QR\/camera output released",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "mixed QR\/job failed",
+      "expected": "failed",
+      "actual": "failed",
+      "pass": true
+    },
+    {
+      "id": "mixed QR\/visible error",
+      "expected": "QR_MULTIPLE",
+      "actual": "QR_MULTIPLE",
+      "pass": true
+    },
+    {
+      "id": "mixed QR\/no successful outcome",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "mixed QR\/no empty incoming",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "mixed QR\/no record",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "actual Android test process notification lines amount",
+      "expected": "456.78",
+      "actual": "456.78",
+      "pass": true
+    },
+    {
+      "id": "notification lines currency",
+      "expected": "KZT",
+      "actual": "KZT",
+      "pass": true
+    },
+    {
+      "id": "notification lines direction",
+      "expected": "income",
+      "actual": "income",
+      "pass": true
+    },
+    {
+      "id": "new notification format stays review",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "no INTERNET permission",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "first\/job",
+      "actual": {
+        "jobId": "4614173a-a4ab-4243-87be-95c3a09dae2a",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "needs_review",
+          "candidateId": "8511c8c8-6f8d-44d6-87f1-53caa7556b14",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "same QR new file\/job",
+      "actual": {
+        "jobId": "0a5c7051-52ab-4342-a45e-95d5a2eed657",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "8511c8c8-6f8d-44d6-87f1-53caa7556b14",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "ignored repeated QR\/job",
+      "actual": {
+        "jobId": "9a16bd02-1792-444d-827d-22551e52cd91",
+        "type": "scanCamera",
+        "status": "completed",
+        "error": null,
+        "outcome": {
+          "status": "duplicate",
+          "candidateId": "8511c8c8-6f8d-44d6-87f1-53caa7556b14",
+          "transactionId": null,
+          "month": "2026-11",
+          "currency": "KZT"
+        }
+      }
+    },
+    {
+      "id": "excess precision\/job",
+      "actual": {
+        "jobId": "b181a7d7-f98c-4112-9bad-b805623d8259",
+        "type": "scanCamera",
+        "status": "failed",
+        "error": {
+          "code": "QR_AMOUNT_INVALID",
+          "message": "Не удалось надёжно разобрать сумму из QR чека.",
+          "field": null
+        },
+        "outcome": null
+      }
+    },
+    {
+      "id": "invalid date\/job",
+      "actual": {
+        "jobId": "42ef2213-cd39-4347-886d-16693c90a83e",
+        "type": "scanCamera",
+        "status": "failed",
+        "error": {
+          "code": "QR_DATE_INVALID",
+          "message": "Не удалось надёжно разобрать дату из QR чека.",
+          "field": null
+        },
+        "outcome": null
+      }
+    },
+    {
+      "id": "payment QR\/job",
+      "actual": {
+        "jobId": "45c04369-a3c8-4c8b-930f-d6b73713b524",
+        "type": "scanCamera",
+        "status": "failed",
+        "error": {
+          "code": "QR_UNSUPPORTED",
+          "message": "Этот QR пока не поддерживается. Нужен фискальный QR чека.",
+          "field": null
+        },
+        "outcome": null
+      }
+    },
+    {
+      "id": "two fiscal QR\/job",
+      "actual": {
+        "jobId": "51e0117a-abc7-49ef-8c61-bbcd7361e259",
+        "type": "scanCamera",
+        "status": "failed",
+        "error": {
+          "code": "QR_MULTIPLE",
+          "message": "На снимке несколько QR. Оставьте один фискальный QR чека.",
+          "field": null
+        },
+        "outcome": null
+      }
+    },
+    {
+      "id": "mixed QR\/job",
+      "actual": {
+        "jobId": "912937f7-94bc-4bb2-9b8e-3d285eaf285e",
+        "type": "scanCamera",
+        "status": "failed",
+        "error": {
+          "code": "QR_MULTIPLE",
+          "message": "На снимке несколько QR. Оставьте один фискальный QR чека.",
+          "field": null
+        },
+        "outcome": null
+      }
+    },
+    {
+      "id": "scope",
+      "actual": "Synthetic PNG file->decoder->native processMedia->registered Job\/state\/outcome->SQLite only. Job inserted by test-only reflection; queueAction\/Activity\/system camera\/gallery UI and real user QR not exercised."
+    }
+  ],
+  "finishedAt": "2026-11-03T20:55:29.563Z"
+}
