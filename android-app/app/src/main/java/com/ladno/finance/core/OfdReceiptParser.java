@@ -63,7 +63,9 @@ public final class OfdReceiptParser {
         boolean finalSale = "TICKET".equals(string(required(ticket, "type"), 32))
             && integer(required(ticket, "operationType")) == 2
             && required(ticket, "cancelDate") == null && required(ticket, "offlineFiscalId") == null;
-        if (!TICKET_FIELDS.containsAll(ticket.keySet())) finalSale = false;
+        // New optional OFD fields are not evidence against a completed sale, but an explicit
+        // non-tenge currency is: the QR total is always tenge.
+        if (ticket.containsKey("currency") && !"KZT".equals(ticket.get("currency"))) finalSale = false;
         for (String linked : Arrays.asList("parentTicket", "linkedKkmRequestId", "linkedKkmRequestTime", "linkedTransactionId"))
             if (ticket.get(linked) != null) finalSale = false;
         List<Object> payments = array(required(ticket, "payments"));
@@ -72,7 +74,6 @@ public final class OfdReceiptParser {
         for (Object value : payments) {
             Map<String, Object> payment = object(value);
             String type = string(required(payment, "paymentType"), 32);
-            if (!Arrays.asList("CARD", "CASH", "MOBILE").contains(type)) finalSale = false;
             paid = paid.add(moneyMinor(required(payment, "sum"), true));
         }
         if (!paid.equals(total.minor)) return fallback(qr, "OFD_MISMATCH");
@@ -87,7 +88,8 @@ public final class OfdReceiptParser {
                 // Positions are bounded evidence, never a recomputed total (discounts/taxes differ).
             } else if (type == 5) {
                 object(required(item, "discount"));
-            } else finalSale = false;
+            }
+            // Other position types (services, tare, markup) do not change the paid total.
         }
         if (!finalSale) return fallback(qr, "OFD_REVIEW_REQUIRED");
         return new ImportCandidate("expense", total.amount, "KZT", request.date, "source", "",
@@ -95,6 +97,8 @@ public final class OfdReceiptParser {
     }
 
     public static ImportCandidate fallback(FiscalQrParser.Result qr, String reason) {
+        // Network trouble never blocks a QR whose own signed total and time are complete.
+        if ("OFD_UNAVAILABLE".equals(reason) || "OFD_INVALID_RESPONSE".equals(reason)) return qr.candidate();
         List<String> reasons = new ArrayList<>(qr.candidate().reasons);
         if (!reasons.contains(reason)) reasons.add(reason);
         return new ImportCandidate(null, qr.amount, "KZT", qr.date, "source", "", reasons, "uncertain", null);

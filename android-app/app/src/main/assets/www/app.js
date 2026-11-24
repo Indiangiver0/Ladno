@@ -431,7 +431,7 @@
       if (dismiss) payload.decision = 'ignore';
       mutate(dismiss ? 'reviewCandidate' : confirmation.action, payload, null, dismiss ? 'Чек убран из разбора. Расход не добавлен.' : confirmation.action === 'deleteCategory' ? 'Категория удалена. Операции сохранены.' : 'Операция удалена из учёта.');
     }
-    else if (action === 'scanCamera' || action === 'scanGallery' || action === 'openNotificationAccess') mutate(action, {}, null, action === 'openNotificationAccess' ? 'Запрошено открытие системных настроек.' : 'Запрошен выбор изображения. Итог появится после обработки.');
+    else if (action === 'scanCamera' || action === 'scanPhoto' || action === 'openNotificationAccess') mutate(action, {}, null, action === 'openNotificationAccess' ? 'Запрошено открытие системных настроек.' : (action === 'scanCamera' ? 'Открываю сканер QR.' : 'Открываю камеру.'));
   });
   function changed(event) {
     var element = event.target, form = element.closest && element.closest('form[data-form]');

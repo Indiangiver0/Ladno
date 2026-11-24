@@ -85,7 +85,8 @@ public final class OfdIndependentTest {
     @Test public void paymentSumAndNetDiscountTotalAreIndependentEvidence() {
         String valid = body("1234.50");
         notHigh(valid.replace("\"paymentType\":\"CARD\",\"sum\":1234.50", "\"paymentType\":\"CARD\",\"sum\":1234.49"));
-        notHigh(valid.replace("\"paymentType\":\"CARD\"", "\"paymentType\":\"UNKNOWN\""));
+        // A new payment method still means the receipt was paid.
+        assertEquals("high", parse(valid.replace("\"paymentType\":\"CARD\"", "\"paymentType\":\"UNKNOWN\"")).confidence);
         String discounted = valid.replace("\"items\":[", "\"items\":[{\"itemType\":5,\"commodity\":null,\"discount\":{\"sum\":25}},");
         ImportCandidate result = parse(discounted);
         assertEquals("1234.50", result.amount); assertEquals("high", result.confidence);
@@ -104,17 +105,18 @@ public final class OfdIndependentTest {
         assertFalse(positive.getInstanceFollowRedirects()); assertEquals("GET", positive.getRequestMethod());
         assertNull(positive.getRequestProperty("Cookie")); assertNull(positive.getRequestProperty("Authorization"));
         assertTrue(positive.disconnected); assertTrue(positive.bodyClosed);
+        // Rejected transport/bodies never feed parsed OFD data; only the QR's own total remains.
         for (int status : new int[]{301, 302, 307, 401, 403, 429, 500}) {
             Fake fake = new Fake(seen.get(), body("1234.50")); fake.status = status;
-            assertNotEquals("high", new OfdReceiptClient(url -> fake, 1000).lookup(qr).confidence);
+            assertTrue(new OfdReceiptClient(url -> fake, 1000).lookup(qr).reasons.isEmpty());
             assertTrue(fake.disconnected);
         }
         Fake html = new Fake(seen.get(), "<html>not a receipt</html>"); html.contentType = "text/html";
-        assertNotEquals("high", new OfdReceiptClient(url -> html, 1000).lookup(qr).confidence);
+        assertEquals("1234.50", new OfdReceiptClient(url -> html, 1000).lookup(qr).amount);
         Fake declared = new Fake(seen.get(), body("1234.50")); declared.length = 262145;
-        assertNotEquals("high", new OfdReceiptClient(url -> declared, 1000).lookup(qr).confidence);
+        assertEquals("1234.50", new OfdReceiptClient(url -> declared, 1000).lookup(qr).amount);
         Fake streamed = new Fake(seen.get(), "x".repeat(262145)); streamed.length = -1;
-        assertNotEquals("high", new OfdReceiptClient(url -> streamed, 1000).lookup(qr).confidence);
+        assertEquals("1234.50", new OfdReceiptClient(url -> streamed, 1000).lookup(qr).amount);
     }
 
     @Test public void totalDeadlineReturnsLocalFieldsAndClosesTransport() throws Exception {
@@ -129,8 +131,8 @@ public final class OfdIndependentTest {
         ImportCandidate result = new OfdReceiptClient(url -> blocked, 80).lookup(qr("1234.50"));
         long millis = java.util.concurrent.TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - before);
         assertTrue("Caller must have a bounded total deadline", millis < 1800);
-        assertNotEquals("high", result.confidence); assertEquals("1234.50", result.amount);
-        assertNull(result.kind); assertTrue(blocked.disconnected);
+        assertEquals("1234.50", result.amount);
+        assertEquals("expense", result.kind); assertTrue(blocked.disconnected);
     }
 
     private static final class Fake extends HttpsURLConnection {

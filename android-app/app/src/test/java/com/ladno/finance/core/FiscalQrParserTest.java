@@ -15,14 +15,15 @@ public class FiscalQrParserTest {
         catch (ContractException e) { assertEquals(code, e.code); assertFalse(e.getMessage().contains(value)); }
     }
 
-    @Test public void exactAmountDateAndConservativeCandidate() {
+    @Test public void exactAmountDateAndPostableExpense() {
         FiscalQrParser.Result qr = FiscalQrParser.parse(url("1234.5", "20261104T235959"));
         ImportCandidate candidate = ImportCandidate.fromJson(qr.candidate().toJson());
         assertEquals("1234.50", candidate.amount); assertEquals("KZT", candidate.currency);
         assertEquals("2026-11-04", candidate.date); assertEquals("source", candidate.dateOrigin);
-        assertNull(candidate.kind); assertEquals("uncertain", candidate.confidence);
+        // A fiscal QR is a cash-register-signed paid total: it is posted as an expense.
+        assertEquals("expense", candidate.kind); assertEquals("high", candidate.confidence);
         assertNull(candidate.paymentReference); assertEquals("", candidate.note);
-        assertEquals(Arrays.asList("UNKNOWN_KIND", "LOW_CONFIDENCE", "IDENTITY_UNCERTAIN"), candidate.reasons);
+        assertTrue(candidate.reasons.isEmpty());
     }
 
     @Test public void acceptedAmountsDoNotRoundAndSupportMaximum() {
@@ -33,8 +34,11 @@ public class FiscalQrParserTest {
     }
 
     @Test public void invalidAmountsNeverBecomeMoney() {
-        for (String amount : new String[]{"0", "0.0", "0.00", "-1", "+1", "1e2", "1,20", "1.200", "01", ".1", "1.", "1000000000000000000000000"})
+        for (String amount : new String[]{"0", "0.0", "0.00", "-1", "+1", "1e2", "1.205", "01", ".1", "1.", "1000000000000000000000000"})
             rejected("QR_AMOUNT_INVALID", url(amount, "20261104T120000"));
+        // Comma decimals and trailing zeros are formatting, not rounding.
+        assertEquals("1.20", FiscalQrParser.parse(url("1,20", "20261104T120000")).amount);
+        assertEquals("1.20", FiscalQrParser.parse(url("1.200", "20261104T120000")).amount);
     }
 
     @Test public void calendarAndClockAreStrict() {
@@ -44,25 +48,32 @@ public class FiscalQrParserTest {
         assertEquals("9999-12-31", FiscalQrParser.parse(url("1", "99991231T235959")).date);
     }
 
-    @Test public void onlyExactKnownHostsAndRawPaths() {
+    @Test public void anyOperatorHostIsReadLocallyButNeverTrustedForLookup() {
         String query = "?i=1&f=2&s=3&t=20261104T120000";
-        for (String prefix : new String[]{"https://consumer.oofd.kz.evil.test/", "https://evilconsumer.oofd.kz/", "https://consumer.oofd.kz./", "https://consumer.test-oofd.kz/", "https://user@consumer.oofd.kz/", "https://consumer.oofd.kz:443/", "ftp://consumer.oofd.kz/", "https://consumer.oofd.kz/%2f", "https://consumer.oofd.kz/a/../", "https://ofd.rekassa.kz/t", "https://ofd.rekassa.kz/%74/", "https://ofd.rekassa.kz/portal/", "https://127.0.0.1/"})
+        for (String prefix : new String[]{"https://ofd1.kz/t/", "https://cabinet.kofd.kz/consumer", "http://consumer.oofd.kz", "https://ofd.rekassa.kz/t/", "https://consumer.oofd.kz:443/"})
+            assertEquals(prefix, "3.00", FiscalQrParser.parse(prefix + query).amount);
+        for (String prefix : new String[]{"https://user@consumer.oofd.kz/", "ftp://consumer.oofd.kz/", "file:///consumer/", "https://localhost/"})
             rejected("QR_UNSUPPORTED", prefix + query);
-        assertEquals("3.00", FiscalQrParser.parse("http://consumer.oofd.kz" + query).amount);
-        assertEquals("3.00", FiscalQrParser.parse("https://ofd.rekassa.kz/t/" + query).amount);
+        // Only the exact Kazakhtelecom host may be looked up; look-alikes stay local.
+        assertFalse(OfdReceiptParser.Request.from(FiscalQrParser.parse("https://consumer.oofd.kz.evil.test/" + query)).supported());
+        assertTrue(OfdReceiptParser.Request.from(FiscalQrParser.parse("https://consumer.oofd.kz/" + query)).supported());
     }
 
     @Test public void queriesAreDecodedOnceAndDuplicatesRejected() {
         String valid = url("3", "20261104T120000");
-        for (String invalid : new String[]{valid + "#", valid + "#anything", valid + "&i=2", valid.replace("&f=000123456789", "&%69=2"), valid.replace("s=3", "s=3%26f%3D8"), valid.replace("s=3", "s=%2533"), valid.replace("s=3", "s=%GG"), valid.replace("i=001234567", "i="), valid.replace("&f=000123456789", "&other=2"), valid.replace("https:", "https:\\")})
+        for (String invalid : new String[]{valid + "&i=2", valid.replace("&f=000123456789", "&%69=2"), valid.replace("s=3", "s=%GG"), valid.replace("i=001234567", "i="), valid.replace("&f=000123456789", "&other=2"), valid.replace("https:", "https:\\")})
             rejected("QR_UNSUPPORTED", invalid);
+        rejected("QR_AMOUNT_INVALID", valid.replace("s=3", "s=3%26f%3D8"));
+        rejected("QR_AMOUNT_INVALID", valid.replace("s=3", "s=%2533"));
+        assertEquals("3.00", FiscalQrParser.parse(valid + "&extra=1").amount);
         assertEquals("3.00", FiscalQrParser.parse(valid.replace("s=3", "s=%33")).amount);
     }
 
     @Test public void amountAndDateErrorsAreNotHiddenByMalformedEncoding() {
-        rejected("QR_AMOUNT_INVALID", url("3%20", "20261104T120000"));
-        rejected("QR_DATE_INVALID", url("3", "20261104T120000%0A"));
-        rejected("QR_UNSUPPORTED", url("3", "20261104T120000") + "\n");
+        rejected("QR_AMOUNT_INVALID", url("3%2C5%2C0", "20261104T120000"));
+        rejected("QR_DATE_INVALID", url("3", "20261104T1200"  + "0%0A1"));
+        // Scanner payloads may end with a newline.
+        assertEquals("3.00", FiscalQrParser.parse(url("3", "20261104T120000") + "\n").amount);
     }
 
     @Test public void canonicalLocatorIsIndependentOfPhotoAndQueryOrder() {
@@ -84,7 +95,7 @@ public class FiscalQrParserTest {
             catch (ContractException e) { assertEquals("QR_MULTIPLE", e.code); }
         }
         rejected("QR_UNSUPPORTED", "https://pay.example/qr");
-        rejected("QR_UNSUPPORTED", "http://consumer.test-oofd.kz?i=1196572871&f=678980123456&s=0.0&t=20200518T181817");
+        rejected("QR_AMOUNT_INVALID", "http://consumer.test-oofd.kz?i=1196572871&f=678980123456&s=0.0&t=20200518T181817");
     }
 
     @Test public void oversizedPayloadAndCountAreExplicitLimits() {

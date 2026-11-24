@@ -6,7 +6,7 @@
     deleteTransaction: ['id', 'expectedRevision'], saveCategory: ['id', 'expectedRevision', 'name', 'kind'],
     deleteCategory: ['id', 'expectedRevision'], saveSources: ['packages'],
     reviewCandidate: ['id', 'expectedRevision', 'decision', 'transaction', 'transactionId', 'confirmDistinct'],
-    scanCamera: [], scanGallery: [], openNotificationAccess: []
+    scanCamera: [], scanPhoto: [], openNotificationAccess: []
   };
   function failure(code, message, field) {
     var error = new Error(message);

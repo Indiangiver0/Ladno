@@ -40,7 +40,7 @@ public final class MainActivity extends Activity {
     static final String PAGE = LocalAssets.PAGE;
     private static final String REFRESH = "window.NativeEvents&&window.NativeEvents.onRefresh()";
     private static final int CAMERA = 41;
-    private static final int GALLERY = 42;
+    private static final int QR = 42;
     private static final int NOTIFICATION_ACCESS = 43;
     private static final String CSP = "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; "
         + "font-src 'self'; connect-src 'none'; frame-src 'none'; child-src 'none'; object-src 'none'; "
@@ -173,19 +173,10 @@ public final class MainActivity extends Activity {
 
     void launchNativeAction(String type, String jobId) {
         try {
-            if (type.equals("scanGallery")) {
-                Intent picker = new Intent(Intent.ACTION_OPEN_DOCUMENT).setType("image/*")
-                    .addCategory(Intent.CATEGORY_OPENABLE).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                startActivityForResult(picker, GALLERY);
-            } else if (type.equals("scanCamera")) {
-                File output = runtime.newCameraFile();
-                runtime.cameraOutput(output);
-                cameraGrant = FileProvider.getUriForFile(this, getPackageName() + ".capture", output);
-                Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-                    .putExtra(MediaStore.EXTRA_OUTPUT, cameraGrant)
-                    .addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                camera.setClipData(ClipData.newRawUri("Receipt", cameraGrant));
-                startActivityForResult(camera, CAMERA);
+            if (type.equals("scanCamera")) {
+                startActivityForResult(new Intent(this, QrScanActivity.class), QR);
+            } else if (type.equals("scanPhoto")) {
+                launchPhoto();
             } else {
                 startActivityForResult(new Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS), NOTIFICATION_ACCESS);
             }
@@ -201,6 +192,17 @@ public final class MainActivity extends Activity {
         }
     }
 
+    private void launchPhoto() throws IOException {
+        File output = runtime.newCameraFile();
+        runtime.cameraOutput(output);
+        cameraGrant = FileProvider.getUriForFile(this, getPackageName() + ".capture", output);
+        Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            .putExtra(MediaStore.EXTRA_OUTPUT, cameraGrant)
+            .addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        camera.setClipData(ClipData.newRawUri("Receipt", cameraGrant));
+        startActivityForResult(camera, CAMERA);
+    }
+
     @Override protected void onActivityResult(int request, int result, Intent data) {
         super.onActivityResult(request, result, data);
         if (request == NOTIFICATION_ACCESS) {
@@ -209,24 +211,32 @@ public final class MainActivity extends Activity {
             runtime.refresh(); // Read actual OS access; returning from settings never grants access by assumption.
             return;
         }
-        if (request != CAMERA && request != GALLERY) return;
+        if (request != CAMERA && request != QR) return;
         String jobId = runtime.mediaJob();
         if (jobId == null) { revokeCameraGrant(); return; }
+        if (request == QR) {
+            if (result == RESULT_OK) {
+                String payload = data == null ? null : data.getStringExtra(QrScanActivity.EXTRA_PAYLOAD);
+                if (payload == null) runtime.failed(jobId, "IMAGE_INVALID", "QR не получен.");
+                else runtime.processQr(jobId, payload);
+            } else if (result == QrScanActivity.RESULT_PHOTO) {
+                try { launchPhoto(); }
+                catch (ActivityNotFoundException e) { revokeCameraGrant(); runtime.failed(jobId, "ACTIVITY_UNAVAILABLE", "Системная камера недоступна."); }
+                catch (Exception e) { revokeCameraGrant(); runtime.failed(jobId, "UNAVAILABLE", "Не удалось открыть камеру."); }
+            } else if (data != null && data.getBooleanExtra(QrScanActivity.EXTRA_DENIED, false)) {
+                runtime.failed(jobId, "PERMISSION_DENIED", "Нет доступа к камере. Разрешите камеру для «Ладно» в настройках Android.");
+            } else runtime.finish(jobId, "cancelled", null);
+            return;
+        }
         if (result != RESULT_OK) {
             revokeCameraGrant();
             runtime.finish(jobId, "cancelled", null);
             return;
         }
-        if (request == CAMERA) {
-            revokeCameraGrant();
-            File file = runtime.cameraOutput();
-            if (file == null) runtime.failed(jobId, "IMAGE_INVALID", "Изображение камеры недоступно.");
-            else runtime.processMedia(jobId, null, file);
-        } else {
-            Uri selected = data == null ? null : data.getData();
-            if (selected == null) runtime.failed(jobId, "IMAGE_INVALID", "Изображение не выбрано.");
-            else runtime.processMedia(jobId, selected, null);
-        }
+        revokeCameraGrant();
+        File file = runtime.cameraOutput();
+        if (file == null) runtime.failed(jobId, "IMAGE_INVALID", "Изображение камеры недоступно.");
+        else runtime.processMedia(jobId, null, file);
     }
 
     private void revokeCameraGrant() {

@@ -9,8 +9,8 @@ android {
         applicationId 'com.ladno.finance'
         minSdk 26
         targetSdk 36
-        versionCode 5
-        versionName '0.4.1'
+        versionCode 6
+        versionName '0.5.0'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     signingConfigs {
@@ -38,6 +38,12 @@ dependencies {
     implementation 'androidx.exifinterface:exifinterface:1.4.2'
     implementation 'cz.adaptech.tesseract4android:tesseract4android:4.9.0'
     implementation 'com.google.zxing:core:3.5.3'
+    // Live receipt QR scanner: CameraX preview + bundled (offline, no Play services) ML Kit model.
+    implementation 'androidx.activity:activity:1.10.1'
+    implementation 'androidx.camera:camera-camera2:1.4.2'
+    implementation 'androidx.camera:camera-lifecycle:1.4.2'
+    implementation 'androidx.camera:camera-view:1.4.2'
+    implementation 'com.google.mlkit:barcode-scanning:17.3.0'
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.json:json:20240303'
     androidTestImplementation 'androidx.test:runner:1.6.2'

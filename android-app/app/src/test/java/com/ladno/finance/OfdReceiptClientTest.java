@@ -31,11 +31,11 @@ public class OfdReceiptClientTest {
         assertEquals("identity", connection.getRequestProperty("Accept-Encoding"));
         assertNull(connection.getRequestProperty("Authorization")); assertNull(connection.getRequestProperty("Cookie"));
     }
-    @Test public void redirectAuthRateLimitAndServerErrorsNeverCreateExpense() throws Exception {
+    @Test public void redirectAuthRateLimitAndServerErrorsFallBackToSignedQrTotal() throws Exception {
         for (int status : new int[]{301, 302, 307, 401, 403, 404, 429, 500}) {
             Fake connection = new Fake(); connection.status = status;
             ImportCandidate value = new OfdReceiptClient(url -> connection, 1000).lookup(qr());
-            assertNull(value.kind); assertTrue(value.reasons.contains("OFD_UNAVAILABLE"));
+            assertQrOnly(value);
             assertFalse(connection.bodyRead); assertTrue(connection.disconnected);
         }
     }
@@ -56,8 +56,7 @@ public class OfdReceiptClientTest {
     @Test public void malformedJsonUtf8AndIdentityMismatchNeverBecomeHigh() throws Exception {
         Fake malformed = new Fake(); malformed.bytes = "{not-json}".getBytes(StandardCharsets.UTF_8); assertInvalid(malformed);
         Fake utf8 = new Fake(); utf8.bytes = new byte[]{(byte) 0xc3, (byte) 0x28};
-        ImportCandidate utf = new OfdReceiptClient(url -> utf8, 1000).lookup(qr());
-        assertNull(utf.kind); assertNotEquals("high", utf.confidence);
+        assertQrOnly(new OfdReceiptClient(url -> utf8, 1000).lookup(qr()));
         Fake mismatch = new Fake(); mismatch.bytes = OfdReceiptParserTest.receipt().replace("123456", "123457").getBytes(StandardCharsets.UTF_8);
         ImportCandidate value = new OfdReceiptClient(url -> mismatch, 1000).lookup(qr());
         assertNull(value.kind); assertTrue(value.reasons.contains("OFD_MISMATCH"));
@@ -68,18 +67,24 @@ public class OfdReceiptClientTest {
         ImportCandidate value = new OfdReceiptClient(url -> blocked, 50).lookup(qr());
         long elapsed = (System.nanoTime() - before) / 1000000;
         assertTrue("Bounded caller deadline", elapsed < 1500);
-        assertNull(value.kind); assertTrue(value.reasons.contains("OFD_UNAVAILABLE"));
+        assertQrOnly(value);
         assertEquals("", value.note); assertTrue(blocked.disconnected);
     }
     @Test public void anotherProviderIsNotSentToKazakhtelecom() throws Exception {
         FiscalQrParser.Result other = FiscalQrParser.parse("https://ofd.rekassa.kz/t/?i=123456&f=000000987654&s=1234.50&t=20261103T201122");
         ImportCandidate result = new OfdReceiptClient(url -> { fail("Unexpected network"); return null; }, 1000).lookup(other);
-        assertNull(result.kind); assertEquals("1234.50", result.amount);
+        assertQrOnly(result);
     }
     private static void assertInvalid(Fake connection) {
         ImportCandidate value = new OfdReceiptClient(url -> connection, 1000).lookup(qr());
-        assertNull(value.kind); assertTrue(value.reasons.contains("OFD_INVALID_RESPONSE"));
+        assertQrOnly(value);
         assertTrue(connection.disconnected);
+    }
+    /** OFD could not add anything: the QR's own signed total and date are posted as an expense. */
+    private static void assertQrOnly(ImportCandidate value) {
+        assertEquals("expense", value.kind); assertEquals("high", value.confidence);
+        assertEquals("1234.50", value.amount); assertEquals("2026-11-03", value.date);
+        assertTrue(value.reasons.isEmpty());
     }
     private static final class Fake extends HttpsURLConnection {
         int status = 200;

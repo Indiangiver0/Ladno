@@ -35,7 +35,7 @@ public class ReceiptQrDecoderTest {
         assertEquals(1, decoded.size()); assertEquals(A, decoded.get(0));
         assertEquals("754.32", FiscalQrParser.select(decoded).candidate().amount);
         assertEquals("2026-11-04", FiscalQrParser.select(decoded).candidate().date);
-        assertNull(FiscalQrParser.select(decoded).candidate().kind);
+        assertEquals("expense", FiscalQrParser.select(decoded).candidate().kind);
     }
 
     @Test public void rotatedAndMirroredQrDecode() throws Exception {

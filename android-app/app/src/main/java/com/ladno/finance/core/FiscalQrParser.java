@@ -45,6 +45,7 @@ public final class FiscalQrParser {
     }
 
     public static Result parse(String payload) {
+        if (payload != null) payload = payload.trim();
         if (payload == null || payload.isEmpty()) throw unsupported();
         if (payload.getBytes(StandardCharsets.UTF_8).length > MAX_PAYLOAD_BYTES) throw limit();
         for (int i = 0; i < payload.length(); i++) {
@@ -55,34 +56,38 @@ public final class FiscalQrParser {
             URI uri = new URI(payload);
             String scheme = uri.getScheme(), host = uri.getHost();
             if (scheme == null || !(scheme.equalsIgnoreCase("https") || scheme.equalsIgnoreCase("http"))
-                || host == null || uri.isOpaque() || uri.getRawUserInfo() != null || uri.getPort() != -1
-                || uri.getRawFragment() != null || !host.equalsIgnoreCase(uri.getRawAuthority())) throw unsupported();
+                || host == null || uri.isOpaque() || uri.getRawUserInfo() != null) throw unsupported();
             host = host.toLowerCase(Locale.ROOT);
-            String path = uri.getRawPath();
-            boolean telecom = host.equals("consumer.oofd.kz") && (path.isEmpty() || path.equals("/"));
-            boolean rekassa = host.equals("ofd.rekassa.kz") && path.equals("/t/");
-            if (!telecom && !rekassa) throw unsupported();
+            // Every KZ OFD encodes the same KGD fields (i, f, s, t) in its QR link; the host only
+            // names the operator. The URL itself is never loaded, so any operator is accepted.
+            if (!host.matches("[a-z0-9.-]{1,253}") || !host.contains(".")) throw unsupported();
             String rawQuery = uri.getRawQuery();
-            if (rawQuery == null) throw unsupported();
+            if (rawQuery == null || rawQuery.isEmpty()) throw unsupported();
             String[] parts = rawQuery.split("&", -1);
-            if (parts.length != 4) throw unsupported();
+            if (parts.length > 16) throw unsupported();
             Map<String, String> query = new LinkedHashMap<>();
             for (String part : parts) {
                 int equals = part.indexOf('=');
-                if (equals <= 0 || equals != part.lastIndexOf('=')) throw unsupported();
-                String key = URLDecoder.decode(part.substring(0, equals), StandardCharsets.UTF_8.name());
+                if (equals <= 0) continue;
+                String key = URLDecoder.decode(part.substring(0, equals), StandardCharsets.UTF_8.name()).toLowerCase(Locale.ROOT);
+                if (!(key.equals("i") || key.equals("f") || key.equals("s") || key.equals("t"))) continue;
                 String value = URLDecoder.decode(part.substring(equals + 1), StandardCharsets.UTF_8.name());
-                if (!(key.equals("i") || key.equals("f") || key.equals("s") || key.equals("t"))
-                    || value.indexOf('&') >= 0 || value.indexOf('=') >= 0 || value.indexOf('%') >= 0
-                    || query.put(key, value) != null) throw unsupported();
+                if (query.put(key, value) != null) throw unsupported();
             }
             String fiscal = query.get("i"), register = query.get("f"), amount = query.get("s"), timestamp = query.get("t");
             if (fiscal == null || register == null || !fiscal.matches("[0-9]{1,32}")
                 || !register.matches("[0-9]{1,32}")) throw unsupported();
+            if (amount != null) amount = amount.replace(',', '.');
+            if (amount != null && amount.matches("(?:0|[1-9][0-9]{0,23})\\.[0-9]{3,}")) {
+                // Some cash registers print "1500.000": only trailing zeros may be dropped.
+                String trimmed = amount.replaceFirst("0+$", "");
+                amount = trimmed.endsWith(".") ? trimmed.substring(0, trimmed.length() - 1) : trimmed;
+            }
             if (amount == null || !amount.matches("(?:0|[1-9][0-9]{0,23})(?:\\.[0-9]{1,2})?")) throw amountInvalid();
             Money money;
             try { money = Money.parseManual(amount, "KZT"); }
             catch (ContractException e) { throw amountInvalid(); }
+            if (timestamp != null && timestamp.matches("[0-9]{8}T[0-9]{4}")) timestamp += "00";
             if (timestamp == null || !timestamp.matches("[0-9]{8}T[0-9]{6}")) throw dateInvalid();
             LocalDateTime dateTime;
             try {
@@ -106,9 +111,10 @@ public final class FiscalQrParser {
         /** Only feed this receipt locator to per-install, purpose-separated HMAC. */
         public String locator() { return host + "\n" + fiscalSign + "\n" + registerNumber; }
         public String revision() { return amount + "\n" + timestamp; }
+        /** A fiscal QR carries the paid total and time signed by the cash register: post it as an expense. */
         public ImportCandidate candidate() {
-            return new ImportCandidate(null, amount, "KZT", date, "source", "",
-                Arrays.asList("UNKNOWN_KIND", "LOW_CONFIDENCE", "IDENTITY_UNCERTAIN"), "uncertain", null);
+            return new ImportCandidate("expense", amount, "KZT", date, "source", "",
+                java.util.Collections.emptyList(), "high", null);
         }
     }
 

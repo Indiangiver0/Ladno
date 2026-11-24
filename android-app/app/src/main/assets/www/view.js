@@ -453,12 +453,12 @@
   }
   function jobs(state, ui, latestOnly) {
     var entries = array(state.jobs);
-    if (latestOnly) entries = entries.filter(function (job) { return job.type === 'scanCamera' || job.type === 'scanGallery'; }).slice(-1);
+    if (latestOnly) entries = entries.filter(function (job) { return job.type === 'scanCamera' || job.type === 'scanPhoto'; }).slice(-1);
     if (!entries.length) return null;
     var section = node('section', 'card scan-results');
     attr(section, 'aria-label', 'Результат обработки');
     append(section, append(node('div', 'section-heading'), node('h2', '', latestOnly ? 'Последний скан' : 'Обработка')));
-    var typeNames = { scanCamera: 'Чек с камеры', scanGallery: 'Чек из изображения', openNotificationAccess: 'Доступ к уведомлениям' };
+    var typeNames = { scanCamera: 'QR чека', scanPhoto: 'Фото чека', openNotificationAccess: 'Доступ к уведомлениям' };
     var statusNames = { queued: 'В очереди', running: 'Выполняется', completed: 'Завершено', cancelled: 'Отменено', failed: 'Не выполнено' };
     entries.slice(-8).reverse().forEach(function (job) {
       var active = job.status === 'queued' || job.status === 'running';
@@ -499,9 +499,9 @@
     var scanDisabled = !!ui.busy || !!ui.preview;
     var capture = node('section');
     var camera = action('scanCamera', '', { className: 'capture-card', disabled: scanDisabled, icon: 'camera', iconSize: 25 });
-    append(camera, append(node('span', '', 'Снять чек'), node('small', '', 'Открыть камеру')));
-    var gallery = action('scanGallery', '', { className: 'capture-card', disabled: scanDisabled, icon: 'gallery', iconSize: 25 });
-    append(gallery, append(node('span', '', 'Изображение'), node('small', '', 'Выбрать снимок чека')));
+    append(camera, append(node('span', '', 'Сканировать QR'), node('small', '', 'Наведите камеру на QR чека')));
+    var gallery = action('scanPhoto', '', { className: 'capture-card', disabled: scanDisabled, icon: 'gallery', iconSize: 25 });
+    append(gallery, append(node('span', '', 'Чек без QR'), node('small', '', 'Сфотографировать чек')));
     append(capture, append(node('div', 'capture-grid'), camera, gallery));
     if (ocr.error) append(capture, errorNotice(ocr.error, false));
     else if (!ocr.ready && !ui.preview) append(capture, node('p', 'footnote', 'Модуль распознавания ещё не готов. Доступность обновится автоматически.'));

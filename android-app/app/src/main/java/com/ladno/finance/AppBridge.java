@@ -12,7 +12,7 @@ import java.util.Set;
 public final class AppBridge {
     private static final Set<String> ACTIONS = new HashSet<>(java.util.Arrays.asList("state", "settings", "saveTransaction",
         "deleteTransaction", "saveCategory", "deleteCategory", "saveSources", "reviewCandidate",
-        "scanCamera", "scanGallery", "openNotificationAccess"));
+        "scanCamera", "scanPhoto", "openNotificationAccess"));
     private final NativeRuntime runtime;
 
     AppBridge(NativeRuntime runtime) { this.runtime = runtime; }
@@ -35,7 +35,7 @@ public final class AppBridge {
                 runtime.refresh();
             } else {
                 runtime.requireSetup();
-                if (action.equals("scanCamera") || action.equals("scanGallery") || action.equals("openNotificationAccess")) {
+                if (action.equals("scanCamera") || action.equals("scanPhoto") || action.equals("openNotificationAccess")) {
                     data = runtime.queueAction(action);
                 } else {
                     if (action.equals("saveSources")) runtime.validatePackages(payload.optJSONArray("packages"));

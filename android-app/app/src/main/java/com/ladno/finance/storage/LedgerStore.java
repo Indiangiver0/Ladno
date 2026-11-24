@@ -408,6 +408,21 @@ public final class LedgerStore implements StorageApi {
                     if (!provenDistinct) matches.add(target);
                 }
             }
+            // Same purchase seen by a different channel (bank push vs. paper receipt): one
+            // unambiguous match that has no observation of this channel yet is linked, not duplicated.
+            String crossChannel = null;
+            if (matches.size() == 1 && complete && setup && source.hasIdentity() && reasons.isEmpty()
+                    && candidate.confidence.equals("high")) {
+                String target = matches.iterator().next();
+                if (exists(db, "SELECT 1 FROM transactions WHERE id=? AND deleted=0 AND source!=? AND source!='manual'", target, source.kind)
+                        && !exists(db, "SELECT 1 FROM import_candidates WHERE transaction_id=? AND source=? LIMIT 1", target, source.kind))
+                    crossChannel = target;
+            }
+            if (crossChannel != null) {
+                resolve(db, id, 1, "linked", crossChannel);
+                matches.clear();
+                outcome = "linked";
+            } else {
             if (!matches.isEmpty()) addReason(reasons, "POSSIBLE_DUPLICATE");
             if (complete && setup && source.hasIdentity() && reasons.isEmpty() && candidate.confidence.equals("high")) {
                 TransactionInput transaction = new TransactionInput(obj("kind", candidate.kind, "date", candidate.date,
@@ -416,6 +431,7 @@ public final class LedgerStore implements StorageApi {
                 resolve(db, id, 1, "posted", recordId);
                 outcome = "posted";
             } else outcome = "review";
+            }
         }
         putReasons(db, id, reasons);
         for (String target : matches) db.insertOrThrow("candidate_matches", null, values("candidate_id", id, "transaction_id", target));

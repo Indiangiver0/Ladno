@@ -248,13 +248,8 @@ final class NativeRuntime {
                 ImportCandidate parsed;
                 String sourceKey, revision;
                 if (qr != null) {
-                    parsed = ofd.lookup(qr);
-                    // Preserve the exact 0.3.0 QR observation identity for both local
-                    // fallback and verified API. API metadata/confidence must not
-                    // resurrect an ignored or manually edited/posted observation.
-                    sourceKey = tokens.hmac("receipt-source", "receipt-fiscal-qr-v1", qr.locator());
-                    revision = tokens.hmac("receipt-revision", "receipt-fiscal-qr-v1", qr.locator(), qr.revision());
-                    qr = null;
+                    ingestQr(jobId, qr);
+                    return;
                 } else {
                     String digest = digest(input);
                     OcrEngine.Result recognized = ocr.recognize(input);
@@ -283,6 +278,32 @@ final class NativeRuntime {
                 if (camera != null) deleteOwnedMedia(camera);
             }
         });
+    }
+
+    /** Payload comes from the in-app live scanner; it is parsed locally and never loaded as a URL. */
+    void processQr(String jobId, String payload) {
+        worker.execute(() -> {
+            try {
+                requireSetup();
+                ingestQr(jobId, FiscalQrParser.select(java.util.Collections.singletonList(payload)));
+            } catch (ContractException e) { failed(jobId, e.code, e.getMessage()); }
+            catch (Exception | LinkageError e) { failed(jobId, "UNAVAILABLE", "Не удалось обработать QR чека."); }
+        });
+    }
+
+    private void ingestQr(String jobId, FiscalQrParser.Result qr) {
+        ImportCandidate parsed = ofd.lookup(qr);
+        // Preserve the exact 0.3.0 QR observation identity for both local
+        // fallback and verified API. API metadata/confidence must not
+        // resurrect an ignored or manually edited/posted observation.
+        String sourceKey = tokens.hmac("receipt-source", "receipt-fiscal-qr-v1", qr.locator());
+        String revision = tokens.hmac("receipt-revision", "receipt-fiscal-qr-v1", qr.locator(), qr.revision());
+        ImportCandidate sanitized = safeCandidate(parsed, tokens.isUncertain());
+        JSONObject source = NativeJson.object("kind", "receipt", "eventId", UUID.randomUUID().toString(),
+            "sourceKeyToken", sourceKey, "revisionToken", revision, "accountSurrogate", null,
+            "paymentRefToken", null, "packageName", null, "label", "Чек", "capturedAt", Instant.now().toString(), "postTime", null);
+        JSONObject committed = store.ingestCandidate(source, sanitized);
+        finish(jobId, "completed", null, ScanOutcome.fromIngest(committed));
     }
 
     static ImportCandidate safeCandidate(ImportCandidate parsed, boolean uncertain) {

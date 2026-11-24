@@ -117,7 +117,7 @@
       return { settings: settings };
     }
     if (!settings.initialized) fail('SETUP_REQUIRED', 'Сначала выберите валюту и правило даты.');
-    if (action === 'scanCamera' || action === 'scanGallery' || action === 'openNotificationAccess') fail('UNAVAILABLE', 'Камера, OCR и системный доступ доступны только в Android-приложении.');
+    if (action === 'scanCamera' || action === 'scanPhoto' || action === 'openNotificationAccess') fail('UNAVAILABLE', 'Камера, OCR и системный доступ доступны только в Android-приложении.');
     if (action === 'saveTransaction') return saveTransaction(payload);
     if (action === 'deleteTransaction') {
       var record = find(records, payload.id); revision(record, payload.expectedRevision);

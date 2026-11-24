@@ -9,6 +9,16 @@ import com.ladno.finance.core.FiscalQrParser;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import com.google.android.gms.tasks.Tasks;
+import com.google.mlkit.vision.barcode.BarcodeScanner;
+import com.google.mlkit.vision.barcode.BarcodeScannerOptions;
+import com.google.mlkit.vision.barcode.BarcodeScanning;
+import com.google.mlkit.vision.barcode.common.Barcode;
+import com.google.mlkit.vision.common.InputImage;
 
 /** Bounded local media decoding. Raw QR content never leaves this native call chain. */
 final class ReceiptQrScanner {
@@ -38,6 +48,10 @@ final class ReceiptQrScanner {
         int[] pixels;
         try {
             bitmap = orient(input, bitmap);
+            // The bundled ML Kit model finds small, faint thermal-paper QR codes far more
+            // reliably than the pure-Java detector, which remains the offline fallback.
+            FiscalQrParser.Result fast = fiscal(mlKit(bitmap));
+            if (fast != null) return fast;
             width = bitmap.getWidth(); height = bitmap.getHeight();
             long count = (long) width * height;
             if (width > ReceiptQrDecoder.MAX_DIMENSION || height > ReceiptQrDecoder.MAX_DIMENSION
@@ -46,7 +60,36 @@ final class ReceiptQrScanner {
             bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
         } finally { if (!bitmap.isRecycled()) bitmap.recycle(); }
         // Release the bitmap before allocating the luminance/detection buffers.
-        return FiscalQrParser.select(ReceiptQrDecoder.decode(width, height, pixels));
+        List<String> decoded = ReceiptQrDecoder.decode(width, height, pixels);
+        FiscalQrParser.Result found = fiscal(decoded);
+        return found != null || decoded.isEmpty() ? found : FiscalQrParser.select(decoded);
+    }
+
+    private static List<String> mlKit(Bitmap bitmap) {
+        BarcodeScanner scanner = BarcodeScanning.getClient(new BarcodeScannerOptions.Builder()
+            .setBarcodeFormats(Barcode.FORMAT_QR_CODE).build());
+        try {
+            List<Barcode> codes = Tasks.await(scanner.process(InputImage.fromBitmap(bitmap, 0)), 15, TimeUnit.SECONDS);
+            List<String> payloads = new ArrayList<>();
+            for (Barcode code : codes) if (code.getRawValue() != null) payloads.add(code.getRawValue());
+            return payloads;
+        } catch (Exception | LinkageError e) {
+            return Collections.emptyList();
+        } finally { scanner.close(); }
+    }
+
+    /** A receipt may also carry a promo/loyalty QR: keep only fiscal ones and require one receipt. */
+    static FiscalQrParser.Result fiscal(List<String> payloads) {
+        FiscalQrParser.Result chosen = null;
+        for (String payload : payloads) {
+            FiscalQrParser.Result parsed;
+            try { parsed = FiscalQrParser.select(Collections.singletonList(payload)); }
+            catch (ContractException e) { continue; }
+            if (chosen != null && !(chosen.locator() + chosen.revision()).equals(parsed.locator() + parsed.revision()))
+                throw new ContractException("QR_MULTIPLE", null, "На снимке несколько чеков. Оставьте в кадре один чек.");
+            chosen = parsed;
+        }
+        return chosen;
     }
 
     private static Bitmap orient(File file, Bitmap bitmap) throws IOException {

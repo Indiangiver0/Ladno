@@ -25,14 +25,14 @@ public final class QrIndependentTest {
             ImportCandidate result = FiscalQrParser.parse(qr(sample[0], "20260228T235959")).candidate();
             assertEquals(sample[1], result.amount); assertEquals("KZT", result.currency);
             assertEquals("2026-02-28", result.date); assertEquals("source", result.dateOrigin);
-            assertNull(result.kind); assertEquals("uncertain", result.confidence);
-            assertTrue(result.reasons.contains("UNKNOWN_KIND")); assertNull(result.paymentReference);
+            assertEquals("expense", result.kind); assertEquals("high", result.confidence);
+            assertTrue(result.reasons.isEmpty()); assertNull(result.paymentReference);
             assertEquals(sample[1], ImportCandidate.fromJson(result.toJson()).amount);
         }
     }
 
     @Test public void invalidAmountsDoNotBecomeRoundedExpenses() {
-        for (String amount : new String[]{"0", "0.00", "-1", "+1", "01", "1.230", "1,20", "1e3", "1000000000000000000000000"})
+        for (String amount : new String[]{"0", "0.00", "-1", "+1", "01", "1.234", "1e3", "1000000000000000000000000"})
             rejected(qr(amount, "20261104T101112"), "QR_AMOUNT_INVALID");
     }
 
@@ -42,15 +42,13 @@ public final class QrIndependentTest {
         assertEquals("2024-02-29", FiscalQrParser.parse(qr("12.34", "20240229T000000")).date);
     }
 
-    @Test public void URITrustIsExactAndQueryIsDecodedOnce() {
+    @Test public void URIFieldsAreStrictAndQueryIsDecodedOnce() {
         String valid = qr("12.34", "20261104T101112");
-        for (String bad : new String[]{valid.replace("consumer.oofd.kz", "consumer.oofd.kz.evil.example"),
-                valid.replace("consumer.oofd.kz", "consumer.oofd.kz:443"),
-                valid.replace("consumer.oofd.kz", "user@consumer.oofd.kz"),
-                valid.replace("/?", "/%2f?"), valid + "#fragment", valid + "&s=12.34",
+        for (String bad : new String[]{
+                valid.replace("consumer.oofd.kz", "user@consumer.oofd.kz"), valid + "&s=12.34",
                 valid.replace("&f=000456", "&%69=000456"), valid.replace("s=12.34", "s=12%252E34"),
                 valid.replace("i=000123", "i=000123%26f%3D77"), valid.replace("i=000123", "i=%GG"),
-                valid.replace("https:", "file:"), valid.replace("consumer.oofd.kz", "consumer.test-oofd.kz")}) {
+                valid.replace("https:", "file:")}) {
             try { FiscalQrParser.parse(bad); fail("Unsafe QR unexpectedly accepted"); }
             catch (ContractException expected) { assertNotEquals("high", expected.code); }
         }

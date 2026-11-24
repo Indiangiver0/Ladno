@@ -37,7 +37,7 @@ public final class NativeJsonGuardTest {
         assertError(bridge.request("executeSql", "{}"), "UNKNOWN_ACTION");
         assertError(bridge.request("state", "[]"), "BAD_JSON");
         assertError(bridge.request("state", "{\"path\":\"secret\"}"), "VALIDATION");
-        assertError(bridge.request("scanGallery", "{\"uri\":\"content://example\"}"), "VALIDATION");
+        assertError(bridge.request("scanPhoto", "{\"uri\":\"content://example\"}"), "VALIDATION");
         assertError(bridge.request("settings", "{\"primaryCurrency\":\"USD\",\"zoneId\":\"UTC\",\"datePolicy\":\"GUESS\"}"), "VALIDATION");
         StringBuilder oversized = new StringBuilder("{\"text\":\"");
         for (int i = 0; i < 24000; i++) oversized.append('文');

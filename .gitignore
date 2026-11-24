@@ -1,3 +1,4 @@
 team/snapshots/*-files/
 __pycache__/
 *.pyc
+образцы/

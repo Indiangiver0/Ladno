@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Only the native fixed-host receipt client uses Internet. WebView networking remains blocked. -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Used only while the in-app receipt QR scanner screen is open. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
     <queries>
         <intent>
             <action android:name="android.intent.action.MAIN" />
@@ -28,6 +31,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".QrScanActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <service
             android:name=".BankNotificationService"
             android:label="@string/notification_service_name"

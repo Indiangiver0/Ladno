@@ -49,7 +49,7 @@ public class OfdReceiptParserTest {
             receipt().replace("\"operationType\":2", "\"operationType\":1"), receipt().replace("\"operationType\":2", "\"operationType\":3"),
             receipt().replace("\"operationType\":2", "\"operationType\":999"), receipt().replace("\"cancelDate\":null", "\"cancelDate\":\"2026-11-03\""),
             receipt().replace("\"offlineFiscalId\":null", "\"offlineFiscalId\":\"offline\""),
-            receipt().replace("\"type\":", "\"status\":\"unknown\",\"type\":"), receipt().replace("\"type\":", "\"parentTicket\":{},\"type\":"))) {
+            receipt().replace("\"type\":", "\"parentTicket\":{},\"type\":"))) {
             ImportCandidate value = OfdReceiptParser.parse(body, qr());
             assertNull(value.kind); assertEquals("uncertain", value.confidence); assertTrue(value.reasons.contains("OFD_REVIEW_REQUIRED"));
         }
@@ -81,10 +81,13 @@ public class OfdReceiptParserTest {
         for (int i = 0; i < 18; i++) nested = "[" + nested + "]";
         rejected(receipt().replace("\"type\":", "\"payload\":" + nested + ",\"type\":"));
     }
-    @Test public void fallbackPreservesUsefulFieldsAndUnknownKind() {
+    @Test public void unavailableOfdFallsBackToQrTotalButSuspiciousResponsesNeedReview() {
         ImportCandidate value = OfdReceiptParser.fallback(qr(), "OFD_UNAVAILABLE");
         assertEquals("1234.50", value.amount); assertEquals("2026-11-03", value.date);
-        assertNull(value.kind); assertEquals("uncertain", value.confidence); assertTrue(value.reasons.contains("OFD_UNAVAILABLE"));
+        assertEquals("expense", value.kind); assertEquals("high", value.confidence); assertTrue(value.reasons.isEmpty());
+        ImportCandidate mismatch = OfdReceiptParser.fallback(qr(), "OFD_MISMATCH");
+        assertEquals("1234.50", mismatch.amount);
+        assertNull(mismatch.kind); assertEquals("uncertain", mismatch.confidence); assertTrue(mismatch.reasons.contains("OFD_MISMATCH"));
     }
     private static void rejected(String body) {
         try { OfdReceiptParser.parse(body, qr()); fail("Invalid response accepted"); }
